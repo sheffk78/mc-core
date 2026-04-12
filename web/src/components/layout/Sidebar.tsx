@@ -29,8 +29,12 @@ const NAV_ITEMS = [
 ];
 
 export function Sidebar() {
-  const { activeBrand, activeView, setActiveBrand, setActiveView } = useDashboardStore();
+  const { activeBrand, activeView, setActiveBrand, setActiveView, setSidebarOpen } = useDashboardStore();
   const brands = useDataStore((s) => s.brands);
+
+  // Close mobile sidebar on nav click
+  const nav = (view: string) => { setActiveView(view); setSidebarOpen(false); };
+  const filterBrand = (slug: string | null) => { setActiveBrand(slug); setSidebarOpen(false); };
 
   return (
     <aside
@@ -57,7 +61,7 @@ export function Sidebar() {
 
         {/* All Brands */}
         <button
-          onClick={() => setActiveBrand(null)}
+          onClick={() => filterBrand(null)}
           className={`mx-2 flex w-[calc(100%-16px)] items-center rounded-md px-3 py-1.5 text-left text-sm transition-colors duration-150 ${
             activeBrand === null
               ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
@@ -71,7 +75,7 @@ export function Sidebar() {
         {brands.map((brand) => (
           <button
             key={brand.slug}
-            onClick={() => setActiveBrand(brand.slug)}
+            onClick={() => filterBrand(brand.slug)}
             className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-3 py-1.5 text-left text-sm transition-colors duration-150 ${
               activeBrand === brand.slug
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
@@ -101,7 +105,7 @@ export function Sidebar() {
         {COMMAND_CENTER_ITEMS.map(({ label, icon: Icon, view }) => (
           <button
             key={view}
-            onClick={() => setActiveView(view)}
+            onClick={() => nav(view)}
             className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-2 text-sm transition-colors duration-150 ${
               activeView === view
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
@@ -120,7 +124,7 @@ export function Sidebar() {
         {NAV_ITEMS.map(({ label, icon: Icon, view }) => (
           <button
             key={view}
-            onClick={() => setActiveView(view)}
+            onClick={() => nav(view)}
             className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-2 text-sm transition-colors duration-150 ${
               activeView === view
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
