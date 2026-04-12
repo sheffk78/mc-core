@@ -48,8 +48,8 @@ COPY --from=builder /app/server/dist server/dist
 # Copy built web frontend from builder
 COPY --from=builder /app/web/dist web/dist
 
-# Copy any static assets or migration files if present
-COPY --from=builder /app/server/scripts server/scripts 2>/dev/null || true
+# Copy migration/seed scripts
+COPY --from=builder /app/server/scripts server/scripts
 
 ENV NODE_ENV=production
 ENV PORT=3000
