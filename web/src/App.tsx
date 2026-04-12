@@ -12,9 +12,7 @@ const JeffQueueView = lazy(() => import('./views/JeffQueue'));
 const ActivityStreamView = lazy(() => import('./views/ActivityStream'));
 const TasksPage = lazy(() => import('./views/TasksPage'));
 
-const ApprovalsPage = lazy(() =>
-  import('./views/stubs').then((m) => ({ default: m.ApprovalsPage })),
-);
+const ApprovalsPage = lazy(() => import('./views/ApprovalsPage'));
 const FilesPage = lazy(() =>
   import('./views/stubs').then((m) => ({ default: m.FilesPage })),
 );
