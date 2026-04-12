@@ -112,8 +112,13 @@ function QueueCountBadges({
 // ── Queue item row (compact) ──
 
 function QueueItemRow({ item }: { item: QueueItem }) {
+  const setActiveView = useDashboardStore((s) => s.setActiveView);
+
   return (
-    <div className="flex items-center gap-2.5 rounded-md bg-white/[0.02] px-3 py-2 transition-colors duration-150 hover:bg-white/[0.04]">
+    <button
+      onClick={() => setActiveView(item.approval_id ? 'approvals' : 'tasks')}
+      className="flex w-full items-center gap-2.5 rounded-md bg-white/[0.02] px-3 py-2 text-left transition-colors duration-150 hover:bg-white/[0.06]"
+    >
       <span
         className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
         style={{
@@ -134,7 +139,7 @@ function QueueItemRow({ item }: { item: QueueItem }) {
       <span className="flex-shrink-0 text-[11px] text-[var(--mc-ink-muted)]">
         {relativeTime(item.created_at)}
       </span>
-    </div>
+    </button>
   );
 }
 
@@ -142,9 +147,13 @@ function QueueItemRow({ item }: { item: QueueItem }) {
 
 function ActivityRowCompact({ activity }: { activity: Activity }) {
   const actorCfg = ACTOR_CONFIG[activity.actor] ?? ACTOR_CONFIG.system;
+  const setActiveView = useDashboardStore((s) => s.setActiveView);
 
   return (
-    <div className="flex items-start gap-2 rounded-md bg-white/[0.02] px-3 py-2 transition-colors duration-150 hover:bg-white/[0.04]">
+    <button
+      onClick={() => setActiveView('activity-stream')}
+      className="flex w-full items-start gap-2 rounded-md bg-white/[0.02] px-3 py-2 text-left transition-colors duration-150 hover:bg-white/[0.06]"
+    >
       <span className="mt-0.5 w-12 flex-shrink-0 text-right text-[11px] text-[var(--mc-ink-muted)]">
         {relativeTime(activity.created_at)}
       </span>
@@ -160,7 +169,7 @@ function ActivityRowCompact({ activity }: { activity: Activity }) {
       <span className="flex-1 truncate text-[13px] text-[var(--mc-ink)]">
         {activity.summary}
       </span>
-    </div>
+    </button>
   );
 }
 
@@ -254,7 +263,7 @@ export default function DashboardOverview() {
             <PanelHeader
               title="Jeff's Queue"
               subtitle="Items needing your input"
-              viewName="command-center"
+              viewName="jeff-queue"
             />
 
             {/* Count badges */}
@@ -288,7 +297,7 @@ export default function DashboardOverview() {
             <PanelHeader
               title="Kit's Stream"
               subtitle="Recent agent activity"
-              viewName="command-center"
+              viewName="activity-stream"
             />
 
             {/* Daily stats */}
