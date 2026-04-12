@@ -246,7 +246,7 @@ app.route("/api/v1/revenue", revenueRouter);
 app.get(
   "/*",
   serveStatic({
-    root: "../web/dist",
+    root: "./web/dist",
     rewriteRequestPath: (path) => {
       if (path.match(/\.\w+$/)) return path;
       return "/index.html";
