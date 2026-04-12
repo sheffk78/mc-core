@@ -10,6 +10,9 @@ COPY package.json bun.lockb* ./
 COPY server/package.json server/
 COPY web/package.json web/
 
+# Copy tsconfig files
+COPY tsconfig.base.json ./
+
 # Install all dependencies (workspaces)
 RUN bun install --frozen-lockfile || bun install
 

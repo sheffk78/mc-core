@@ -3,8 +3,8 @@
   "private": true,
   "workspaces": ["server", "web"],
   "scripts": {
-    "dev": "bun run --filter '*' dev",
-    "build": "bun run --filter web build && bun run --filter server build",
+    "dev": "cd server && bun run dev & cd web && bun run dev",
+    "build": "cd web && bun run build && cd ../server && bun run build",
     "migrate": "bun run server/scripts/migrate.ts",
     "seed": "bun run server/scripts/seed.ts"
   },
