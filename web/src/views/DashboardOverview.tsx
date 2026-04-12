@@ -14,7 +14,9 @@ import type { Activity, Actor, QueueItem } from '../lib/types';
 
 function relativeTime(dateStr: string): string {
   const now = Date.now();
-  const then = new Date(dateStr).getTime();
+  // Append Z if no timezone info — SQLite stores UTC without suffix
+  const normalized = dateStr.includes('Z') || dateStr.includes('+') ? dateStr : dateStr + 'Z';
+  const then = new Date(normalized).getTime();
   const diff = now - then;
   const mins = Math.floor(diff / 60000);
   if (mins < 1) return 'just now';
