@@ -13,12 +13,8 @@ const ActivityStreamView = lazy(() => import('./views/ActivityStream'));
 const TasksPage = lazy(() => import('./views/TasksPage'));
 
 const ApprovalsPage = lazy(() => import('./views/ApprovalsPage'));
-const FilesPage = lazy(() =>
-  import('./views/stubs').then((m) => ({ default: m.FilesPage })),
-);
-const CostsPage = lazy(() =>
-  import('./views/stubs').then((m) => ({ default: m.CostsPage })),
-);
+const FilesPage = lazy(() => import('./views/FilesPage'));
+const CostsPage = lazy(() => import('./views/CostsPage'));
 const RevenuePage = lazy(() =>
   import('./views/stubs').then((m) => ({ default: m.RevenuePage })),
 );
