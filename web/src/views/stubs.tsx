@@ -73,8 +73,8 @@ export function SettingsPage() {
 
       {/* API Token section — double-bezel card */}
       <div className="mt-8 max-w-md">
-        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+        <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
             <h2 className="text-sm font-medium text-[var(--mc-ink)]">Access Token</h2>
 
             {/* Status indicator */}

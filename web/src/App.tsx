@@ -77,7 +77,7 @@ function AuthGate({ children }: { children: React.ReactNode }) {
   return (
     <div className="flex min-h-screen items-center justify-center bg-[var(--mc-bg)] px-4">
       {/* Double-bezel card */}
-      <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-1.5">
+      <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-1.5">
         <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-6">
           <h1 className="font-display text-xl font-bold text-[var(--mc-ink)]">
             Mission Control
@@ -105,7 +105,7 @@ function AuthGate({ children }: { children: React.ReactNode }) {
               style={{ transitionTimingFunction: 'cubic-bezier(0.32, 0.72, 0, 1)' }}
             >
               {loading ? (
-                <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/30 border-t-white" />
+                <span className="inline-block h-4 w-4 animate-spin rounded-full border-2 border-white/50 border-t-transparent" />
               ) : (
                 'Connect'
               )}
@@ -146,8 +146,12 @@ function ViewRouter() {
 // ── App ──
 
 export default function App() {
+  const isAuthenticated = useAuthStore((s) => s.isAuthenticated);
+
   useEffect(() => {
-    // Fetch initial data
+    if (!isAuthenticated) return;
+
+    // Fetch initial data after auth
     useDataStore.getState().fetchBrands();
     useDataStore.getState().fetchStats();
     useDataStore.getState().fetchJeffQueue();
@@ -169,7 +173,7 @@ export default function App() {
       unsub();
       clearInterval(interval);
     };
-  }, []);
+  }, [isAuthenticated]);
 
   return (
     <AuthGate>

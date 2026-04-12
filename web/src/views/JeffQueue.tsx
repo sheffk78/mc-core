@@ -25,7 +25,7 @@ function relativeTime(dateStr: string): string {
 
 function EmptyState({ message }: { message: string }) {
   return (
-    <div className="flex items-center gap-3 rounded-lg bg-white/[0.02] px-4 py-6">
+    <div className="flex items-center gap-3 rounded-lg bg-black/[0.03] px-4 py-6">
       <CheckCircle2 size={18} className="text-[var(--mc-green)]/40" />
       <span className="text-sm text-[var(--mc-ink-muted)]/60">{message}</span>
     </div>
@@ -154,7 +154,7 @@ function ReviewTaskItem({ task }: { task: Task }) {
             </div>
             <div className="mt-0.5 flex items-center gap-2">
               {task.category && (
-                <span className="rounded bg-white/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
+                <span className="rounded bg-black/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
                   {task.category}
                 </span>
               )}
@@ -182,7 +182,7 @@ function ReviewTaskItem({ task }: { task: Task }) {
 
 function CompletedTaskRow({ task }: { task: Task }) {
   return (
-    <div className="flex items-center gap-3 rounded-lg bg-white/[0.02] px-4 py-2.5 transition-colors duration-150 hover:bg-white/[0.04]">
+    <div className="flex items-center gap-3 rounded-lg bg-black/[0.03] px-4 py-2.5 transition-colors duration-150 hover:bg-black/[0.05]">
       <CheckCircle2 size={14} className="flex-shrink-0 text-[var(--mc-green)]/60" />
       <div className="flex-1 min-w-0">
         <span className="text-[13px] text-[var(--mc-ink)]/70 line-clamp-1">
@@ -308,8 +308,8 @@ export default function JeffQueueView() {
 
       <div className="mt-8 flex flex-col gap-8">
         {/* 🔴 NEEDS DECISION */}
-        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+        <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
             <SectionHeader
               icon={<AlertCircle size={14} className="text-[var(--mc-red)]" />}
               title="Needs Decision"
@@ -318,7 +318,7 @@ export default function JeffQueueView() {
             />
             <div className="mt-4 flex flex-col gap-2">
               {isLoading ? (
-                <div className="h-16 animate-pulse rounded-lg bg-white/5" />
+                <div className="h-16 animate-pulse rounded-lg bg-black/5" />
               ) : redApprovals.length === 0 ? (
                 <EmptyState message="Nothing needs your attention" />
               ) : (
@@ -335,8 +335,8 @@ export default function JeffQueueView() {
         </div>
 
         {/* 🟡 READY FOR REVIEW */}
-        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+        <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
             <SectionHeader
               icon={<Clock size={14} className="text-[var(--mc-yellow)]" />}
               title="Ready for Review"
@@ -345,7 +345,7 @@ export default function JeffQueueView() {
             />
             <div className="mt-4 flex flex-col gap-2">
               {isLoading ? (
-                <div className="h-16 animate-pulse rounded-lg bg-white/5" />
+                <div className="h-16 animate-pulse rounded-lg bg-black/5" />
               ) : yellowGreenApprovals.length === 0 && reviewTasks.length === 0 ? (
                 <EmptyState message="Nothing needs your attention" />
               ) : (
@@ -367,8 +367,8 @@ export default function JeffQueueView() {
         </div>
 
         {/* 🟢 RECENTLY COMPLETED */}
-        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+        <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
             <SectionHeader
               icon={<CheckCircle2 size={14} className="text-[var(--mc-green)]" />}
               title="Recently Completed"
@@ -377,7 +377,7 @@ export default function JeffQueueView() {
             />
             <div className="mt-4 flex flex-col gap-1">
               {isLoading ? (
-                <div className="h-12 animate-pulse rounded-lg bg-white/5" />
+                <div className="h-12 animate-pulse rounded-lg bg-black/5" />
               ) : completedTasks.length === 0 ? (
                 <EmptyState message="No completions in the last 24 hours" />
               ) : (

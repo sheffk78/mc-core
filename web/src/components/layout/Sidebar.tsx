@@ -65,7 +65,7 @@ export function Sidebar() {
           className={`mx-2 flex w-[calc(100%-16px)] items-center rounded-md px-3 py-1.5 text-left text-sm transition-colors duration-150 ${
             activeBrand === null
               ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
-              : 'text-[var(--mc-ink-muted)] hover:bg-white/5 hover:text-[var(--mc-ink)]'
+              : 'text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
           }`}
         >
           All Brands
@@ -79,7 +79,7 @@ export function Sidebar() {
             className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-3 py-1.5 text-left text-sm transition-colors duration-150 ${
               activeBrand === brand.slug
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
-                : 'text-[var(--mc-ink-muted)] hover:bg-white/5 hover:text-[var(--mc-ink)]'
+                : 'text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
             }`}
           >
             <span
@@ -88,7 +88,7 @@ export function Sidebar() {
             />
             <span className="flex-1 truncate">{brand.name}</span>
             {brand.task_count != null && brand.task_count > 0 && (
-              <span className="rounded-full bg-white/5 px-1.5 py-0.5 text-[10px] text-[var(--mc-ink-muted)]">
+              <span className="rounded-full bg-black/5 px-1.5 py-0.5 text-[10px] text-[var(--mc-ink-muted)]">
                 {brand.task_count}
               </span>
             )}
@@ -109,7 +109,7 @@ export function Sidebar() {
             className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-2 text-sm transition-colors duration-150 ${
               activeView === view
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
-                : 'text-[var(--mc-ink-muted)] hover:bg-white/5 hover:text-[var(--mc-ink)]'
+                : 'text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
             }`}
           >
             <Icon size={16} />
@@ -128,7 +128,7 @@ export function Sidebar() {
             className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-2 text-sm transition-colors duration-150 ${
               activeView === view
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
-                : 'text-[var(--mc-ink-muted)] hover:bg-white/5 hover:text-[var(--mc-ink)]'
+                : 'text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
             }`}
           >
             <Icon size={16} />

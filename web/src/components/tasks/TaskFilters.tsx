@@ -69,7 +69,7 @@ export function TaskFilters({ onChange }: TaskFiltersProps) {
             className={`px-3 py-1.5 text-xs transition-colors duration-150 ${
               filters.risk_tier === opt.value
                 ? 'bg-[var(--mc-accent)]/15 text-[var(--mc-accent)]'
-                : 'bg-transparent text-[var(--mc-ink-muted)] hover:bg-white/5 hover:text-[var(--mc-ink)]'
+                : 'bg-transparent text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
             }`}
           >
             {opt.label}
@@ -90,7 +90,7 @@ export function TaskFilters({ onChange }: TaskFiltersProps) {
             className={`px-3 py-1.5 text-xs transition-colors duration-150 ${
               filters.assignee === opt.value
                 ? 'bg-[var(--mc-accent)]/15 text-[var(--mc-accent)]'
-                : 'bg-transparent text-[var(--mc-ink-muted)] hover:bg-white/5 hover:text-[var(--mc-ink)]'
+                : 'bg-transparent text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
             }`}
           >
             {opt.label}

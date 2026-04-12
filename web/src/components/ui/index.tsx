@@ -15,7 +15,7 @@ export function Badge({ variant = 'default', className, children }: BadgeProps) 
       className={clsx(
         'inline-flex items-center rounded-full px-2 py-0.5 text-[11px]',
         variant === 'default'
-          ? 'border border-[var(--mc-border)] bg-white/5 text-[var(--mc-ink-muted)]'
+          ? 'border border-[var(--mc-border)] bg-black/5 text-[var(--mc-ink-muted)]'
           : 'border border-[var(--mc-border)] bg-transparent text-[var(--mc-ink-muted)]',
         className,
       )}
@@ -32,7 +32,7 @@ interface SkeletonProps {
 }
 
 export function Skeleton({ className }: SkeletonProps) {
-  return <div className={clsx('animate-pulse rounded-md bg-white/5', className)} />;
+  return <div className={clsx('animate-pulse rounded-md bg-black/5', className)} />;
 }
 
 // ── Button ──
@@ -56,7 +56,7 @@ export function Button({
         size === 'md' ? 'px-4 py-2 text-sm' : 'px-3 py-1.5 text-xs',
         variant === 'default' && 'bg-[var(--mc-accent)] text-white hover:opacity-90',
         variant === 'ghost' &&
-          'bg-transparent text-[var(--mc-ink-muted)] hover:bg-white/5 hover:text-[var(--mc-ink)]',
+          'bg-transparent text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]',
         variant === 'destructive' &&
           'bg-[var(--mc-red)]/20 text-[var(--mc-red)] hover:bg-[var(--mc-red)]/30',
         className,

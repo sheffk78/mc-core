@@ -172,7 +172,7 @@ function ActivityRow({ activity }: { activity: Activity }) {
 
         {/* Brand tag */}
         {activity.brand_slug && (
-          <span className="mt-1 inline-block rounded bg-white/5 px-1.5 py-0.5 text-[10px] text-[var(--mc-ink-muted)]">
+          <span className="mt-1 inline-block rounded bg-black/5 px-1.5 py-0.5 text-[10px] text-[var(--mc-ink-muted)]">
             {activity.brand_slug}
           </span>
         )}
@@ -365,11 +365,11 @@ export default function ActivityStreamView() {
           <div className="flex flex-col gap-3">
             {[...Array(5)].map((_, i) => (
               <div key={i} className="flex items-start gap-3 px-3 py-2.5">
-                <div className="h-3 w-12 animate-pulse rounded bg-white/5" />
-                <div className="h-5 w-14 animate-pulse rounded-full bg-white/5" />
+                <div className="h-3 w-12 animate-pulse rounded bg-black/5" />
+                <div className="h-5 w-14 animate-pulse rounded-full bg-black/5" />
                 <div className="flex-1">
-                  <div className="h-3.5 w-3/4 animate-pulse rounded bg-white/5" />
-                  <div className="mt-1.5 h-3 w-1/3 animate-pulse rounded bg-white/5" />
+                  <div className="h-3.5 w-3/4 animate-pulse rounded bg-black/5" />
+                  <div className="mt-1.5 h-3 w-1/3 animate-pulse rounded bg-black/5" />
                 </div>
               </div>
             ))}

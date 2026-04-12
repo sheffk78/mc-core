@@ -117,7 +117,7 @@ function QueueItemRow({ item }: { item: QueueItem }) {
   return (
     <button
       onClick={() => setActiveView(item.approval_id ? 'approvals' : 'tasks')}
-      className="flex w-full items-center gap-2.5 rounded-md bg-white/[0.02] px-3 py-2 text-left transition-colors duration-150 hover:bg-white/[0.06]"
+      className="flex w-full items-center gap-2.5 rounded-md bg-black/[0.03] px-3 py-2 text-left transition-colors duration-150 hover:bg-white/[0.06]"
     >
       <span
         className="h-1.5 w-1.5 flex-shrink-0 rounded-full"
@@ -152,7 +152,7 @@ function ActivityRowCompact({ activity }: { activity: Activity }) {
   return (
     <button
       onClick={() => setActiveView('activity-stream')}
-      className="flex w-full items-start gap-2 rounded-md bg-white/[0.02] px-3 py-2 text-left transition-colors duration-150 hover:bg-white/[0.06]"
+      className="flex w-full items-start gap-2 rounded-md bg-black/[0.03] px-3 py-2 text-left transition-colors duration-150 hover:bg-white/[0.06]"
     >
       <span className="mt-0.5 w-12 flex-shrink-0 text-right text-[11px] text-[var(--mc-ink-muted)]">
         {relativeTime(activity.created_at)}
@@ -182,7 +182,7 @@ function DailyStatsCompact({ activities }: { activities: Activity[] }) {
   const totalCost = todayActivities.reduce((s, a) => s + (a.cost_usd ?? 0), 0);
 
   return (
-    <div className="flex items-center gap-4 rounded-lg bg-white/[0.02] px-3 py-2 text-[11px]">
+    <div className="flex items-center gap-4 rounded-lg bg-black/[0.03] px-3 py-2 text-[11px]">
       <div className="flex items-center gap-1">
         <Zap size={11} className="text-[var(--mc-accent)]" />
         <span className="text-[var(--mc-ink-muted)]">{totalActions} actions</span>
@@ -205,7 +205,7 @@ function DailyStatsCompact({ activities }: { activities: Activity[] }) {
 
 function EmptyState({ message }: { message: string }) {
   return (
-    <div className="flex items-center gap-2 rounded-lg bg-white/[0.02] px-4 py-4">
+    <div className="flex items-center gap-2 rounded-lg bg-black/[0.03] px-4 py-4">
       <CheckCircle2 size={16} className="text-[var(--mc-green)]/40" />
       <span className="text-[12px] text-[var(--mc-ink-muted)]/60">{message}</span>
     </div>
@@ -258,8 +258,8 @@ export default function DashboardOverview() {
       {/* Split layout */}
       <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-5">
         {/* LEFT — Jeff's Queue (60% = 3/5) */}
-        <div className="lg:col-span-3 rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+        <div className="lg:col-span-3 rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
             <PanelHeader
               title="Jeff's Queue"
               subtitle="Items needing your input"
@@ -277,7 +277,7 @@ export default function DashboardOverview() {
                 [...Array(4)].map((_, i) => (
                   <div
                     key={i}
-                    className="h-9 animate-pulse rounded-md bg-white/5"
+                    className="h-9 animate-pulse rounded-md bg-black/5"
                   />
                 ))
               ) : queueItems.length === 0 ? (
@@ -292,8 +292,8 @@ export default function DashboardOverview() {
         </div>
 
         {/* RIGHT — Kit's Stream (40% = 2/5) */}
-        <div className="lg:col-span-2 rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+        <div className="lg:col-span-2 rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
             <PanelHeader
               title="Kit's Stream"
               subtitle="Recent agent activity"
@@ -311,7 +311,7 @@ export default function DashboardOverview() {
                 [...Array(5)].map((_, i) => (
                   <div
                     key={i}
-                    className="h-8 animate-pulse rounded-md bg-white/5"
+                    className="h-8 animate-pulse rounded-md bg-black/5"
                   />
                 ))
               ) : recentActivities.length === 0 ? (
