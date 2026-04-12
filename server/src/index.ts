@@ -196,6 +196,7 @@ import { approvalsRouter } from "../routes/approvals";
 import { activitiesRouter } from "../routes/activities";
 import { costsRouter } from "../routes/costs";
 import { statsRouter } from "../routes/stats";
+import { filesRouter } from "../routes/files";
 import { revenueRouter } from "../routes/revenue";
 import { wsHandlers } from "../ws";
 
@@ -238,6 +239,7 @@ app.route("/api/v1/approvals", approvalsRouter);
 app.route("/api/v1/activities", activitiesRouter);
 app.route("/api/v1/costs", costsRouter);
 app.route("/api/v1/stats", statsRouter);
+app.route("/api/v1/files", filesRouter);
 app.route("/api/v1/revenue", revenueRouter);
 
 // ---------------------------------------------------------------------------

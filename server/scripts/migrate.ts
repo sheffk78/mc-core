@@ -75,6 +75,21 @@ CREATE TABLE task_files (
 CREATE INDEX idx_task_files_task ON task_files(task_id);
 CREATE INDEX idx_task_files_path ON task_files(file_path);
 
+CREATE TABLE files (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  path TEXT NOT NULL UNIQUE,
+  name TEXT NOT NULL,
+  label TEXT DEFAULT '',
+  category TEXT NOT NULL DEFAULT 'other' CHECK(category IN ('skill','brand_doc','daily_note','config','output','other')),
+  brand_id TEXT REFERENCES brands(id),
+  preview TEXT DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE UNIQUE INDEX idx_files_path ON files(path);
+CREATE INDEX idx_files_category ON files(category);
+CREATE INDEX idx_files_brand ON files(brand_id);
+
 CREATE TABLE approvals (
   id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
   brand_id TEXT NOT NULL REFERENCES brands(id),

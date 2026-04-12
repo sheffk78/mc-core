@@ -102,7 +102,40 @@ export const tasks = sqliteTable(
 );
 
 // ---------------------------------------------------------------------------
-// 3. task_files
+// 3. files (file registry)
+// ---------------------------------------------------------------------------
+export const files = sqliteTable(
+  "files",
+  {
+    id: text("id")
+      .primaryKey()
+      .default(sql`lower(hex(randomblob(8)))`),
+    path: text("path").notNull().unique(),
+    name: text("name").notNull(),
+    label: text("label").default(""),
+    category: text("category", {
+      enum: ["skill", "brand_doc", "daily_note", "config", "output", "other"],
+    })
+      .notNull()
+      .default("other"),
+    brand_id: text("brand_id").references(() => brands.id),
+    preview: text("preview").default(""),
+    created_at: text("created_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+    updated_at: text("updated_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+  },
+  (t) => [
+    uniqueIndex("idx_files_path").on(t.path),
+    index("idx_files_category").on(t.category),
+    index("idx_files_brand").on(t.brand_id),
+  ]
+);
+
+// ---------------------------------------------------------------------------
+// 3b. task_files
 // ---------------------------------------------------------------------------
 export const taskFiles = sqliteTable(
   "task_files",
@@ -398,6 +431,9 @@ export type InsertTask = InferInsertModel<typeof tasks>;
 
 export type TaskFile = InferSelectModel<typeof taskFiles>;
 export type InsertTaskFile = InferInsertModel<typeof taskFiles>;
+
+export type File = InferSelectModel<typeof files>;
+export type InsertFile = InferInsertModel<typeof files>;
 
 export type Approval = InferSelectModel<typeof approvals>;
 export type InsertApproval = InferInsertModel<typeof approvals>;
