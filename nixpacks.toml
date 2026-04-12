@@ -1,0 +1,13 @@
+[phases.setup]
+nixPkgs = ["bun"]
+
+[phases.install]
+dependsOn = ["setup"]
+cmd = "bun install --frozen-lockfile"
+
+[phases.build]
+dependsOn = ["install"]
+cmd = "bun run build"
+
+[start]
+cmd = "bun run server/dist/index.js"
