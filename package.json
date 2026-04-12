@@ -1,0 +1,17 @@
+{
+  "name": "mission-control-v2",
+  "private": true,
+  "workspaces": ["server", "web"],
+  "scripts": {
+    "dev": "bun run --filter '*' dev",
+    "build": "bun run --filter web build && bun run --filter server build",
+    "migrate": "bun run server/scripts/migrate.ts",
+    "seed": "bun run server/scripts/seed.ts"
+  },
+  "engines": {
+    "bun": ">=1.3.0"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.7.6"
+  }
+}

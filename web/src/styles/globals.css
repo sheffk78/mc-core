@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "geist/font/sans.css";
+
+:root {
+  --mc-ink: oklch(0.96 0.005 60);
+  --mc-ink-muted: oklch(0.55 0.008 60);
+  --mc-bg: oklch(0.07 0.008 60);
+  --mc-surface: oklch(0.11 0.008 60);
+  --mc-border: oklch(0.18 0.005 60);
+  --mc-accent: oklch(0.65 0.18 42);
+  --mc-red: oklch(0.58 0.20 22);
+  --mc-yellow: oklch(0.75 0.15 75);
+  --mc-green: oklch(0.65 0.14 145);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  background: var(--mc-bg);
+  color: var(--mc-ink);
+  font-family: 'Geist', system-ui, -apple-system, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Thin scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--mc-border);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--mc-ink-muted);
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--mc-ink);
+}
+
+/* Selection */
+::selection {
+  background: color-mix(in oklch, var(--mc-accent) 40%, transparent);
+}
+
+/* Display font utility */
+.font-display {
+  font-family: 'Playfair Display', Georgia, serif;
+}
