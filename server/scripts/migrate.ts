@@ -207,6 +207,7 @@ const BRANDS = [
   { name: "WingPoint", slug: "wingpoint", color: "#6b7c4a", sort_order: 2 },
   { name: "AgenticTrust", slug: "agentictrust", color: "#3d5a7a", sort_order: 3 },
   { name: "True Joy Birthing", slug: "truejoybirthing", color: "#a0522d", sort_order: 4 },
+  { name: "General", slug: "general", color: "#888888", sort_order: 0 },
 ];
 
 const insert = db.prepare(

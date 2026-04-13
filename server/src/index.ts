@@ -173,6 +173,18 @@ CREATE TABLE webauthn_credentials (
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
   last_used_at TEXT
 );
+
+CREATE TABLE files (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  path TEXT NOT NULL UNIQUE,
+  name TEXT NOT NULL,
+  label TEXT DEFAULT '',
+  category TEXT NOT NULL DEFAULT 'other' CHECK(category IN ('skill','brand_doc','daily_note','config','output','other')),
+  brand_id TEXT REFERENCES brands(id),
+  preview TEXT DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT (datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
 `);
 
   // Seed brands
@@ -182,11 +194,12 @@ CREATE TABLE webauthn_credentials (
     ["WingPoint", "wingpoint", "#6b7c4a", 2],
     ["AgenticTrust", "agentictrust", "#3d5a7a", 3],
     ["True Joy Birthing", "truejoybirthing", "#a0522d", 4],
+    ["General", "general", "#888888", 0],
   ];
   for (const b of brands) insert.run(...b);
 
   db.close();
-  console.log("✅ Auto-migration complete — 10 tables, 4 brands seeded");
+  console.log("✅ Auto-migration complete — 11 tables, 5 brands seeded");
 }
 
 autoMigrate();
