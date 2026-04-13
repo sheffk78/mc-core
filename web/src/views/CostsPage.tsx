@@ -26,7 +26,7 @@ export default function CostsPage() {
       .finally(() => setLoading(false));
   }, []);
 
-  const budgetPct = todayCosts?.budget_pct_used ?? stats?.today_budget_pct_used ?? 0;
+  const budgetPct = (todayCosts?.budget_pct_used ?? stats?.today_budget_pct_used ?? 0) / 100;
   const spent = todayCosts?.total_cost ?? stats?.today_cost_usd ?? 0;
   const budget = todayCosts?.budget_limit ?? stats?.today_budget_limit ?? 2.00;
 
