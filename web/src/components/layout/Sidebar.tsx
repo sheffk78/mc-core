@@ -40,8 +40,8 @@ export function Sidebar() {
     <aside
       className="hidden md:flex fixed left-0 top-0 h-screen w-[220px] flex-col border-r border-[var(--mc-border)] bg-[var(--mc-surface)]"
     >
-      {/* Wordmark */}
-      <div className="px-4 py-4">
+      {/* Wordmark — fixed */}
+      <div className="flex-shrink-0 px-4 py-4">
         <div className="font-display text-[17px] font-bold text-[var(--mc-ink)]">
           Mission{' '}
           <span className="italic" style={{ color: 'var(--mc-accent)' }}>
@@ -53,8 +53,8 @@ export function Sidebar() {
         </div>
       </div>
 
-      {/* Brands */}
-      <div className="flex-1 overflow-y-auto">
+      {/* Brands — scrollable middle */}
+      <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
         <div className="px-4 py-2 text-[10px] uppercase tracking-[0.15em] text-[var(--mc-ink-muted)]">
           Brands
         </div>
@@ -96,17 +96,16 @@ export function Sidebar() {
         ))}
       </div>
 
-      {/* Nav */}
-      <nav className="pb-4">
-        {/* Command Center section */}
-        <div className="px-4 pt-3 pb-1 text-[10px] uppercase tracking-[0.15em] text-[var(--mc-ink-muted)]">
+      {/* Nav — fixed at bottom */}
+      <nav className="flex-shrink-0 border-t border-[var(--mc-border)] pb-3 pt-2">
+        <div className="px-4 pb-1 text-[10px] uppercase tracking-[0.15em] text-[var(--mc-ink-muted)]">
           Command Center
         </div>
         {COMMAND_CENTER_ITEMS.map(({ label, icon: Icon, view }) => (
           <button
             key={view}
             onClick={() => nav(view)}
-            className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-2 text-sm transition-colors duration-150 ${
+            className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-1.5 text-sm transition-colors duration-150 ${
               activeView === view
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
                 : 'text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
@@ -117,15 +116,13 @@ export function Sidebar() {
           </button>
         ))}
 
-        {/* Divider */}
-        <div className="mx-4 my-2 border-t border-[var(--mc-border)]" />
+        <div className="mx-4 my-1.5 border-t border-[var(--mc-border)]" />
 
-        {/* Rest of nav */}
         {NAV_ITEMS.map(({ label, icon: Icon, view }) => (
           <button
             key={view}
             onClick={() => nav(view)}
-            className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-2 text-sm transition-colors duration-150 ${
+            className={`mx-2 flex w-[calc(100%-16px)] items-center gap-2 rounded-md px-4 py-1.5 text-sm transition-colors duration-150 ${
               activeView === view
                 ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-accent)]'
                 : 'text-[var(--mc-ink-muted)] hover:bg-black/5 hover:text-[var(--mc-ink)]'
