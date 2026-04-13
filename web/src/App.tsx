@@ -18,9 +18,7 @@ const CostsPage = lazy(() => import('./views/CostsPage'));
 const RevenuePage = lazy(() =>
   import('./views/stubs').then((m) => ({ default: m.RevenuePage })),
 );
-const SettingsPage = lazy(() =>
-  import('./views/stubs').then((m) => ({ default: m.SettingsPage })),
-);
+const SettingsPage = lazy(() => import('./views/SettingsPage'));
 
 // ── Loading pane ──
 

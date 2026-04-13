@@ -221,9 +221,17 @@ app.use("*", logger());
 // Health endpoint (no auth)
 // ---------------------------------------------------------------------------
 app.get("/health", (c) => {
+  const dbPath = process.env.DB_PATH ?? "./data/mc.db";
+  let dbSizeKb = 0;
+  try { dbSizeKb = Math.round(require("fs").statSync(dbPath).size / 1024); } catch {}
+  const tables = ["brands", "tasks", "approvals", "activities", "files", "daily_costs"];
+
   return c.json({
     status: "ok",
-    uptime: process.uptime(),
+    version: "2.0.0",
+    uptime_ms: Math.round(process.uptime() * 1000),
+    db_size_kb: dbSizeKb,
+    budget_limit: parseFloat(process.env.DAILY_BUDGET_USD ?? "2.00"),
     timestamp: new Date().toISOString(),
   });
 });
