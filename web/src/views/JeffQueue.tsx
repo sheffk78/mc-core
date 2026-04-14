@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState, useCallback } from 'react';
-import { Check, X, Clock, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Check, X, Clock, CheckCircle2, AlertCircle, ListTodo } from 'lucide-react';
 import { useDataStore } from '../stores/data';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../lib/api';
@@ -10,8 +10,7 @@ import type { Task, Approval } from '../lib/types';
 
 function relativeTime(dateStr: string): string {
   const now = Date.now();
-  const normalized = dateStr.includes("Z") || dateStr.includes("+") ? dateStr : dateStr + "Z";
-  const then = new Date(normalized).getTime();
+  const then = new Date(dateStr).getTime();
   const diff = now - then;
   const mins = Math.floor(diff / 60000);
   if (mins < 1) return 'just now';
@@ -26,7 +25,7 @@ function relativeTime(dateStr: string): string {
 
 function EmptyState({ message }: { message: string }) {
   return (
-    <div className="flex items-center gap-3 rounded-lg bg-black/[0.03] px-4 py-6">
+    <div className="flex items-center gap-3 rounded-lg bg-white/[0.02] px-4 py-6">
       <CheckCircle2 size={18} className="text-[var(--mc-green)]/40" />
       <span className="text-sm text-[var(--mc-ink-muted)]/60">{message}</span>
     </div>
@@ -155,7 +154,7 @@ function ReviewTaskItem({ task }: { task: Task }) {
             </div>
             <div className="mt-0.5 flex items-center gap-2">
               {task.category && (
-                <span className="rounded bg-black/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
+                <span className="rounded bg-white/5 px-1.5 py-0.5 text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
                   {task.category}
                 </span>
               )}
@@ -183,7 +182,7 @@ function ReviewTaskItem({ task }: { task: Task }) {
 
 function CompletedTaskRow({ task }: { task: Task }) {
   return (
-    <div className="flex items-center gap-3 rounded-lg bg-black/[0.03] px-4 py-2.5 transition-colors duration-150 hover:bg-black/[0.05]">
+    <div className="flex items-center gap-3 rounded-lg bg-white/[0.02] px-4 py-2.5 transition-colors duration-150 hover:bg-white/[0.04]">
       <CheckCircle2 size={14} className="flex-shrink-0 text-[var(--mc-green)]/60" />
       <div className="flex-1 min-w-0">
         <span className="text-[13px] text-[var(--mc-ink)]/70 line-clamp-1">
@@ -238,7 +237,7 @@ function SectionHeader({
 // ── Main JeffQueue View ──
 
 export default function JeffQueueView() {
-  const { tasks, approvals, loading, fetchTasks, fetchApprovals } = useDataStore();
+  const { tasks, jeffOpenTasks, approvals, loading, fetchTasks, fetchJeffOpenTasks, fetchApprovals } = useDataStore();
   const jeffQueue = useDataStore((s) => s.jeffQueue);
   const fetchJeffQueue = useDataStore((s) => s.fetchJeffQueue);
   const activeBrand = useDashboardStore((s) => s.activeBrand);
@@ -249,8 +248,9 @@ export default function JeffQueueView() {
     fetchJeffQueue();
     fetchApprovals({ status: 'pending', brand: activeBrand ?? undefined });
     fetchTasks({ status: 'pending_review', brand: activeBrand ?? undefined });
+    fetchJeffOpenTasks();
     fetchTasks({ status: 'completed', brand: activeBrand ?? undefined, limit: 20 });
-  }, [activeBrand, fetchJeffQueue, fetchApprovals, fetchTasks]);
+  }, [activeBrand, fetchJeffQueue, fetchApprovals, fetchTasks, fetchJeffOpenTasks]);
 
   // Re-fetch on approval action
   const handleApprovalAction = useCallback(
@@ -263,7 +263,7 @@ export default function JeffQueueView() {
   );
 
   // Split approvals by risk tier (excluding acted-on ones)
-  const { redApprovals, yellowGreenApprovals, reviewTasks, completedTasks } = useMemo(() => {
+  const { redApprovals, yellowGreenApprovals, reviewTasks, jeffOpenTaskItems, completedTasks } = useMemo(() => {
     const visibleApprovals = approvals.filter((a) => !removedApprovalIds.has(a.id));
 
     // Red tier = needs decision
@@ -276,6 +276,9 @@ export default function JeffQueueView() {
 
     // Tasks with pending_review status
     const reviewTasks = tasks.filter((t) => t.status === 'pending_review');
+
+    // Jeff's open tasks
+    const jeffOpenTaskItems = jeffOpenTasks;
 
     // Completed tasks in last 24h
     const twentyFourAgo = Date.now() - 24 * 60 * 60 * 1000;
@@ -290,8 +293,8 @@ export default function JeffQueueView() {
         (a, b) => new Date(b.completed_at!).getTime() - new Date(a.completed_at!).getTime(),
       );
 
-    return { redApprovals, yellowGreenApprovals, reviewTasks, completedTasks };
-  }, [approvals, tasks, removedApprovalIds]);
+    return { redApprovals, yellowGreenApprovals, reviewTasks, jeffOpenTaskItems, completedTasks };
+  }, [approvals, tasks, jeffOpenTasks, removedApprovalIds]);
 
   const isLoading = loading.jeffQueue || loading.approvals || loading.tasks;
 
@@ -309,8 +312,8 @@ export default function JeffQueueView() {
 
       <div className="mt-8 flex flex-col gap-8">
         {/* 🔴 NEEDS DECISION */}
-        <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
+        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
             <SectionHeader
               icon={<AlertCircle size={14} className="text-[var(--mc-red)]" />}
               title="Needs Decision"
@@ -319,7 +322,7 @@ export default function JeffQueueView() {
             />
             <div className="mt-4 flex flex-col gap-2">
               {isLoading ? (
-                <div className="h-16 animate-pulse rounded-lg bg-black/5" />
+                <div className="h-16 animate-pulse rounded-lg bg-white/5" />
               ) : redApprovals.length === 0 ? (
                 <EmptyState message="Nothing needs your attention" />
               ) : (
@@ -335,9 +338,32 @@ export default function JeffQueueView() {
           </div>
         </div>
 
+        {/* 📋 YOUR TASKS */}
+        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
+            <SectionHeader
+              icon={<ListTodo size={14} className="text-[var(--mc-blue)]" />}
+              title="Your Tasks"
+              count={jeffOpenTaskItems.length}
+              color="var(--mc-blue)"
+            />
+            <div className="mt-4 flex flex-col gap-2">
+              {loading.jeffOpenTasks ? (
+                <div className="h-16 animate-pulse rounded-lg bg-white/5" />
+              ) : jeffOpenTaskItems.length === 0 ? (
+                <EmptyState message="No open tasks assigned to you" />
+              ) : (
+                jeffOpenTaskItems.map((task) => (
+                  <ReviewTaskItem key={task.id} task={task} />
+                ))
+              )}
+            </div>
+          </div>
+        </div>
+
         {/* 🟡 READY FOR REVIEW */}
-        <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
+        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
             <SectionHeader
               icon={<Clock size={14} className="text-[var(--mc-yellow)]" />}
               title="Ready for Review"
@@ -346,7 +372,7 @@ export default function JeffQueueView() {
             />
             <div className="mt-4 flex flex-col gap-2">
               {isLoading ? (
-                <div className="h-16 animate-pulse rounded-lg bg-black/5" />
+                <div className="h-16 animate-pulse rounded-lg bg-white/5" />
               ) : yellowGreenApprovals.length === 0 && reviewTasks.length === 0 ? (
                 <EmptyState message="Nothing needs your attention" />
               ) : (
@@ -368,8 +394,8 @@ export default function JeffQueueView() {
         </div>
 
         {/* 🟢 RECENTLY COMPLETED */}
-        <div className="rounded-[1rem] border border-black/[0.08] bg-black/5 p-[6px]">
-          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-sm">
+        <div className="rounded-[1rem] border border-white/[0.08] bg-white/5 p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-5 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
             <SectionHeader
               icon={<CheckCircle2 size={14} className="text-[var(--mc-green)]" />}
               title="Recently Completed"
@@ -378,7 +404,7 @@ export default function JeffQueueView() {
             />
             <div className="mt-4 flex flex-col gap-1">
               {isLoading ? (
-                <div className="h-12 animate-pulse rounded-lg bg-black/5" />
+                <div className="h-12 animate-pulse rounded-lg bg-white/5" />
               ) : completedTasks.length === 0 ? (
                 <EmptyState message="No completions in the last 24 hours" />
               ) : (

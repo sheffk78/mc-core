@@ -18,16 +18,18 @@ interface DataState {
   brands: Brand[];
   tasks: Task[];
   tasksTotal: number;
+  jeffOpenTasks: Task[];
   approvals: Approval[];
   approvalsTotal: number;
   activities: Activity[];
   stats: StatsResponse | null;
   jeffQueue: JeffQueueResponse | null;
-  loading: Partial<Record<'brands' | 'tasks' | 'approvals' | 'activities' | 'stats' | 'jeffQueue', boolean>>;
+  loading: Partial<Record<'brands' | 'tasks' | 'jeffOpenTasks' | 'approvals' | 'activities' | 'stats' | 'jeffQueue', boolean>>;
   errors: Partial<Record<string, string>>;
 
   fetchBrands: () => Promise<void>;
   fetchTasks: (filters?: TaskFilters) => Promise<void>;
+  fetchJeffOpenTasks: () => Promise<void>;
   fetchApprovals: (filters?: ApprovalFilters) => Promise<void>;
   fetchActivities: (filters?: ActivityFilters) => Promise<void>;
   fetchStats: () => Promise<void>;
@@ -39,6 +41,7 @@ export const useDataStore = create<DataState>()((set, get) => ({
   brands: [],
   tasks: [],
   tasksTotal: 0,
+  jeffOpenTasks: [],
   approvals: [],
   approvalsTotal: 0,
   activities: [],
@@ -73,6 +76,22 @@ export const useDataStore = create<DataState>()((set, get) => ({
       set((s) => ({
         loading: { ...s.loading, tasks: false },
         errors: { ...s.errors, tasks: (err as Error).message },
+      }));
+    }
+  },
+
+  fetchJeffOpenTasks: async () => {
+    set((s) => ({ loading: { ...s.loading, jeffOpenTasks: true }, errors: { ...s.errors, jeffOpenTasks: undefined } }));
+    try {
+      const data = await api.get<PaginatedResponse<Task>>('/tasks', { status: 'open', assignee: 'jeff' });
+      set((s) => ({
+        jeffOpenTasks: data.items,
+        loading: { ...s.loading, jeffOpenTasks: false },
+      }));
+    } catch (err) {
+      set((s) => ({
+        loading: { ...s.loading, jeffOpenTasks: false },
+        errors: { ...s.errors, jeffOpenTasks: (err as Error).message },
       }));
     }
   },
@@ -140,15 +159,31 @@ export const useDataStore = create<DataState>()((set, get) => ({
     const state = get();
 
     switch (event.type) {
-      case 'task.created':
-        set({ tasks: [event.data as Task, ...state.tasks] });
+      case 'task.created': {
+        const newTask = event.data as Task;
+        set({ tasks: [newTask, ...state.tasks] });
+        if (newTask.status === 'open' && newTask.assignee === 'jeff') {
+          set({ jeffOpenTasks: [newTask, ...state.jeffOpenTasks] });
+        }
         break;
+      }
 
       case 'task.updated': {
         const updated = event.data as Task;
         set({
           tasks: state.tasks.map((t) => (t.id === updated.id ? updated : t)),
         });
+        // Sync jeffOpenTasks
+        if (updated.status === 'open' && updated.assignee === 'jeff') {
+          const exists = state.jeffOpenTasks.some((t) => t.id === updated.id);
+          set({
+            jeffOpenTasks: exists
+              ? state.jeffOpenTasks.map((t) => (t.id === updated.id ? updated : t))
+              : [updated, ...state.jeffOpenTasks],
+          });
+        } else {
+          set({ jeffOpenTasks: state.jeffOpenTasks.filter((t) => t.id !== updated.id) });
+        }
         break;
       }
 
@@ -159,6 +194,10 @@ export const useDataStore = create<DataState>()((set, get) => ({
             t.id === id ? { ...t, status: new_status as Task['status'] } : t,
           ),
         });
+        // Remove from jeffOpenTasks if no longer open
+        if (new_status !== 'open') {
+          set({ jeffOpenTasks: state.jeffOpenTasks.filter((t) => t.id !== id) });
+        }
         break;
       }
 

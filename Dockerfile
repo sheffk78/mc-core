@@ -10,9 +10,6 @@ COPY package.json bun.lockb* ./
 COPY server/package.json server/
 COPY web/package.json web/
 
-# Copy tsconfig files
-COPY tsconfig.base.json ./
-
 # Install all dependencies (workspaces)
 RUN bun install --frozen-lockfile || bun install
 
@@ -48,12 +45,13 @@ COPY --from=builder /app/server/dist server/dist
 # Copy built web frontend from builder
 COPY --from=builder /app/web/dist web/dist
 
-# Copy migration/seed scripts
-COPY --from=builder /app/server/scripts server/scripts
+# Copy any static assets or migration files if present
+COPY --from=builder /app/server/scripts server/scripts 2>/dev/null || true
 
 ENV NODE_ENV=production
 ENV PORT=3000
 
 EXPOSE 3000
 
-CMD ["bun", "server/dist/index.js"]
+# Initialize DB (creates tables if missing, safe for volumes) then start server
+CMD ["sh", "-c", "bun server/scripts/init-db.ts && bun server/dist/index.js"]

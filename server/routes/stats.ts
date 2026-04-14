@@ -133,6 +133,23 @@ statsRouter.get("/jeff-queue", authMiddleware, async (c) => {
     .leftJoin(brands, eq(tasks.brand_id, brands.id))
     .where(eq(tasks.status, "pending_review"));
 
+  // Get Jeff's open tasks (status=open, assignee=jeff)
+  const jeffOpenTasks = await db
+    .select({
+      id: tasks.id,
+      risk_tier: tasks.risk_tier,
+      title: tasks.title,
+      created_at: tasks.created_at,
+      category: tasks.category,
+      assignee: tasks.assignee,
+      agent_note: tasks.agent_note,
+      brand_slug: brands.slug,
+      brand_color: brands.color,
+    })
+    .from(tasks)
+    .leftJoin(brands, eq(tasks.brand_id, brands.id))
+    .where(and(eq(tasks.status, "open"), eq(tasks.assignee, "jeff")));
+
   // Map to QueueItem shape
   const approvalItems = pendingApprovals.map((a) => ({
     id: a.id,
@@ -160,8 +177,21 @@ statsRouter.get("/jeff-queue", authMiddleware, async (c) => {
     agent_note_preview: (t.agent_note ?? "").slice(0, 200),
   }));
 
+  const jeffOpenItems = jeffOpenTasks.map((t) => ({
+    id: t.id,
+    type: "task" as const,
+    risk_tier: t.risk_tier,
+    title: t.title,
+    brand_slug: t.brand_slug,
+    brand_color: t.brand_color,
+    created_at: t.created_at,
+    category: t.category ?? undefined,
+    assignee: t.assignee,
+    agent_note_preview: (t.agent_note ?? "").slice(0, 200),
+  }));
+
   // Combine and sort: risk_tier (red > yellow > green), then created_at ASC
-  const allItems = [...approvalItems, ...taskItems].sort((a, b) => {
+  const allItems = [...approvalItems, ...taskItems, ...jeffOpenItems].sort((a, b) => {
     const tierOrder: Record<string, number> = { red: 0, yellow: 1, green: 2 };
     const tierDiff =
       (tierOrder[a.risk_tier] ?? 3) - (tierOrder[b.risk_tier] ?? 3);
