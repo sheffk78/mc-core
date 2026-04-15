@@ -17,6 +17,7 @@ RUN bun install --frozen-lockfile || bun install
 COPY server/ server/
 COPY web/ web/
 COPY drizzle.config.ts* ./
+COPY tsconfig.base.json* ./
 
 # Build web frontend (Vite)
 RUN cd web && bun run build
