@@ -13,7 +13,6 @@ const ActivityStreamView = lazy(() => import('./views/ActivityStream'));
 const TasksPage = lazy(() => import('./views/TasksPage'));
 const BriefsPage = lazy(() => import('./views/BriefsPage'));
 
-const BriefsPage = lazy(() => import('./views/BriefsPage'));
 
 const FilesPage = lazy(() => import('./views/FilesPage'));
 const CostsPage = lazy(() => import('./views/CostsPage'));
