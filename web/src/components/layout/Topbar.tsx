@@ -5,8 +5,10 @@ import { useDataStore } from '../../stores/data';
 
 const VIEW_LABELS: Record<string, string> = {
   'command-center': 'Command Center',
+  'jeff-queue': "Jeff's Queue",
+  'activity-stream': "Kit's Stream",
   tasks: 'Tasks',
-  approvals: 'Approvals',
+  briefs: 'Briefs',
   files: 'Files',
   costs: 'Costs',
   revenue: 'Revenue',

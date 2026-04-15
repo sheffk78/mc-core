@@ -1,15 +1,8 @@
-import React, { useEffect, useState, useMemo } from 'react';
+import React, { useMemo } from 'react';
 import { FileText } from 'lucide-react';
 import { useDataStore } from '../stores/data';
 import { useDashboardStore } from '../stores/dashboard';
 import type { Task } from '../lib/types';
-
-const BRAND_TABS = [
-  { slug: 'trustoffice', label: 'TrustOffice', color: '#c85a2a' },
-  { slug: 'wingpoint', label: 'WingPoint', color: '#6b7c4a' },
-  { slug: 'agentictrust', label: 'AgenticTrust', color: '#3d5a7a' },
-  { slug: 'truejoybirthing', label: 'True Joy Birthing', color: '#a0522d' },
-] as const;
 
 function relativeTime(dateStr: string): string {
   const now = Date.now();
@@ -30,10 +23,8 @@ function formatDate(dateStr: string): string {
 }
 
 function renderBrief(text: string): React.ReactNode {
-  // Simple markdown-like renderer: ## headings, **bold**, bullet lists, numbered lists, code
   const lines = text.split('\n');
   const elements: React.ReactNode[] = [];
-  let inList = false;
   let listItems: string[] = [];
 
   const flushList = () => {
@@ -42,57 +33,30 @@ function renderBrief(text: string): React.ReactNode {
         <ul key={`list-${elements.length}`} className="mt-1 space-y-0.5 text-[13px] text-[var(--mc-ink)]">
           {listItems.map((item, i) => (
             <li key={i} className="flex gap-2">
-              <span className="text-[var(--mc-accent)] mt-0.5">•</span>
+              <span className="mt-0.5 text-[var(--mc-accent)]">•</span>
               <span>{item.replace(/^\d+\.\s*/, '')}</span>
             </li>
           ))}
         </ul>
       );
       listItems = [];
-      inList = false;
     }
   };
 
   for (let i = 0; i < lines.length; i++) {
     const line = lines[i];
-
-    if (line.match(/^##\s/)) {
+    if (line.match(/^##\s/)) { flushList(); elements.push(<h3 key={`h-${i}`} className="mt-4 text-[15px] font-semibold text-[var(--mc-ink)]">{line.replace(/^##\s/, '')}</h3>); }
+    else if (line.match(/^#\s/)) { flushList(); elements.push(<h2 key={`h2-${i}`} className="mt-5 mb-1 text-[17px] font-bold text-[var(--mc-ink)]">{line.replace(/^#\s/, '')}</h2>); }
+    else if (line.match(/^[-*]\s/)) { listItems.push(line.replace(/^[-*]\s/, '')); }
+    else if (line.match(/^\d+\.\s/)) { listItems.push(line); }
+    else if (line.trim() === '---') { flushList(); elements.push(<hr key={`hr-${i}`} className="my-3 border-white/[0.08]" />); }
+    else if (line.trim() === '') { flushList(); }
+    else {
       flushList();
-      elements.push(
-        <h3 key={`h-${i}`} className="mt-4 text-[15px] font-semibold text-[var(--mc-ink)]">
-          {line.replace(/^##\s/, '')}
-        </h3>
-      );
-    } else if (line.match(/^#\s/)) {
-      flushList();
-      elements.push(
-        <h2 key={`h2-${i}`} className="mt-5 mb-1 text-[17px] font-bold text-[var(--mc-ink)]">
-          {line.replace(/^#\s/, '')}
-        </h2>
-      );
-    } else if (line.match(/^[-*]\s/)) {
-      inList = true;
-      listItems.push(line.replace(/^[-*]\s/, ''));
-    } else if (line.match(/^\d+\.\s/)) {
-      inList = true;
-      listItems.push(line);
-    } else if (line.trim() === '---') {
-      flushList();
-      elements.push(<hr key={`hr-${i}`} className="my-3 border-white/[0.08]" />);
-    } else if (line.trim() === '') {
-      flushList();
-    } else {
-      flushList();
-      // Handle **bold** inline
       const parts = line.split(/(\*\*[^*]+\*\*)/);
       elements.push(
         <p key={`p-${i}`} className="mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]">
-          {parts.map((part, j) => {
-            if (part.startsWith('**') && part.endsWith('**')) {
-              return <strong key={j} className="font-semibold">{part.slice(2, -2)}</strong>;
-            }
-            return part;
-          })}
+          {parts.map((part, j) => part.startsWith('**') && part.endsWith('**') ? <strong key={j} className="font-semibold">{part.slice(2, -2)}</strong> : part)}
         </p>
       );
     }
@@ -104,9 +68,8 @@ function renderBrief(text: string): React.ReactNode {
 export default function BriefsPage() {
   const tasks = useDataStore((s) => s.tasks);
   const activeBrand = useDashboardStore((s) => s.activeBrand);
-  const setActiveBrand = useDashboardStore((s) => s.setActiveBrand);
 
-  // Filter to briefing tasks only
+  // Use sidebar's active brand — no duplicate brand tabs in the view itself
   const briefings = useMemo(
     () => tasks.filter((t: Task) => t.category === 'briefing'),
     [tasks],
@@ -120,90 +83,67 @@ export default function BriefsPage() {
       if (!map[brand]) map[brand] = [];
       map[brand].push(t);
     }
-    // Sort newest first
     for (const brand in map) {
       map[brand].sort((a, b) => new Date(b.created_at).getTime() - new Date(a.created_at).getTime());
     }
     return map;
   }, [briefings]);
 
-  // Active brand tab — default to first
-  const [tab, setTab] = useState<string>(activeBrand ?? BRAND_TABS[0].slug);
-  useEffect(() => { if (!activeBrand) setTab(BRAND_TABS[0].slug); }, [activeBrand]);
-
-  const brandData = BRAND_TABS.find((b) => b.slug === tab);
-  const brandBriefs = byBrand[tab] ?? [];
+  // Show all brands if no active brand filter, otherwise filter to active brand
+  const brandGroups = activeBrand
+    ? Object.entries(byBrand).filter(([slug]) => slug === activeBrand)
+    : Object.entries(byBrand).sort((a, b) => a[0].localeCompare(b[0]));
 
   return (
     <div className="flex h-full">
-      {/* ── Left: brief list ─────────────────────────────── */}
-      <div className="w-64 flex-shrink-0 border-r border-white/[0.06] overflow-y-auto">
-        {/* Brand tabs */}
-        <div className="sticky top-0 z-10 border-b border-white/[0.06] bg-[var(--mc-bg)] px-3 py-2">
-          <div className="flex gap-1">
-            {BRAND_TABS.map((bt) => (
-              <button
-                key={bt.slug}
-                onClick={() => setTab(bt.slug)}
-                className={`rounded-md px-2 py-1 text-[11px] font-medium transition-colors ${
-                  tab === bt.slug
-                    ? 'text-white'
-                    : 'text-[var(--mc-ink-muted)] hover:text-[var(--mc-ink)]'
-                }`}
-                style={tab === bt.slug ? { backgroundColor: bt.color + '33' } : {}}
-              >
-                {bt.label}
-              </button>
-            ))}
-          </div>
+      {/* ── Brief list (left) ─────────────────────── */}
+      <div className="w-72 flex-shrink-0 border-r border-white/[0.06] overflow-y-auto">
+        <div className="sticky top-0 z-10 border-b border-white/[0.06] bg-[var(--mc-bg)] px-4 py-3">
+          <h2 className="text-[13px] font-semibold text-[var(--mc-ink)]">Morning Briefs</h2>
+          {activeBrand && <p className="mt-0.5 text-[11px] text-[var(--mc-ink-muted)]">Showing: {activeBrand}</p>}
         </div>
-
-        {/* Brief list for active brand */}
-        <div className="p-2 space-y-1">
-          {brandBriefs.length === 0 && (
-            <p className="p-3 text-[12px] text-[var(--mc-ink-muted)]">No briefs yet</p>
+        <div className="p-3 space-y-1">
+          {brandGroups.length === 0 && (
+            <p className="p-4 text-[12px] text-[var(--mc-ink-muted)]">No briefs found.</p>
           )}
-          {brandBriefs.map((b: Task) => (
-            <button
-              key={b.id}
-              className="w-full rounded-lg border border-transparent px-3 py-2 text-left text-[12px] transition-colors hover:bg-white/[0.04]"
-            >
-              <div className="font-medium text-[var(--mc-ink)]">{b.title}</div>
-              <div className="mt-0.5 text-[10px] text-[var(--mc-ink-muted)]">
-                {formatDate(b.created_at)} · {relativeTime(b.created_at)}
-              </div>
-            </button>
+          {brandGroups.map(([slug, briefs]) => (
+            <div key={slug}>
+              <div className="px-1 py-1.5 text-[10px] font-semibold uppercase tracking-wider text-[var(--mc-ink-muted)]">{slug}</div>
+              {briefs.map((b: Task) => (
+                <button
+                  key={b.id}
+                  onClick={() => {}}
+                  className="w-full rounded-lg border border-transparent px-3 py-2 text-left text-[12px] transition-colors hover:bg-white/[0.04]"
+                >
+                  <div className="font-medium text-[var(--mc-ink)] line-clamp-2">{b.title}</div>
+                  <div className="mt-0.5 text-[10px] text-[var(--mc-ink-muted)]">
+                    {formatDate(b.created_at)} · {relativeTime(b.created_at)}
+                  </div>
+                </button>
+              ))}
+            </div>
           ))}
         </div>
       </div>
 
-      {/* ── Right: brief reader ──────────────────────────── */}
+      {/* ── Brief reader (right) ──────────────────── */}
       <div className="flex-1 overflow-y-auto px-8 py-6">
-        {brandBriefs.length === 0 ? (
-          <div className="flex flex-col items-center justify-center h-full text-center">
-            <FileText size={40} className="text-[var(--mc-border)] mb-3" />
-            <p className="text-[14px] text-[var(--mc-ink-muted)]">
-              No briefs for <strong>{brandData?.label}</strong> yet.
-            </p>
-            <p className="mt-1 text-[12px] text-[var(--mc-ink-muted)]">
-              Briefs are generated automatically each weekday at 7 AM MT.
-            </p>
+        {briefings.length === 0 ? (
+          <div className="flex h-full flex-col items-center justify-center text-center">
+            <FileText size={40} className="mb-3 text-[var(--mc-border)]" />
+            <p className="text-[14px] text-[var(--mc-ink-muted)]">No briefs yet for this brand.</p>
+            <p className="mt-1 text-[12px] text-[var(--mc-ink-muted)]">Briefs are generated automatically each weekday at 7 AM MT.</p>
           </div>
         ) : (
-          <div className="max-w-2xl mx-auto">
-            {/* Latest brief header */}
-            <div className="mb-6 pb-4 border-b border-white/[0.06]">
-              <h1 className="text-[20px] font-bold text-[var(--mc-ink)]">
-                {brandBriefs[0]?.title}
-              </h1>
+          <div className="mx-auto max-w-2xl">
+            <div className="mb-6 border-b border-white/[0.06] pb-4">
+              <h1 className="text-[20px] font-bold text-[var(--mc-ink)]">{briefings[0].title}</h1>
               <p className="mt-1 text-[12px] text-[var(--mc-ink-muted)]">
-                {brandData?.label} · {formatDate(brandBriefs[0]?.created_at)}
+                {briefings[0].brand_slug} · {formatDate(briefings[0].created_at)}
               </p>
             </div>
-
-            {/* Brief content */}
             <div className="space-y-1">
-              {renderBrief(brandBriefs[0]?.description ?? 'No content available.')}
+              {renderBrief(briefings[0].description ?? 'No content available.')}
             </div>
           </div>
         )}
