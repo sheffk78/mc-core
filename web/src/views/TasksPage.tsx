@@ -3,6 +3,7 @@ import { useDashboardStore } from '../stores/dashboard';
 import { useDataStore } from '../stores/data';
 import { TaskCard, TaskCardSkeleton } from '../components/tasks/TaskCard';
 import { TaskFilters, type TaskFilterState } from '../components/tasks/TaskFilters';
+import { TaskDetailModal } from '../components/tasks/TaskDetailModal';
 import type { Task, TaskStatus, RiskTier, Assignee, Priority } from '../lib/types';
 
 // ── Sort + filter helpers ──
@@ -80,6 +81,7 @@ export default function TasksPage() {
     sort: 'newest',
     search: '',
   });
+  const [selectedTask, setSelectedTask] = useState<Task | null>(null);
 
   // Fetch tasks when brand or API-level filters change
   useEffect(() => {
@@ -136,9 +138,24 @@ export default function TasksPage() {
       ) : (
         <div className="mt-4 grid grid-cols-1 gap-3 md:grid-cols-2">
           {visibleTasks.map((task) => (
-            <TaskCard key={task.id} task={task} />
+            <TaskCard key={task.id} task={task} onClick={() => setSelectedTask(task)} />
           ))}
         </div>
+      )}
+
+      {/* Task Detail Modal */}
+      {selectedTask && (
+        <TaskDetailModal
+          task={selectedTask}
+          onClose={() => setSelectedTask(null)}
+          onUpdated={(updated) => {
+            setSelectedTask(updated);
+            fetchTasks({
+              brand: activeBrand ?? undefined,
+              ...apiFilters,
+            });
+          }}
+        />
       )}
     </div>
   );

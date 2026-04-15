@@ -4,6 +4,7 @@ import { useDataStore } from '../stores/data';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../lib/api';
 import { Badge, Button } from '../components/ui';
+import { TaskDetailModal } from '../components/tasks/TaskDetailModal';
 import type { Task, Approval } from '../lib/types';
 
 // ── Helpers ──
@@ -126,12 +127,12 @@ function ApprovalItem({
 
 // ── Queue Item Card (for tasks in review) ──
 
-function ReviewTaskItem({ task }: { task: Task }) {
+function ReviewTaskItem({ task, onClick }: { task: Task; onClick?: () => void }) {
   const navigate = useDashboardStore((s) => s.setActiveView);
 
   return (
     <div
-      onClick={() => navigate('tasks')}
+      onClick={onClick}
       className="cursor-pointer rounded-[0.75rem] border border-white/[0.06] bg-white/[0.03] p-[4px] transition-all duration-200 hover:border-white/[0.12]"
       style={{ transitionTimingFunction: 'cubic-bezier(0.32, 0.72, 0, 1)' }}
     >
@@ -242,6 +243,7 @@ export default function JeffQueueView() {
   const fetchJeffQueue = useDataStore((s) => s.fetchJeffQueue);
   const activeBrand = useDashboardStore((s) => s.activeBrand);
   const [removedApprovalIds, setRemovedApprovalIds] = useState<Set<string>>(new Set());
+  const [selectedTask, setSelectedTask] = useState<Task | null>(null);
 
   // Fetch all queue data
   useEffect(() => {
@@ -354,7 +356,7 @@ export default function JeffQueueView() {
                 <EmptyState message="No open tasks assigned to you" />
               ) : (
                 jeffOpenTaskItems.map((task) => (
-                  <ReviewTaskItem key={task.id} task={task} />
+                  <ReviewTaskItem key={task.id} task={task} onClick={() => setSelectedTask(task)} />
                 ))
               )}
             </div>
@@ -385,7 +387,7 @@ export default function JeffQueueView() {
                     />
                   ))}
                   {reviewTasks.map((task) => (
-                    <ReviewTaskItem key={task.id} task={task} />
+                    <ReviewTaskItem key={task.id} task={task} onClick={() => setSelectedTask(task)} />
                   ))}
                 </>
               )}
@@ -416,6 +418,19 @@ export default function JeffQueueView() {
           </div>
         </div>
       </div>
+
+      {/* Task Detail Modal */}
+      {selectedTask && (
+        <TaskDetailModal
+          task={selectedTask}
+          onClose={() => setSelectedTask(null)}
+          onUpdated={(updated) => {
+            setSelectedTask(updated);
+            fetchJeffQueue();
+            fetchJeffOpenTasks();
+          }}
+        />
+      )}
     </div>
   );
 }
