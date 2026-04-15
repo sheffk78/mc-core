@@ -47,6 +47,10 @@ function relativeTime(dateStr: string): string {
   return `${days}d ago`;
 }
 
+// ── Final statuses that auto-close the modal ──
+
+const FINAL_STATUSES: TaskStatus[] = ['completed', 'approved', 'archived'];
+
 // ── Modal ──
 
 interface TaskDetailModalProps {
@@ -65,20 +69,23 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
       setTransitioning(newStatus);
       setError(null);
       try {
-        await api.patch(`/tasks/${currentTask.id}`, { status: newStatus });
-        const updated = { ...currentTask, status: newStatus as TaskStatus };
-        if (newStatus === 'completed') {
-          updated.completed_at = new Date().toISOString();
-        }
+        // Use the dedicated status endpoint (validates transitions)
+        const updated = await api.patch<Task>(`/tasks/${currentTask.id}/status`, {
+          status: newStatus,
+        });
         setCurrentTask(updated);
         onUpdated?.(updated);
+        // Auto-close the modal on final statuses
+        if (FINAL_STATUSES.includes(newStatus as TaskStatus)) {
+          onClose();
+        }
       } catch (err) {
         setError(`Failed to update status: ${(err as Error).message}`);
       } finally {
         setTransitioning(null);
       }
     },
-    [currentTask, onUpdated],
+    [currentTask, onUpdated, onClose],
   );
 
   const allowedNext = ALLOWED_TRANSITIONS[currentTask.status] ?? [];
@@ -230,7 +237,7 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
                   <Button
                     key={status}
                     size="sm"
-                    variant={status === 'completed' ? 'default' : 'secondary'}
+                    variant={status === 'completed' || status === 'approved' ? 'default' : (status === 'rejected' ? 'destructive' : 'ghost')}
                     disabled={transitioning !== null}
                     onClick={() => handleStatusChange(status)}
                   >
