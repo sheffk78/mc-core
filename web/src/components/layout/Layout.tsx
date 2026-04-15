@@ -1,6 +1,7 @@
 import React from 'react';
 import { Sidebar } from './Sidebar';
 import { Topbar } from './Topbar';
+import { BudgetBar } from './BudgetBar';
 import { useDashboardStore } from '../../stores/dashboard';
 
 export function Layout({ children }: { children: React.ReactNode }) {
@@ -31,6 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       {/* Main column */}
       <div className="flex flex-1 flex-col overflow-hidden md:ml-[220px]">
         <Topbar />
+        <BudgetBar />
         <main className="flex-1 overflow-y-auto">{children}</main>
       </div>
     </div>
