@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
-import { eq, count, sql } from "drizzle-orm";
+import { eq, and, count, sql } from "drizzle-orm";
 import { db } from "../db";
 import { brands, tasks, approvals } from "../schema";
 import { authMiddleware } from "../middleware/auth";
@@ -23,14 +23,12 @@ brandsRouter.get("/", async (c) => {
       const [taskCount] = await db
         .select({ count: count() })
         .from(tasks)
-        .where(eq(tasks.brand_id, brand.id))
-        .where(sql`${tasks.status} != 'archived'`);
+        .where(and(eq(tasks.brand_id, brand.id), sql`${tasks.status} != 'archived'`));
 
       const [approvalCount] = await db
         .select({ count: count() })
         .from(approvals)
-        .where(eq(approvals.brand_id, brand.id))
-        .where(eq(approvals.status, "pending"));
+        .where(and(eq(approvals.brand_id, brand.id), eq(approvals.status, "pending")));
 
       return {
         ...brand,
@@ -61,14 +59,12 @@ brandsRouter.get("/:slug", async (c) => {
   const [taskCount] = await db
     .select({ count: count() })
     .from(tasks)
-    .where(eq(tasks.brand_id, brand.id))
-    .where(sql`${tasks.status} != 'archived'`);
+    .where(and(eq(tasks.brand_id, brand.id), sql`${tasks.status} != 'archived'`));
 
   const [approvalCount] = await db
     .select({ count: count() })
     .from(approvals)
-    .where(eq(approvals.brand_id, brand.id))
-    .where(eq(approvals.status, "pending"));
+    .where(and(eq(approvals.brand_id, brand.id), eq(approvals.status, "pending")));
 
   return c.json({
     ...brand,
