@@ -21,7 +21,7 @@ const COMMAND_CENTER_ITEMS = [
 
 const NAV_ITEMS = [
   { label: 'Tasks', icon: CheckSquare, view: 'tasks' as const },
-  { label: 'Approvals', icon: ThumbsUp, view: 'approvals' as const },
+  { label: 'Briefs', icon: ThumbsUp, view: 'briefs' as const },
   { label: 'Files', icon: FolderOpen, view: 'files' as const },
   { label: 'Costs', icon: DollarSign, view: 'costs' as const },
   { label: 'Revenue', icon: TrendingUp, view: 'revenue' as const },

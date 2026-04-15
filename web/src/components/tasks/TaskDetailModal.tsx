@@ -69,13 +69,11 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
       setTransitioning(newStatus);
       setError(null);
       try {
-        // Use the dedicated status endpoint (validates transitions)
         const updated = await api.patch<Task>(`/tasks/${currentTask.id}/status`, {
           status: newStatus,
         });
         setCurrentTask(updated);
         onUpdated?.(updated);
-        // Auto-close the modal on final statuses
         if (FINAL_STATUSES.includes(newStatus as TaskStatus)) {
           onClose();
         }
@@ -96,11 +94,11 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
       onClick={onClose}
     >
       <div
-        className="mx-4 w-full max-w-lg rounded-[1.25rem] border border-white/[0.08] bg-white/5 p-[6px] shadow-2xl"
+        className="mx-4 flex max-h-[85vh] w-full max-w-lg flex-col rounded-[1.25rem] border border-white/[0.08] bg-white/5 p-[6px] shadow-2xl"
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="rounded-[calc(1.25rem-6px)] bg-[var(--mc-surface)] p-6 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
-          {/* Header */}
+        {/* ── Header (sticky) ─────────────────────────── */}
+        <div className="flex-none rounded-t-[calc(1.25rem-6px)] bg-[var(--mc-surface)] px-6 pt-6 pb-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
           <div className="flex items-start justify-between gap-4">
             <div className="flex items-start gap-3">
               <span
@@ -126,58 +124,43 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
               <X size={18} />
             </button>
           </div>
+        </div>
 
+        {/* ── Scrollable body ─────────────────────────── */}
+        <div className="min-h-0 flex-1 overflow-y-auto bg-[var(--mc-surface)] px-6 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
           {/* Metadata grid */}
-          <div className="mt-5 grid grid-cols-2 gap-3">
-            {/* Assignee */}
+          <div className="grid grid-cols-2 gap-3">
             <div className="flex items-center gap-2 rounded-lg bg-white/[0.03] px-3 py-2">
               <User size={14} className="text-[var(--mc-ink-muted)]" />
               <div>
-                <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                  Assignee
-                </div>
-                <div className="text-[13px] capitalize text-[var(--mc-ink)]">
-                  {currentTask.assignee}
-                </div>
+                <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Assignee</div>
+                <div className="text-[13px] capitalize text-[var(--mc-ink)]">{currentTask.assignee}</div>
               </div>
             </div>
 
-            {/* Priority */}
             <div className="flex items-center gap-2 rounded-lg bg-white/[0.03] px-3 py-2">
               <AlertCircle size={14} className="text-[var(--mc-ink-muted)]" />
               <div>
-                <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                  Priority
-                </div>
-                <div className="text-[13px] capitalize text-[var(--mc-ink)]">
-                  {currentTask.priority}
-                </div>
+                <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Priority</div>
+                <div className="text-[13px] capitalize text-[var(--mc-ink)]">{currentTask.priority}</div>
               </div>
             </div>
 
-            {/* Category */}
             {currentTask.category && (
               <div className="flex items-center gap-2 rounded-lg bg-white/[0.03] px-3 py-2">
                 <Tag size={14} className="text-[var(--mc-ink-muted)]" />
                 <div>
-                  <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                    Category
-                  </div>
+                  <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Category</div>
                   <div className="text-[13px] text-[var(--mc-ink)]">{currentTask.category}</div>
                 </div>
               </div>
             )}
 
-            {/* Created */}
             <div className="flex items-center gap-2 rounded-lg bg-white/[0.03] px-3 py-2">
               <Calendar size={14} className="text-[var(--mc-ink-muted)]" />
               <div>
-                <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                  Created
-                </div>
-                <div className="text-[13px] text-[var(--mc-ink)]">
-                  {relativeTime(currentTask.created_at)}
-                </div>
+                <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Created</div>
+                <div className="text-[13px] text-[var(--mc-ink)]">{relativeTime(currentTask.created_at)}</div>
               </div>
             </div>
           </div>
@@ -185,12 +168,8 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
           {/* Description */}
           {currentTask.description && (
             <div className="mt-4">
-              <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                Description
-              </div>
-              <p className="mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]">
-                {currentTask.description}
-              </p>
+              <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Description</div>
+              <p className="mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]">{currentTask.description}</p>
             </div>
           )}
 
@@ -210,12 +189,8 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
           {/* User note */}
           {currentTask.user_note && (
             <div className="mt-4">
-              <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                Your Note
-              </div>
-              <p className="mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]">
-                {currentTask.user_note}
-              </p>
+              <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Your Note</div>
+              <p className="mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]">{currentTask.user_note}</p>
             </div>
           )}
 
@@ -226,12 +201,20 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
             </div>
           )}
 
-          {/* Actions — status transitions */}
+          {/* Completed at */}
+          {currentTask.completed_at && (
+            <div className="mt-3 flex items-center gap-1.5 text-[11px] text-[var(--mc-green)]">
+              <CheckCircle2 size={12} />
+              Completed {relativeTime(currentTask.completed_at)}
+            </div>
+          )}
+        </div>
+
+        {/* ── Actions (sticky bottom) ─────────────────── */}
+        <div className="flex-none rounded-b-[calc(1.25rem-6px)] border-t border-white/[0.06] bg-[var(--mc-surface)] px-6 py-4 shadow-[inset_0_1px_0_rgba(255,255,255,0.07)]">
           {allowedNext.length > 0 && (
-            <div className="mt-5 border-t border-white/[0.06] pt-4">
-              <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                Move to
-              </div>
+            <div>
+              <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Move to</div>
               <div className="mt-2 flex flex-wrap gap-2">
                 {allowedNext.map((status) => (
                   <Button
@@ -245,14 +228,6 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
                   </Button>
                 ))}
               </div>
-            </div>
-          )}
-
-          {/* Completed at */}
-          {currentTask.completed_at && (
-            <div className="mt-3 flex items-center gap-1.5 text-[11px] text-[var(--mc-green)]">
-              <CheckCircle2 size={12} />
-              Completed {relativeTime(currentTask.completed_at)}
             </div>
           )}
         </div>

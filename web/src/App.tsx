@@ -11,8 +11,10 @@ const DashboardOverview = lazy(() => import('./views/DashboardOverview'));
 const JeffQueueView = lazy(() => import('./views/JeffQueue'));
 const ActivityStreamView = lazy(() => import('./views/ActivityStream'));
 const TasksPage = lazy(() => import('./views/TasksPage'));
+const BriefsPage = lazy(() => import('./views/BriefsPage'));
 
-const ApprovalsPage = lazy(() => import('./views/ApprovalsPage'));
+const BriefsPage = lazy(() => import('./views/BriefsPage'));
+
 const FilesPage = lazy(() => import('./views/FilesPage'));
 const CostsPage = lazy(() => import('./views/CostsPage'));
 const RevenuePage = lazy(() =>
@@ -119,7 +121,7 @@ function ViewRouter() {
     'jeff-queue': JeffQueueView,
     'activity-stream': ActivityStreamView,
     tasks: TasksPage,
-    approvals: ApprovalsPage,
+    briefs: BriefsPage,
     files: FilesPage,
     costs: CostsPage,
     revenue: RevenuePage,
