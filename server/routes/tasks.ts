@@ -30,6 +30,7 @@ tasksRouter.get("/", async (c) => {
   const status = c.req.query("status");
   const assignee = c.req.query("assignee");
   const riskTier = c.req.query("risk_tier");
+  const category = c.req.query("category");
   const limit = Math.min(parseInt(c.req.query("limit") ?? "50", 10), 200);
   const offset = parseInt(c.req.query("offset") ?? "0", 10);
 
@@ -53,6 +54,7 @@ tasksRouter.get("/", async (c) => {
   if (status) conditions.push(eq(tasks.status, status as any));
   if (assignee) conditions.push(eq(tasks.assignee, assignee as any));
   if (riskTier) conditions.push(eq(tasks.risk_tier, riskTier as any));
+  if (category) conditions.push(eq(tasks.category, category as any));
 
   const whereClause = conditions.length > 0 ? and(...conditions) : undefined;
 
