@@ -1,8 +1,8 @@
 import React, { useEffect, useMemo, useState, useCallback } from 'react';
 import { FileText, Calendar, ChevronRight } from 'lucide-react';
-import { useDataStore } from '../stores/data';
 import { useDashboardStore } from '../stores/dashboard';
-import type { Task } from '../lib/types';
+import { api } from '../lib/api';
+import type { Task, PaginatedResponse } from '../lib/types';
 
 // ── Helpers ──
 
@@ -170,24 +170,36 @@ function BriefListItem({
 // ── Main page ──
 
 export default function BriefsPage() {
-  const { tasks, fetchTasks } = useDataStore();
   const activeBrand = useDashboardStore((s) => s.activeBrand);
   const [selectedBriefId, setSelectedBriefId] = useState<string | null>(null);
+  const [briefings, setBriefings] = useState<Task[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
-  // Fetch briefing tasks on mount and when brand changes
+  // Fetch briefing tasks directly — don't clobber the shared tasks store
   useEffect(() => {
-    fetchTasks({
+    let cancelled = false;
+    setLoading(true);
+    setError(null);
+    api.get<PaginatedResponse<Task>>('/tasks', {
       brand: activeBrand ?? undefined,
       category: 'briefing',
       limit: 50,
-    });
-  }, [activeBrand, fetchTasks]);
-
-  // Filter to briefing category
-  const briefings = useMemo(
-    () => tasks.filter((t: Task) => t.category === 'briefing'),
-    [tasks],
-  );
+    } as Record<string, string | number | undefined>)
+      .then((data) => {
+        if (!cancelled) {
+          setBriefings(data.items);
+          setLoading(false);
+        }
+      })
+      .catch((err) => {
+        if (!cancelled) {
+          setError(err.message || 'Failed to load briefs');
+          setLoading(false);
+        }
+      });
+    return () => { cancelled = true; };
+  }, [activeBrand]);
 
   // Group by brand_slug
   const byBrand = useMemo(() => {
@@ -255,7 +267,15 @@ export default function BriefsPage() {
           )}
         </div>
         <div className="p-2 space-y-0.5">
-          {brandGroups.length === 0 ? (
+          {loading ? (
+            <div className="flex items-center justify-center py-10">
+              <div className="h-5 w-5 animate-spin rounded-full border-2 border-[var(--mc-border)] border-t-[var(--mc-accent)]" />
+            </div>
+          ) : error ? (
+            <div className="p-4 text-center">
+              <p className="text-[12px] text-[var(--mc-red)]">{error}</p>
+            </div>
+          ) : brandGroups.length === 0 ? (
             <div className="p-4 text-center">
               <p className="text-[12px] text-[var(--mc-ink-muted)]">No briefs found.</p>
               <p className="mt-1 text-[11px] text-[var(--mc-ink-muted)]">
