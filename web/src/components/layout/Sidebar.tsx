@@ -53,8 +53,8 @@ export function Sidebar() {
         </div>
       </div>
 
-      {/* Brands — scrollable middle */}
-      <div className="flex-1 min-h-0 overflow-y-auto overscroll-contain">
+      {/* Brands — compact, scrolls if many */}
+      <div className="overflow-y-auto overscroll-contain">
         <div className="px-4 py-2 text-[10px] uppercase tracking-[0.15em] text-[var(--mc-ink-muted)]">
           Brands
         </div>
