@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useState, useCallback } from 'react';
-import { FileText, Calendar, ChevronRight } from 'lucide-react';
+import { FileText, Calendar, ChevronRight, ArrowLeft } from 'lucide-react';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../lib/api';
 import type { Task, PaginatedResponse } from '../lib/types';
@@ -254,135 +254,171 @@ export default function BriefsPage() {
     }
   }, [selectedBriefId, briefings]);
 
-  return (
-    <div className="flex h-full">
-      {/* ── Brief list (left) ─────────────────────── */}
-      <div className="w-72 flex-shrink-0 border-r border-white/[0.06] overflow-y-auto">
-        <div className="sticky top-0 z-10 border-b border-white/[0.06] bg-[var(--mc-bg)] px-4 py-3">
-          <h2 className="text-[13px] font-semibold text-[var(--mc-ink)]">Morning Briefs</h2>
-          {activeBrand && (
-            <p className="mt-0.5 text-[11px] text-[var(--mc-ink-muted)]">
-              Showing: {activeBrand}
-            </p>
-          )}
-        </div>
-        <div className="p-2 space-y-0.5">
-          {loading ? (
-            <div className="flex items-center justify-center py-10">
-              <div className="h-5 w-5 animate-spin rounded-full border-2 border-[var(--mc-border)] border-t-[var(--mc-accent)]" />
-            </div>
-          ) : error ? (
-            <div className="p-4 text-center">
-              <p className="text-[12px] text-[var(--mc-red)]">{error}</p>
-            </div>
-          ) : brandGroups.length === 0 ? (
-            <div className="p-4 text-center">
-              <p className="text-[12px] text-[var(--mc-ink-muted)]">No briefs found.</p>
-              <p className="mt-1 text-[11px] text-[var(--mc-ink-muted)]">
-                Briefs are generated each weekday at 7 AM MT.
-              </p>
-            </div>
-          ) : (
-            brandGroups.map(([slug, briefs]) => (
-              <div key={slug}>
-                {/* Brand header — only show when viewing all brands */}
-                {!activeBrand && (
-                  <div className="flex items-center gap-1.5 px-2 py-2">
-                    <span
-                      className="h-2 w-2 rounded-full"
-                      style={{ backgroundColor: brandColorMap[slug] ?? '#888' }}
-                    />
-                    <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                      {slug}
-                    </span>
-                    <span className="ml-auto text-[10px] text-[var(--mc-ink-muted)]">
-                      {briefs.length}
-                    </span>
-                  </div>
-                )}
-                {briefs.map((b: Task) => (
-                  <BriefListItem
-                    key={b.id}
-                    brief={b}
-                    isSelected={selectedBrief?.id === b.id}
-                    onClick={() => handleSelect(b.id)}
-                    brandColor={!activeBrand ? undefined : brandColorMap[slug]}
-                  />
-                ))}
-              </div>
-            ))
-          )}
-        </div>
-      </div>
+  // ── Brief list sidebar (shared between mobile and desktop) ──
 
-      {/* ── Brief reader (right) ──────────────────── */}
-      <div className="flex-1 overflow-y-auto">
-        {!selectedBrief ? (
-          <div className="flex h-full flex-col items-center justify-center text-center px-4">
-            <FileText size={40} className="mb-3 text-[var(--mc-border)]" />
-            <p className="text-[14px] text-[var(--mc-ink-muted)]">No briefs yet.</p>
-            <p className="mt-1 text-[12px] text-[var(--mc-ink-muted)]">
-              Briefs are generated automatically each weekday at 7 AM MT.
+  const briefList = (
+    <div className="w-full md:w-72 md:flex-shrink-0 md:border-r md:border-white/[0.06] overflow-y-auto">
+      <div className="sticky top-0 z-10 border-b border-white/[0.06] bg-[var(--mc-bg)] px-4 py-3">
+        <h2 className="text-[13px] font-semibold text-[var(--mc-ink)]">Morning Briefs</h2>
+        {activeBrand && (
+          <p className="mt-0.5 text-[11px] text-[var(--mc-ink-muted)]">
+            Showing: {activeBrand}
+          </p>
+        )}
+      </div>
+      <div className="p-2 space-y-0.5">
+        {loading ? (
+          <div className="flex items-center justify-center py-10">
+            <div className="h-5 w-5 animate-spin rounded-full border-2 border-[var(--mc-border)] border-t-[var(--mc-accent)]" />
+          </div>
+        ) : error ? (
+          <div className="p-4 text-center">
+            <p className="text-[12px] text-[var(--mc-red)]">{error}</p>
+          </div>
+        ) : brandGroups.length === 0 ? (
+          <div className="p-4 text-center">
+            <p className="text-[12px] text-[var(--mc-ink-muted)]">No briefs found.</p>
+            <p className="mt-1 text-[11px] text-[var(--mc-ink-muted)]">
+              Briefs are generated each weekday at 7 AM MT.
             </p>
           </div>
         ) : (
-          <div className="mx-auto max-w-2xl px-8 py-8">
-            {/* Header */}
-            <div className="mb-6 border-b border-white/[0.06] pb-5">
-              <div className="flex items-center gap-2 mb-2">
-                {selectedBrief.brand_slug && (
+          brandGroups.map(([slug, briefs]) => (
+            <div key={slug}>
+              {/* Brand header — only show when viewing all brands */}
+              {!activeBrand && (
+                <div className="flex items-center gap-1.5 px-2 py-2">
                   <span
                     className="h-2 w-2 rounded-full"
-                    style={{
-                      backgroundColor:
-                        brandColorMap[selectedBrief.brand_slug] ?? '#888',
-                    }}
+                    style={{ backgroundColor: brandColorMap[slug] ?? '#888' }}
                   />
-                )}
-                <span className="text-[11px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
-                  {selectedBrief.brand_slug ?? 'unknown'}
-                </span>
-              </div>
-              <h1 className="text-[20px] font-bold text-[var(--mc-ink)] leading-tight">
-                {selectedBrief.title}
-              </h1>
-              <p className="mt-1.5 text-[12px] text-[var(--mc-ink-muted)]">
-                {formatFullDate(selectedBrief.created_at)}
-              </p>
-            </div>
-
-            {/* Brief content */}
-            <div className="space-y-1">
-              {renderBrief(selectedBrief.description ?? 'No content available.')}
-            </div>
-
-            {/* Footer — metadata */}
-            {(selectedBrief.agent_note || selectedBrief.risk_tier) && (
-              <div className="mt-8 border-t border-white/[0.06] pt-4">
-                <div className="flex items-center gap-3 text-[11px] text-[var(--mc-ink-muted)]">
-                  {selectedBrief.risk_tier && (
-                    <span className="flex items-center gap-1">
-                      <span
-                        className={`h-2 w-2 rounded-full ${
-                          selectedBrief.risk_tier === 'red'
-                            ? 'bg-[var(--mc-red)]'
-                            : selectedBrief.risk_tier === 'yellow'
-                            ? 'bg-[var(--mc-yellow)]'
-                            : 'bg-[var(--mc-green)]'
-                        }`}
-                      />
-                      {selectedBrief.risk_tier}
-                    </span>
-                  )}
-                  {selectedBrief.assignee && (
-                    <span>assignee: {selectedBrief.assignee}</span>
-                  )}
+                  <span className="text-[10px] font-semibold uppercase tracking-wider text-[var(--mc-ink-muted)]">
+                    {slug}
+                  </span>
+                  <span className="ml-auto text-[10px] text-[var(--mc-ink-muted)]">
+                    {briefs.length}
+                  </span>
                 </div>
-              </div>
+              )}
+              {briefs.map((b: Task) => (
+                <BriefListItem
+                  key={b.id}
+                  brief={b}
+                  isSelected={selectedBrief?.id === b.id}
+                  onClick={() => handleSelect(b.id)}
+                  brandColor={!activeBrand ? undefined : brandColorMap[slug]}
+                />
+              ))}
+            </div>
+          ))
+        )}
+      </div>
+    </div>
+  );
+
+  // ── Brief reader (shared between mobile and desktop) ──
+
+  const briefReader = selectedBrief ? (
+    <div className="flex-1 overflow-y-auto px-4 py-4 md:px-8 md:py-6">
+      <div className="mx-auto max-w-2xl">
+        {/* Header */}
+        <div className="mb-6 border-b border-white/[0.06] pb-5">
+          <div className="flex items-center gap-2 mb-2">
+            {selectedBrief.brand_slug && (
+              <span
+                className="h-2 w-2 rounded-full"
+                style={{
+                  backgroundColor:
+                    brandColorMap[selectedBrief.brand_slug] ?? '#888',
+                }}
+              />
             )}
+            <span className="text-[11px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
+              {selectedBrief.brand_slug ?? 'unknown'}
+            </span>
+          </div>
+          <h1 className="text-[18px] md:text-[20px] font-bold text-[var(--mc-ink)] leading-tight">
+            {selectedBrief.title}
+          </h1>
+          <p className="mt-1.5 text-[12px] text-[var(--mc-ink-muted)]">
+            {formatFullDate(selectedBrief.created_at)}
+          </p>
+        </div>
+
+        {/* Brief content */}
+        <div className="space-y-1">
+          {renderBrief(selectedBrief.description ?? 'No content available.')}
+        </div>
+
+        {/* Footer — metadata */}
+        {(selectedBrief.agent_note || selectedBrief.risk_tier) && (
+          <div className="mt-8 border-t border-white/[0.06] pt-4">
+            <div className="flex items-center gap-3 text-[11px] text-[var(--mc-ink-muted)]">
+              {selectedBrief.risk_tier && (
+                <span className="flex items-center gap-1">
+                  <span
+                    className={`h-2 w-2 rounded-full ${
+                      selectedBrief.risk_tier === 'red'
+                        ? 'bg-[var(--mc-red)]'
+                        : selectedBrief.risk_tier === 'yellow'
+                        ? 'bg-[var(--mc-yellow)]'
+                        : 'bg-[var(--mc-green)]'
+                    }`}
+                  />
+                  {selectedBrief.risk_tier}
+                </span>
+              )}
+              {selectedBrief.assignee && (
+                <span>assignee: {selectedBrief.assignee}</span>
+              )}
+            </div>
           </div>
         )}
       </div>
+    </div>
+  ) : (
+    <div className="flex flex-1 flex-col items-center justify-center text-center px-4">
+      <FileText size={40} className="mb-3 text-[var(--mc-border)]" />
+      <p className="text-[14px] text-[var(--mc-ink-muted)]">No brief selected.</p>
+    </div>
+  );
+
+  return (
+    <div className="flex h-full">
+      {/* Mobile: show list OR detail with back button */}
+      <div className="md:hidden flex flex-1 flex-col">
+        {selectedBrief ? (
+          <div className="flex flex-1 flex-col overflow-hidden">
+            <button
+              onClick={() => setSelectedBriefId(null)}
+              className="flex items-center gap-2 border-b border-white/[0.06] px-4 py-2.5 text-[13px] text-[var(--mc-accent)] hover:opacity-80"
+            >
+              <ArrowLeft size={16} />
+              Back to briefs
+            </button>
+            {briefReader}
+          </div>
+        ) : (
+          briefList
+        )}
+      </div>
+
+      {/* Desktop: side-by-side layout */}
+      <div className="hidden md:flex flex-1">
+        {briefList}
+        {briefReader}
+      </div>
+
+      {/* Empty state — no briefs at all */}
+      {briefings.length === 0 && !loading && (
+        <div className="flex flex-1 flex-col items-center justify-center text-center">
+          <FileText size={40} className="mb-3 text-[var(--mc-border)]" />
+          <p className="text-[14px] text-[var(--mc-ink-muted)]">No briefs yet.</p>
+          <p className="mt-1 text-[12px] text-[var(--mc-ink-muted)]">
+            Briefs are generated automatically each weekday at 7 AM MT.
+          </p>
+        </div>
+      )}
     </div>
   );
 }

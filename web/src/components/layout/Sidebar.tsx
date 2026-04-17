@@ -33,12 +33,12 @@ export function Sidebar() {
   const brands = useDataStore((s) => s.brands);
 
   // Close mobile sidebar on nav click
-  const nav = (view: string) => { setActiveView(view); setSidebarOpen(false); };
+  const nav = (view: string) => { setActiveView(view as any); setSidebarOpen(false); };
   const filterBrand = (slug: string | null) => { setActiveBrand(slug); setSidebarOpen(false); };
 
   return (
     <aside
-      className="hidden md:flex fixed left-0 top-0 h-screen w-[220px] flex-col border-r border-[var(--mc-border)] bg-[var(--mc-surface)]"
+      className="flex fixed left-0 top-0 h-screen w-[220px] flex-col border-r border-[var(--mc-border)] bg-[var(--mc-surface)]"
     >
       {/* Wordmark — fixed */}
       <div className="flex-shrink-0 px-4 py-4">

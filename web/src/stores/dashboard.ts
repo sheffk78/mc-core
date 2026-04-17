@@ -30,7 +30,7 @@ export const useDashboardStore = create<DashboardState>()(
     (set) => ({
       activeBrand: null,
       activeView: 'command-center',
-      sidebarOpen: true,
+      sidebarOpen: false,
       wsConnected: false,
 
       setActiveBrand: (slug) => set({ activeBrand: slug }),

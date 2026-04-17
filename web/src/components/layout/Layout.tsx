@@ -9,8 +9,10 @@ export function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div className="flex min-h-screen bg-[var(--mc-bg)]">
-      {/* Desktop sidebar */}
-      <Sidebar />
+      {/* Desktop sidebar — visible on md+ screens only */}
+      <div className="hidden md:block">
+        <Sidebar />
+      </div>
 
       {/* Mobile sidebar overlay */}
       {sidebarOpen && (
@@ -20,9 +22,9 @@ export function Layout({ children }: { children: React.ReactNode }) {
         />
       )}
 
-      {/* Mobile sidebar */}
+      {/* Mobile sidebar drawer */}
       <div
-        className={`fixed inset-y-0 left-0 z-50 transform transition-transform duration-300 md:hidden ${
+        className={`fixed inset-y-0 left-0 z-50 w-[220px] transform transition-transform duration-300 md:hidden ${
           sidebarOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
       >
