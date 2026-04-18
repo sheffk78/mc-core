@@ -183,16 +183,22 @@ export class DiscordBot {
   // ── Private ──
 
   private handleMessage(msg: Message): void {
-    // Ignore bot messages and DMs
-    if (msg.author.bot) return;
+    // Ignore our own messages (already stored in sendMessage)
+    // but allow OTHER bots' messages (e.g., Kit via OpenClaw) to be stored
+    if (msg.author.id === this.client?.user?.id) return;
     if (!msg.guildId) return;
 
     // Check if message is in one of our channels
     const channelConfig = this.channels.find((c) => c.id === msg.channelId);
     if (!channelConfig) return;
 
+    // Detect if message is from OpenClaw's Kit bot
+    // KIT_BOT_ID env var should contain OpenClaw's Discord bot user ID
+    const kitBotId = process.env.KIT_BOT_ID;
+    const isFromKit = kitBotId ? msg.author.id === kitBotId : msg.author.bot;
+
     // Store in DB — if storage fails, skip broadcast
-    const messageId = this.storeMessage(msg, false);
+    const messageId = this.storeMessage(msg, isFromKit);
     if (!messageId) return;
 
     // Broadcast to WebSocket clients
