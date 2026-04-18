@@ -222,20 +222,57 @@ export const useChatStore = create<ChatState>()((set, get) => ({
     // Stop any current speech
     window.speechSynthesis.cancel();
 
-    const utterance = new SpeechSynthesisUtterance(message.content);
-    const voices = window.speechSynthesis.getVoices();
-    const state = get();
+    // Chrome bug workaround: speechSynthesis.speak() silently fails if called
+    // right after cancel(). Small delay lets Chrome reset its internal state.
+    setTimeout(() => {
+      const utterance = new SpeechSynthesisUtterance(message.content);
+      const voices = window.speechSynthesis.getVoices();
+      const state = get();
 
-    if (voices[state.ttsVoiceIndex]) {
-      utterance.voice = voices[state.ttsVoiceIndex];
-    }
-    utterance.rate = state.ttsRate;
+      // Try to set voice — fall back to first available English voice if
+      // the saved index is out of range (happens when voices haven't loaded yet)
+      if (voices[state.ttsVoiceIndex]) {
+        utterance.voice = voices[state.ttsVoiceIndex];
+      } else {
+        // Fallback: find a good English voice
+        const englishVoice = voices.find(v => v.lang.startsWith('en') && v.localService) 
+          ?? voices.find(v => v.lang.startsWith('en'))
+          ?? voices[0];
+        if (englishVoice) utterance.voice = englishVoice;
+      }
+      utterance.rate = state.ttsRate;
 
-    utterance.onstart = () => set({ ttsSpeaking: true, ttsCurrentMessageId: message.id });
-    utterance.onend = () => set({ ttsSpeaking: false, ttsCurrentMessageId: null });
-    utterance.onerror = () => set({ ttsSpeaking: false, ttsCurrentMessageId: null });
+      utterance.onstart = () => set({ ttsSpeaking: true, ttsCurrentMessageId: message.id });
+      utterance.onend = () => set({ ttsSpeaking: false, ttsCurrentMessageId: null });
+      utterance.onerror = (e) => {
+        console.warn('[TTS] Speech error:', e.error, e);
+        set({ ttsSpeaking: false, ttsCurrentMessageId: null });
+      };
 
-    window.speechSynthesis.speak(utterance);
+      // Chrome bug workaround: resume() unpauses the synth queue which can
+      // get stuck after cancel() on some Chrome versions
+      window.speechSynthesis.resume();
+      window.speechSynthesis.speak(utterance);
+
+      // Chrome bug workaround: long text can cause synth to pause mid-utterance.
+      // Periodic resume() calls keep it going.
+      const resumeInterval = setInterval(() => {
+        if (!get().ttsSpeaking) {
+          clearInterval(resumeInterval);
+          return;
+        }
+        window.speechSynthesis.resume();
+      }, 5000);
+
+      utterance.onend = () => {
+        clearInterval(resumeInterval);
+        set({ ttsSpeaking: false, ttsCurrentMessageId: null });
+      };
+      utterance.onerror = () => {
+        clearInterval(resumeInterval);
+        set({ ttsSpeaking: false, ttsCurrentMessageId: null });
+      };
+    }, 100);
   },
 
   stopSpeaking: () => {

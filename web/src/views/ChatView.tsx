@@ -106,7 +106,7 @@ function MessageBubble({ message, onSpeak }: { message: ChatMessage; onSpeak: ()
       </div>
 
       {/* Message content */}
-      <div className={`max-w-[75%] ${isKit ? 'items-end' : 'items-start'} flex flex-col`}>
+      <div className={`max-w-[75%] ${isKit ? 'items-end' : 'items-start'} flex flex-col`} role="article" aria-label={`${message.discord_author_name} message`}>
         <div className="flex items-baseline gap-2">
           <span className="text-[11px] font-medium text-[var(--mc-ink)]">
             {message.discord_author_name}
@@ -119,8 +119,10 @@ function MessageBubble({ message, onSpeak }: { message: ChatMessage; onSpeak: ()
               ? 'bg-[var(--mc-accent)]/10 text-[var(--mc-ink)]'
               : 'bg-black/5 text-[var(--mc-ink)]'
           } ${isSpeaking ? 'ring-2 ring-[var(--mc-accent)] ring-offset-1' : ''}`}
+          role="text"
+          aria-live="polite"
         >
-          {message.content}
+          <p className="m-0">{message.content}</p>
         </div>
 
         {/* Speak button (appears on hover) */}
