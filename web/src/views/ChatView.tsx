@@ -362,18 +362,18 @@ export default function ChatView() {
   const activeMessages = activeChannel ? (messages[activeChannel] ?? []) : [];
 
   return (
-    <div className="flex h-full">
-      {/* Channel sidebar */}
-      <div className="w-[200px] flex-shrink-0 border-r border-[var(--mc-border)] bg-[var(--mc-surface)]">
+    <div className="flex h-[calc(100vh-120px)]">
+      {/* Channel sidebar — fixed, no scroll */}
+      <div className="w-[200px] flex-shrink-0 border-r border-[var(--mc-border)] bg-[var(--mc-surface)] overflow-hidden">
         <ChannelList />
       </div>
 
       {/* Main chat area */}
-      <div className="flex flex-1 flex-col">
+      <div className="flex flex-1 flex-col overflow-hidden">
         {activeChannel && activeChannelData ? (
           <>
-            {/* Header */}
-            <div className="flex items-center justify-between border-b border-[var(--mc-border)] px-4 py-2">
+            {/* Header — fixed */}
+            <div className="flex-shrink-0 flex items-center justify-between border-b border-[var(--mc-border)] px-4 py-2">
               <div className="flex items-center gap-2">
                 <span
                   className="h-2.5 w-2.5 rounded-full"
@@ -418,7 +418,7 @@ export default function ChatView() {
               </div>
             </div>
 
-            {/* Messages */}
+            {/* Messages — scrollable area only */}
             <div className="flex-1 overflow-y-auto px-4 py-3">
               <div className="flex flex-col gap-3">
                 {activeMessages.map((msg) => (
@@ -437,7 +437,7 @@ export default function ChatView() {
               )}
             </div>
 
-            {/* Input */}
+            {/* Input — fixed at bottom */}
             <MessageInput channelId={activeChannel} />
           </>
         ) : (

@@ -8,7 +8,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
   const sidebarOpen = useDashboardStore((s) => s.sidebarOpen);
 
   return (
-    <div className="flex min-h-screen bg-[var(--mc-bg)]">
+    <div className="flex h-screen bg-[var(--mc-bg)]">
       {/* Desktop sidebar — visible on md+ screens only */}
       <div className="hidden md:block">
         <Sidebar />
@@ -32,7 +32,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
       </div>
 
       {/* Main column */}
-      <div className="flex flex-1 flex-col overflow-hidden md:ml-[220px]">
+      <div className="flex flex-1 flex-col md:ml-[220px]" style={{ height: '100vh' }}>
         <Topbar />
         <BudgetBar />
         <main className="flex-1 overflow-y-auto">{children}</main>

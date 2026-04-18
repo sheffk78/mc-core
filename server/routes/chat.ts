@@ -213,38 +213,49 @@ export function createChatRouter(db: Database, broadcast: BroadcastFn, sendToDis
     const whisperModel = process.env.WHISPER_MODEL ?? "base";
 
     if (!whisperVenvPath) {
-      // Fallback: try OpenAI Whisper API if OPENAI_API_KEY is set
-      const apiKey = process.env.OPENAI_API_KEY;
-      if (!apiKey) {
-        return c.json({ error: "Whisper not configured" }, 501);
+      // Fallback chain: Groq → OpenAI → error
+      const groqApiKey = process.env.GROQ_API_KEY;
+      const openaiApiKey = process.env.OPENAI_API_KEY;
+
+      if (!groqApiKey && !openaiApiKey) {
+        return c.json({ error: "Whisper not configured (set GROQ_API_KEY or OPENAI_API_KEY)" }, 501);
       }
+
+      // Prefer Groq (free tier), fall back to OpenAI
+      const apiUrl = groqApiKey
+        ? "https://api.groq.com/openai/v1/audio/transcriptions"
+        : "https://api.openai.com/v1/audio/transcriptions";
+      const apiKey = groqApiKey || openaiApiKey!;
 
       try {
         const buffer = Buffer.from(await audioFile.arrayBuffer());
         const blob = new Blob([buffer], { type: audioFile.type || "audio/webm" });
         const file = new File([blob], "audio.webm", { type: audioFile.type || "audio/webm" });
 
-        const openaiFormData = new FormData();
-        openaiFormData.append("file", file);
-        openaiFormData.append("model", "whisper-1");
-        openaiFormData.append("response_format", "json");
+        const apiFormData = new FormData();
+        apiFormData.append("file", file);
+        apiFormData.append("model", "whisper-1");
+        apiFormData.append("response_format", "json");
 
-        const response = await fetch("https://api.openai.com/v1/audio/transcriptions", {
+        const provider = groqApiKey ? "groq" : "openai";
+        console.log(`[whisper] Using ${provider} API`);
+
+        const response = await fetch(apiUrl, {
           method: "POST",
           headers: { Authorization: `Bearer ${apiKey}` },
-          body: openaiFormData,
+          body: apiFormData,
         });
 
         if (!response.ok) {
           const errText = await response.text();
-          console.error("[whisper] OpenAI API error:", errText);
+          console.error(`[whisper] ${provider} API error:`, errText);
           return c.json({ error: "Transcription failed" }, 500);
         }
 
         const result = await response.json() as { text: string };
         return c.json({ text: result.text });
       } catch (err) {
-        console.error("[whisper] OpenAI API error:", (err as Error).message);
+        console.error("[whisper] API error:", (err as Error).message);
         return c.json({ error: "Transcription failed" }, 500);
       }
     }
