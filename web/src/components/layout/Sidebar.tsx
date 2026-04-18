@@ -9,6 +9,7 @@ import {
   Settings2,
   ListTodo,
   Activity,
+  MessageCircle,
 } from 'lucide-react';
 import { useDashboardStore } from '../../stores/dashboard';
 import { useDataStore } from '../../stores/data';
@@ -17,6 +18,7 @@ const COMMAND_CENTER_ITEMS = [
   { label: 'Overview', icon: LayoutDashboard, view: 'command-center' as const },
   { label: "Jeff's Queue", icon: ListTodo, view: 'jeff-queue' as const },
   { label: "Kit's Stream", icon: Activity, view: 'activity-stream' as const },
+  { label: 'Chat', icon: MessageCircle, view: 'chat' as const },
 ];
 
 const NAV_ITEMS = [

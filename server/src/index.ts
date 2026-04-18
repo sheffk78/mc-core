@@ -2,28 +2,30 @@ import { Hono } from "hono";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { serveStatic } from "hono/bun";
+import { Database } from "bun:sqlite";
+import { mkdirSync } from "fs";
 
 import { authMiddleware } from "../middleware/auth";
+import { DiscordBot } from "../discord-bot";
+import { createChatRouter } from "../routes/chat";
+import { wsEmit } from "../ws";
+
+// ── Database (shared across routes) ──
+const dbPath = process.env.DB_PATH ?? "./data/mc.db";
+const dbDir = dbPath.substring(0, dbPath.lastIndexOf("/"));
+if (dbDir) mkdirSync(dbDir, { recursive: true });
+const db = new Database(dbPath);
+db.exec("PRAGMA journal_mode = WAL");
+db.exec("PRAGMA foreign_keys = ON");
 
 // ---------------------------------------------------------------------------
 // Auto-migrate on first boot
 // ---------------------------------------------------------------------------
-import { Database } from "bun:sqlite";
-import { mkdirSync, existsSync } from "fs";
-import { join } from "path";
 
-function autoMigrate() {
-  const dbPath = process.env.DB_PATH ?? "./data/mc.db";
-  const dbDir = dbPath.substring(0, dbPath.lastIndexOf("/"));
-  if (dbDir) mkdirSync(dbDir, { recursive: true });
-
-  const db = new Database(dbPath);
-  db.exec("PRAGMA journal_mode = WAL");
-  db.exec("PRAGMA foreign_keys = ON");
-
+function autoMigrate(db: Database) {
   // Check if tables exist
   const table = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='brands'").get();
-  if (table) { db.close(); return; }
+  if (table) return;
 
   console.log("⚡ Auto-migrating database...");
 
@@ -185,6 +187,31 @@ CREATE TABLE files (
   created_at TEXT NOT NULL DEFAULT (datetime('now')),
   updated_at TEXT NOT NULL DEFAULT (datetime('now'))
 );
+
+CREATE TABLE IF NOT EXISTS chat_channels (
+  discord_channel_id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT NOT NULL,
+  brand_id TEXT REFERENCES brands(id),
+  last_message_at TEXT,
+  unread_count INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE IF NOT EXISTS chat_messages (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  channel_id TEXT NOT NULL,
+  channel_slug TEXT NOT NULL,
+  discord_message_id TEXT,
+  discord_author_id TEXT,
+  discord_author_name TEXT NOT NULL,
+  discord_author_avatar TEXT,
+  content TEXT NOT NULL,
+  is_from_kit INTEGER NOT NULL DEFAULT 0,
+  is_read INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_chat_messages_channel ON chat_messages(channel_id);
+CREATE INDEX IF NOT EXISTS idx_chat_messages_created ON chat_messages(created_at);
 `);
 
   // Seed brands
@@ -198,11 +225,10 @@ CREATE TABLE files (
   ];
   for (const b of brands) insert.run(...b);
 
-  db.close();
-  console.log("✅ Auto-migration complete — 11 tables, 5 brands seeded");
+  console.log("✅ Auto-migration complete — tables seeded");
 }
 
-autoMigrate();
+autoMigrate(db);
 import { brandsRouter } from "../routes/brands";
 import { tasksRouter } from "../routes/tasks";
 import { approvalsRouter } from "../routes/approvals";
@@ -263,6 +289,13 @@ app.route("/api/v1/stats", statsRouter);
 app.route("/api/v1/files", filesRouter);
 app.route("/api/v1/revenue", revenueRouter);
 
+// ── Chat routes (Discord bridge) ──
+const chatRouter = createChatRouter(db, wsEmit, async (channelId: string, content: string) => {
+  if (!discordBot) return null;
+  return discordBot.sendMessage(channelId, content);
+});
+app.route("/api/v1/chat", chatRouter);
+
 // ---------------------------------------------------------------------------
 // Serve static frontend (built Vite output)
 // ---------------------------------------------------------------------------
@@ -306,3 +339,24 @@ console.log(`🚀 Mission Control v2 running on port ${port}`);
 console.log(`   Health: http://localhost:${port}/health`);
 console.log(`   API:    http://localhost:${port}/api/v1`);
 console.log(`   WS:     ws://localhost:${port}/ws`);
+
+// ── Start Discord bot (non-blocking) ──
+const discordBot = new DiscordBot(db, wsEmit);
+discordBot.start().catch((err) => {
+  console.error("[discord] Failed to start:", err.message);
+});
+
+// ── Graceful shutdown ──
+process.on("SIGINT", async () => {
+  console.log("\n🛑 Shutting down...");
+  await discordBot.stop();
+  db.close();
+  process.exit(0);
+});
+
+process.on("SIGTERM", async () => {
+  console.log("\n🛑 Shutting down (SIGTERM)...");
+  await discordBot.stop();
+  db.close();
+  process.exit(0);
+});

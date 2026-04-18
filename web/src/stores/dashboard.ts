@@ -10,7 +10,8 @@ type View =
   | 'files'
   | 'costs'
   | 'revenue'
-  | 'settings';
+  | 'settings'
+  | 'chat';
 
 interface DashboardState {
   activeBrand: string | null;
