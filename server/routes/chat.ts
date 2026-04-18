@@ -226,6 +226,8 @@ export function createChatRouter(db: Database, broadcast: BroadcastFn, sendToDis
         ? "https://api.groq.com/openai/v1/audio/transcriptions"
         : "https://api.openai.com/v1/audio/transcriptions";
       const apiKey = groqApiKey || openaiApiKey!;
+      // Groq uses "whisper-large-v3", OpenAI uses "whisper-1"
+      const model = groqApiKey ? "whisper-large-v3" : "whisper-1";
 
       try {
         const buffer = Buffer.from(await audioFile.arrayBuffer());
@@ -234,7 +236,7 @@ export function createChatRouter(db: Database, broadcast: BroadcastFn, sendToDis
 
         const apiFormData = new FormData();
         apiFormData.append("file", file);
-        apiFormData.append("model", "whisper-1");
+        apiFormData.append("model", model);
         apiFormData.append("response_format", "json");
 
         const provider = groqApiKey ? "groq" : "openai";
