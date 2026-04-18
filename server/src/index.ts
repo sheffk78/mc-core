@@ -25,7 +25,11 @@ db.exec("PRAGMA foreign_keys = ON");
 function autoMigrate(db: Database) {
   // Check if tables exist
   const table = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='brands'").get();
-  if (table) return;
+  if (table) {
+    // Tables exist, but check for new tables (chat) that need to be added
+    autoMigrateChatTables(db);
+    return;
+  }
 
   console.log("⚡ Auto-migrating database...");
 
@@ -226,6 +230,41 @@ CREATE INDEX IF NOT EXISTS idx_chat_messages_created ON chat_messages(created_at
   for (const b of brands) insert.run(...b);
 
   console.log("✅ Auto-migration complete — tables seeded");
+}
+
+// ── Incremental migration for chat tables ──
+function autoMigrateChatTables(db: Database) {
+  const chatChannels = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='chat_channels'").get();
+  if (chatChannels) return; // Already migrated
+
+  console.log("⚡ Adding chat tables...");
+  db.exec(`
+CREATE TABLE chat_channels (
+  discord_channel_id TEXT PRIMARY KEY,
+  name TEXT NOT NULL,
+  slug TEXT NOT NULL,
+  brand_id TEXT REFERENCES brands(id),
+  last_message_at TEXT,
+  unread_count INTEGER NOT NULL DEFAULT 0
+);
+
+CREATE TABLE chat_messages (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  channel_id TEXT NOT NULL,
+  channel_slug TEXT NOT NULL,
+  discord_message_id TEXT,
+  discord_author_id TEXT,
+  discord_author_name TEXT NOT NULL,
+  discord_author_avatar TEXT,
+  content TEXT NOT NULL,
+  is_from_kit INTEGER NOT NULL DEFAULT 0,
+  is_read INTEGER NOT NULL DEFAULT 0,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX idx_chat_messages_channel ON chat_messages(channel_id);
+CREATE INDEX idx_chat_messages_created ON chat_messages(created_at);
+  `);
+  console.log("✅ Chat tables created");
 }
 
 autoMigrate(db);
