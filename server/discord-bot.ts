@@ -191,7 +191,7 @@ export class DiscordBot {
     const channelConfig = this.channels.find((c) => c.id === msg.channelId);
     if (!channelConfig) return;
 
-    // Store in DB
+    // Store in DB — if storage fails, skip broadcast
     const messageId = this.storeMessage(msg, false);
     if (!messageId) return;
 
@@ -257,8 +257,8 @@ export class DiscordBot {
     );
 
     // Try to resolve brand IDs from the brands table
-    const brands = this.db.prepare("SELECT id, slug FROM brands").all();
-    const brandMap = new Map(brands.map((b: any) => [b.slug, b.id]));
+    const brands = this.db.prepare("SELECT id, slug FROM brands").all() as { id: string; slug: string }[];
+    const brandMap = new Map(brands.map((b) => [b.slug, b.id]));
 
     for (const ch of this.channels) {
       const brandId = ch.brandId ?? brandMap.get(ch.slug) ?? null;

@@ -14,8 +14,9 @@ export function wsEmit(event: string, data: unknown): void {
         // Client may have disconnected between iteration and send
       }
     }
-  } catch {
-    // Swallow all errors — wsEmit must never throw
+  } catch (err) {
+    // Swallow all errors — wsEmit must never throw, but log for debugging
+    console.error("[ws] Broadcast failed:", err);
   }
 }
 
@@ -29,6 +30,7 @@ export const wsHandlers = {
   },
 
   message(ws: ServerWebSocket, message: string | Buffer) {
+    if (typeof message !== "string" && !Buffer.isBuffer(message)) return;
     try {
       const parsed = JSON.parse(typeof message === "string" ? message : message.toString());
       if (parsed.type === "ping") {

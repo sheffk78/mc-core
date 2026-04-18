@@ -317,7 +317,7 @@ export const useChatStore = create<ChatState>()((set, get) => ({
 
     if (!res.ok) throw new Error('Transcription failed');
     const data = await res.json();
-    return data.text ?? '';
+    return (data.text ?? '').trim();
   },
 }));
 

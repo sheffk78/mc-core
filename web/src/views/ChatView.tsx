@@ -101,7 +101,7 @@ function MessageBubble({ message, onSpeak }: { message: ChatMessage; onSpeak: ()
             className="h-8 w-8 rounded-full"
           />
         ) : (
-          message.discord_author_name.charAt(0).toUpperCase()
+          message.discord_author_name?.charAt(0).toUpperCase() ?? "?"
         )}
       </div>
 
@@ -266,9 +266,11 @@ function MessageInput({ channelId }: { channelId: string }) {
 
     try {
       const transcribed = await transcribeAudio(blob);
-      if (transcribed) {
-        setText((prev) => prev ? `${prev} ${transcribed}` : transcribed);
+      if (!transcribed.trim()) {
+        setRecordingError('No speech detected');
+        return;
       }
+      setText((prev) => prev ? `${prev} ${transcribed}` : transcribed);
     } catch {
       setRecordingError('Transcription failed');
     }
@@ -340,14 +342,14 @@ export default function ChatView() {
   useEffect(() => {
     fetchChannels();
     subscribeToChatEvents();
-    // Set first channel as active if none selected
-    const unsub = useChatStore.subscribe((state) => {
-      if (!state.activeChannel && state.channels.length > 0) {
-        state.setActiveChannel(state.channels[0].discord_channel_id);
-      }
-    });
-    return () => unsub();
   }, []);
+
+  // Auto-set active channel when channels load
+  useEffect(() => {
+    if (!activeChannel && channels.length > 0) {
+      setActiveChannel(channels[0].discord_channel_id);
+    }
+  }, [channels, activeChannel, setActiveChannel]);
 
   // Auto-scroll on new messages
   useEffect(() => {

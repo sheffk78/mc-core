@@ -3,7 +3,7 @@ import { cors } from "hono/cors";
 import { logger } from "hono/logger";
 import { serveStatic } from "hono/bun";
 import { Database } from "bun:sqlite";
-import { mkdirSync } from "fs";
+import { mkdirSync, statSync } from "fs";
 
 import { authMiddleware } from "../middleware/auth";
 import { DiscordBot } from "../discord-bot";
@@ -262,7 +262,7 @@ app.use("*", logger());
 app.get("/health", (c) => {
   const dbPath = process.env.DB_PATH ?? "./data/mc.db";
   let dbSizeKb = 0;
-  try { dbSizeKb = Math.round(require("fs").statSync(dbPath).size / 1024); } catch {}
+  try { dbSizeKb = Math.round(statSync(dbPath).size / 1024); } catch {}
   const tables = ["brands", "tasks", "approvals", "activities", "files", "daily_costs"];
 
   return c.json({
@@ -347,16 +347,12 @@ discordBot.start().catch((err) => {
 });
 
 // ── Graceful shutdown ──
-process.on("SIGINT", async () => {
-  console.log("\n🛑 Shutting down...");
+const gracefulShutdown = async (signal: string) => {
+  console.log(`\n🛑 Shutting down (${signal})...`);
   await discordBot.stop();
   db.close();
   process.exit(0);
-});
+};
 
-process.on("SIGTERM", async () => {
-  console.log("\n🛑 Shutting down (SIGTERM)...");
-  await discordBot.stop();
-  db.close();
-  process.exit(0);
-});
+process.on("SIGINT", () => gracefulShutdown("SIGINT"));
+process.on("SIGTERM", () => gracefulShutdown("SIGTERM"));

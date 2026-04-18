@@ -75,13 +75,27 @@ export function createChatRouter(db: Database, broadcast: BroadcastFn, sendToDis
     const { channelId } = c.req.param();
     const { limit, before } = c.req.valid("query");
 
+    // Validate channel exists
+    const channelExists = db
+      .prepare("SELECT 1 FROM chat_channels WHERE discord_channel_id = ?")
+      .get(channelId);
+    if (!channelExists) {
+      return c.json({ error: "Channel not found" }, 404);
+    }
+
     let query: string;
     let params: any[];
 
     if (before) {
-      // Get messages older than the given ID (for pagination)
-      query = `SELECT * FROM chat_messages WHERE channel_id = ? AND created_at < (SELECT created_at FROM chat_messages WHERE id = ?) ORDER BY created_at ASC LIMIT ?`;
-      params = [channelId, before, limit];
+      // Validate the 'before' message exists
+      const refMsg = db
+        .prepare("SELECT created_at FROM chat_messages WHERE id = ?")
+        .get(before) as { created_at: string } | null;
+      if (!refMsg) {
+        return c.json({ error: "Message not found" }, 404);
+      }
+      query = `SELECT * FROM chat_messages WHERE channel_id = ? AND created_at < ? ORDER BY created_at ASC LIMIT ?`;
+      params = [channelId, refMsg.created_at, limit];
     } else {
       query = `SELECT * FROM chat_messages WHERE channel_id = ? ORDER BY created_at DESC LIMIT ?`;
       params = [channelId, limit];
@@ -112,13 +126,37 @@ export function createChatRouter(db: Database, broadcast: BroadcastFn, sendToDis
       return c.json({ error: "Failed to send message to Discord" }, 500);
     }
 
-    // The bot's own message handler will store and broadcast it,
-    // but we also return the stored message here for immediate UI feedback
+    // Wait briefly for the Discord bot's own message handler to store it,
+    // then retrieve. Fallback to constructing a response if not yet stored.
+    await new Promise((r) => setTimeout(r, 200));
+
     const message = db
       .prepare("SELECT * FROM chat_messages WHERE discord_message_id = ?")
       .get(discordMessageId);
 
-    return c.json({ message: message ?? { discord_message_id: discordMessageId } });
+    if (message) {
+      return c.json({ message });
+    }
+
+    // Construct a provisional response if the bot handler hasn't stored it yet
+    const channelRow = db
+      .prepare("SELECT slug FROM chat_channels WHERE discord_channel_id = ?")
+      .get(channel_id) as { slug: string } | null;
+    return c.json({
+      message: {
+        id: "pending",
+        channel_id,
+        channel_slug: channelRow?.slug ?? "unknown",
+        discord_message_id: discordMessageId,
+        discord_author_id: null,
+        discord_author_name: "Kit",
+        discord_author_avatar: null,
+        content,
+        is_from_kit: 1,
+        is_read: 0,
+        created_at: new Date().toISOString(),
+      },
+    });
   });
 
   // ── POST /chat/messages/:id/read — Mark a message as read ──
@@ -126,15 +164,19 @@ export function createChatRouter(db: Database, broadcast: BroadcastFn, sendToDis
   router.post("/messages/:id/read", (c) => {
     const { id } = c.req.param();
 
+    const msg = db
+      .prepare("SELECT channel_id FROM chat_messages WHERE id = ?")
+      .get(id) as { channel_id: string } | null;
+    if (!msg) {
+      return c.json({ error: "Message not found" }, 404);
+    }
+
     db.prepare("UPDATE chat_messages SET is_read = 1 WHERE id = ?").run(id);
 
-    // Also update unread count for the channel
-    const msg = db.prepare("SELECT channel_id FROM chat_messages WHERE id = ?").get(id) as ChatMessage | null;
-    if (msg) {
-      db.prepare(
-        `UPDATE chat_channels SET unread_count = (SELECT COUNT(*) FROM chat_messages WHERE channel_id = ? AND is_read = 0) WHERE discord_channel_id = ?`
-      ).run(msg.channel_id, msg.channel_id);
-    }
+    // Update unread count for the channel
+    db.prepare(
+      `UPDATE chat_channels SET unread_count = (SELECT COUNT(*) FROM chat_messages WHERE channel_id = ? AND is_read = 0) WHERE discord_channel_id = ?`
+    ).run(msg.channel_id, msg.channel_id);
 
     return c.json({ ok: true });
   });
@@ -160,6 +202,11 @@ export function createChatRouter(db: Database, broadcast: BroadcastFn, sendToDis
 
     if (!audioFile) {
       return c.json({ error: "No audio file provided" }, 400);
+    }
+
+    // Limit audio file to 10MB
+    if (audioFile.size > 10 * 1024 * 1024) {
+      return c.json({ error: "Audio file too large (max 10MB)" }, 413);
     }
 
     const whisperVenvPath = process.env.WHISPER_VENV_PATH;
