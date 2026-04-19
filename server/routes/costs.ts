@@ -283,6 +283,25 @@ costsRouter.post(
 );
 
 // ---------------------------------------------------------------------------
+// DELETE /reset/:date — Reset cost data for a specific date (admin, auth required)
+// Removes all cost entries for the given date. Use sparingly to fix data issues.
+// ---------------------------------------------------------------------------
+costsRouter.delete("/reset/:date", authMiddleware, async (c) => {
+  const date = c.req.param("date");
+  // Validate date format
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) {
+    return c.json({ error: "Invalid date format, use YYYY-MM-DD" }, 400);
+  }
+
+  const deleted = await db
+    .delete(dailyCosts)
+    .where(eq(dailyCosts.date, date))
+    .returning({ id: dailyCosts.id });
+
+  return c.json({ ok: true, date, deleted_count: deleted.length });
+});
+
+// ---------------------------------------------------------------------------
 // POST /budget/check — Budget check (auth required, no side effects)
 // ---------------------------------------------------------------------------
 costsRouter.post("/budget/check", authMiddleware, async (c) => {
