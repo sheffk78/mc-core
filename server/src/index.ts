@@ -267,7 +267,39 @@ CREATE INDEX idx_chat_messages_created ON chat_messages(created_at);
   console.log("✅ Chat tables created");
 }
 
+// ── Incremental migration for news table ──
+function autoMigrateNewsTable(db: Database) {
+  const exists = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='news'").get();
+  if (exists) return; // Already migrated
+
+  console.log("⚡ Adding news table...");
+  db.exec(`
+CREATE TABLE news (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  brand_id TEXT NOT NULL REFERENCES brands(id),
+  title TEXT NOT NULL,
+  summary TEXT NOT NULL,
+  source_url TEXT NOT NULL,
+  source_name TEXT DEFAULT '',
+  category TEXT DEFAULT '',
+  risk_tier TEXT NOT NULL DEFAULT('red') CHECK(risk_tier IN ('green','yellow','red')),
+  jeff_comment TEXT DEFAULT '',
+  jeff_recommends INTEGER NOT NULL DEFAULT(0),
+  is_read INTEGER NOT NULL DEFAULT(0),
+  intel_run_id TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT(datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT(datetime('now'))
+);
+CREATE INDEX idx_news_brand ON news(brand_id);
+CREATE INDEX idx_news_risk ON news(risk_tier);
+CREATE INDEX idx_news_run ON news(intel_run_id);
+CREATE INDEX idx_news_created ON news(created_at);
+  `);
+  console.log("✅ News table created");
+}
+
 autoMigrate(db);
+autoMigrateNewsTable(db);
 import { brandsRouter } from "../routes/brands";
 import { tasksRouter } from "../routes/tasks";
 import { approvalsRouter } from "../routes/approvals";
@@ -276,6 +308,7 @@ import { costsRouter } from "../routes/costs";
 import { statsRouter } from "../routes/stats";
 import { filesRouter } from "../routes/files";
 import { revenueRouter } from "../routes/revenue";
+import { newsRouter } from "../routes/news";
 import { wsHandlers } from "../ws";
 
 const app = new Hono();
@@ -327,6 +360,7 @@ app.route("/api/v1/costs", costsRouter);
 app.route("/api/v1/stats", statsRouter);
 app.route("/api/v1/files", filesRouter);
 app.route("/api/v1/revenue", revenueRouter);
+app.route("/api/v1/news", newsRouter);
 
 // ── Chat routes (Discord bridge) ──
 const chatRouter = createChatRouter(db, wsEmit, async (channelId: string, content: string) => {

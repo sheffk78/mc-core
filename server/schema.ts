@@ -345,7 +345,48 @@ export const notifications = sqliteTable("notifications", {
 });
 
 // ---------------------------------------------------------------------------
-// 10. webauthn_credentials
+// 10. news
+// ---------------------------------------------------------------------------
+export const news = sqliteTable(
+  "news",
+  {
+    id: text("id")
+      .primaryKey()
+      .default(sql`lower(hex(randomblob(8)))`),
+    brand_id: text("brand_id")
+      .notNull()
+      .references(() => brands.id),
+    title: text("title").notNull(),
+    summary: text("summary").notNull(),
+    source_url: text("source_url").notNull(),
+    source_name: text("source_name").default(""),
+    category: text("category").default(""),
+    risk_tier: text("risk_tier", {
+      enum: ["green", "yellow", "red"],
+    })
+      .notNull()
+      .default("red"),
+    jeff_comment: text("jeff_comment").default(""),
+    jeff_recommends: integer("jeff_recommends").notNull().default(0),
+    is_read: integer("is_read").notNull().default(0),
+    intel_run_id: text("intel_run_id").notNull(),
+    created_at: text("created_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+    updated_at: text("updated_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+  },
+  (t) => [
+    index("idx_news_brand").on(t.brand_id),
+    index("idx_news_risk").on(t.risk_tier),
+    index("idx_news_run").on(t.intel_run_id),
+    index("idx_news_created").on(t.created_at),
+  ]
+);
+
+// ---------------------------------------------------------------------------
+// 11. webauthn_credentials
 // ---------------------------------------------------------------------------
 export const webauthnCredentials = sqliteTable(
   "webauthn_credentials",
@@ -379,6 +420,7 @@ export const brandsRelations = relations(brands, ({ many }) => ({
   cronJobs: many(cronJobs),
   dailyCosts: many(dailyCosts),
   revenueSnapshots: many(revenueSnapshots),
+  news: many(news),
 }));
 
 export const tasksRelations = relations(tasks, ({ one, many }) => ({
@@ -406,6 +448,13 @@ export const approvalsRelations = relations(approvals, ({ one }) => ({
   task: one(tasks, {
     fields: [approvals.task_id],
     references: [tasks.id],
+  }),
+}));
+
+export const newsRelations = relations(news, ({ one }) => ({
+  brand: one(brands, {
+    fields: [news.brand_id],
+    references: [brands.id],
   }),
 }));
 
@@ -455,3 +504,6 @@ export type InsertNotification = InferInsertModel<typeof notifications>;
 
 export type WebauthnCredential = InferSelectModel<typeof webauthnCredentials>;
 export type InsertWebauthnCredential = InferInsertModel<typeof webauthnCredentials>;
+
+export type News = InferSelectModel<typeof news>;
+export type InsertNews = InferInsertModel<typeof news>;

@@ -5,9 +5,11 @@ import type {
   Task,
   Approval,
   Activity,
+  News,
   TaskFilters,
   ApprovalFilters,
   ActivityFilters,
+  NewsFilters,
   StatsResponse,
   JeffQueueResponse,
   PaginatedResponse,
@@ -22,9 +24,11 @@ interface DataState {
   approvals: Approval[];
   approvalsTotal: number;
   activities: Activity[];
+  news: News[];
+  newsTotal: number;
   stats: StatsResponse | null;
   jeffQueue: JeffQueueResponse | null;
-  loading: Partial<Record<'brands' | 'tasks' | 'jeffOpenTasks' | 'approvals' | 'activities' | 'stats' | 'jeffQueue', boolean>>;
+  loading: Partial<Record<'brands' | 'tasks' | 'jeffOpenTasks' | 'approvals' | 'activities' | 'news' | 'stats' | 'jeffQueue', boolean>>;
   errors: Partial<Record<string, string>>;
 
   fetchBrands: () => Promise<void>;
@@ -34,6 +38,7 @@ interface DataState {
   fetchActivities: (filters?: ActivityFilters) => Promise<void>;
   fetchStats: () => Promise<void>;
   fetchJeffQueue: () => Promise<void>;
+  fetchNews: (filters?: NewsFilters) => Promise<void>;
   handleWsEvent: (event: WsEvent) => void;
 }
 
@@ -45,6 +50,8 @@ export const useDataStore = create<DataState>()((set, get) => ({
   approvals: [],
   approvalsTotal: 0,
   activities: [],
+  news: [],
+  newsTotal: 0,
   stats: null,
   jeffQueue: null,
   loading: {},
@@ -125,6 +132,23 @@ export const useDataStore = create<DataState>()((set, get) => ({
       set((s) => ({
         loading: { ...s.loading, activities: false },
         errors: { ...s.errors, activities: (err as Error).message },
+      }));
+    }
+  },
+
+  fetchNews: async (filters) => {
+    set((s) => ({ loading: { ...s.loading, news: true }, errors: { ...s.errors, news: undefined } }));
+    try {
+      const data = await api.get<PaginatedResponse<News>>('/news', filters as Record<string, string | number | undefined>);
+      set((s) => ({
+        news: data.items,
+        newsTotal: data.total,
+        loading: { ...s.loading, news: false },
+      }));
+    } catch (err) {
+      set((s) => ({
+        loading: { ...s.loading, news: false },
+        errors: { ...s.errors, news: (err as Error).message },
       }));
     }
   },
@@ -230,6 +254,20 @@ export const useDataStore = create<DataState>()((set, get) => ({
       case 'activity.new': {
         const newActivities = [event.data as Activity, ...state.activities];
         set({ activities: newActivities.slice(0, 100) });
+        break;
+      }
+
+      case 'news.created': {
+        const newNews = event.data as News;
+        set({ news: [newNews, ...state.news] });
+        break;
+      }
+
+      case 'news.updated': {
+        const updatedNews = event.data as News;
+        set({
+          news: state.news.map((n) => (n.id === updatedNews.id ? updatedNews : n)),
+        });
         break;
       }
 

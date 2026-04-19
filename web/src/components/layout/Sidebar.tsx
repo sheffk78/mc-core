@@ -10,6 +10,7 @@ import {
   ListTodo,
   Activity,
   MessageCircle,
+  Newspaper,
 } from 'lucide-react';
 import { useDashboardStore } from '../../stores/dashboard';
 import { useDataStore } from '../../stores/data';
@@ -19,6 +20,7 @@ const COMMAND_CENTER_ITEMS = [
   { label: "Jeff's Queue", icon: ListTodo, view: 'jeff-queue' as const },
   { label: "Kit's Stream", icon: Activity, view: 'activity-stream' as const },
   { label: 'Chat', icon: MessageCircle, view: 'chat' as const },
+  { label: 'News', icon: Newspaper, view: 'news' as const },
 ];
 
 const NAV_ITEMS = [

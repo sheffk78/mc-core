@@ -209,6 +209,34 @@ export interface ActivityFilters {
 
 // ── API response types ──
 
+export interface News {
+  id: string;
+  brand_id: string;
+  title: string;
+  summary: string;
+  source_url: string;
+  source_name: string | null;
+  category: string | null;
+  risk_tier: 'green' | 'yellow' | 'red';
+  jeff_comment: string | null;
+  jeff_recommends: number;
+  is_read: number;
+  intel_run_id: string;
+  created_at: string;
+  updated_at: string;
+  brand_slug?: string;
+  brand_name?: string;
+  brand_color?: string;
+}
+
+export interface NewsFilters {
+  brand?: string;
+  risk_tier?: string;
+  intel_run_id?: string;
+  limit?: number;
+  offset?: number;
+}
+
 export interface PaginatedResponse<T> {
   items: T[];
   total: number;

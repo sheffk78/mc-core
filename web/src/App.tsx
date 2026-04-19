@@ -21,6 +21,7 @@ const RevenuePage = lazy(() =>
 );
 const SettingsPage = lazy(() => import('./views/SettingsPage'));
 const ChatView = lazy(() => import('./views/ChatView'));
+const NewsPage = lazy(() => import('./views/NewsPage'));
 
 // ── Loading pane ──
 
@@ -127,6 +128,7 @@ function ViewRouter() {
     revenue: RevenuePage,
     settings: SettingsPage,
     chat: ChatView,
+    news: NewsPage,
   };
 
   const Page = viewMap[activeView] ?? DashboardOverview;
