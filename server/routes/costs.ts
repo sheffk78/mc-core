@@ -224,6 +224,7 @@ const logCostSchema = z.object({
   tokens_out: z.number().int(),
   cost_usd: z.number(),
   task_count: z.number().int().optional(),
+  date: z.string().optional(), // Override date (YYYY-MM-DD), defaults to today. Used for backfilling historical data.
 });
 
 costsRouter.post(
@@ -232,7 +233,7 @@ costsRouter.post(
   zValidator("json", logCostSchema),
   async (c) => {
     const body = c.req.valid("json");
-    const date = todayDate();
+    const date = body.date ?? todayDate();
 
     // Resolve brand_id from slug if provided
     let brandId: string | null = null;

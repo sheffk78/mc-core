@@ -13,9 +13,122 @@ interface TodayCosts {
   by_model: Array<{ model: string; cost_usd: number; tokens_in: number; tokens_out: number }>;
 }
 
+interface DailyCost {
+  date: string;
+  cost_usd: number;
+  task_count: number;
+}
+
+// ── Simple SVG bar chart ──
+
+function CostChart({ data, budgetLimit }: { data: DailyCost[]; budgetLimit: number }) {
+  if (data.length === 0) {
+    return (
+      <div className="flex items-center justify-center py-10 text-[var(--mc-ink-muted)]">
+        <BarChart3 size={18} className="mr-2 opacity-40" />
+        <span className="text-[12px]">No cost data for the last 10 days</span>
+      </div>
+    );
+  }
+
+  const maxCost = Math.max(budgetLimit * 1.1, ...data.map((d) => d.cost_usd), 0.01);
+  const barWidth = 100 / data.length; // percentage
+
+  // Date formatting
+  const formatDate = (dateStr: string) => {
+    const d = new Date(dateStr + 'T12:00:00'); // midday to avoid timezone issues
+    return d.toLocaleDateString('en-US', { month: 'short', day: 'numeric' });
+  };
+
+  return (
+    <div className="w-full">
+      {/* Y-axis labels */}
+      <div className="relative flex" style={{ height: 180 }}>
+        {/* Y-axis */}
+        <div className="flex flex-col justify-between py-1 pr-2 text-[10px] text-[var(--mc-ink-muted)]" style={{ width: 40 }}>
+          <span>${maxCost.toFixed(2)}</span>
+          <span>${(maxCost / 2).toFixed(2)}</span>
+          <span>$0</span>
+        </div>
+
+        {/* Chart area */}
+        <div className="relative flex-1 flex items-end gap-[2px]">
+          {/* Budget line */}
+          {budgetLimit > 0 && budgetLimit <= maxCost && (
+            <div
+              className="absolute left-0 right-0 border-t border-dashed border-[var(--mc-yellow)]/60 z-10"
+              style={{ bottom: `${(budgetLimit / maxCost) * 100}%` }}
+            >
+              <span className="absolute -top-3 right-0 text-[9px] text-[var(--mc-yellow)]">budget</span>
+            </div>
+          )}
+
+          {data.map((d, i) => {
+            const heightPct = maxCost > 0 ? (d.cost_usd / maxCost) * 100 : 0;
+            const isToday = i === data.length - 1;
+            const overBudget = budgetLimit > 0 && d.cost_usd > budgetLimit;
+            const barColor = overBudget
+              ? 'var(--mc-red)'
+              : isToday
+              ? 'var(--mc-accent)'
+              : 'color-mix(in oklch, var(--mc-accent) 60%, transparent)';
+
+            return (
+              <div
+                key={d.date}
+                className="flex-1 flex flex-col items-center justify-end"
+                style={{ height: '100%' }}
+              >
+                {/* Value label on hover/today */}
+                {isToday && d.cost_usd > 0 && (
+                  <span className="text-[9px] font-medium text-[var(--mc-accent)] mb-0.5">
+                    ${d.cost_usd.toFixed(2)}
+                  </span>
+                )}
+                <div
+                  className="w-full rounded-t transition-all duration-300 min-h-[2px]"
+                  style={{
+                    height: `${Math.max(heightPct, 1)}%`,
+                    backgroundColor: barColor,
+                    maxWidth: '24px',
+                    margin: '0 auto',
+                  }}
+                />
+              </div>
+            );
+          })}
+        </div>
+      </div>
+
+      {/* X-axis labels */}
+      <div className="flex ml-[40px]" style={{ marginTop: 4 }}>
+        {data.map((d, i) => {
+          // Show every other label if many days, always show first and last
+          const showLabel = data.length <= 5 || i === 0 || i === data.length - 1 || i % 2 === 0;
+          return (
+            <div key={d.date} className="flex-1 text-center">
+              {showLabel ? (
+                <span className={`text-[9px] ${i === data.length - 1 ? 'text-[var(--mc-accent)] font-medium' : 'text-[var(--mc-ink-muted)]'}`}>
+                  {formatDate(d.date)}
+                </span>
+              ) : (
+                <span className="text-[9px] text-transparent">.</span>
+              )}
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
+
+// ── Main page ──
+
 export default function CostsPage() {
   const [todayCosts, setTodayCosts] = useState<TodayCosts | null>(null);
+  const [rangeData, setRangeData] = useState<DailyCost[]>([]);
   const [loading, setLoading] = useState(true);
+  const [rangeLoading, setRangeLoading] = useState(true);
   const stats = useDataStore((s) => s.stats);
 
   useEffect(() => {
@@ -24,6 +137,37 @@ export default function CostsPage() {
       .then(setTodayCosts)
       .catch(() => setTodayCosts(null))
       .finally(() => setLoading(false));
+  }, []);
+
+  useEffect(() => {
+    setRangeLoading(true);
+    // Fetch last 10 days
+    const today = new Date();
+    const from = new Date(today);
+    from.setDate(from.getDate() - 9);
+    const fromStr = from.toISOString().slice(0, 10);
+    const toStr = today.toISOString().slice(0, 10);
+
+    api.get<DailyCost[]>('/costs/range', { from: fromStr, to: toStr, group_by: 'day' } as Record<string, string | number | undefined>)
+      .then((data) => {
+        // Fill in missing days with zero
+        const dayMap = new Map(data.map((d) => [d.date, d]));
+        const filled: DailyCost[] = [];
+        for (let i = 0; i < 10; i++) {
+          const d = new Date(today);
+          d.setDate(d.getDate() - (9 - i));
+          const dateStr = d.toISOString().slice(0, 10);
+          const entry = dayMap.get(dateStr);
+          filled.push({
+            date: dateStr,
+            cost_usd: entry?.cost_usd ?? 0,
+            task_count: entry?.task_count ?? 0,
+          });
+        }
+        setRangeData(filled);
+      })
+      .catch(() => setRangeData([]))
+      .finally(() => setRangeLoading(false));
   }, []);
 
   const budgetPct = (todayCosts?.budget_pct_used ?? stats?.today_budget_pct_used ?? 0) / 100;
@@ -103,8 +247,22 @@ export default function CostsPage() {
         </div>
       </div>
 
-      {/* By Brand */}
+      {/* 10-Day Cost Chart */}
       <div className="mt-8">
+        <h2 className="text-sm font-medium text-[var(--mc-ink)] mb-3">Last 10 Days</h2>
+        <div className="rounded-[1rem] border border-black/[0.08] bg-black/[0.03] p-[6px]">
+          <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-4 shadow-sm">
+            {rangeLoading ? (
+              <div className="h-44 animate-pulse rounded-lg bg-black/5" />
+            ) : (
+              <CostChart data={rangeData} budgetLimit={budget} />
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* By Brand */}
+      <div className="mt-6">
         <h2 className="text-sm font-medium text-[var(--mc-ink)] mb-3">By Brand</h2>
         <div className="rounded-[1rem] border border-black/[0.08] bg-black/[0.03] p-[6px]">
           <div className="rounded-[calc(1rem-6px)] bg-[var(--mc-surface)] p-4 shadow-sm">
