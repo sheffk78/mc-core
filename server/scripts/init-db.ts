@@ -14,7 +14,7 @@ const tableCount = db
   .prepare("SELECT count(*) as cnt FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")
   .get() as { cnt: number };
 
-if (tableCount.cnt >= 10) {
+if (tableCount.cnt >= 11) {
   console.log("✅ Database already initialized — skipping (tables: " + tableCount.cnt + ")");
   process.exit(0);
 }
@@ -183,6 +183,35 @@ CREATE UNIQUE INDEX IF NOT EXISTS idx_webauthn_credential ON webauthn_credential
 `);
 
 console.log("✅ Tables created");
+
+// ── Incremental: ensure news table exists (added v2.1) ──
+const newsExists = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='news'").get();
+if (!newsExists) {
+  console.log("⚡ Adding news table...");
+  db.exec(`
+CREATE TABLE IF NOT EXISTS news (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  brand_id TEXT NOT NULL REFERENCES brands(id),
+  title TEXT NOT NULL,
+  summary TEXT NOT NULL,
+  source_url TEXT NOT NULL,
+  source_name TEXT DEFAULT '',
+  category TEXT DEFAULT '',
+  risk_tier TEXT NOT NULL DEFAULT('red') CHECK(risk_tier IN ('green','yellow','red')),
+  jeff_comment TEXT DEFAULT '',
+  jeff_recommends INTEGER NOT NULL DEFAULT(0),
+  is_read INTEGER NOT NULL DEFAULT(0),
+  intel_run_id TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT(datetime('now')),
+  updated_at TEXT NOT NULL DEFAULT(datetime('now'))
+);
+CREATE INDEX IF NOT EXISTS idx_news_brand ON news(brand_id);
+CREATE INDEX IF NOT EXISTS idx_news_risk ON news(risk_tier);
+CREATE INDEX IF NOT EXISTS idx_news_run ON news(intel_run_id);
+CREATE INDEX IF NOT EXISTS idx_news_created ON news(created_at);
+  `);
+  console.log("✅ News table created");
+}
 
 // Seed brands (idempotent)
 const BRANDS = [
