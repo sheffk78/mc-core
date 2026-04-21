@@ -321,7 +321,7 @@ export default function JeffQueueView() {
     fetchJeffQueue();
     fetchApprovals({ status: 'pending', brand: activeBrand ?? undefined });
     fetchTasks({ status: 'pending_review', brand: activeBrand ?? undefined });
-    fetchJeffOpenTasks();
+    fetchJeffOpenTasks(activeBrand ?? undefined);
     // NOTE: We intentionally do NOT fetch completed tasks anymore
   }, [activeBrand, fetchJeffQueue, fetchApprovals, fetchTasks, fetchJeffOpenTasks]);
 
@@ -494,7 +494,7 @@ export default function JeffQueueView() {
           onUpdated={(updated) => {
             setSelectedTask(updated);
             fetchJeffQueue();
-            fetchJeffOpenTasks();
+            fetchJeffOpenTasks(activeBrand ?? undefined);
           }}
         />
       )}

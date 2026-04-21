@@ -33,7 +33,7 @@ interface DataState {
 
   fetchBrands: () => Promise<void>;
   fetchTasks: (filters?: TaskFilters) => Promise<void>;
-  fetchJeffOpenTasks: () => Promise<void>;
+  fetchJeffOpenTasks: (brand?: string) => Promise<void>;
   fetchApprovals: (filters?: ApprovalFilters) => Promise<void>;
   fetchActivities: (filters?: ActivityFilters) => Promise<void>;
   fetchStats: () => Promise<void>;
@@ -87,14 +87,16 @@ export const useDataStore = create<DataState>()((set, get) => ({
     }
   },
 
-  fetchJeffOpenTasks: async () => {
+  fetchJeffOpenTasks: async (brand?: string) => {
     set((s) => ({ loading: { ...s.loading, jeffOpenTasks: true }, errors: { ...s.errors, jeffOpenTasks: undefined } }));
     try {
-      const data = await api.get<PaginatedResponse<Task>>('/tasks', { status: 'open', assignee: 'jeff' });
+      const params: Record<string, string> = { status: 'open', assignee: 'jeff' };
+      if (brand) params.brand = brand;
+      const data = await api.get<PaginatedResponse<Task>>('/tasks', params);
       set((s) => ({
         jeffOpenTasks: data.items,
         loading: { ...s.loading, jeffOpenTasks: false },
-      }));
+      }));;
     } catch (err) {
       set((s) => ({
         loading: { ...s.loading, jeffOpenTasks: false },
