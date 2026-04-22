@@ -1,9 +1,11 @@
 import React, { useEffect, useMemo, useCallback, useState } from 'react';
+import { Plus } from 'lucide-react';
 import { useDashboardStore } from '../stores/dashboard';
 import { useDataStore } from '../stores/data';
 import { TaskCard, TaskCardSkeleton } from '../components/tasks/TaskCard';
 import { TaskFilters, type TaskFilterState } from '../components/tasks/TaskFilters';
 import { TaskDetailModal } from '../components/tasks/TaskDetailModal';
+import { NewTaskModal } from '../components/tasks/NewTaskModal';
 import type { Task, TaskStatus, RiskTier, Assignee, Priority } from '../lib/types';
 
 // ── Sort + filter helpers ──
@@ -82,6 +84,7 @@ export default function TasksPage() {
     search: '',
   });
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
+  const [showNewTask, setShowNewTask] = useState(false);
 
   // Fetch tasks when brand or API-level filters change
   useEffect(() => {
@@ -116,9 +119,18 @@ export default function TasksPage() {
       {/* Header */}
       <div className="flex items-baseline justify-between">
         <h1 className="font-display text-2xl font-bold text-[var(--mc-ink)]">Tasks</h1>
-        <span className="text-sm text-[var(--mc-ink-muted)]">
-          {isLoading ? '…' : `${tasksTotal} task${tasksTotal !== 1 ? 's' : ''}`}
-        </span>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => setShowNewTask(true)}
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--mc-accent)] px-3 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[var(--mc-accent)]/90"
+          >
+            <Plus size={14} />
+            New Task
+          </button>
+          <span className="text-sm text-[var(--mc-ink-muted)]">
+            {isLoading ? '…' : `${tasksTotal} task${tasksTotal !== 1 ? 's' : ''}`}
+          </span>
+        </div>
       </div>
 
       {/* Filters */}
@@ -141,6 +153,20 @@ export default function TasksPage() {
             <TaskCard key={task.id} task={task} onClick={() => setSelectedTask(task)} />
           ))}
         </div>
+      )}
+
+      {/* New Task Modal */}
+      {showNewTask && (
+        <NewTaskModal
+          onClose={() => setShowNewTask(false)}
+          onCreated={() => {
+            setShowNewTask(false);
+            fetchTasks({
+              brand: activeBrand ?? undefined,
+              ...apiFilters,
+            });
+          }}
+        />
       )}
 
       {/* Task Detail Modal */}

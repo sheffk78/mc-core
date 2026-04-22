@@ -1,10 +1,11 @@
 import React, { useEffect, useMemo, useState, useCallback } from 'react';
-import { Check, X, Clock, AlertCircle, ArrowRight } from 'lucide-react';
+import { Check, X, Clock, AlertCircle, ArrowRight, Plus } from 'lucide-react';
 import { useDataStore } from '../stores/data';
 import { useDashboardStore } from '../stores/dashboard';
 import { api } from '../lib/api';
 import { Badge, Button } from '../components/ui';
 import { TaskDetailModal } from '../components/tasks/TaskDetailModal';
+import { NewTaskModal } from '../components/tasks/NewTaskModal';
 import type { Task, Approval } from '../lib/types';
 
 // ── Helpers ──
@@ -315,6 +316,7 @@ export default function JeffQueueView() {
   const activeBrand = useDashboardStore((s) => s.activeBrand);
   const [removedApprovalIds, setRemovedApprovalIds] = useState<Set<string>>(new Set());
   const [selectedTask, setSelectedTask] = useState<Task | null>(null);
+  const [showNewTask, setShowNewTask] = useState(false);
 
   // Fetch all queue data
   useEffect(() => {
@@ -403,9 +405,18 @@ export default function JeffQueueView() {
             </span>
           )}
         </div>
-        <span className="text-sm text-[var(--mc-ink-muted)]">
-          {isLoading ? '…' : `${needsJeffItems.length + inProgressItems.length} items`}
-        </span>
+        <div className="flex items-center gap-4">
+          <button
+            onClick={() => setShowNewTask(true)}
+            className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--mc-accent)] px-3 py-1.5 text-[13px] font-medium text-white transition-colors hover:bg-[var(--mc-accent)]/90"
+          >
+            <Plus size={14} />
+            New Task
+          </button>
+          <span className="text-sm text-[var(--mc-ink-muted)]">
+            {isLoading ? '…' : `${needsJeffItems.length + inProgressItems.length} items`}
+          </span>
+        </div>
       </div>
 
       <div className="mt-8 flex flex-col gap-8">
@@ -485,6 +496,18 @@ export default function JeffQueueView() {
           </div>
         )}
       </div>
+
+      {/* New Task Modal */}
+      {showNewTask && (
+        <NewTaskModal
+          onClose={() => setShowNewTask(false)}
+          onCreated={() => {
+            setShowNewTask(false);
+            fetchJeffQueue();
+            fetchJeffOpenTasks(activeBrand ?? undefined);
+          }}
+        />
+      )}
 
       {/* Task Detail Modal */}
       {selectedTask && (
