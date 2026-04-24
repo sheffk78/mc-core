@@ -165,11 +165,9 @@ function QuickAddForm({ onCreated, brands }: { onCreated: () => void; brands: an
             className="flex-1 bg-transparent text-sm text-[var(--mc-ink)] placeholder:text-[var(--mc-ink-muted)] focus:outline-none"
             onFocus={() => setIsExpanded(true)}
           />
-          {title.trim() && (
-            <Button size="sm" variant="default" disabled={submitting} type="submit">
-              {submitting ? '...' : 'Add'}
-            </Button>
-          )}
+          <Button size="sm" variant="default" disabled={!title.trim() || submitting} type="submit">
+            {submitting ? '...' : 'Add'}
+          </Button>
         </div>
 
         {isExpanded && (
