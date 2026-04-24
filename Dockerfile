@@ -1,6 +1,8 @@
 # ---- Stage 1: Build ----
 FROM oven/bun:1.2-alpine AS builder
 
+ARG CACHE_BUST=1
+
 WORKDIR /app
 
 # Copy root workspace config
