@@ -15,7 +15,118 @@ const tableCount = db
   .get() as { cnt: number };
 
 if (tableCount.cnt >= 11) {
-  console.log("✅ Database already initialized — skipping (tables: " + tableCount.cnt + ")");
+  console.log("✅ Database already initialized (tables: " + tableCount.cnt + ") — running incremental migrations");
+  
+  // ── V2 Migration: Add 'blocked' to tasks status CHECK constraint ──
+  // SQLite doesn't support ALTER COLUMN, so we recreate the tasks table
+  const statusCheck = db
+    .prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='tasks'")
+    .get() as { sql: string } | null;
+  
+  if (statusCheck && !statusCheck.sql.includes('blocked')) {
+    console.log("⚡ Migrating tasks table to add 'blocked' status...");
+    try {
+      db.exec(`
+        CREATE TABLE tasks_new (
+          id TEXT PRIMARY KEY,
+          brand_id TEXT NOT NULL REFERENCES brands(id),
+          title TEXT NOT NULL,
+          description TEXT DEFAULT '',
+          status TEXT NOT NULL DEFAULT 'open' CHECK(status IN ('open','in_progress','blocked','pending_review','approved','rejected','completed','archived')),
+          priority TEXT NOT NULL DEFAULT 'normal' CHECK(priority IN ('low','normal','high','critical')),
+          risk_tier TEXT NOT NULL DEFAULT 'yellow' CHECK(risk_tier IN ('green','yellow','red')),
+          assignee TEXT NOT NULL DEFAULT 'kit' CHECK(assignee IN ('kit','jeff','unassigned')),
+          category TEXT DEFAULT '',
+          agent_note TEXT DEFAULT '',
+          user_note TEXT DEFAULT '',
+          due_date TEXT,
+          completed_at TEXT,
+          estimated_cost REAL,
+          actual_cost REAL,
+          model_used TEXT,
+          tokens_in INTEGER,
+          tokens_out INTEGER,
+          confidence REAL,
+          blocked_on TEXT DEFAULT '',
+          parent_task_id TEXT,
+          source TEXT DEFAULT 'mc_ui',
+          lane TEXT DEFAULT '',
+          checkpoint_summary TEXT DEFAULT '',
+          checkpoint_at TEXT,
+          created_at TEXT NOT NULL DEFAULT (datetime('now')),
+          updated_at TEXT NOT NULL DEFAULT (datetime('now'))
+        );
+      `);
+      
+      // Copy data from old table to new
+      db.exec(`
+        INSERT INTO tasks_new SELECT 
+          id, brand_id, title, description, status, priority, risk_tier, assignee, 
+          category, agent_note, user_note, due_date, completed_at, estimated_cost, 
+          actual_cost, model_used, tokens_in, tokens_out, confidence,
+          '', NULL, 'mc_ui', '', '', NULL,
+          created_at, updated_at
+        FROM tasks;
+      `);
+      
+      // Drop old table and rename
+      db.exec("DROP TABLE tasks;");
+      db.exec("ALTER TABLE tasks_new RENAME TO tasks;");
+      
+      // Recreate indexes
+      db.exec("CREATE INDEX idx_tasks_brand ON tasks(brand_id);");
+      db.exec("CREATE INDEX idx_tasks_status ON tasks(status);");
+      db.exec("CREATE INDEX idx_tasks_assignee ON tasks(assignee);");
+      db.exec("CREATE INDEX idx_tasks_risk ON tasks(risk_tier);");
+      db.exec("CREATE INDEX idx_tasks_due ON tasks(due_date);");
+      db.exec("CREATE INDEX IF NOT EXISTS idx_tasks_parent ON tasks(parent_task_id);");
+      db.exec("CREATE INDEX IF NOT EXISTS idx_tasks_source ON tasks(source);");
+      db.exec("CREATE INDEX IF NOT EXISTS idx_tasks_blocked ON tasks(blocked_on);");
+      
+      console.log("✅ Tasks table migrated with 'blocked' status + new columns");
+    } catch (e: any) {
+      console.error("❌ Migration failed:", e.message);
+      // Continue — the server's auto-migrate might handle it
+    }
+  }
+  
+  // ── V2 Migration: Add task_comments and task_status_history tables ──
+  const commentsExist = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='task_comments'").get();
+  if (!commentsExist) {
+    console.log("⚡ Adding task_comments table...");
+    db.exec(`
+      CREATE TABLE task_comments (
+        id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+        task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+        author TEXT NOT NULL DEFAULT 'kit' CHECK(author IN ('kit', 'jeff')),
+        content TEXT NOT NULL,
+        created_at TEXT NOT NULL DEFAULT (datetime('now'))
+      );
+      CREATE INDEX idx_comments_task ON task_comments(task_id);
+      CREATE INDEX idx_comments_created ON task_comments(created_at);
+    `);
+    console.log("✅ task_comments table created");
+  }
+  
+  const historyExist = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='task_status_history'").get();
+  if (!historyExist) {
+    console.log("⚡ Adding task_status_history table...");
+    db.exec(`
+      CREATE TABLE task_status_history (
+        id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+        task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+        from_status TEXT NOT NULL,
+        to_status TEXT NOT NULL,
+        changed_by TEXT NOT NULL DEFAULT 'kit' CHECK(changed_by IN ('kit', 'jeff', 'system')),
+        note TEXT DEFAULT '',
+        created_at TEXT NOT NULL DEFAULT (datetime('now'))
+      );
+      CREATE INDEX idx_history_task ON task_status_history(task_id);
+      CREATE INDEX idx_history_created ON task_status_history(created_at);
+    `);
+    console.log("✅ task_status_history table created");
+  }
+  
   process.exit(0);
 }
 
@@ -38,7 +149,7 @@ CREATE TABLE IF NOT EXISTS tasks (
   brand_id TEXT NOT NULL REFERENCES brands(id),
   title TEXT NOT NULL,
   description TEXT DEFAULT '',
-  status TEXT NOT NULL DEFAULT 'open' CHECK(status IN ('open','in_progress','pending_review','approved','rejected','completed','archived')),
+  status TEXT NOT NULL DEFAULT 'open' CHECK(status IN ('open','in_progress','blocked','pending_review','approved','rejected','completed','archived')),
   priority TEXT NOT NULL DEFAULT 'normal' CHECK(priority IN ('low','normal','high','critical')),
   risk_tier TEXT NOT NULL DEFAULT 'yellow' CHECK(risk_tier IN ('green','yellow','red')),
   assignee TEXT NOT NULL DEFAULT 'kit' CHECK(assignee IN ('kit','jeff','unassigned')),
