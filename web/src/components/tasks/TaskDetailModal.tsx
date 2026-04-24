@@ -1,5 +1,6 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import { X, CheckCircle2, Clock, AlertCircle, User, Calendar, Tag, MessageSquare } from 'lucide-react';
+import { marked } from 'marked';
 import { api } from '../../lib/api';
 import { Badge, Button } from '../ui';
 import type { Task, TaskStatus } from '../../lib/types';
@@ -7,8 +8,9 @@ import type { Task, TaskStatus } from '../../lib/types';
 // ── Status transition map (must match server) ──
 
 const ALLOWED_TRANSITIONS: Record<string, string[]> = {
-  open: ['in_progress', 'pending_review', 'archived'],
-  in_progress: ['pending_review', 'completed', 'archived'],
+  open: ['in_progress', 'blocked', 'pending_review', 'archived'],
+  in_progress: ['pending_review', 'blocked', 'completed', 'archived'],
+  blocked: ['in_progress', 'open', 'archived'],
   pending_review: ['approved', 'rejected', 'in_progress'],
   approved: ['completed'],
   rejected: ['in_progress', 'archived'],
@@ -19,6 +21,7 @@ const ALLOWED_TRANSITIONS: Record<string, string[]> = {
 const STATUS_LABELS: Record<string, string> = {
   open: 'Open',
   in_progress: 'In Progress',
+  blocked: 'Blocked',
   pending_review: 'Pending Review',
   approved: 'Approved',
   rejected: 'Rejected',
@@ -169,7 +172,10 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
           {currentTask.description && (
             <div className="mt-4">
               <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Description</div>
-              <p className="mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]">{currentTask.description}</p>
+              <div
+                className="mc-markdown mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]"
+                dangerouslySetInnerHTML={{ __html: marked.parse(currentTask.description) as string }}
+              />
             </div>
           )}
 
@@ -180,9 +186,10 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
                 <MessageSquare size={12} />
                 Agent Note
               </div>
-              <p className="mt-1 rounded-lg bg-white/[0.03] p-3 text-[13px] leading-relaxed text-[var(--mc-ink)]">
-                {currentTask.agent_note}
-              </p>
+              <div
+                className="mc-markdown mt-1 rounded-lg bg-white/[0.03] p-3 text-[13px] leading-relaxed text-[var(--mc-ink)]"
+                dangerouslySetInnerHTML={{ __html: marked.parse(currentTask.agent_note) as string }}
+              />
             </div>
           )}
 

@@ -499,11 +499,6 @@ export const tasksRelations = relations(tasks, ({ one, many }) => ({
     fields: [tasks.brand_id],
     references: [brands.id],
   }),
-  parent: one(tasks, {
-    fields: [tasks.parent_task_id],
-    references: [tasks.id],
-    relationName: "parentTask",
-  }),
   files: many(taskFiles),
   approvals: many(approvals),
   activities: many(activities),
