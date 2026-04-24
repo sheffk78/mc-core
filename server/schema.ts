@@ -85,6 +85,12 @@ export const tasks = sqliteTable(
     tokens_in: integer("tokens_in"),
     tokens_out: integer("tokens_out"),
     confidence: real("confidence"),
+    blocked_on: text("blocked_on").default(""),
+    parent_task_id: text("parent_task_id"),
+    source: text("source").default("mc_ui"),
+    lane: text("lane").default(""),
+    checkpoint_summary: text("checkpoint_summary").default(""),
+    checkpoint_at: text("checkpoint_at"),
     created_at: text("created_at")
       .notNull()
       .default(sql`datetime('now')`),
@@ -98,6 +104,9 @@ export const tasks = sqliteTable(
     index("idx_tasks_assignee").on(t.assignee),
     index("idx_tasks_risk").on(t.risk_tier),
     index("idx_tasks_due").on(t.due_date),
+    index("idx_tasks_parent").on(t.parent_task_id),
+    index("idx_tasks_source").on(t.source),
+    index("idx_tasks_blocked").on(t.blocked_on),
   ]
 );
 
@@ -428,9 +437,30 @@ export const tasksRelations = relations(tasks, ({ one, many }) => ({
     fields: [tasks.brand_id],
     references: [brands.id],
   }),
+  parent: one(tasks, {
+    fields: [tasks.parent_task_id],
+    references: [tasks.id],
+    relationName: "parentTask",
+  }),
   files: many(taskFiles),
   approvals: many(approvals),
   activities: many(activities),
+  comments: many(taskComments),
+  statusHistory: many(taskStatusHistory),
+}));
+
+export const taskCommentsRelations = relations(taskComments, ({ one }) => ({
+  task: one(tasks, {
+    fields: [taskComments.task_id],
+    references: [tasks.id],
+  }),
+}));
+
+export const taskStatusHistoryRelations = relations(taskStatusHistory, ({ one }) => ({
+  task: one(tasks, {
+    fields: [taskStatusHistory.task_id],
+    references: [tasks.id],
+  }),
 }));
 
 export const taskFilesRelations = relations(taskFiles, ({ one }) => ({
@@ -439,6 +469,64 @@ export const taskFilesRelations = relations(taskFiles, ({ one }) => ({
     references: [tasks.id],
   }),
 }));
+
+// ---------------------------------------------------------------------------
+// 2b. task_comments
+// ---------------------------------------------------------------------------
+export const taskComments = sqliteTable(
+  "task_comments",
+  {
+    id: text("id")
+      .primaryKey()
+      .default(sql`lower(hex(randomblob(8)))`),
+    task_id: text("task_id")
+      .notNull()
+      .references(() => tasks.id, { onDelete: "cascade" }),
+    author: text("author", {
+      enum: ["kit", "jeff"],
+    })
+      .notNull()
+      .default("kit"),
+    content: text("content").notNull(),
+    created_at: text("created_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+  },
+  (t) => [
+    index("idx_comments_task").on(t.task_id),
+    index("idx_comments_created").on(t.created_at),
+  ]
+);
+
+// ---------------------------------------------------------------------------
+// 2c. task_status_history
+// ---------------------------------------------------------------------------
+export const taskStatusHistory = sqliteTable(
+  "task_status_history",
+  {
+    id: text("id")
+      .primaryKey()
+      .default(sql`lower(hex(randomblob(8)))`),
+    task_id: text("task_id")
+      .notNull()
+      .references(() => tasks.id, { onDelete: "cascade" }),
+    from_status: text("from_status").notNull(),
+    to_status: text("to_status").notNull(),
+    changed_by: text("changed_by", {
+      enum: ["kit", "jeff", "system"],
+    })
+      .notNull()
+      .default("kit"),
+    note: text("note").default(""),
+    created_at: text("created_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+  },
+  (t) => [
+    index("idx_history_task").on(t.task_id),
+    index("idx_history_created").on(t.created_at),
+  ]
+);
 
 export const approvalsRelations = relations(approvals, ({ one }) => ({
   brand: one(brands, {
@@ -507,3 +595,9 @@ export type InsertWebauthnCredential = InferInsertModel<typeof webauthnCredentia
 
 export type News = InferSelectModel<typeof news>;
 export type InsertNews = InferInsertModel<typeof news>;
+
+export type TaskComment = InferSelectModel<typeof taskComments>;
+export type InsertTaskComment = InferInsertModel<typeof taskComments>;
+
+export type TaskStatusHistoryEntry = InferSelectModel<typeof taskStatusHistory>;
+export type InsertTaskStatusHistory = InferInsertModel<typeof taskStatusHistory>;

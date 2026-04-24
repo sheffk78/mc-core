@@ -8,7 +8,7 @@ import { subscribe } from './lib/ws';
 // ── Lazy page imports ──
 
 const DashboardOverview = lazy(() => import('./views/DashboardOverview'));
-const JeffQueueView = lazy(() => import('./views/JeffQueue'));
+const JeffIntake = lazy(() => import('./views/JeffIntake'));
 const ActivityStreamView = lazy(() => import('./views/ActivityStream'));
 const TasksPage = lazy(() => import('./views/TasksPage'));
 const BriefsPage = lazy(() => import('./views/BriefsPage'));
@@ -119,7 +119,7 @@ function ViewRouter() {
 
   const viewMap: Record<string, React.LazyExoticComponent<() => React.JSX.Element>> = {
     'command-center': DashboardOverview,
-    'jeff-queue': JeffQueueView,
+    'jeff-queue': JeffIntake,
     'activity-stream': ActivityStreamView,
     tasks: TasksPage,
     briefs: BriefsPage,

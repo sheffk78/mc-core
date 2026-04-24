@@ -298,10 +298,83 @@ CREATE INDEX idx_news_created ON news(created_at);
   console.log("✅ News table created");
 }
 
+// ── Incremental migration for v2 columns + tables ──
+function autoMigrateV2(db: Database) {
+  // Add new columns to tasks table
+  const newColumns = [
+    { name: "blocked_on", type: "TEXT DEFAULT ''" },
+    { name: "parent_task_id", type: "TEXT" },
+    { name: "source", type: "TEXT DEFAULT 'mc_ui'" },
+    { name: "lane", type: "TEXT DEFAULT ''" },
+    { name: "checkpoint_summary", type: "TEXT DEFAULT ''" },
+    { name: "checkpoint_at", type: "TEXT" },
+  ];
+
+  let addedAny = false;
+  for (const col of newColumns) {
+    try {
+      db.exec(`ALTER TABLE tasks ADD COLUMN ${col.name} ${col.type}`);
+      addedAny = true;
+    } catch (e: any) {
+      if (!e.message?.includes("duplicate column name")) throw e;
+    }
+  }
+
+  // Create task_comments table
+  const commentsExist = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='task_comments'").get();
+  if (!commentsExist) {
+    db.exec(`
+CREATE TABLE task_comments (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+  author TEXT NOT NULL DEFAULT 'kit' CHECK(author IN ('kit', 'jeff')),
+  content TEXT NOT NULL,
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX idx_comments_task ON task_comments(task_id);
+CREATE INDEX idx_comments_created ON task_comments(created_at);
+    `);
+    addedAny = true;
+  }
+
+  // Create task_status_history table
+  const historyExist = db.prepare("SELECT name FROM sqlite_master WHERE type='table' AND name='task_status_history'").get();
+  if (!historyExist) {
+    db.exec(`
+CREATE TABLE task_status_history (
+  id TEXT PRIMARY KEY DEFAULT (lower(hex(randomblob(8)))),
+  task_id TEXT NOT NULL REFERENCES tasks(id) ON DELETE CASCADE,
+  from_status TEXT NOT NULL,
+  to_status TEXT NOT NULL,
+  changed_by TEXT NOT NULL DEFAULT 'kit' CHECK(changed_by IN ('kit', 'jeff', 'system')),
+  note TEXT DEFAULT '',
+  created_at TEXT NOT NULL DEFAULT (datetime('now'))
+);
+CREATE INDEX idx_history_task ON task_status_history(task_id);
+CREATE INDEX idx_history_created ON task_status_history(created_at);
+    `);
+    addedAny = true;
+  }
+
+  // Add indexes on new columns
+  const newIndexes = [
+    "CREATE INDEX IF NOT EXISTS idx_tasks_parent ON tasks(parent_task_id)",
+    "CREATE INDEX IF NOT EXISTS idx_tasks_source ON tasks(source)",
+    "CREATE INDEX IF NOT EXISTS idx_tasks_blocked ON tasks(blocked_on)",
+  ];
+  for (const idx of newIndexes) {
+    db.exec(idx);
+  }
+
+  if (addedAny) console.log("✅ V2 migration applied");
+}
+
 autoMigrate(db);
 autoMigrateNewsTable(db);
+autoMigrateV2(db);
 import { brandsRouter } from "../routes/brands";
 import { tasksRouter } from "../routes/tasks";
+import { taskCommentsRouter } from "../routes/task-comments";
 import { approvalsRouter } from "../routes/approvals";
 import { activitiesRouter } from "../routes/activities";
 import { costsRouter } from "../routes/costs";
@@ -354,6 +427,7 @@ app.use("/api/v1/*", authMiddleware);
 
 app.route("/api/v1/brands", brandsRouter);
 app.route("/api/v1/tasks", tasksRouter);
+app.route("/api/v1/tasks", taskCommentsRouter);
 app.route("/api/v1/approvals", approvalsRouter);
 app.route("/api/v1/activities", activitiesRouter);
 app.route("/api/v1/costs", costsRouter);

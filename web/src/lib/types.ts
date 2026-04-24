@@ -3,6 +3,7 @@
 export type TaskStatus =
   | 'open'
   | 'in_progress'
+  | 'blocked'
   | 'pending_review'
   | 'approved'
   | 'rejected'
@@ -70,6 +71,12 @@ export interface Task {
   tokens_in: number | null;
   tokens_out: number | null;
   confidence: number | null;
+  blocked_on: string | null;
+  parent_task_id: string | null;
+  source: string | null;
+  lane: string | null;
+  checkpoint_summary: string | null;
+  checkpoint_at: string | null;
   created_at: string;
   updated_at: string;
   brand_slug?: string;

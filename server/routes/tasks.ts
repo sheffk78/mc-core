@@ -13,11 +13,12 @@ export const tasksRouter = new Hono();
 // Status transition map
 // ---------------------------------------------------------------------------
 const ALLOWED_TRANSITIONS: Record<string, string[]> = {
-  open: ["in_progress", "pending_review", "archived"],
-  in_progress: ["pending_review", "completed", "archived"],
-  pending_review: ["approved", "rejected", "in_progress"],
+  open: ["in_progress", "blocked", "pending_review", "archived"],
+  in_progress: ["pending_review", "blocked", "completed", "archived"],
+  blocked: ["in_progress", "pending_review", "archived"],
+  pending_review: ["approved", "rejected", "in_progress", "blocked"],
   approved: ["completed"],
-  rejected: ["in_progress", "archived"],
+  rejected: ["in_progress", "blocked", "archived"],
   completed: ["archived"],
   archived: ["open"],
 };
@@ -55,6 +56,12 @@ tasksRouter.get("/", async (c) => {
   if (assignee) conditions.push(eq(tasks.assignee, assignee as any));
   if (riskTier) conditions.push(eq(tasks.risk_tier, riskTier as any));
   if (category) conditions.push(eq(tasks.category, category as any));
+
+  // Support filtering by blocked_on (non-empty means blocked)
+  const isBlocked = c.req.query("blocked");
+  if (isBlocked === "true") {
+    conditions.push(sql`${tasks.blocked_on} != '' AND ${tasks.blocked_on} IS NOT NULL`);
+  }
 
   const whereClause = conditions.length > 0 ? and(...conditions) : undefined;
 
@@ -144,6 +151,10 @@ const createTaskSchema = z.object({
   tokens_in: z.number().int().optional(),
   tokens_out: z.number().int().optional(),
   confidence: z.number().optional(),
+  blocked_on: z.string().optional(),
+  parent_task_id: z.string().optional(),
+  source: z.enum(["discord", "mc_ui", "cron", "kit_proactive"]).optional(),
+  lane: z.string().optional(),
   linked_files: z
     .array(
       z.object({
@@ -193,6 +204,10 @@ tasksRouter.post(
           tokens_in: body.tokens_in ?? null,
           tokens_out: body.tokens_out ?? null,
           confidence: body.confidence ?? null,
+          blocked_on: body.blocked_on ?? "",
+          parent_task_id: body.parent_task_id ?? null,
+          source: body.source ?? "mc_ui",
+          lane: body.lane ?? "",
         })
         .returning();
 
@@ -246,6 +261,12 @@ const updateTaskSchema = z.object({
   tokens_in: z.number().int().optional().nullable(),
   tokens_out: z.number().int().optional().nullable(),
   confidence: z.number().optional().nullable(),
+  blocked_on: z.string().optional().nullable(),
+  parent_task_id: z.string().optional().nullable(),
+  source: z.enum(["discord", "mc_ui", "cron", "kit_proactive"]).optional(),
+  lane: z.string().optional(),
+  checkpoint_summary: z.string().optional(),
+  checkpoint_at: z.string().optional().nullable(),
   append_agent_note: z.string().optional(),
   append_user_note: z.string().optional(),
 });
@@ -316,6 +337,7 @@ const statusSchema = z.object({
   status: z.enum([
     "open",
     "in_progress",
+    "blocked",
     "pending_review",
     "approved",
     "rejected",

@@ -17,7 +17,7 @@ import { useDataStore } from '../../stores/data';
 
 const COMMAND_CENTER_ITEMS = [
   { label: 'Overview', icon: LayoutDashboard, view: 'command-center' as const },
-  { label: "Jeff's Queue", icon: ListTodo, view: 'jeff-queue' as const },
+  { label: 'Mission Control', icon: ListTodo, view: 'jeff-queue' as const },
   { label: "Kit's Stream", icon: Activity, view: 'activity-stream' as const },
   { label: 'Chat', icon: MessageCircle, view: 'chat' as const },
   { label: 'News', icon: Newspaper, view: 'news' as const },
