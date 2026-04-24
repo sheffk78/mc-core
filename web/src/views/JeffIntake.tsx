@@ -113,6 +113,17 @@ function QuickAddForm({ onCreated, brands }: { onCreated: () => void; brands: an
   const [isExpanded, setIsExpanded] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
+  // Skills per brand
+  const BRAND_SKILLS: Record<string, string[]> = {
+    trustoffice: ['analytics', 'affiliate', 'content', 'seo', 'social', 'email', 'outreach', 'ads', 'competitor'],
+    agentictrust: ['coding', 'research', 'positioning', 'competitor', 'content', 'devops'],
+    wingpoint: ['content', 'community', 'email', 'outreach', 'seo'],
+    truejoybirthing: ['content', 'social', 'email', 'community', 'seo'],
+    general: ['research', 'coding', 'content', 'admin', 'competitor'],
+  };
+  const availableSkills = BRAND_SKILLS[brandSlug] || BRAND_SKILLS.general;
+  const [selectedSkills, setSelectedSkills] = useState<string[]>([]);
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!title.trim() || submitting) return;
@@ -126,6 +137,8 @@ function QuickAddForm({ onCreated, brands }: { onCreated: () => void; brands: an
         description: description.trim() || undefined,
         assignee: 'kit',
         source: 'mc_ui',
+        category: selectedSkills.length > 0 ? selectedSkills.join(',') : undefined,
+        agent_note: selectedSkills.length > 0 ? `Relevant skills: ${selectedSkills.join(', ')}` : undefined,
       });
       setTitle('');
       setDescription('');
@@ -171,13 +184,32 @@ function QuickAddForm({ onCreated, brands }: { onCreated: () => void; brands: an
             <div className="flex items-center gap-3">
               <select
                 value={brandSlug}
-                onChange={(e) => setBrandSlug(e.target.value)}
+                onChange={(e) => { setBrandSlug(e.target.value); setSelectedSkills([]); }}
                 className="rounded-lg border border-[var(--mc-border)] bg-[var(--mc-bg)] px-2 py-1 text-xs text-[var(--mc-ink)] focus:outline-none"
               >
                 {brands.map((b) => (
                   <option key={b.slug} value={b.slug}>{b.name}</option>
                 ))}
               </select>
+              {/* Skills multi-select */}
+              <div className="flex flex-wrap gap-1">
+                {availableSkills.map((skill) => (
+                  <button
+                    key={skill}
+                    type="button"
+                    onClick={() => setSelectedSkills(prev => 
+                      prev.includes(skill) ? prev.filter(s => s !== skill) : [...prev, skill]
+                    )}
+                    className={`rounded px-1.5 py-0.5 text-[10px] font-medium transition-all ${
+                      selectedSkills.includes(skill)
+                        ? 'bg-[var(--mc-accent)]/20 text-[var(--mc-accent)] border border-[var(--mc-accent)]/40'
+                        : 'bg-white/5 text-[var(--mc-ink-muted)] border border-transparent hover:bg-white/10'
+                    }`}
+                  >
+                    {skill}
+                  </button>
+                ))}
+              </div>
               <div className="flex items-center gap-1">
                 {(['low', 'normal', 'high', 'critical'] as const).map((p) => (
                   <button
@@ -393,11 +425,10 @@ export default function JeffIntakeView() {
   const refresh = useCallback(() => {
     fetchJeffQueue();
     fetchApprovals({ status: 'pending', brand: activeBrand ?? undefined });
-    fetchTasks({ status: 'pending_review', brand: activeBrand ?? undefined });
+    // Fetch all active tasks for kit — this populates the "Kit Working" column
+    fetchTasks({ status: 'open,in_progress,blocked,pending_review', assignee: 'kit', brand: activeBrand ?? undefined });
+    // Fetch tasks needing jeff's attention
     fetchJeffOpenTasks(activeBrand ?? undefined);
-    // Also fetch blocked and in_progress tasks
-    fetchTasks({ status: 'blocked', brand: activeBrand ?? undefined });
-    fetchTasks({ status: 'in_progress', brand: activeBrand ?? undefined });
     setRefreshKey((k) => k + 1);
   }, [activeBrand, fetchJeffQueue, fetchApprovals, fetchTasks, fetchJeffOpenTasks]);
 
@@ -439,7 +470,13 @@ export default function JeffIntakeView() {
     return order[a.urgency] - order[b.urgency];
   });
 
-  const inProgressTasks = tasks.filter((t) => t.status === 'in_progress');
+  // Kit Working: open + in_progress + blocked tasks assigned to kit
+  const kitWorkingTasks = tasks.filter((t) => 
+    ['open', 'in_progress', 'blocked'].includes(t.status) && t.assignee === 'kit'
+  ).sort((a, b) => {
+    const order: Record<string, number> = { in_progress: 0, blocked: 1, open: 2 };
+    return (order[a.status] ?? 3) - (order[b.status] ?? 3);
+  });
   const recentlyCompleted = tasks.filter((t) => t.status === 'completed').slice(0, 5);
 
   const isLoading = loading.tasks || loading.approvals;
@@ -537,8 +574,8 @@ export default function JeffIntakeView() {
               <SectionHeader
                 icon={<Zap size={14} className="text-[var(--mc-accent)]" />}
                 title="Kit Working"
-                subtitle="No action needed — Kit is on it"
-                count={inProgressTasks.length}
+                subtitle="Active, blocked, and queued"
+                count={kitWorkingTasks.length}
                 color="var(--mc-accent)"
               />
               <div className="mt-4 flex flex-col gap-2">
@@ -547,13 +584,13 @@ export default function JeffIntakeView() {
                     <div className="h-16 animate-pulse rounded-lg bg-white/5" />
                     <div className="h-16 animate-pulse rounded-lg bg-white/5" />
                   </>
-                ) : inProgressTasks.length === 0 ? (
+                ) : kitWorkingTasks.length === 0 ? (
                   <div className="flex items-center gap-3 rounded-lg bg-white/[0.02] px-4 py-6">
                     <Clock size={18} className="text-[var(--mc-ink-muted)]/40" />
                     <span className="text-sm text-[var(--mc-ink-muted)]/60">Kit isn't actively working on anything</span>
                   </div>
                 ) : (
-                  inProgressTasks.map((task) => (
+                  kitWorkingTasks.map((task) => (
                     <CompactTaskCard
                       key={task.id}
                       task={task}

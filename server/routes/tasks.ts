@@ -1,7 +1,7 @@
 import { Hono } from "hono";
 import { zValidator } from "@hono/zod-validator";
 import { z } from "zod";
-import { eq, and, desc, asc, count, sql, ne } from "drizzle-orm";
+import { eq, and, desc, asc, count, sql, ne, inArray } from "drizzle-orm";
 import { db } from "../db";
 import { brands, tasks, taskFiles, activities } from "../schema";
 import { authMiddleware } from "../middleware/auth";
@@ -52,7 +52,15 @@ tasksRouter.get("/", async (c) => {
     }
   }
 
-  if (status) conditions.push(eq(tasks.status, status as any));
+  if (status) {
+    // Support comma-separated statuses (e.g. "open,in_progress,blocked")
+    const statuses = status.includes(',') ? status.split(',') : [status];
+    if (statuses.length === 1) {
+      conditions.push(eq(tasks.status, statuses[0] as any));
+    } else {
+      conditions.push(inArray(tasks.status, statuses as any));
+    }
+  }
   if (assignee) conditions.push(eq(tasks.assignee, assignee as any));
   if (riskTier) conditions.push(eq(tasks.risk_tier, riskTier as any));
   if (category) conditions.push(eq(tasks.category, category as any));

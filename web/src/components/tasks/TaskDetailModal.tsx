@@ -1,9 +1,9 @@
 import React, { useState, useCallback, useMemo } from 'react';
-import { X, CheckCircle2, Clock, AlertCircle, User, Calendar, Tag, MessageSquare } from 'lucide-react';
+import { X, CheckCircle2, Clock, AlertCircle, User, Calendar, Tag, MessageSquare, Paperclip } from 'lucide-react';
 import { marked } from 'marked';
 import { api } from '../../lib/api';
 import { Badge, Button } from '../ui';
-import type { Task, TaskStatus } from '../../lib/types';
+import type { Task, TaskStatus, TaskFile } from '../../lib/types';
 
 // ── Status transition map (must match server) ──
 
@@ -198,6 +198,33 @@ export function TaskDetailModal({ task, onClose, onUpdated }: TaskDetailModalPro
             <div className="mt-4">
               <div className="text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">Your Note</div>
               <p className="mt-1 text-[13px] leading-relaxed text-[var(--mc-ink)]">{currentTask.user_note}</p>
+            </div>
+          )}
+
+          {/* Linked Files */}
+          {currentTask.linked_files && currentTask.linked_files.length > 0 && (
+            <div className="mt-4">
+              <div className="flex items-center gap-1.5 text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
+                <Paperclip size={12} />
+                Attached Files
+              </div>
+              <div className="mt-1.5 flex flex-col gap-1.5">
+                {currentTask.linked_files.map((f: TaskFile) => (
+                  <a
+                    key={f.id}
+                    href={f.file_path}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-2 rounded-lg bg-white/[0.03] px-3 py-2 text-[13px] text-[var(--mc-accent)] hover:bg-white/[0.06] transition-colors"
+                  >
+                    <Paperclip size={12} />
+                    <span className="truncate">{f.label || f.file_path.split('/').pop() || 'File'}</span>
+                    {f.role && (
+                      <span className="ml-auto rounded bg-white/[0.06] px-1.5 py-0.5 text-[10px] capitalize text-[var(--mc-ink-muted)]">{f.role}</span>
+                    )}
+                  </a>
+                ))}
+              </div>
             </div>
           )}
 
