@@ -50,6 +50,7 @@ export const tasks = sqliteTable(
       enum: [
         "open",
         "in_progress",
+        "blocked",
         "pending_review",
         "approved",
         "rejected",
@@ -422,6 +423,67 @@ export const webauthnCredentials = sqliteTable(
 // ---------------------------------------------------------------------------
 // Relations (for Drizzle relational queries)
 // ---------------------------------------------------------------------------
+// ---------------------------------------------------------------------------
+// 2b. task_comments (must come before relations)
+// ---------------------------------------------------------------------------
+export const taskComments = sqliteTable(
+  "task_comments",
+  {
+    id: text("id")
+      .primaryKey()
+      .default(sql`lower(hex(randomblob(8)))`),
+    task_id: text("task_id")
+      .notNull()
+      .references(() => tasks.id, { onDelete: "cascade" }),
+    author: text("author", {
+      enum: ["kit", "jeff"],
+    })
+      .notNull()
+      .default("kit"),
+    content: text("content").notNull(),
+    created_at: text("created_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+  },
+  (t) => [
+    index("idx_comments_task").on(t.task_id),
+    index("idx_comments_created").on(t.created_at),
+  ]
+);
+
+// ---------------------------------------------------------------------------
+// 2c. task_status_history (must come before relations)
+// ---------------------------------------------------------------------------
+export const taskStatusHistory = sqliteTable(
+  "task_status_history",
+  {
+    id: text("id")
+      .primaryKey()
+      .default(sql`lower(hex(randomblob(8)))`),
+    task_id: text("task_id")
+      .notNull()
+      .references(() => tasks.id, { onDelete: "cascade" }),
+    from_status: text("from_status").notNull(),
+    to_status: text("to_status").notNull(),
+    changed_by: text("changed_by", {
+      enum: ["kit", "jeff", "system"],
+    })
+      .notNull()
+      .default("kit"),
+    note: text("note").default(""),
+    created_at: text("created_at")
+      .notNull()
+      .default(sql`datetime('now')`),
+  },
+  (t) => [
+    index("idx_history_task").on(t.task_id),
+    index("idx_history_created").on(t.created_at),
+  ]
+);
+
+// ---------------------------------------------------------------------------
+// Relations (all table definitions must come before this section)
+// ---------------------------------------------------------------------------
 export const brandsRelations = relations(brands, ({ many }) => ({
   tasks: many(tasks),
   approvals: many(approvals),
@@ -469,64 +531,6 @@ export const taskFilesRelations = relations(taskFiles, ({ one }) => ({
     references: [tasks.id],
   }),
 }));
-
-// ---------------------------------------------------------------------------
-// 2b. task_comments
-// ---------------------------------------------------------------------------
-export const taskComments = sqliteTable(
-  "task_comments",
-  {
-    id: text("id")
-      .primaryKey()
-      .default(sql`lower(hex(randomblob(8)))`),
-    task_id: text("task_id")
-      .notNull()
-      .references(() => tasks.id, { onDelete: "cascade" }),
-    author: text("author", {
-      enum: ["kit", "jeff"],
-    })
-      .notNull()
-      .default("kit"),
-    content: text("content").notNull(),
-    created_at: text("created_at")
-      .notNull()
-      .default(sql`datetime('now')`),
-  },
-  (t) => [
-    index("idx_comments_task").on(t.task_id),
-    index("idx_comments_created").on(t.created_at),
-  ]
-);
-
-// ---------------------------------------------------------------------------
-// 2c. task_status_history
-// ---------------------------------------------------------------------------
-export const taskStatusHistory = sqliteTable(
-  "task_status_history",
-  {
-    id: text("id")
-      .primaryKey()
-      .default(sql`lower(hex(randomblob(8)))`),
-    task_id: text("task_id")
-      .notNull()
-      .references(() => tasks.id, { onDelete: "cascade" }),
-    from_status: text("from_status").notNull(),
-    to_status: text("to_status").notNull(),
-    changed_by: text("changed_by", {
-      enum: ["kit", "jeff", "system"],
-    })
-      .notNull()
-      .default("kit"),
-    note: text("note").default(""),
-    created_at: text("created_at")
-      .notNull()
-      .default(sql`datetime('now')`),
-  },
-  (t) => [
-    index("idx_history_task").on(t.task_id),
-    index("idx_history_created").on(t.created_at),
-  ]
-);
 
 export const approvalsRelations = relations(approvals, ({ one }) => ({
   brand: one(brands, {
