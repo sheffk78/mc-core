@@ -21,6 +21,9 @@ COPY web/ web/
 COPY drizzle.config.ts* ./
 COPY tsconfig.base.json* ./
 
+# Force cache invalidation for web build
+RUN echo "cache_bust=$CACHE_BUST" > /dev/null
+
 # Build web frontend (Vite)
 RUN cd web && bun run build
 
