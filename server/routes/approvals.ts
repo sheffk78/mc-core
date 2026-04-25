@@ -369,6 +369,104 @@ approvalsRouter.post(
 );
 
 // ---------------------------------------------------------------------------
+// PATCH /:id — Update an approval (status transition)
+// ---------------------------------------------------------------------------
+const updateApprovalSchema = z.object({
+  status: z.enum(["approved", "rejected", "expired"]).optional(),
+  feedback: z.string().optional(),
+  preview: z.string().optional(),
+  jeff_comment: z.string().optional(),
+});
+
+approvalsRouter.patch(
+  "/:id",
+  authMiddleware,
+  zValidator("json", updateApprovalSchema),
+  async (c) => {
+    const id = c.req.param("id");
+    const body = c.req.valid("json");
+
+    const [existing] = await db
+      .select()
+      .from(approvals)
+      .where(eq(approvals.id, id))
+      .limit(1);
+
+    if (!existing) {
+      return c.json({ error: "Approval not found" }, 404);
+    }
+
+    // Build update object
+    const updates: Record<string, any> = {};
+
+    if (body.status) {
+      updates.status = body.status;
+      updates.decided_at = sql`datetime('now')`;
+      updates.decided_by = "jeff";
+
+      // If approving/rejecting, also update linked task status
+      if (existing.task_id) {
+        if (body.status === "approved") {
+          const [linkedTask] = await db
+            .select({ status: tasks.status })
+            .from(tasks)
+            .where(eq(tasks.id, existing.task_id))
+            .limit(1);
+
+          if (linkedTask?.status === "pending_review") {
+            await db
+              .update(tasks)
+              .set({
+                status: "approved",
+                updated_at: sql`datetime('now')`,
+              })
+              .where(eq(tasks.id, existing.task_id));
+          }
+        } else if (body.status === "rejected") {
+          if (existing.task_id) {
+            await db
+              .update(tasks)
+              .set({
+                status: "rejected",
+                updated_at: sql`datetime('now')`,
+              })
+              .where(eq(tasks.id, existing.task_id));
+          }
+        }
+      }
+    }
+
+    if (body.feedback !== undefined) updates.feedback = body.feedback;
+    if (body.preview !== undefined) updates.preview = body.preview;
+
+    const [updated] = await db
+      .update(approvals)
+      .set(updates)
+      .where(eq(approvals.id, id))
+      .returning();
+
+    // Log activity if status changed
+    if (body.status) {
+      await db.insert(activities).values({
+        brand_id: existing.brand_id,
+        task_id: existing.task_id,
+        actor: "jeff",
+        action: `approval.${body.status}`,
+        summary: `${body.status === 'approved' ? 'Approved' : body.status === 'rejected' ? 'Rejected' : 'Expired'}: ${existing.title}`,
+        detail: body.feedback ?? "",
+      });
+
+      wsEmit(`approval.${body.status}`, {
+        id,
+        title: existing.title,
+      });
+    }
+
+    return c.json(updated);
+  }
+);
+
+// ---------------------------------------------------------------------------
 // POST /bulk — Bulk approve or dismiss
 // ---------------------------------------------------------------------------
 const bulkSchema = z.object({
