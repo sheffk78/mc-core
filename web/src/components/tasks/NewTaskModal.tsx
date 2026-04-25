@@ -99,7 +99,7 @@ export function NewTaskModal({ onClose, onCreated }: NewTaskModalProps) {
         </div>
 
         {/* Scrollable form */}
-        <form onSubmit={handleSubmit} className="min-h-0 flex-1 overflow-y-auto bg-[var(--mc-surface)] px-6 py-4">
+        <form id="new-task-form" onSubmit={handleSubmit} className="min-h-0 flex-1 overflow-y-auto bg-[var(--mc-surface)] px-6 py-4">
           {/* Title */}
           <div className="mb-4">
             <label className="mb-1.5 block text-[10px] uppercase tracking-wider text-[var(--mc-ink-muted)]">
@@ -260,14 +260,15 @@ export function NewTaskModal({ onClose, onCreated }: NewTaskModalProps) {
           )}
         </form>
 
-        {/* Footer */}
+        {/* Footer — inside form so submit works from keyboard too */}
         <div className="flex-none rounded-b-[calc(1.25rem-6px)] border-t border-white/[0.06] bg-[var(--mc-surface)] px-6 py-4">
           <div className="flex justify-end gap-3">
-            <Button variant="ghost" onClick={onClose} disabled={submitting}>
+            <Button variant="ghost" onClick={onClose} disabled={submitting} type="button">
               Cancel
             </Button>
             <Button
-              onClick={handleSubmit}
+              type="submit"
+              form="new-task-form"
               disabled={!title.trim() || submitting}
             >
               {submitting ? 'Creating…' : 'Create Task'}

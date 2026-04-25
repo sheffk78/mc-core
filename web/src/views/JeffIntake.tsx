@@ -161,7 +161,7 @@ function QuickAddForm({ onCreated, brands }: { onCreated: () => void; brands: an
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
-            placeholder="Add a task..."
+            placeholder="Task title..."
             className="flex-1 bg-transparent text-sm text-[var(--mc-ink)] placeholder:text-[var(--mc-ink-muted)] focus:outline-none"
             onFocus={() => setIsExpanded(true)}
           />
