@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "cities": [
+    { "slug": "midland-tx", "city": "Midland", "state": "TX", "status": "queued", "priority": 1 },
+    { "slug": "killeen-tx", "city": "Killeen", "state": "TX", "status": "queued", "priority": 2 },
+    { "slug": "tyler-tx", "city": "Tyler", "state": "TX", "status": "queued", "priority": 3 },
+    { "slug": "mcallen-tx", "city": "McAllen", "state": "TX", "status": "queued", "priority": 4 },
+    { "slug": "college-station-tx", "city": "College Station", "state": "TX", "status": "queued", "priority": 5 },
+    { "slug": "abilene-tx", "city": "Abilene", "state": "TX", "status": "queued", "priority": 6 },
+    { "slug": "longview-tx", "city": "Longview", "state": "TX", "status": "queued", "priority": 7 },
+    { "slug": "beaumont-tx", "city": "Beaumont", "state": "TX", "status": "queued", "priority": 8 },
+    { "slug": "odessa-tx", "city": "Odessa", "state": "TX", "status": "queued", "priority": 9 },
+    { "slug": "brownsville-tx", "city": "Brownsville", "state": "TX", "status": "queued", "priority": 10 }
+  ],
+  "rules": {
+    "maxDeploysPer24h": 3,
+    "deployCount24h": 0,
+    "last24hReset": null,
+    "requiresHumanApproval": true,
+    "pauseOnSimilarity": true,
+    "similarityThreshold": 0.65
+  }
+}
