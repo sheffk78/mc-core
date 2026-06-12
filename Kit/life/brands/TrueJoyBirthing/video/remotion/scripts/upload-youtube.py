@@ -130,7 +130,7 @@ Created by Shelbi Kohler, certified birth doula.
             'Tacoma General Hospital', 'St. Joseph Medical Center Tacoma',
         ],
         'category_id': '27',  # Education
-        'privacy_status': 'public',
+        'privacy_status': 'unlisted',
         'made_for_kids': False,
     },
     'norfolk-va': {
@@ -149,12 +149,14 @@ Created by Shelbi Kohler, certified birth doula.
 
 CHAPTERS:
 0:00 — Welcome to Norfolk
-0:11 — Where Norfolk Families Deliver (Hospitals)
-1:02 — Doulas & Midwives in Norfolk
-1:15 — The True Joy Birthing App
-1:40 — Cost Reality ($1,200–$2,500)
-2:05 — Insurance & Virginia Medicaid
-2:36 — Your Next Step
+0:11 — Where Norfolk Families Deliver
+0:29 — Sentara Norfolk General Hospital
+0:57 — Children's Hospital of The King's Daughters
+1:22 — Doulas & Midwives in Norfolk
+1:37 — The True Joy Birthing App
+2:02 — Cost Reality ($1,200–$2,500)
+2:26 — Insurance & Virginia Medicaid
+2:57 — Your Next Step
 
 True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared — all for free.
 
@@ -171,6 +173,128 @@ Created by Shelbi Kohler, certified birth doula.
         ],
         'category_id': '27',  # Education
         'privacy_status': 'public',
+        'made_for_kids': False,
+    },
+    'fremont-ca': {
+        'title': 'Fremont Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)',
+        'description': """You just found out you're pregnant in Fremont — now what? This guide walks you through everything: doulas and midwives serving Fremont, hospital policies, real costs, and California's Medi-Cal covers a doula.
+
+📱 Get the free app → https://truejoybirthing.com
+📝 Free birth plan → https://truejoybirthing.com/birth-plan-template/
+📍 Fremont doula directory → https://truejoybirthing.com/birth-support/fremont-ca/
+
+▸ Find Fremont doulas & midwives (33 providers)
+▸ Compare hospital options (Washington Hospital, El Camino Mountain View)
+▸ Know what doula care actually costs ($1,500–$3,000)
+▸ Understand California Medi-Cal PAVE doula coverage ($1,587/pregnancy)
+▸ Build your free birth plan step by step
+
+CHAPTERS:
+0:00 — Welcome to Fremont
+0:14 — Washington Hospital (Level II NICU, Doula-Friendly)
+0:39 — El Camino Health Mountain View (Level III NICU)
+1:04 — 33 Doulas & Midwives Serving Fremont
+1:18 — The True Joy Birthing App
+1:48 — Cost Reality ($1,500–$3,000)
+2:13 — Insurance & California Medi-Cal
+2:37 — Your Next Step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared — all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#fremontdoula #fremontbirth #californiamedicaid #birthplan #doula #pregnancyfremont""",
+        'tags': [
+            'Fremont doula', 'Fremont birth doula', 'California Medi-Cal doula',
+            'Fremont pregnancy guide', 'birth plan template', 'first time mom Fremont',
+            'Fremont hospital maternity', 'Fremont doula cost', 'California birth support',
+            'doula near me', 'Fremont midwife', 'pregnancy California',
+            'free birth plan', 'doula services Fremont', 'birth preparation',
+            'Washington Hospital Fremont', 'El Camino Health Mountain View',
+        ],
+        'category_id': '27',  # Education
+        'privacy_status': 'public',
+        'made_for_kids': False,
+    },
+    'vancouver-wa': {
+        'title': 'Vancouver WA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)',
+        'description': """You just found out you're pregnant in Vancouver, Washington — now what? This guide walks you through everything: doulas and midwives serving Vancouver, hospital policies, real costs, and whether Washington Apple Health covers a doula.
+
+📱 Get the free app → https://truejoybirthing.com
+📝 Free birth plan → https://truejoybirthing.com/birth-plan-template/
+📍 Vancouver doula directory → https://truejoybirthing.com/birth-support/vancouver-wa/
+
+▸ Find Vancouver doulas & midwives
+▸ Compare hospital options (PeaceHealth Southwest, Legacy Salmon Creek)
+▸ Know what doula care actually costs ($1,200–$2,800)
+▸ Understand Washington Apple Health doula coverage (mature program)
+▸ Build your free birth plan step by step
+
+CHAPTERS:
+0:00 — Welcome to Vancouver
+0:11 — Where Vancouver Families Deliver (Hospitals)
+1:06 — Doulas & Midwives in Vancouver
+1:23 — The True Joy Birthing App
+1:48 — Cost Reality ($1,200–$2,800)
+2:13 — Insurance & Washington Apple Health
+2:38 — Your Next Step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared — all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#vancouverwadoula #vancouverwashingtonbirth #washingtonmedicaid #birthplan #doula #pregnancyvancouverwa""",
+        'tags': [
+            'Vancouver WA doula', 'Vancouver Washington birth doula', 'Washington Apple Health doula',
+            'Vancouver WA pregnancy guide', 'birth plan template', 'first time mom Vancouver WA',
+            'PeaceHealth Southwest maternity', 'Legacy Salmon Creek maternity',
+            'Vancouver doula cost', 'Washington birth support',
+            'doula near me', 'Vancouver WA midwife', 'pregnancy Washington',
+            'free birth plan', 'doula services Vancouver WA', 'birth preparation',
+            'Clark County doula', 'Vancouver WA birth guide',
+        ],
+        'category_id': '27',  # Education
+        'privacy_status': 'public',
+        'made_for_kids': False,
+    },
+    'cary-nc': {
+        'title': 'Cary Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)',
+        'description': """You just found out you're pregnant in Cary, North Carolina — now what? This guide walks you through everything: doulas and midwives serving Cary, hospital policies, real costs, and whether NC Medicaid covers a doula.
+
+📱 Get the free app → https://truejoybirthing.com
+📝 Free birth plan → https://truejoybirthing.com/birth-plan-template/
+📍 Cary doula directory → https://truejoybirthing.com/birth-support/cary-nc/
+
+▸ Find Cary doulas & midwives
+▸ Compare hospital options (WakeMed Cary Level III, UNC REX Level III, Duke Level IV)
+▸ Know what doula care actually costs ($1,000–$3,000)
+▸ Understand NC Medicaid doula coverage (since Oct 2024)
+▸ Build your free birth plan step by step
+
+CHAPTERS:
+0:00 — Welcome to Cary
+0:11 — Where Cary Families Deliver (Hospitals)
+0:21 — Doulas & Midwives in Cary
+0:29 — The True Joy Birthing App
+0:52 — Cost Reality ($1,000–$3,000)
+1:14 — Insurance & NC Medicaid
+1:33 — Your Next Step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared — all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#carydoula #caryncbirth #ncmedicaid #birthplan #doula #pregnancync""",
+        'tags': [
+            'Cary doula', 'Cary NC birth doula', 'North Carolina Medicaid doula',
+            'Cary pregnancy guide', 'birth plan template', 'first time mom Cary NC',
+            'WakeMed Cary maternity', 'UNC REX maternity', 'Cary doula cost',
+            'North Carolina birth support', 'doula near me', 'Cary midwife',
+            'pregnancy North Carolina', 'free birth plan', 'doula services Cary',
+            'Research Triangle doula', 'Cary NC birth guide',
+        ],
+        'category_id': '27',  # Education
+        'privacy_status': 'unlisted',
         'made_for_kids': False,
     },
 }

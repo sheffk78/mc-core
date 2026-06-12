@@ -11,11 +11,11 @@ export const norfolk_vaData: TJBCityVideoData = {
     city: "Norfolk",
     state: "VA",
     slug: "norfolk-va",
-    duration_seconds: 193.86,
+    duration_seconds: 196.93,
     fps: 30,
     medicaid: true,
     hasBirthCenter: false,
-    hasAppScreenshot: false,
+    hasAppScreenshot: true,
   },
   scenes: [
     {
@@ -44,8 +44,8 @@ export const norfolk_vaData: TJBCityVideoData = {
     {
       scene_id: "03a_sentara_norfolk",
       scene_type: "tjb_hospital_card",
-      duration_seconds: 28.33,
-      narration: "Sentara Norfolk General Hospital is a 563-bed academic teaching hospital for Eastern Virginia Medical School, and the only Level I trauma center in Hampton Roads. It has a full obstetrics program with a NICU for babies who need extra support, with direct access to CHKD's pediatric specialists for higher-risk cases. Doulas are generally welcome here — confirm current policies during your hospital tour.",
+      duration_seconds: 27.20,
+      narration: "Sentara Norfolk General Hospital on Gresham Drive is a 563-bed academic teaching hospital and the only Level I trauma center in Hampton Roads. It has a full obstetrics program with a NICU and direct access to CHKD's pediatric specialists. Doulas are generally welcome here — confirm current policies during your hospital tour.",
       text_content: {
         name: "Sentara Norfolk General Hospital",
         address: "600 Gresham Dr, Norfolk, VA 23507",
@@ -57,8 +57,8 @@ export const norfolk_vaData: TJBCityVideoData = {
     {
       scene_id: "03b_chkd",
       scene_type: "tjb_hospital_card",
-      duration_seconds: 24.20,
-      narration: "Children's Hospital of The King's Daughters sits right next to Sentara Norfolk General in the Ghent neighborhood. CHKD is a 206-bed freestanding children's hospital. While CHKD doesn't handle deliveries itself, its neonatal and pediatric specialists work closely with Sentara's labor and delivery team for any infant needing advanced care after birth.",
+      duration_seconds: 23.20,
+      narration: "Children's Hospital of The King's Daughters sits right next to Sentara in the Ghent neighborhood. CHKD is a 206-bed freestanding children's hospital. It doesn't handle deliveries itself, but its neonatal and pediatric specialists work closely with Sentara's labor and delivery team for any infant needing advanced care after birth.",
       text_content: {
         name: "Children's Hospital of The King's Daughters",
         address: "601 Children's Lane, Norfolk, VA 23507",
@@ -69,10 +69,13 @@ export const norfolk_vaData: TJBCityVideoData = {
     },
     {
       scene_id: "04_providers",
-      scene_type: "tjb_provider_portrait",
-      duration_seconds: 10.40,
-      narration: "Norfolk has experienced doulas and midwives ready to support you. See who's serving your area — and message them directly — in the app.",
+      scene_type: "tjb_provider_scroll",
+      duration_seconds: 15.60,
+      narration: "Norfolk has over two dozen doulas and midwives ready to support you. Birth doulas, postpartum specialists, overnight support — browse everyone serving your area and message them directly right in the app.",
       text_content: {
+        screenshotPath: "images/norfolk-fullpage-scroll.png",
+        providerCount: 26,
+        maxScroll: 3420,
         city: "Norfolk",
       },
     },
@@ -83,6 +86,7 @@ export const norfolk_vaData: TJBCityVideoData = {
       narration: "Here's the part every Norfolk mom should know about. The True Joy Birthing app is completely free — no account, no catch. Nine guided sections walk you through your entire birth plan. You can find and message doulas and midwives near you right inside the app. Then export your plan as a PDF to share with your provider. It's the tool every mom needs in her pocket.",
       text_content: {
         headline: "Build Your Birth Plan",
+        screenshotPath: "images/tjb-app-dashboard.webp",
         features: [
           "Nine guided sections — hospital preferences, pain management, who's in the room",
           "Find and connect with doulas AND midwives near you",
