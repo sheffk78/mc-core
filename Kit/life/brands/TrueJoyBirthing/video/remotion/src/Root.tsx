@@ -7,8 +7,13 @@ import { Composition, Folder } from 'remotion';
 import { TJB } from './style/tjb-tokens';
 import { TJBCityVideo } from './TJBCityVideo';
 import { denverData, denverFirstTwoScenes } from './data/denver-example';
+import { fontana_caData } from './data/fontana-ca-data';
+import { dallas_txData } from './data/dallas-tx-data';
+import { cary_ncData } from './data/cary-nc-data';
+import { fremont_caData } from './data/fremont-ca-data';
 import { norfolk_vaData } from './data/norfolk-va-data';
 import { tacomaWaData } from './data/tacoma-wa-data';
+import { vancouver_waData } from './data/vancouver-wa-data';
 import {
   CityHookSlide,
   CityBridgeSlide,
@@ -17,6 +22,8 @@ import {
   AppFeatureSlide,
   CostRevealSlide,
   InsuranceBranchSlide,
+  ProviderGridSlide,
+  ProviderScrollSlide,
   CityCTASlide,
 } from './scenes/index';
 
@@ -24,13 +31,13 @@ const fps = 30;
 
 // Full Denver video
 const totalFrames = denverData.scenes.reduce(
-  (sum: number, s: { duration_seconds: number }) => sum + Math.max(Math.round(s.duration_seconds * fps), 1),
+  (sum: number, s: { duration_seconds: number }) => sum + Math.max(Math.ceil(s.duration_seconds * fps), 1),
   0
 );
 
 // First-two-scenes test (54s of audio)
 const firstTwoFrames = denverFirstTwoScenes.scenes.reduce(
-  (sum: number, s: { duration_seconds: number }) => sum + Math.max(Math.round(s.duration_seconds * fps), 1),
+  (sum: number, s: { duration_seconds: number }) => sum + Math.max(Math.ceil(s.duration_seconds * fps), 1),
   0
 );
 
@@ -41,22 +48,71 @@ export const Root: React.FC = () => {
         <Composition
           id="Tacoma-City-Guide"
           component={TJBCityVideo}
-          durationInFrames={tacomaWaData.scenes.reduce((s, c) => s + Math.max(Math.round(c.duration_seconds * 30), 1), 0)}
+          durationInFrames={tacomaWaData.scenes.reduce((s, c) => s + Math.max(Math.ceil(c.duration_seconds * 30), 1), 0)}
           fps={fps}
           width={1920}
           height={1080}
-          defaultProps={{videoData: tacomaWaData, audioPath: 'audio/tacoma-wa/denver-master.wav'}}
+          defaultProps={{videoData: tacomaWaData, audioPath: 'audio/tacoma-wa/tacoma-wa-master.wav'}}
         />
 
 
         <Composition
-          id="norfolk-va-City-Guide"
+          id="Vancouver-City-Guide"
           component={TJBCityVideo}
-          durationInFrames={norfolk_vaData.scenes.reduce((s, c) => s + Math.max(Math.round(c.duration_seconds * 30), 1), 0)}
+          durationInFrames={vancouver_waData.scenes.reduce((s, c) => s + Math.max(Math.ceil(c.duration_seconds * 30), 1), 0)}
           fps={fps}
           width={1920}
           height={1080}
-          defaultProps={{videoData: norfolk_vaData, audioPath: 'audio/norfolk-va/norfolk-master.wav'}}
+          defaultProps={{videoData: vancouver_waData, audioPath: 'audio/vancouver-wa/vancouver-wa-master.wav'}}
+        />
+        <Composition
+          id="norfolk-va-City-Guide"
+          component={TJBCityVideo}
+          durationInFrames={norfolk_vaData.scenes.reduce((s, c) => s + Math.max(Math.ceil(c.duration_seconds * 30), 1), 0)}
+          fps={fps}
+          width={1920}
+          height={1080}
+          defaultProps={{videoData: norfolk_vaData, audioPath: 'audio/norfolk-va/norfolk-va-master.wav'}}
+        />
+
+        <Composition
+          id="fremont-ca-City-Guide"
+          component={TJBCityVideo}
+          durationInFrames={fremont_caData.scenes.reduce((s, c) => s + Math.max(Math.ceil(c.duration_seconds * 30), 1), 0)}
+          fps={fps}
+          width={1920}
+          height={1080}
+          defaultProps={{videoData: fremont_caData, audioPath: 'audio/fremont-ca/fremont-master.wav'}}
+        />
+
+        <Composition
+          id="cary-nc-City-Guide"
+          component={TJBCityVideo}
+          durationInFrames={cary_ncData.scenes.reduce((s, c) => s + Math.max(Math.ceil(c.duration_seconds * 30), 1), 0)}
+          fps={fps}
+          width={1920}
+          height={1080}
+          defaultProps={{videoData: cary_ncData, audioPath: 'audio/cary-nc/cary-nc-master.wav'}}
+        />
+
+        <Composition
+          id="dallas-tx-City-Guide"
+          component={TJBCityVideo}
+          durationInFrames={dallas_txData.scenes.reduce((s, c) => s + Math.max(Math.ceil(c.duration_seconds * 30), 1), 0)}
+          fps={fps}
+          width={1920}
+          height={1080}
+          defaultProps={{videoData: dallas_txData, audioPath: 'audio/dallas-tx/dallas-tx-master.wav'}}
+        />
+
+        <Composition
+          id="fontana-ca-City-Guide"
+          component={TJBCityVideo}
+          durationInFrames={fontana_caData.scenes.reduce((s, c) => s + Math.max(Math.round(c.duration_seconds * 30), 1), 0)}
+          fps={fps}
+          width={1920}
+          height={1080}
+          defaultProps={{videoData: fontana_caData, audioPath: 'audio/fontana-ca/fontana-ca-master.wav'}}
         />
         <Composition
           id="Denver-City-Guide"
@@ -256,6 +312,49 @@ export const Root: React.FC = () => {
             />
           )}
           durationInFrames={120}
+          fps={fps}
+          width={1920}
+          height={1080}
+        />
+
+        <Composition
+          id="test-provider-grid"
+          component={() => (
+            <ProviderGridSlide
+              photos={[
+                { photo: 'images/doulas/sonja-spitzer.webp', name: 'Sonja Spitzer' },
+                { photo: 'images/doulas/meadowsweet-midwifery.webp', name: 'Melissa Sexton' },
+                { name: 'Jane Doe' },
+                { name: 'Maria Garcia' },
+                { photo: 'images/doulas/sonja-spitzer.webp', name: 'Another Provider' },
+                { name: 'Kim Lee' },
+                { name: 'Sarah Chen' },
+                { photo: 'images/doulas/meadowsweet-midwifery.webp', name: 'River Johnson' },
+                { name: 'Lisa Park' },
+                { name: 'Tanya Brown' },
+                { name: 'Rachel White' },
+                { name: 'Amy Stone' },
+              ]}
+              providerCount={26}
+            />
+          )}
+          durationInFrames={150}
+          fps={fps}
+          width={1920}
+          height={1080}
+        />
+
+        <Composition
+          id="test-provider-scroll"
+          component={() => (
+            <ProviderScrollSlide
+              screenshotPath="images/fremont-fullpage-scroll.png"
+              providerCount={33}
+              maxScroll={5200}
+              city="Fremont"
+            />
+          )}
+          durationInFrames={Math.ceil(13.97 * 30)}
           fps={fps}
           width={1920}
           height={1080}
