@@ -1,0 +1,17 @@
+[Unit]
+Description=Leland Mills Hermes Bridge API
+After=network.target
+
+[Service]
+Type=simple
+User=cleaningbot
+WorkingDirectory=/home/cleaningbot/bridge
+Environment="BRIDGE_API_KEY=lm-bridge-key-2026"
+ExecStart=/home/cleaningbot/.hermes/hermes-agent/venv/bin/uvicorn bridge:app --host 127.0.0.1 --port 8080
+Restart=on-failure
+RestartSec=5
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target
