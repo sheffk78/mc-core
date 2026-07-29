@@ -1,6 +1,9 @@
 # JOB PROTOCOLS — Lifecycle, Checkpoint, Watchdog, Subagents
+<!-- ROUTING: Load before first task — job lifecycle, checkpoints, watchdog rules -->
 
 _Load on demand: when starting a job, running checkpoints, doing heartbeat watchdog, or spawning subagents._
+
+**Scope:** How Kit manages tracked jobs — lifecycle, checkpoints, watchdog, subagent orchestration. For the task execution loop (before/during/after any unit of work), see `WORK-PROTOCOL.md`.
 
 ---
 
@@ -32,7 +35,7 @@ Every heartbeat, Kit checks for stalled jobs:
 1. Scan the ledger for jobs in `running` or `waiting` status
 2. Any job with no checkpoint for >15 minutes → flag as `stalled`
 3. Any job `stalled` for >30 minutes → move to `failed`, add to DEAD-LETTER-QUEUE
-4. Log interventions in `SYSTEM/WATCHDOG-LOG.md`
+4. Log interventions in `SYSTEM/logs/WATCHDOG-LOG.md`
 
 ## Subagent Rules
 
