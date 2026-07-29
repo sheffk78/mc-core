@@ -13,11 +13,11 @@
 | Assign/execute coding work (Path A/B/C) | `TOOLS/coding-paths.md` |
 | Hit the Mission Control API (tasks, approvals, costs, files) | `TOOLS/mission-control-api.md` |
 | Post to X / reply / search | `TOOLS/x-api.md` |
-| Post social content (TikTok/IG/YT/Pin/LI/FB) | `TOOLS/genviral.md` |
-| Post Reddit comments via CrowdReply | `TOOLS/crowdreply.md` |
+| Post social content (TikTok/IG/YT/Pin/LI/FB) | `TOOLS/social-posting-api.md` |
+| ~~Post Reddit comments via CrowdReply~~ (ARCHIVED — skill decommissioned 2026-06-01) | `TOOLS/crowdreply.md` (archived) |
 | Send email (any brand) | `TOOLS/mailercloud.md` |
 | Scrape social / web / leads | `TOOLS/apify.md` |
-| Search markdown across workspace + PARA | `TOOLS/qmd.md` |
+| Search markdown across workspace + PARA | `TOOLS/markdown-search.md` |
 | Run a >5min background process | `TOOLS/tmux.md` |
 | Retrieve a credential | `TOOLS/1password.md` |
 | Read repos, commits, code | `TOOLS/github-cli.md` |

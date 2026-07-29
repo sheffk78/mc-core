@@ -2,7 +2,7 @@
 <!-- ROUTING: Load to see what Kit is working on right now -->
 
 ## Current: Workspace Restructure for Smaller Models
-**Status:** Running — Phase 2 (mechanical work)
+**Status:** Running — Phase 3 (skill renames) complete
 **Started:** 2026-07-28
 
 ### Phase 1: Analysis & Design ✅
@@ -10,23 +10,25 @@
 - Council deliberation completed (3 reviewers: adversarial, simulator, IA purist)
 - Key decisions: 145-line AGENTS.md (not 80), safety stays inline, SOUL+IDENTITY merged, kit-charter folded
 
-### Phase 2: Execution (in progress)
+### Phase 2: Execution ✅
 - ✅ New AGENTS.md written (145 lines, down from 262)
 - ✅ SYSTEM/OPERATING-MANUAL.md written (135 lines, on-demand detail)
 - ✅ SOUL.md merged with IDENTITY.md (91 lines)
 - ✅ Pre-split files archived with manifest
-- 🔄 File operations running (spec files → brand dirs, railway scripts → scripts/railway/, stubs archived)
-- 🔄 Cross-reference updates running (63 files, 145 hits)
-- ⬜ Post-split verification
+- ✅ File operations complete (spec files → brand dirs, railway scripts → scripts/railway/, stubs archived)
+- ✅ Cross-reference updates complete (63 files, 145 hits)
+- ✅ Post-split verification
+- ✅ SYSTEM/ split: active logs → SYSTEM/logs/, JSON → SYSTEM/data/
+- ✅ kit-*.md consolidation: charter folded into AGENTS.md, toolbox into TOOLS.md, standards renamed
 
-### Phase 3: Verification (pending)
-- Content diff audit (zero information loss)
-- Reference scan (zero broken pointers)
-- Boot test (can model recite safety rules from new AGENTS.md)
+### Phase 3: Skill Clarity ✅
+- ✅ qmd → markdown-search (dir, SKILL.md, TOOLS ref, GLOBAL-SKILLS-INDEX)
+- ✅ genviral → social-posting-api (dir, SKILL.md, TOOLS ref, GLOBAL-SKILLS-INDEX)
+- ✅ crowd-reply archived (decommissioned 2026-06-01, moved to archive/2026-07-29-cleanup/)
+- ✅ daily-review → nightly-revenue-review (dir, SKILL.md, GLOBAL-SKILLS-INDEX)
+- ✅ TOOLS.md, GLOBAL-SKILLS-INDEX.md, lead-magnet-pipeline ref updated
+- ✅ No cron job references found — zero breakage risk
 
-### Key Files
-- New AGENTS.md: `/Users/socializerender/.openclaw/workspace/AGENTS.md` (145 lines)
-- New OPERATING-MANUAL.md: `/Users/socializerender/.openclaw/workspace/SYSTEM/OPERATING-MANUAL.md` (135 lines)
-- New SOUL.md: `/Users/socializerender/.openclaw/workspace/SOUL.md` (91 lines)
-- Archive: `/Users/socializerender/.openclaw/workspace/archive/2026-07-28-workspace-restructure/`
-- Reference audit: `/tmp/agents_refs.json` (366 records)
+### Pending
+- ⬜ IDENTITY.md still at root (minor — should archive)
+- ⬜ Deep content audit of USER.md, brand folders (postponed)
