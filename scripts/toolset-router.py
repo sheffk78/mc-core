@@ -162,8 +162,7 @@ def route():
         for c in changes:
             print(c)
         print("\nChanges take effect on next /reset (new session).")
-    else:
-        print("Toolset router — no changes needed. Current toolsets match active task.")
+    # Silent when no changes — watchdog pattern (empty stdout = no delivery)
 
 
 def show_status():

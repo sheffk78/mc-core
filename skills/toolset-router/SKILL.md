@@ -9,9 +9,21 @@ Dynamically route toolsets based on what the active task actually needs. Prevent
 
 ## When to Load
 
-- At session start (check ACTIVE-TASK.md, enable what's needed)
-- When switching to a different brand or task type mid-session
 - When a tool call fails with "tool not available"
+- When switching to a different brand or task type mid-session and you need to check toolsets
+- At session start if the cron job didn't run or ACTIVE-TASK.md changed recently
+
+## Architecture
+
+This is integrated with the **skill-registry MCP server** — the same server that provides `search_skills`, `suggest_skills`, `list_categories`, and `load_skill`. Toolset routing is the 5th tool: `route_toolsets`.
+
+**3 access points:**
+
+1. **MCP tool** (in-session, read-only): Call `mcp__skill_registry__route_toolsets` via the skill-registry MCP. Returns recommendations but doesn't write config. Use this to check what you need, then enable manually.
+
+2. **Cron job** (background, zero tokens): `no_agent=True` script-only job runs `toolset-router.py` every 2h. Reads ACTIVE-TASK.md, writes config changes directly. Silent when no changes needed (empty stdout = no message delivered). Only messages you when toolsets actually changed.
+
+3. **Manual script**: `python3 scripts/toolset-router.py` — same logic as cron. Flags: `--status` (show current state), `--reset` (back to core-only defaults).
 
 ## Toolset → Task Mapping
 
