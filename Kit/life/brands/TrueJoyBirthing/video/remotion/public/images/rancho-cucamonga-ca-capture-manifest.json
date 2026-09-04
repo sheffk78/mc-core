@@ -1,0 +1,34 @@
+{
+  "slug": "rancho-cucamonga-ca",
+  "captured_at": "2026-09-04T20:04:45.887895+00:00",
+  "live_url": "https://truejoybirthing.com/birth-support/rancho-cucamonga-ca/",
+  "screenshot": "rancho-cucamonga-ca-fullpage-scroll.png",
+  "crop": {
+    "start": 4116,
+    "end": 6558
+  },
+  "section_label": "Doulas & Midwives Serving Rancho Cucamonga",
+  "provider_photos": [
+    {
+      "src": "provider-rancho-cucamonga-ca-selina-pasillas.webp",
+      "loaded": true,
+      "name": "Selina Pasillas"
+    },
+    {
+      "src": "provider-rancho-cucamonga-ca-annie-griffith.webp",
+      "loaded": true,
+      "name": "Annie Griffith"
+    },
+    {
+      "src": "provider-rancho-cucamonga-ca-nicole-jones.webp",
+      "loaded": true,
+      "name": "Nicole Jones"
+    },
+    {
+      "src": "provider-rancho-cucamonga-ca-lauren-pancucci.webp",
+      "loaded": true,
+      "name": "Lauren Pancucci"
+    }
+  ],
+  "provider_count": 4
+}

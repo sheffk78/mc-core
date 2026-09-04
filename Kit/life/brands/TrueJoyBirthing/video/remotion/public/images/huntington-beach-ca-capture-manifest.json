@@ -1,0 +1,34 @@
+{
+  "slug": "huntington-beach-ca",
+  "captured_at": "2026-09-04T20:05:12.998667+00:00",
+  "live_url": "https://truejoybirthing.com/birth-support/huntington-beach-ca/",
+  "screenshot": "huntington-beach-ca-fullpage-scroll.png",
+  "crop": {
+    "start": 4046,
+    "end": 6478
+  },
+  "section_label": "Doulas & Midwives Serving Huntington Beach",
+  "provider_photos": [
+    {
+      "src": "provider-huntington-beach-ca-madi-rose.webp",
+      "loaded": true,
+      "name": "Madi Rose Full"
+    },
+    {
+      "src": "provider-huntington-beach-ca-dee-ornelas.webp",
+      "loaded": true,
+      "name": "Dee Ornelas"
+    },
+    {
+      "src": "provider-huntington-beach-ca-soul-shine-birth.webp",
+      "loaded": true,
+      "name": "Aurora"
+    },
+    {
+      "src": "provider-huntington-beach-ca-my-french-doula.webp",
+      "loaded": true,
+      "name": "Mathilde"
+    }
+  ],
+  "provider_count": 4
+}
