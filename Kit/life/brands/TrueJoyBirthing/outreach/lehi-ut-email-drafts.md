@@ -56,5 +56,6 @@ TrueJoyBirthing.com
 ## Notes
 
 - Aleece Weaver is the only Lehi provider with a verified public email; email sent 2026-09-05 from shelbi@truejoybirthing.com.
+- **Verified send:** message_id `vps-20260905194152178777`, to eggbabyds@gmail.com, subject "We featured you on our new Lehi birth guide (video + free listing)" â mail_client returned success (exit 0, no bounce).
 - Madison Gordon, Krystalyn Leffler-Macon, and Shay Crowther have no public email on record â outreach deferred to website contact forms / Instagram DMs (documented, not email-blocked).
 - 15s send spacing honored (single email send; no further emails in this batch).
