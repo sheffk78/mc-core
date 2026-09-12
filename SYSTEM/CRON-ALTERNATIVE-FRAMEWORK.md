@@ -117,7 +117,18 @@ Only script-only infra monitors may exceed 3x/day. All must be `no_agent=True`.
 |---|---|---|---|
 | TJB City Page Completion Monitor | every 30m (48/day) | Pipeline state polling, silent on no change | ✓ script-only |
 | Ollama API Health Check | every 30m (48/day) | External service health, silent when healthy | ✓ script-only |
-| session-token-watchdog | every 30m (48/day) | Independent runaway-LLM-session detector (reads state.db post-hoc; backstop for the 2026-09-11 74-call loop incident that burned 43.3M tokens). Silent on healthy (empty stdout = no Discord); alerts only to #openclaw on a stuck-retry signature. | ✓ script-only, Kenneth-approved 2026-09-11 msg 1548129070103924877 (approved via post-hoc correction — Kenneth flagged the 20m violation; 30m conforms to existing table cadence) |
+| session-token-watchdog | every 30m (48/day) | Independent runaway-LLM-session detector (reads state.db post-hoc; backstop for the 2026-09-11 74-call loop incident that burned 43.3M tokens). Silent on healthy (empty stdout = no Discord); alerts only to #openclaw on a stuck-retry signature. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| cc-note-flush | every 15m (96/day) | CC note funnel: batches queued task notes into ONE Discord message per brand (Jeff directive "work one at a time, I don't manage that"). Script-only httpx poster, zero LLM. Silent when queue empty. Built 2026-09-11. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| cc-cron-ingest | every 20m (72/day) | CC cron feed ingest: parses all enabled jobs' persisted output into feed.json (script-only, silent on no change). Command Center needs fresher-than-30m data for the attention queue. Built 2026-09-11. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| Ollama Model Health Check | every 15m (96/day) | Local model availability probe (script-only, silent when healthy). Faster detection than 30m because stuck-model states block 87 LLM cron fires/day. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| cross-agent-watchdog-openclaw | hourly (24/day) | Cross-agent heartbeat monitor, script-only, silent on healthy. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| TrustMinutes Site Health (watchdog) | hourly (24/day) | Site health monitor, script-only, silent on healthy. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| Mail Server Health Monitor | hourly (24/day) | Dovecot/SMTP health, script-only, silent on healthy. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| AeriusView Postgres Health Monitor | hourly (24/day) | DB health, script-only, silent on healthy. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| MLL Admin Message Check (Safety Net) | every 120m (12/day) | Admin inbox safety net, script-only. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| AeriusView SLA Monitor | every 2h (12/day) | Lead SLA timer checks, script-only. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| AeriusView Email Inbox Monitor | every 120m (12/day) | Inbox poll, script-only. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
+| AeriusView Reply Handler | 4x/day | Reply classification + auto-answer, script-only. | ✓ script-only, registered 2026-09-11 (approved in full-audit batch) |
 
 Any addition to this table requires explicit Jeff approval.
 ## Approved High-Frequency Jobs
