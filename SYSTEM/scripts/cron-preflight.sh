@@ -90,7 +90,11 @@ if is_script_only and fpd > 3:
     except FileNotFoundError:
         print("BLOCKED: framework file missing; cannot verify registration.")
         sys.exit(1)
-    if name and name.lower() in table.lower():
+    # Normalize: case + all non-alphanumerics, so "AeriusView Reply Handler"
+    # matches "aeriusview-reply-handler" (job names vs table rows differ in
+    # hyphenation/spacing conventions).
+    norm = lambda s: re.sub(r'[^a-z0-9]', '', s.lower())
+    if name and norm(name) in norm(table):
         print(f"PREFLIGHT PASSED: script-only, {fpd:.0f}/day, '{name}' registered in approved table.")
         sys.exit(0)
     print(f"BLOCKED: script-only cron at {fpd:.0f}/day exceeds 3x/day and '{name or '(unnamed)'}' is NOT in the Approved High-Frequency Jobs table of SYSTEM/CRON-ALTERNATIVE-FRAMEWORK.md. Register it there first (edit = approval record), then create.")
