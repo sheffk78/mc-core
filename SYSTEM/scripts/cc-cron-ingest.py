@@ -139,7 +139,117 @@ def extract_full_text(path: Path) -> str:
         ln for ln in text.splitlines() if not header_like.match(ln.strip())
     )
     # else: whole file is the payload (script-mode fallback)
-    return _clean_report_text(text)[:MAX_BODY]
+    cleaned = _clean_report_text(text)
+    return _strip_chatter(cleaned)[:MAX_BODY]
+
+
+def _strip_chatter(cleaned: str) -> str:
+    """Drop agent-work narration from the top of a cleaned report."""
+    lines = cleaned.splitlines()
+    while lines and (CHATTER_START.match(lines[0]) or len(lines[0]) > 240
+                     and not RESULT_LINE.search(lines[0])):
+        lines.pop(0)
+    return "\n".join(lines).strip()
+
+
+# ── Card digest ─────────────────────────────────────────────────────────────
+# What Kenneth reads on a card. Not the first N chars of the report — a
+# signal-extracted digest: outcome/outcome-structured lines first, then the
+# ask, never a stack trace or agent-chatter preamble.
+
+# Agent-work narration with zero reader value. Drop lines that start like this.
+CHATTER_START = re.compile(
+    r"^(i (am|'m|will|'ll|need to|see|have|notice|found)|let me|i'll now|"
+    r"okay,?|all right|understood|loading|reading|checking (the )?(file|inbox)|"
+    r"here('s| is) the (report|summary|update))\b", re.I)
+# Lines that carry the actual outcome.
+RESULT_LINE = re.compile(
+    r"(sent|delivered|failed|passed|complete[ds]?|found|flagged|skipped|"
+    r"scraped|archived|blocked|bounced|errored|success(ful)?|✅|❌|⚠️|🔴|"
+    r"\b\d+\s*(of|/)\s*\d+|\b\d+\s+(new|unread|items?|replies|prospects|leads|"
+    r"visitors?|pageviews?|messages?|emails?|signups?)\b)", re.I)
+# Stack-trace / stderr furniture — never card content.
+TRACE_LINE = re.compile(
+    r"(^Traceback|^  File |^\s*\^+\s*$|Error code|exit(ed)? with code|"
+    r"^stderr:?$|raise |Exception|^\s*\^+)", re.I)
+# The exception line inside a traceback — the one line worth keeping.
+EXCEPTION_LINE = re.compile(r"^[A-Za-z][\w.]*(Error|Exception|Warning|Failure)\b")
+
+DIGEST_MAX_LINES = 14
+DIGEST_MAX_CHARS = 900
+
+
+def _digest_lines(cleaned: str):
+    """Pick the lines of a cleaned report that belong on a card, in order."""
+    lines = [ln for ln in cleaned.splitlines() if ln.strip()]
+    # A report often has a '---' separating narration from the formal report —
+    # prefer the formal half when it exists and is substantial.
+    if "---" in cleaned:
+        sep = next(i for i, ln in enumerate(lines) if ln.strip() == "---")
+        tail = [ln for ln in lines[sep + 1:] if ln.strip() != "---"]
+        if len(tail) >= 3:
+            lines = tail
+    scored = []
+    for i, ln in enumerate(lines):
+        if TRACE_LINE.search(ln):
+            continue
+        # position bonus: early lines summarise; results lines jump the queue
+        pos_bonus = max(0.0, 1.0 - i / max(len(lines), 1))
+        score = (2.0 if RESULT_LINE.search(ln) else 0.0) + pos_bonus
+        scored.append((score, i, ln))
+    scored.sort(key=lambda t: (-t[0], t[1]))
+    picked_idx = sorted(i for _, i, _ in scored[:DIGEST_MAX_LINES])
+    out = [lines[i].strip() for i in picked_idx]
+    # Markdown bold/headers → plain text (cards are plain text)
+    out = [re.sub(r"^\s*#{1,6}\s*", "", ln) for ln in out]
+    out = [re.sub(r"\*\*?", "", ln) for ln in out]
+    return out
+
+
+def extract_card_digest(path: Path) -> str:
+    """Readable card digest: what happened / results / status, ~10s read."""
+    full = extract_full_text(path)
+    if not full:
+        return ""
+    # Script payloads that are JSON (e.g. the ingest job's own run report):
+    # summarise the item counts instead of quoting the dump.
+    s = full.strip()
+    if s.startswith("{") and '"items"' in s[:300]:
+        try:
+            data = json.loads(s)
+            items = data.get("items", [])
+            na = sum(1 for i in items if i.get("category") == "needs_action")
+            fyi = sum(1 for i in items if i.get("category") == "fyi")
+            return f"Ingested {len(items)} new cron runs · {na} need action · {fyi} FYI"
+        except Exception:
+            pass
+    if len(full) <= DIGEST_MAX_CHARS:
+        return full
+    # Collapse each traceback to its exception line (the actual signal).
+    # Trace mode is sticky: skip File frames, code frames, caret rows, and
+    # chained-exception bridges until the exception line itself.
+    lines = []
+    in_trace = False
+    trace_run = 0
+    for ln in full.splitlines():
+        s = ln.strip()
+        if s.startswith("Traceback"):
+            in_trace, trace_run = True, 0
+            continue
+        if in_trace:
+            trace_run += 1
+            if EXCEPTION_LINE.match(s):
+                lines.append(s)
+                in_trace = False
+            elif trace_run > 60:
+                in_trace = False  # safety: malformed/absent exception line
+            continue
+        lines.append(ln)
+    collapsed = "\n".join(lines)
+    text = "\n".join(_digest_lines(collapsed))
+    if len(text) > DIGEST_MAX_CHARS:
+        text = text[:DIGEST_MAX_CHARS].rsplit("\n", 1)[0]
+    return text.strip()
 
 
 def load_state() -> dict:
@@ -270,6 +380,7 @@ def main() -> int:
             "schedule": (job.get("schedule") or {}).get("display") if isinstance(job.get("schedule"), dict) else str(job.get("schedule") or ""),
             "summary": summarise(resp or ""),
             "full_text": extract_full_text(Path(latest)),
+            "card_digest": extract_card_digest(Path(latest)),
             "output_path": str(latest),
             "output_dir": str(BASE / jid),
             "last_status": job.get("last_status"),
@@ -301,8 +412,9 @@ def main() -> int:
     # Backfill full_text for items ingested before the field existed: any stored
     # item that still has its source file can get the full-text view for free.
     for it in by_id.values():
-        if not it.get("full_text") and it.get("output_path"):
-            it["full_text"] = extract_full_text(Path(it["output_path"]))
+        if it.get("output_path") and (not it.get("full_text") or not it.get("card_digest")):
+            it["full_text"] = it.get("full_text") or extract_full_text(Path(it["output_path"]))
+            it["card_digest"] = it.get("card_digest") or extract_card_digest(Path(it["output_path"]))
     cutoff = datetime.fromtimestamp(now - MAX_AGE_H * 3600, tz=timezone.utc).isoformat()
     kept = [i for i in by_id.values() if (i.get("run_at") or "") >= cutoff]
     kept.sort(key=lambda i: i.get("run_at") or "", reverse=True)

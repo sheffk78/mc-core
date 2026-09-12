@@ -10,14 +10,16 @@ _Brand folder details, hosting, and full brand architecture: `FILE-SYSTEM-BRANDS
 3. **Code projects follow their brand.** Brand projects → `Kit/life/brands/{brand}/projects/`. Independent → `Kit/life/projects/`.
 4. **Shared resources stay shared.** Cross-brand references stay in `Kit/life/resources/` or `Kit/life/templates/`.
 5. **One credential store.** All secrets live in `workspace/secrets/`. No scattered `.env` files outside secrets/.
-6. **Never delete — archive.** Move to `workspace/archive/` with a dated folder.
+6. **Never delete — archive.** Move to `/Volumes/RENDER DISK/archive/` (canonical) with a dated folder, then run `archive-hook.sh` to index it. Workspace `archive/` is a symlink to it.
 7. **Kit/ vs kit/** — macOS is case-insensitive, both are valid. Use `Kit/` in docs.
 8. **Brand folder names are case-sensitive.** `TrustOffice`, `Wingpoint`, `TrueJoyBirthing`, `AeriusView` — not lowercase.
+
+9. **Let Hermes own its runtime state.** `.hermes/` is an auto-managed runtime directory (cron execution DB, skill registry index, working memory, operational scripts, auth tokens). Do not create files there expecting durable persistence. If data matters, it lives in workspace first.
 
 ## Workspace Root
 
 ```
-~/.openclaw/workspace/
+~/.openclaw/workspace/           # Human-curated durable authority; `.hermes/` is the runtime scratch that reads from here
 ├── AGENTS.md                  # Protocols, rules, routing table (auto-loaded)
 ├── SOUL.md                    # Kit's voice and identity
 ├── MEMORY.md                  # Patterns about how Jeff thinks
@@ -56,12 +58,13 @@ _Brand folder details, hosting, and full brand architecture: `FILE-SYSTEM-BRANDS
 │       └── resources/        # Cross-brand shared reference materials
 │
 ├── TOOLS/                     # Detailed tool documentation
+├── TOOLS/stealth-helpers.md   # Shared browser-automation utility (human-mimicry for Playwright/CDP)
 ├── archive/                   # Retired files (never deleted)
 ├── config/                    # System configuration
 ├── cron_tracking/             # Cron job tracking data
-├── mc-core/                   # Mission Control core
+├── mc-core/                   # LEGACY — Mission Control core (decommissioned 2026-08-14, archive candidate)
 ├── memory/                    # Daily notes (YYYY-MM-DD.md)
-├── pending_review/            # Tasks pending Jeff's review
+├── pending_review/            # Triage inbox for items awaiting Jeff's review (see lifecycle note)
 ├── scripts/                   # System scripts, tool wrappers, utilities
 ├── secrets/                   # All credentials and API keys (+ INVENTORY.md)
 └── skills/                    # Global cross-brand skills
@@ -72,9 +75,18 @@ _Brand folder details, hosting, and full brand architecture: `FILE-SYSTEM-BRANDS
 | Item | Where it belongs | Why |
 |---|---|---|
 | Brand-specific files | `Kit/life/brands/{Brand}/` | Brand isolation |
-| Project code | `Kit/life/projects/` or `Kit/life/brands/{parent}/` | Not system infrastructure |
+| Project code | `Kit/life/brands/{Brand}/projects/` (brand) or `Kit/life/projects/` (non-brand) | Not system infrastructure |
 | Loose `.py` scripts | `scripts/` | Single utility location |
 | System docs | `SYSTEM/` | System docs belong together |
+
+### `pending_review/` lifecycle (Jeff directive 2026-08-21)
+
+`pending_review/` is a **triage inbox — a queue, not a pile.** Items are moved here awaiting Jeff's review; they must not linger.
+
+- **It is NOT a storage area.** Any brand-specific material parked here belongs inside its brand folder (`Kit/life/brands/{Brand}/`), not this inbox.
+- **Resolved items get DELETED, not archived.** Once an item is handled — or its useful info has been moved to its real home (e.g. credentials confirmed in `~/.config/x-api/keys.env`) — delete the file. Archive is for genuinely historical/retired records, not for cleared inbox items.
+- **Superseded proposals get deleted too.** If the work a recommendation describes has already shipped (e.g. a dashboard restructure the code now reflects), the doc is a stale plan with no surviving value — remove it.
+- **Surfacing real finds is the goal.** If triage uncovers a genuinely live issue Jeff has forgotten (e.g. a monitor running blind on a drained quota), bring it up — but once Jeff confirms it's already known or not needed, delete the note and move on.
 
 ## System Paths
 
@@ -92,8 +104,8 @@ _Brand folder details, hosting, and full brand architecture: `FILE-SYSTEM-BRANDS
 | Global skills index | `~/.openclaw/workspace/skills/GLOBAL-SKILLS-INDEX.md` |
 | All credentials | `~/.openclaw/workspace/secrets/` |
 | Secrets inventory | `~/.openclaw/workspace/secrets/INVENTORY.md` |
-| Local Archive | `~/.openclaw/workspace/archive/` |
-| Permanent Archive | `/Volumes/RENDER DISK/Dropbox/Workspace/Kit/life/archive/` |
+| Local Archive (symlink) | `~/.openclaw/workspace/archive/` → `/Volumes/RENDER DISK/archive/workspace-archive/` |
+| Permanent Archive | `/Volumes/RENDER DISK/archive/` (canonical — official place to archive) |
 
 ## Anti-Patterns (DO NOT DO)
 
@@ -104,4 +116,6 @@ _Brand folder details, hosting, and full brand architecture: `FILE-SYSTEM-BRANDS
 | Loose `.py` scripts at root | `scripts/` | Single utility location |
 | System docs at workspace root | `SYSTEM/` | System docs belong together |
 | `kit/` (lowercase k) | `Kit/` (capital K) | Documentation readability |
-| Credentials in scattered `.env` | `secrets/` only | Single credential store |
+|| Credentials in scattered `.env` | `secrets/` only | Single credential store |
+|| Data managed by Hermes at runtime hand-edited in `.hermes/` | Let `.hermes/` own it; client files go in workspace | Hermes auto-manages; hand-edits get overwritten |
+|| Human-curated knowledge stored only in `.hermes/` | Workspace `Kit/life/`, `SYSTEM/`, `memory/` | Not persistent; lost on reset |
