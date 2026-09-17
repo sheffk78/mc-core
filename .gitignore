@@ -1,0 +1,4 @@
+secrets/
+
+# harness evidence outputs (regenerated each run, timestamped)
+Kit/life/brands/TrustOffice/directory/tests/fixtures/verify//
