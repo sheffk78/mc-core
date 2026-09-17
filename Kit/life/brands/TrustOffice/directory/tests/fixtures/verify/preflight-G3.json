@@ -1,0 +1,13 @@
+{
+  "pass": false,
+  "pages_checked": 1,
+  "problems": [
+    "sitemap missing manifest URL: https://trustoffice.app/directory/salt-lake-city-ut/"
+  ],
+  "failed_pages": {},
+  "scores": {
+    "test.html": 100.0
+  },
+  "timestamp": "2026-09-16T21:10:44.196408",
+  "gate": "G3"
+}

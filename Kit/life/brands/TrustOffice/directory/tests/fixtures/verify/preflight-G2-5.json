@@ -1,0 +1,19 @@
+{
+  "pass": false,
+  "pages_checked": 1,
+  "problems": [],
+  "failed_pages": {
+    "test.html": [
+      "expected exactly 1 H1, found 0",
+      "heading skip h0->h2",
+      "title 87 chars (>65)",
+      "banned language: [{'word': 'verified', 'context': 'Co-Trustee | TrustOffice \u2014 trusted and verified Trustee services in Salt Lake City trus'}, {'word': 'trusted', 'context': 'City: Find a Co-Trustee | TrustOffice \u2014 trusted and verified Trustee services in Salt L'}, {'word': 'verified', 'context': 'meta attribute (verified)'}, {'word': 'trusted', 'context': 'meta attribute (trusted)'}]",
+      "SEO score 75.0 < 85 ship floor"
+    ]
+  },
+  "scores": {
+    "test.html": 75.0
+  },
+  "timestamp": "2026-09-16T21:10:43.914734",
+  "gate": "G2.5"
+}

@@ -1,0 +1,15 @@
+{
+  "pages": [
+    {
+      "path": "test.html",
+      "url": "https://trustoffice.app/directory/salt-lake-city-ut/",
+      "slug": "salt-lake-city-ut",
+      "topic": "trustee services salt lake city",
+      "metro_tokens": [
+        "salt lake city",
+        "utah"
+      ],
+      "page_type": "metro-hub"
+    }
+  ]
+}

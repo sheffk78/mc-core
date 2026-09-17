@@ -1,0 +1,16 @@
+{
+  "gate": "G0.5",
+  "unit": "salt-lake-city-provo-ut",
+  "pass": false,
+  "problems": [
+    "declared RESEARCH artifact missing/empty: /Users/socializerender/.openclaw/workspace/Kit/life/brands/TrustOffice/directory/artifacts/salt-lake-city-provo-ut/research/registry-raw.csv",
+    "counts.json missing per-type counts ('by_type' dict)"
+  ],
+  "checks": [
+    {
+      "path": "/Users/socializerender/.openclaw/workspace/Kit/life/brands/TrustOffice/directory/artifacts/salt-lake-city-provo-ut/research/raw.csv",
+      "exists": true,
+      "bytes": 20708
+    }
+  ]
+}

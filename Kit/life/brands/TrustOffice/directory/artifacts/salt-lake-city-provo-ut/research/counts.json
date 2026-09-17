@@ -1,0 +1,57 @@
+{
+  "run_id": "2026-09-17-slc-provo",
+  "target": "salt-lake-city-provo-ut",
+  "source": "SEC Investment Adviser Information Report ia09012026-registered.zip (Sept 1 2026 file)",
+  "source_url": "https://www.sec.gov/data-research/sec-markets-data/information-about-registered-investment-advisers-exempt-reporting-advisers",
+  "fetched_at": "2026-09-16T19:22:08.552632",
+  "us_total_sec_registered": 17149,
+  "ut_total": 150,
+  "ut_by_city": {
+    "Salt Lake City": 48,
+    "Lehi": 18,
+    "Draper": 9,
+    "Orem": 8,
+    "Park City": 8,
+    "Logan": 7,
+    "South Jordan": 6,
+    "Provo": 5,
+    "Sandy": 5,
+    "St. George": 5,
+    "Holladay": 4,
+    "Cottonwood Heights": 3,
+    "Bountiful": 3,
+    "Centerville": 3,
+    "Midvale": 3,
+    "Cedar City": 2,
+    "Farmington": 2,
+    "Murray": 2,
+    "Roy": 1,
+    "North Salt Lake": 1,
+    "Alpine": 1,
+    "South Ogden": 1,
+    "West Jordan": 1,
+    "Ogden": 1,
+    "Lindon": 1,
+    "Spanish Fork": 1,
+    "Pleasant Grove": 1
+  },
+  "g05_check": {
+    "status": "FAIL",
+    "checked": "2026-09-16 by directory-preflight.py G0.5",
+    "missing": [
+      "registry-raw.csv (UT bar pass pending)",
+      "by_type counts not yet recorded"
+    ],
+    "note": "SEC pass complete (150 firms). Gate re-runs after UT bar directory pass."
+  },
+  "per_type_counts": {
+    "adviser_sec": 150,
+    "fiduciary_registry": 0,
+    "attorney_bar": 0,
+    "note": "UT bar pass pending (no UT Professional Fiduciaries registry; attorney evidence pass merges into BUILD); fiduciary_registry N/A for UT"
+  },
+  "artifacts": {
+    "raw_sec": "raw-sec-ut.csv",
+    "raw_canonical": "raw.csv"
+  }
+}

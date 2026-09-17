@@ -1,0 +1,188 @@
+{
+  "version": 2,
+  "canonical_schema": "unit_slug (kebab-case metro/state id) is the ONE identifier used in order[], runs[].run_id, artifact dirs, and orchestrator probes. Date-prefixed provenance lives in runs[].research_run_at / artifact READMEs.",
+  "order": [
+    {
+      "unit_slug": "salt-lake-city-provo-ut",
+      "kind": "metro",
+      "tier": 1,
+      "status": "running",
+      "stages_completed": [],
+      "waiting_for": null,
+      "last_active_date": "2026-09-17",
+      "note": "SEC UT pass done (150 firms); UT bar pass pending. G0.5 = FAIL until registry-raw.csv + by_type land (gate-enforced). RESEARCH re-marked complete only on gate exit 0."
+    },
+    {
+      "unit_slug": "los-angeles-ca",
+      "kind": "metro",
+      "tier": 1,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null,
+      "note": "SEC LA-metro=570 + CA PFB licensed fiduciaries"
+    },
+    {
+      "unit_slug": "chicago-il",
+      "kind": "metro",
+      "tier": 1,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "dallas-tx",
+      "kind": "metro",
+      "tier": 1,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "miami-fl",
+      "kind": "metro",
+      "tier": 1,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "new-york-ny",
+      "kind": "metro",
+      "tier": 1,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null,
+      "cap": 60
+    },
+    {
+      "unit_slug": "wyoming-state",
+      "kind": "state",
+      "tier": 2,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "montana-state",
+      "kind": "state",
+      "tier": 2,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "north-dakota-state",
+      "kind": "state",
+      "tier": 2,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "south-dakota-state",
+      "kind": "state",
+      "tier": 2,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "vermont-state",
+      "kind": "state",
+      "tier": 2,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    },
+    {
+      "unit_slug": "west-virginia-state",
+      "kind": "state",
+      "tier": 2,
+      "status": "queued",
+      "stages_completed": [],
+      "waiting_for": null
+    }
+  ],
+  "runs": [],
+  "note_runs": "runs[] merged into order[] — one structure, one identifier. Historical: 2026-09-17-slc-provo renamed to unit_slug salt-lake-city-provo-ut; artifacts dir renamed to match.",
+  "status_vocabulary": [
+    "queued", "assigned", "running", "checkpointing", "waiting",
+    "completed", "stalled", "failed", "dead_letter", "cancelled"
+  ],
+  "gates": [
+    {
+      "id": "G0.5-research",
+      "script": "scripts/directory-preflight.py G0.5 <research_dir> <counts.json> <unit_slug>",
+      "passes_when": [
+        "every declared RESEARCH artifact exists by exact path",
+        "per-type counts present in counts.json",
+        "source age <= 35 days"
+      ]
+    },
+    {
+      "id": "G2.5-seo",
+      "script": "scripts/directory-preflight.py G2.5",
+      "passes_when": [
+        "exit 0 on all generated pages",
+        "banned-language 0 hits",
+        "title/meta/H1/canonical/OG/schema per spec",
+        "anti-doorway substance floor",
+        "rendered-HTML checks clean",
+        "per-page score >= 85 (no-ship < 70)"
+      ]
+    },
+    {
+      "id": "G3-verify",
+      "script": "scripts/directory-preflight.py G3 (dist mode) + live HTTP 200 + noindex-present check",
+      "passes_when": [
+        "preflight exit 0 against deployed dist",
+        "sitemap valid and contains all pages-manifest URLs",
+        "noindex present pre-flip",
+        "live page HTTP 200"
+      ]
+    },
+    {
+      "id": "G4-index",
+      "script": "scripts/directory-preflight.py G4 + SiteGuru MCP get_page_report",
+      "passes_when": [
+        "zero new issues vs verify/siteguru.json baseline (staging-noindex finding whitelisted pre-flip)",
+        "JEFF APPROVAL REQUIRED before flip"
+      ]
+    },
+    {
+      "id": "G5-outreach",
+      "passes_when": ["JEFF APPROVAL REQUIRED before any send"]
+    },
+    {
+      "id": "G6-metrics",
+      "passes_when": ["day-14 script-computed metrics; channel decision is Jeff's"]
+    }
+  ],
+  "seo_loop": {
+    "write_time": "scripts/directory-preflight.py G2.5 (fail-closed)",
+    "post_deploy": "SiteGuru get_page_report mode=issues: metro hub + 3 sample listings -> verify/siteguru.json baseline; zero NEW issues before G4 (staging-noindex finding whitelisted)",
+    "day_1_post_index": "get_seo_report indexation path_contains=/directory/ + GSC coverage + script sitemap curl (positive check stays in script — SiteGuru sitemap report is site-wide/negative-only)",
+    "timing_note": "SiteGuru has no MCP audit trigger; day-1 check runs at 'first SiteGuru crawl after flip' — record crawl freshness timestamp as evidence",
+    "monthly": "CHANGED per SiteGuru wiring check: monthly rollup is a monthly LLM cron via siteguru-seo-operations read-set (report .md + 3-line Discord summary per delivery rules) — the 'script-only, no LLM' spec was impossible (SiteGuru is MCP-only); local curl checks (sitemap membership, HTTP 200, noindex) remain script-only",
+    "baseline": "trustoffice.app health 96, GSC connected (verified 2026-09-17)"
+  },
+  "unit_isolation_rule": {
+    "set_by": "Jeff msg 1549955352491986985 (TJB lesson)",
+    "rule": "The full pipeline executes for ONE unit at a time — one metro/state runs research->build->enrich->seo->verify->deploy end-to-end before any other unit starts. No interleaving.",
+    "resume": "On session restart, re-probe artifacts on disk; resume at last gate-passed stage."
+  },
+  "cadence_enforcement": {
+    "verify_once_per_day_rule": "No two units enter VERIFY+DEPLOY on the same day until 5 units have shipped clean. Enforced by: entering VERIFY sets order[].last_verify_date; cadence check rejects a second unit entering VERIFY same day while shipped_clean_count < 5.",
+    "stalled_rule": "Unit in running/waiting >2 days without artifact progress -> status stalled + surfaced in daily note.",
+    "fields": ["last_verify_date", "first_deployed_at", "shipped_clean_count (queue-level)"]
+  },
+  "preflight_self_check": {
+    "command": "python3 tests/run_gate_tests.py",
+    "cwd": "Kit/life/brands/TrustOffice/directory",
+    "required": "13/13 checks pass, exit 0 — BEFORE any unit advances in any session",
+    "covers": "G0.5 honest fail-closed on real research; G2.5 good/bad page (banned words in meta attributes, H1, scorer >= 85); G3 sitemap membership positive/negative; plan wiring tokens",
+    "rerun_after": "any edit to scripts/directory-preflight.py, scorer, queue schema, or fixtures"
+  },
+  "shipped_clean_count": 0,
+  "updated": "2026-09-17T20:30:00-06:00"
+}
