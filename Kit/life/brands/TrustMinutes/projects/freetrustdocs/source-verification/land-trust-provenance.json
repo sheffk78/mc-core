@@ -1,0 +1,96 @@
+{
+ "Illinois": {
+  "sources": [
+   {
+    "title": "760 ILCS 3/101 (Illinois Trust Code, Sec. 101 \"Short title\"); land trusts are common-law instruments with no enabling land-trust statute",
+    "url": "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=&Chapter=&ActName=Illinois+Trust+Code.&ActID=4001&ChapterID=61&ChapAct=760+ILCS+3/&SeqStart=100000&SeqEnd=1700000"
+   }
+  ],
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "notes": "Illinois land trusts (Chicago Title Insurance Co. type) have NO enabling land-trust statute: they rest on common law (Claflin v. Bosson / Chicago Title & Trust practice) plus the Illinois Trust Code (760 ILCS 3) as general trust law. Per task instruction, entry cites the Illinois Trust Code creation"
+ },
+ "Florida": {
+  "sources": [
+   {
+    "title": "Fla. Stat. § 689.071 (Florida Land Trust Act, ch. 689 part X)",
+    "url": "https://www.flsenate.gov/Laws/Statutes/2025/689.071"
+   }
+  ],
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "notes": "The Florida Land Trust Act is Fla. Stat. ch. 689, part X, § 689.071 et seq. (§§ 689.071-689.0717). Florida Senate hosts the official statute text; section number and act name match on-page."
+ },
+ "Indiana": {
+  "sources": [
+   {
+    "title": "Ind. Code § 30-4-2-13 (Application of statute of uses — preserves trustee title where beneficiary directs sale)",
+    "url": "https://iga.in.gov/ic/2026/Title_30/Article_4/Chapter_2.pdf"
+   }
+  ],
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "notes": "Indiana has no statute named 'land trust'; its land-trust recognition basis is IC 30-4-2-13 (Statute of Uses does not defeat trustee title when the beneficiary controls sale — the classic Illinois-type land-trust structure). IC 30-4-2-9 dropped from citations after independent check could not verify its text against the official source."
+ },
+ "North Dakota": {
+  "sources": [
+   {
+    "title": "N.D.C.C. § 59-12-18 (Uniform Trust Code: 'Requisites of trust relating to real property')",
+    "url": "https://www.ndlegis.gov/cencode/t59c12.pdf"
+   }
+  ],
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "notes": "Investigated the suspected N.D.C.C. § 59-18-13 — no such provision governs land trusts; chapter 59-18 is UTC trustee-liability remedies. The old land-trust statute N.D.C.C. § 59-01-06 ('Trusts relating to real property') was REPEALED by S.L. 2007, ch. 549, § 27 when ND adopted the UTC (title 59 reco"
+ },
+ "Virginia": {
+  "sources": [
+   {
+    "title": "Va. Code § 55.1-117 (Land trusts not to fail because no beneficiaries are specified by name and no duties laid on trustee; when interest of beneficiaries deemed personal property; liens)",
+    "url": "https://law.lis.virginia.gov/vacode/title55.1/chapter1/section55.1-117/"
+   }
+  ],
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "notes": "This is the Virginia land trust statute (former § 55-17.1, recodified to Title 55.1 § 55.1-117). Distinct from § 55.1-1200 (community land trust definition in landlord-tenant law) — do not confuse the two."
+ },
+ "Ohio": {
+  "sources": [
+   {
+    "title": "Ohio R.C. § 5301.255 (Memorandum of trust recording for conveyances by trustee of a disclosed trust)",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-5301.255"
+   }
+  ],
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "notes": "Ohio has no statute named 'land trust'. Its land-trust recognition basis is general trust law plus R.C. 5301.255, which expressly accommodates trustee-titled real-property conveyances via a recordable memorandum of trust (the Illinois-type deed-to-trustee mechanism). Historical connection: R.C. 1707"
+ },
+ "Georgia": {
+  "sources": [],
+  "url_kind": "none",
+  "verified_as_of": "2026-09-17",
+  "notes": "Georgia has no statute named 'land trust'; recognition basis is the Revised Georgia Trust Code of 2010, O.C.G.A. § 53-12-25 (deemed-transfer-to-trustee rule + real-property recording requirement), the provision cited by land-trust practice in GA. official_url set to null per no-fabrication rule beca"
+ },
+ "California": {
+  "sources": [
+   {
+    "title": "Cal. Prob. Code § 15206 (trust in relation to real property — writing requirement); no land-trust statute",
+    "url": "https://california.public.law/codes/probate_code_section_15206"
+   }
+  ],
+  "url_kind": "mirror",
+  "verified_as_of": "2026-09-17",
+  "notes": "California does NOT specifically authorize/recognize Illinois-type land trusts: there is no land-trust statute in the Probate Code (index contains zero 'land trust' provisions); trusts holding real property ride on general Division 9 Trust Law (§§ 15200-15212 creation chapter). california.public.law"
+ },
+ "Texas": {
+  "sources": [
+   {
+    "title": "Tex. Prop. Code ch. 114 (Texas Trust Code, ch. 111-115) — contains no land-trust provision; land trusts rest on general trust law",
+    "url": "https://texas.public.law/statutes/tex._prop._code_title_9_subtitle_b_chapter_114"
+   }
+  ],
+  "url_kind": "mirror",
+  "verified_as_of": "2026-09-17",
+  "notes": "Texas does NOT specifically authorize/recognize Illinois-type land trusts by statute: the Texas Trust Code (Prop. Code chs. 111-115) has no land-trust section, and Texas practice uses general trust law (trustee takes legal title) for title-holding trusts. texas.public.law is a reputable secondary re"
+ }
+}

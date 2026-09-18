@@ -1,0 +1,15 @@
+{
+ "task": "Statute source-verification batch 5 — land trust statutes. For each land-trust-recognizing state, verify the state's land-trust statute and the OFFICIAL legislature URL (HTTP 200 + statute number/name in page text via curl). For non-recognizing states, verify one authoritative secondary source stating land trusts are not specifically authorized/recognized there (url_kind='mirror') or null. Verified_as_of: 2026-09-17. NOTE: Illinois land trusts have NO enabling statute (common law + Illinois Trust Code) — for IL, verify and cite the Illinois Trust Code provision governing trusts generally (e.g. 760 ILCS 3/101) and say so in notes.",
+ "verify_date": "2026-09-17",
+ "states": [
+  {"state": "Illinois", "note": "land-trust-recognizing but NO enabling land-trust statute; cite Illinois Trust Code general trust provision (760 ILCS 3/101 or similar)"},
+  {"state": "Florida", "note": "land-trust-recognizing; Florida Land Trust Act, Fla. Stat. ch. 689 pt X — verify exact section e.g. § 689.071"},
+  {"state": "Indiana", "note": "land-trust-recognizing; Indiana land trust statute"},
+  {"state": "North Dakota", "note": "land-trust-recognizing; North Dakota land trust statute"},
+  {"state": "Virginia", "note": "land-trust-recognizing; land trust provisions in Title 55.1"},
+  {"state": "Ohio", "note": "land-trust-recognizing; Ohio land trust statute"},
+  {"state": "Georgia", "note": "land-trust-recognizing; Georgia land trust statute"},
+  {"state": "California", "note": "non-recognizing; authoritative source stating land trusts not specifically authorized/recognized"},
+  {"state": "Texas", "note": "non-recognizing; authoritative source stating land trusts not specifically authorized/recognized"}
+ ]
+}

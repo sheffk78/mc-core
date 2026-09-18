@@ -1,0 +1,29 @@
+[
+ {
+  "state": "Alabama",
+  "citation": "Ala. Code \u00a7 19-3B-1013",
+  "official_url": "https://alison.legislature.state.al.us/code-of-alabama?section=19-3B-1013",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-18",
+  "evidence": "Rendered in headless browser on Alabama Legislature ALISON site: '19-3B-1013 Certification of Trust' full text confirmed. curl returns JS shell only (Next.js app) - browser verification required and done.",
+  "notes": "Official legislature source, free. Prior fail-closed entry reversed. JS-rendered: automated text fetches need a browser."
+ },
+ {
+  "state": "Louisiana",
+  "citation": "La. R.S. \u00a7 9:1752",
+  "official_url": "https://www.legis.la.gov/legis/Law.aspx?d=106755",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-18",
+  "evidence": "curl HTTP 200, '\u00a71752. Form of inter vivos trust ... created only by authentic act or by act under private signature' confirmed in page text. Official Louisiana Legislature site.",
+  "notes": "LA has no UTC-style certification statute (verified via legis.la.gov full-text search). Trust-code citation for the declaration/extract framework; RS 9:2092 remains the recordation statute. Page body already describes this honestly."
+ },
+ {
+  "state": "New Mexico",
+  "citation": "NMSA \u00a7 46A-10-1013",
+  "official_url": "https://law.justia.com/codes/new-mexico/chapter-46a/article-10/section-46a-10-1013/",
+  "url_kind": "mirror",
+  "verified_as_of": "2026-09-18",
+  "evidence": "Rendered in headless browser: Justia 2025 NMSA, '46A-10-1013 - Certification of trust' full text confirmed. Justia blocks curl (CF 403); official nmonesource.com 403s automated fetchers.",
+  "notes": "Best free verifiable source; official NMSA host (nmonesource.com) is Lexis-walled. Section confirmed as NMSA 1978 ch. 46A art. 10 UTC cert-of-trust statute."
+ }
+]

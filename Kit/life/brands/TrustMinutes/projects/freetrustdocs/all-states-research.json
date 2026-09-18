@@ -318,7 +318,7 @@
     },
     {
       "state": "Georgia",
-      "utc_adopted": true,
+      "utc_adopted": false,
       "statutory_citation": "Georgia Trust Code at O.C.G.A. Title 53, Chapter 12 (Revised Georgia Trust Code, effective July 1, 2010); Certificate of Trust at O.C.G.A. § 53-12-280 (UTC § 1013). Rule Against Perpetuities at O.C.G.A. § 44-6-200 through § 44-6-206.",
       "cert_of_trust_requirements": "Under O.C.G.A. § 53-12-280, a certification of trust may contain some or all of: (1) that the trust exists and date of the trust and any amendments; (2) identity of each settlor; (3) identity and address of each current trustee and, if more than one, the number and identity of those required to exercise the powers of the trustee; (4) relevant powers of the trustee and any restrictions or limitations on those powers; (5) revocability or irrevocability of the trust; (6) how trust property should be titled; (7) except as disclosed, that the transaction at issue requires no consent or action by any person other than the certifying trustee; (8) such other information as the trustee deems appropriate. Must be signed by each trustee. Must state trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect. Need not contain dispositive provisions. A certification of trust in recordable form may be recorded in the office of the clerk of superior court.",
       "execution_requirements": "Georgia does NOT require witnesses or notarization for valid trust execution under the Georgia Trust Code. A revocable living trust is executed by the settlor with notarization recommended but not required by statute. For real property transfers into trust, deeds must be notarized and recorded in the county where property is located. Certification of trust in recordable form may be recorded with clerk of superior court. Georgia does not require registration of trusts with any court.",
@@ -336,7 +336,8 @@
         "verified_as_of": "2026-09-17",
         "human_legal_reviewed": false,
         "evidence": "curl HTTP 200 (9.5 KB HTML). Text: 'Georgia Code § 53-12-280 - Certification of Trust by Trustee (a) The trustee may present a certification of trust to any person other than a beneficiary in lieu of providing a copy of the trust instrument to establish the existence of the trust provisions...'."
-      }
+      },
+      "utc_note": "Non-UTC: governs trusts under its own statutes (e.g. GA O.C.G.A. title 53). Reconciled against ULC enactment map (36 jurisdictions incl. DC as of Oct 2022) 2026-09-18."
     },
     {
       "state": "North Carolina",
@@ -715,7 +716,7 @@
     },
     {
       "state": "Washington",
-      "utc_adopted": true,
+      "utc_adopted": false,
       "statutory_citation": "Revised Code of Washington (RCW) Title 11, Chapter 11.98 (Trusts) and Chapter 11.103 (Uniform Trust Code provisions adopted 2011); RCW 11.98.075 (certification of trust); RCW Chapter 23.90 (Massachusetts trusts)",
       "cert_of_trust_requirements": "Under RCW 11.98.075, a certification of trust must contain: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the trustor; (c) the identity and address of the currently acting trustee; (d) relevant powers of the trustee; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (f) the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (g) the name of the trust or the titling of the trust property. A certification of trust may be signed or otherwise authenticated by any trustee or by an attorney for the trust. Must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. Need not contain the dispositive terms of a trust. A recipient may require excerpts and any other reasonable information.",
       "execution_requirements": "Under Washington law, the trust instrument must be signed by the settlor (trustor). Washington does not require witnesses for trust execution. Notarization is not required for the trust instrument itself. Electronic signing is permitted. For real property transactions, acknowledgment may be required for recording. Trustees may register a trust as a Washington trust if certain factors are present under RCW 11.98.005.",
@@ -733,7 +734,8 @@
         "verified_as_of": "2026-09-17",
         "human_legal_reviewed": false,
         "evidence": "curl HTTP 200. Page text: 'RCW 11.98.075 Certification of trust. (1) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information...'"
-      }
+      },
+      "utc_note": "Non-UTC: governs trusts under its own statutes (e.g. GA O.C.G.A. title 53). Reconciled against ULC enactment map (36 jurisdictions incl. DC as of Oct 2022) 2026-09-18."
     },
     {
       "state": "Arizona",
@@ -825,7 +827,7 @@
     },
     {
       "state": "Iowa",
-      "utc_adopted": true,
+      "utc_adopted": false,
       "statutory_citation": "Iowa Code Chapter 633A (Iowa Trust Code), §§ 633A.1101 et seq. (enacted 1999, ch. 125; substantially revised 2005, ch. 38; further amended 2010, 2012, 2019, 2021). Certification of trust: Iowa Code § 633A.4604. Rule against perpetuities: Iowa Code § 558.68 (common law rule). Self-settled trusts: Iowa Code § 633A.2303.",
       "cert_of_trust_requirements": "Under Iowa Code § 633A.4604, a trustee may present a certification of trust to any person in lieu of providing a copy of the trust instrument. The certification must: (a) State the names of all the currently acting trustees; (b) If there is more than one currently acting trustee, state whether the trustees may act individually or must act by majority decision or must act by unanimous decision; (c) State that the trust has not been revoked, modified, or amended in any manner that would cause the representations in the certification of trust to be incorrect; (d) Be signed by a currently acting trustee or the attorney of an acting trustee; (e) Be dated and certified under penalty of perjury and pursuant to the laws of the state of Iowa that the certification of trust is true and correct, or be subscribed and sworn to under penalty of perjury before a notary public as provided in chapter 9B. A certification of trust need not contain the dispositive provisions of the trust which set forth the distribution of the trust estate. A person may require the trustee to provide proof of the trustee's identity and copies of excerpts from the original trust instrument and amendments which designate the trustee and confer power to act in the pending transaction. A person who acts in reliance after taking reasonable steps to verify the identity of the trustee (not exceeding 10 business days from receipt) is protected from liability. A person who refuses to pay, deliver, or transfer property after receiving a certification may be liable for damages, costs, a penalty of $500-$10,000, and attorney fees.",
       "execution_requirements": "The certification of trust must be signed by a currently acting trustee or the attorney of an acting trustee (Iowa Code § 633A.4604(2)(d)). It must be dated and either certified under penalty of perjury pursuant to Iowa law OR subscribed and sworn to under penalty of perjury before a notary public per chapter 9B (§ 633A.4604(2)(e)). No witnesses or recording are specifically required. Iowa's certification requirements are more detailed than the standard UTC § 1013.",
@@ -843,7 +845,8 @@
         "verified_as_of": "2026-09-17",
         "human_legal_reviewed": false,
         "evidence": "curl -> HTTP 200, PDF downloaded; pdftotext shows 'IOWA TRUST CODE, §633A.4604' heading and section text ('Certification of trust... 1. A trustee may present a certification of trust...')."
-      }
+      },
+      "utc_note": "Non-UTC: governs trusts under its own statutes (e.g. GA O.C.G.A. title 53). Reconciled against ULC enactment map (36 jurisdictions incl. DC as of Oct 2022) 2026-09-18."
     },
     {
       "state": "Kansas",
@@ -898,7 +901,18 @@
       "business_trust_treatment": "Louisiana does not have a specific 'business trust' or 'Massachusetts trust' statute. Business trusts operating in Louisiana are typically structured as LLCs, partnerships, or corporations under Louisiana's civil law framework. The Louisiana Trust Code (RS 9:1721 et seq.) governs express trusts generally but does not specifically address business trusts as a distinct entity type. Louisiana's civil law tradition does not have a common law trust heritage; the trust concept was introduced by statute in 1952. Business entities that function similarly to trusts are governed by the Louisiana LLC Act, partnership statutes, or corporation laws. Foreign business trusts may operate in Louisiana but are subject to Louisiana's foreign entity registration requirements.",
       "favorable_trust_laws": "Louisiana has unique trust duration rules under RS 9:1831 (Limitations upon stipulated term): trusts must terminate at a stipulated term, but the maximum term depends on whether beneficiaries are ascertainable. For trusts with ascertainable beneficiaries, the term cannot exceed the shorter of the lifetimes of the beneficiaries or 50 years (for non-charitable purpose trusts, the term cannot exceed 50 years). This limits dynasty trust planning compared to UTC states with long perpetuities periods. Louisiana does not have a self-settled asset protection trust statute. Louisiana has no state estate or inheritance tax. Louisiana's community property regime affects trust planning significantly. Spendthrift provisions are recognized. Louisiana's trust income tax follows federal treatment with certain state adjustments.",
       "unique_factors": "Louisiana is the ONLY U.S. state with a civil law system (derived from French and Spanish law, Code Napoleon heritage) rather than common law, making its trust law fundamentally different from all other states. Louisiana is the only state that retains forced heirship (Civil Code Arts. 1493-1494), requiring that a portion of a decedent's estate (the 'legitime') go to children under age 24 or children of any age with disabilities, which constrains trust planning. The trust concept was introduced by statute in 1952 and is purely statutory, not common law. Louisiana uses the term 'settlor' and 'usufruct' (a civil law property concept where one person has use of property owned by another). The 'extract of trust' recording system is unique to Louisiana's civil law property recording traditions. Trust terms are limited (max ~50 years for most trusts), making Louisiana unfavorable for dynasty trusts.",
-      "provenance": null
+      "provenance": {
+        "verified_as_of": "2026-09-18",
+        "human_legal_reviewed": false,
+        "sources": [
+          {
+            "label": "La. R.S. § 9:1752 (Form of inter vivos trust)",
+            "url": "https://www.legis.la.gov/legis/Law.aspx?d=106755",
+            "kind": "official"
+          }
+        ]
+      },
+      "cot_note": "La. R.S. § 9:1752 verified 2026-09-18 (official): https://www.legis.la.gov/legis/Law.aspx?d=106755"
     },
     {
       "state": "Maine",
@@ -1062,7 +1076,19 @@
       "execution_requirements": "New Mexico does not require witnesses for trust execution under the NM UTC. Notarization is not required for validity of the trust itself, though it is strongly recommended and often required by financial institutions. For the certification of trust affecting real property title, the recipient may require acknowledgment (notarization) so it can be recorded. New Mexico permits remote online notarization (RON). The trust must be in writing, signed by the settlor, and delivered to the trustee. No recording is required for the trust instrument itself, but deeds transferring real property to the trust must be recorded.",
       "business_trust_treatment": "New Mexico does not have a specific Massachusetts-style business trust statute. Business trusts in New Mexico are governed by common law principles and the NM UTC. The NM UTC applies to express trusts, charitable or noncharitable, including those created for business purposes. New Mexico does not have a separate statutory business trust registration framework. Business trusts operating in New Mexico may be subject to state gross receipts tax and corporate income tax. The NM trust code's broad definition of trust encompasses business trust arrangements. New Mexico's community property laws affect how business trust interests are held by married couples.",
       "favorable_trust_laws": "New Mexico offers moderate trust law advantages. (1) Dynasty Trusts: New Mexico has NOT abolished the rule against perpetuities. NMSA 45-2-901 (Uniform Probate Code) retains the statutory rule against perpetuities, requiring interests to vest or terminate within 21 years after the death of an individual then alive. However, NMSA 45-2-904 provides exceptions for certain interests including property interests held in trust. (2) Asset Protection: New Mexico does not have a self-settled asset protection trust statute; the spendthrift provision does not protect the settlor's interest from the settlor's own creditors. (3) Tax Treatment: New Mexico imposes state income tax on trust income for resident trusts (administered in NM or with at least one NM resident trustee). No state estate or inheritance tax. (4) Decanting: New Mexico adopted the Uniform Trust Decanting Act in 2017 (NMSA 46-12-101 through 46-12-129), allowing trustees to modify trust terms by appointing trust property to a new trust. (5) Community Property: New Mexico is a community property state, which can provide tax advantages for married couples through community property trusts.",
-      "unique_factors": "New Mexico's unique trust law factors include: its status as a community property state, which can provide significant tax basis advantages for married couples using community property trusts; the Uniform Trust Decanting Act (2017), which provides flexible trust modification tools; the certification of trust's inclusion of a ninth requirement (agent delegation not prohibited) not found in the model UTC; and the retention of the rule against perpetuities under the Uniform Probate Code (NMSA 45-2-901), which limits dynasty trust planning. New Mexico's trust code is well-integrated with its Uniform Probate Code, providing a cohesive estate planning framework. The state's low cost of living and lack of estate/inheritance tax make it attractive for moderate estate planning, though it lacks the advanced asset protection and dynasty trust features of states like New Hampshire or Delaware."
+      "unique_factors": "New Mexico's unique trust law factors include: its status as a community property state, which can provide significant tax basis advantages for married couples using community property trusts; the Uniform Trust Decanting Act (2017), which provides flexible trust modification tools; the certification of trust's inclusion of a ninth requirement (agent delegation not prohibited) not found in the model UTC; and the retention of the rule against perpetuities under the Uniform Probate Code (NMSA 45-2-901), which limits dynasty trust planning. New Mexico's trust code is well-integrated with its Uniform Probate Code, providing a cohesive estate planning framework. The state's low cost of living and lack of estate/inheritance tax make it attractive for moderate estate planning, though it lacks the advanced asset protection and dynasty trust features of states like New Hampshire or Delaware.",
+      "cot_note": "NMSA § 46A-10-1013 verified 2026-09-18 (mirror): https://law.justia.com/codes/new-mexico/chapter-46a/article-10/section-46a-10-1013/",
+      "provenance": {
+        "verified_as_of": "2026-09-18",
+        "human_legal_reviewed": false,
+        "sources": [
+          {
+            "label": "NMSA § 46A-10-1013 (Certification of trust)",
+            "url": "https://law.justia.com/codes/new-mexico/chapter-46a/article-10/section-46a-10-1013/",
+            "kind": "mirror"
+          }
+        ]
+      }
     },
     {
       "state": "North Dakota",
@@ -1088,7 +1114,7 @@
     },
     {
       "state": "Oklahoma",
-      "utc_adopted": true,
+      "utc_adopted": false,
       "statutory_citation": "60 O.S. §§ 1601-1609.7 (Oklahoma Uniform Trust Code), enacted 2025 (Laws 2025, c. 254), effective November 1, 2025; codified in Title 60 of the Oklahoma Statutes. Oklahoma is the 36th state to adopt a UTC.",
       "cert_of_trust_requirements": "60 O.S. § 1609.7. Instead of furnishing the trust instrument to a non-beneficiary, and in lieu of or in addition to a memorandum of trust under 60 O.S. § 175.6(A), the trustee may furnish a certification of trust containing: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (6) the authority of co-trustees to sign or authenticate and whether all or less than all are required to exercise trustee powers; (7) the trust's taxpayer identification number; (8) the manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. It need not contain the dispositive terms. A recipient may require the trustee to furnish excerpts from the trust instrument designating the trustee and conferring power to act. A person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. A person who in good faith enters into a transaction in reliance on the certification may enforce it against trust property. A person making a bad-faith demand for the full trust instrument is liable for damages.",
       "execution_requirements": "Oklahoma does not require notarization or witnesses for a trust to be valid under the Oklahoma Uniform Trust Code. The trust may be signed electronically. Oklahoma permits remote online notarization (RON) under 60 O.S. § 175.6. No recording is required for the trust instrument itself, but a memorandum of trust may be recorded for real property transactions, and deeds transferring real property to the trust must be recorded. The trust must be in writing, signed by the settlor, and delivered to the trustee. Oklahoma's OUTC became effective November 1, 2025, modernizing trust law in the state. Prior to the OUTC, Oklahoma trust law was governed by scattered provisions in Title 60.",
@@ -1106,7 +1132,8 @@
         "verified_as_of": "2026-09-17",
         "human_legal_reviewed": false,
         "evidence": "HTTP 200; page text contains '1609.7 - Certification of Trust - Requirements, Reliance, and Limitations' and the full statute text beginning with 'A. Instead of furnishing a copy of the trust instrument...'"
-      }
+      },
+      "utc_note": "Non-UTC: governs trusts under its own statutes (e.g. GA O.C.G.A. title 53). Reconciled against ULC enactment map (36 jurisdictions incl. DC as of Oct 2022) 2026-09-18."
     },
     {
       "state": "Rhode Island",
@@ -1227,11 +1254,23 @@
       "execution_requirements": "Ala. Code §19-3B-401 requires trust creation by: (1) transfer of property to another person as trustee during the settlor's lifetime by means other than a will; (2) declaration by the owner of property that the owner holds identifiable property as trustee; or (3) exercise of a power of appointment in favor of a trustee. The trust instrument should be in writing and executed by the settlor. Notarization is not strictly required under the UTC framework, though it is standard practice. Real property transferred to a trust must be recorded with the probate court in the county where the property is located. Certification of trust under §19-3B-1013 may be signed or otherwise authenticated by any trustee; no notary, witness, or oath requirement is specified. Alabama has a limitation on contesting revocable trusts under §19-3B-604.",
       "business_trust_treatment": "Alabama recognizes and regulates business trusts under Ala. Code Title 10A, Chapter 16 (Business Trusts). A business trust is defined as a form of business organization where property is conveyed to trustees to hold and manage for the benefit of beneficial owners. The Alabama business trust statute provides for: establishment for lawful purposes (§10A-16-1.02); powers and liabilities of trustees (§10A-16-1.03); certificates of ownership with limited liability for beneficial owners (§10A-16-1.04); contents and recordation of declarations of trust (§10A-16-1.05); duration not violating rules against perpetuities (§10A-16-1.06); and suits against the trust (§10A-16-1.07). Common law business trusts (Massachusetts trusts) are recognized under general common law principles, supplemented by the statutory framework. The Alabama Uniform Trust Code (Title 19, Chapter 3B) applies to express trusts and does not directly govern business trusts formed under Title 10A.",
       "favorable_trust_laws": "Alabama adopted the UTC providing a comprehensive modern trust framework. The code includes the full suite of UTC modification tools: nonjudicial settlement agreements (§19-3B-111), modification for changed circumstances (§19-3B-412), modification by consent (§19-3B-411), reformation to correct mistakes (§19-3B-415), modification for tax objectives (§19-3B-416), and combination/division of trusts (§19-3B-417). Alabama has a limitation on contesting revocable trusts (§19-3B-604). The spendthrift provision (§19-3B-502) and exceptions (§19-3B-503) follow the UTC model. Alabama imposes state income tax on trust income. Alabama does not have a DAPT statute for self-settled asset protection trusts. The Rule Against Perpetuities applies unless the trust instrument provides otherwise; Alabama has not abolished it for dynasty trust purposes. Alabama does not have a state estate tax.",
-      "unique_factors": "Alabama's UTC adoption (Title 19, Chapter 3B) provides a straightforward, standard UTC framework without significant state-specific modifications or trust-friendly innovations like DAPT or dynasty trust provisions. Alabama has a separate, dedicated business trust statute (Title 10A, Chapter 16) that provides a clear framework for Massachusetts/business trusts, including recordation requirements. The limitation on contesting revocable trusts (§19-3B-604) provides some certainty for trust settlors. Alabama's trust law is traditional and conservative, making it predictable but less competitive with top trust jurisdictions for complex planning. The state's lack of state estate tax is favorable, but the lack of DAPT, dynasty trust, or directed trust innovations limits its appeal for sophisticated trust planning."
+      "unique_factors": "Alabama's UTC adoption (Title 19, Chapter 3B) provides a straightforward, standard UTC framework without significant state-specific modifications or trust-friendly innovations like DAPT or dynasty trust provisions. Alabama has a separate, dedicated business trust statute (Title 10A, Chapter 16) that provides a clear framework for Massachusetts/business trusts, including recordation requirements. The limitation on contesting revocable trusts (§19-3B-604) provides some certainty for trust settlors. Alabama's trust law is traditional and conservative, making it predictable but less competitive with top trust jurisdictions for complex planning. The state's lack of state estate tax is favorable, but the lack of DAPT, dynasty trust, or directed trust innovations limits its appeal for sophisticated trust planning.",
+      "cot_note": "Ala. Code § 19-3B-1013 verified 2026-09-18 (official): https://alison.legislature.state.al.us/code-of-alabama?section=19-3B-1013",
+      "provenance": {
+        "verified_as_of": "2026-09-18",
+        "human_legal_reviewed": false,
+        "sources": [
+          {
+            "label": "Ala. Code § 19-3B-1013 (Certification of Trust)",
+            "url": "https://alison.legislature.state.al.us/code-of-alabama?section=19-3B-1013",
+            "kind": "official"
+          }
+        ]
+      }
     },
     {
       "state": "Alaska",
-      "utc_adopted": true,
+      "utc_adopted": false,
       "statutory_citation": "Alaska Statutes Title 13, Chapter 36 (Trust Administration), including AS 13.36.079 (Certification of Trust), AS 13.36.090 (Trustee's Duty), AS 13.36.157 (Decanting Power), AS 13.36.370 (Directed Trusts), AS 13.36.375 (Duty and Liability of Directed Trustee), AS 13.36.390 (Powers of Trust Advisors and Trust Protectors). Related: AS 34.27.051 (Rule Against Perpetuities - 1,000-year limit), AS 34.40.110-113 (Spendthrift/DAPT provisions).",
       "cert_of_trust_requirements": "AS 13.36.079. Except as otherwise provided in the trust instrument, instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish a certification of trust containing: (1) that the trust exists and the date the trust instrument was executed; (2) the identity of the settlor; (3) the identity and address of the currently acting trustee; (4) the powers of the trustee; (5) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust; (6) the authority of co-trustees to sign or otherwise authenticate documents related to the trust and whether all or fewer than all co-trustees are required to exercise the trustee powers; (7) the trust's taxpayer identification number, if the trust has one; (8) the manner of taking title to the property of the trust. (b) May be signed or otherwise authenticated by any trustee. (c) Must state that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect. (d) Not required to contain the dispositive terms of a trust. (e) Recipient may require the trustee to furnish copies of excerpts from the original trust instrument, including amendments, which designate the trustee and confer power to act in the pending transaction. (f)-(g) Person acting in reasonable reliance without knowledge of incorrectness is not liable and may enforce the transaction against trust property. (h) Person demanding the trust instrument in addition to a certification is liable to the state for a civil penalty not to exceed $1,000 plus actual damages if court determines they did not act in good faith. (i) Person liable for civil penalty shall also be liable for actual court costs and attorney fees. (j) Does not limit the right to obtain a copy of the trust instrument in a judicial proceeding.",
       "execution_requirements": "AS 13.36.040 (Trust Creation) requires trust creation by transfer of property to another person as trustee, declaration by the owner of property that the owner holds identifiable property as trustee, or exercise of a power of appointment in favor of a trustee. The trust instrument should be in writing and executed by the settlor. Notarization is not strictly required under the UTC framework, though it is standard practice. Real property transferred to a trust must be recorded with the Alaska recorder. Certification of trust under AS 13.36.079 may be signed or otherwise authenticated by any trustee; no notary or witness requirement is specified. For Alaska DAPTs, a qualified transfer affidavit must be sworn to by the settlor under AS 34.40.113, including statements that the settlor has full right to transfer the property, the transfer will not render the settlor insolvent, and the settlor does not intend to defraud creditors.",
@@ -1249,7 +1288,8 @@
         "verified_as_of": "2026-09-17",
         "human_legal_reviewed": false,
         "evidence": "HTTP 200; page text contains 'Sec. 13.36.079. Certification of trust; penalty.' and the full statute text including subsection (a) about trustee furnishing certification of trust."
-      }
+      },
+      "utc_note": "Non-UTC: governs trusts under its own statutes (e.g. GA O.C.G.A. title 53). Reconciled against ULC enactment map (36 jurisdictions incl. DC as of Oct 2022) 2026-09-18."
     }
   ]
 }

@@ -1,0 +1,119 @@
+[
+ {
+  "state": "Arkansas",
+  "citation": "Ark. Code § 28-73-1013",
+  "official_url": "https://law.onecle.com/arkansas/title-28/28-73-1013.html",
+  "url_kind": "mirror",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl GET -> HTTP 200; page title 'Arkansas Code § 28-73-1013 - Certification of Trust'; full subsections (a)-(i) including '(c) A certification of trust must state that the trust has not been revoked, modified, or amended...'.",
+  "notes": "Arkansas legislature (arkleg.state.ar.us) does not host the code online; its official 'Arkansas Code and Constitution of 1874' link opens LexisNexis hottopics/arcode (verified by reading arkleg /ArkansasLaw/ page HTML - dialog opens http://www.lexisnexis.com/hottopics/arcode/), which requires a JS session/cookie challenge and returns no fetchable section page. arkleg FTP code PDF endpoints returned HTTP 200 with empty bodies. Best authoritative free mirror used: onecle (mirrors the Arkansas Code); Justia and FindLaw carry the section but both sit behind Cloudflare (HTTP 403 to curl)."
+ },
+ {
+  "state": "Hawaii",
+  "citation": "Haw. Rev. Stat. § 554D-1013",
+  "official_url": "https://data.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0554D/HRS_0554D-1013.htm",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200 on the legislature's data subdomain hosting the same official HRS current files; full text of '[§554D-1013] Certification of trust' (subsections (a)-(i), L 2021, c 32) fetched; string '554D-1013' present in page text.",
+  "notes": "Official Hawaii legislature HRS file. The canonical www.capitol.hawaii.gov path serves identical content but sits behind Cloudflare bot protection (HTTP 403 to curl; section text verified there via web_extract); data.capitol.hawaii.gov serves the same official file and returns HTTP 200 to curl. No Lexis paywall."
+ },
+ {
+  "state": "Idaho",
+  "citation": "Idaho Code § 68-114",
+  "official_url": "https://legislature.idaho.gov/statutesrules/idstat/title68/t68ch1/sect68-114/",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; page title '68-114 – Idaho State Legislature'; text 'TITLE 68 TRUSTS AND FIDUCIARIES CHAPTER 1 TRUSTS 68-114. Presentation of a certification of trust in lieu of the trust instrument — Effect — Form.'",
+  "notes": "Idaho's certification-of-trust scheme is a stand-alone chapter (68-114 to 68-120), not a UTC §1013 clone; citation verified as given. First fetch hit a transient 404 (cold cache); re-fetch returned 200 with full statute text."
+ },
+ {
+  "state": "Iowa",
+  "citation": "Iowa Code § 633A.4604",
+  "official_url": "https://www.legis.iowa.gov/docs/code/633A.4604.pdf",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200, PDF downloaded; pdftotext shows 'IOWA TRUST CODE, §633A.4604' heading and section text ('Certification of trust... 1. A trustee may present a certification of trust...').",
+  "notes": "Iowa Legislature official code-PDF service (legis.iowa.gov). Official HTML section page pattern was not available; PDF is the official published format."
+ },
+ {
+  "state": "Kansas",
+  "citation": "Kan. Stat. Ann. § 58a-1013",
+  "official_url": "https://www.kslegislature.gov/b2025_26/laws/058a_000_0000_chapter/058a_010_0000_article/058a_010_0013_section/058a_010_0013_k/",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; page text '58a-1013. Certification of trust. (a) Instead of furnishing a copy of the trust instrument to a person other than a qualified beneficiary...'; statute number '58a-1013' present.",
+  "notes": "Kansas legislature official statutes site (2025-26 session edition). ksrevisor.gov chapter-page mirror (ksrevisor.gov/statutes/chapters/ch58a/058a_010_0013.html) also verified HTTP 200."
+ },
+ {
+  "state": "Kentucky",
+  "citation": "Ky. Rev. Stat. § 386B.10-120",
+  "official_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=43153",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200 (content-type application/PDF, 7169 bytes); pdftotext page 1 reads '386B.10-120 Certification of trust. (1) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust...'.",
+  "notes": "Kentucky legislature official KRS statute page; section number appears in the PDF body. verified_as_of reflects the final re-check timestamp (UTC-adjacent 2026-09-18) - content fetched 2026-09-17/18."
+ },
+ {
+  "state": "Louisiana",
+  "citation": "La. Rev. Stat. § 9:2092 (certification of trust)",
+  "official_url": null,
+  "url_kind": "none",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; official Louisiana State Legislature Law.aspx page titled 'RS 9:2092' with full text of '§2092. Recordation of instruments' (extract-of-trust content requirements §2092(B)(1)(a)-(f)). | original URL: https://www.legis.la.gov/legis/Law.aspx?d=106918",
+  "notes": "PARENT FIX 2026-09-17: RS 9:2092 is Recordation of instruments, NOT a certification-of-trust statute (LA Trust Code has no UTC 1013 equivalent — full-text search of Title 9 confirmed). URL nulled so the provenance panel stays pending rather than citing an irrelevant statute. Original verified URL kept in evidence. CITATION MISMATCH: Louisiana Trust Code has NO 'certification of trust' statute equivalent to UTC §1013. RS 9:2092 is 'Recordation of instruments' (recording a trust extract against immovables), not a certificate-of-trust scheme; full-text search of Title 9 and neighbor-section walk on legis.la.gov found no certification-of-trust provision. Recommend the parent correct this citation; URL + section verified as cited, but content is not a certification-of-trust statute."
+ },
+ {
+  "state": "Maine",
+  "citation": "Me. Rev. Stat. tit. 18-B, § 1013",
+  "official_url": "https://legislature.maine.gov/statutes/18-B/title18-Bsec1013.html",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; page text '§1013: Certification of trust' within Title 18-B, Ch. 10 navigator; statute number '§1013' present.",
+  "notes": "mainelegislature.org resolves to legislature.maine.gov (official Maine Law portal)."
+ },
+ {
+  "state": "Massachusetts",
+  "citation": "Mass. Gen. Laws c. 203E, § 1013",
+  "official_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter203E/Section1013",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; page text 'Section 1013. Certification of trust (a) Instead of furnishing a copy of the trust instrument...'; statute number '1013' present.",
+  "notes": "Official Massachusetts General Court site. Correct hierarchy is Part II > Title II (the input hint's TitleIII path 404s; TitleII verified)."
+ },
+ {
+  "state": "Mississippi",
+  "citation": "Miss. Code § 91-8-1013",
+  "official_url": "https://law.justia.com/codes/mississippi/title-91/chapter-8/article-10/section-91-8-1013/",
+  "url_kind": "mirror",
+  "verified_as_of": "2026-09-17",
+  "evidence": "web_extract -> HTTP 200 via fetcher; full text of '§ 91-8-1013. Certification of trust' (2025 Mississippi Code) with subsections (a)(1)-(10), (b)-(g) and history 'Laws, 2014, ch. 421, § 89'.",
+  "notes": "Official mscode.state.ms.us host is dead (DNS NXDOMAIN for mscode.state.ms.us and law.fresearch.ms.gov; curl exit 000). Best free mirror: Justia (section text verified). FindLaw mirror also exists. billstatus.ls.state.ms.us SB2727 enactment text corroborates the section. Plain curl gets Cloudflare 403 (bot wall); section verified via web_extract fetcher (HTTP 200 + full text) same day."
+ },
+ {
+  "state": "Montana",
+  "citation": "Mont. Code § 72-38-1013",
+  "official_url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0380/part_0100/section_0130/0720-0380-0100-0130.html",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; page text '72-38-1013. Certification of trust, MCA' and 'Montana Code Annotated 2025 TITLE 72 ... CHAPTER 38 ... Part 10. Liability of Trustees and Rights of Persons Dealing with Trustee Certification of trust'; statute number present.",
+  "notes": "Montana legislature MCA pages: mca.legmt.gov (current) verified; archive.legmt.gov mirror of same file also HTTP 200."
+ },
+ {
+  "state": "Nebraska",
+  "citation": "Neb. Rev. Stat. § 30-38,102 (certification of trust)",
+  "official_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-38,102",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; page text '30-38,102. Certification of trust; use; form. (a) A trustee may present a certification of trust to any person other than a beneficiary in lieu of a copy of any trust instrument...'. Print view also HTTP 200.",
+  "notes": "PARENT FIX 2026-09-17: original site citation §§ 30-3834/30-3835 was WRONG (UTC 408/409, animal/purpose trusts). Correct statute § 30-38,102 verified HTTP 200 at the official URL below; citation label updated to match. CITATION MISMATCH: the cited §§ 30-3834 (UTC 408, trust for care of animal) and 30-3835 (UTC 409, noncharitable trust without ascertainable beneficiary) are NOT certification-of-trust statutes (both verified HTTP 200 at nebraskalegislature.gov/laws/statutes.php?statute=30-3834 and ...30-3835; text confirms different subject matter). Nebraska's certification-of-trust statute (UTC 1013 analogue) is Neb. Rev. Stat. § 30-38,102 (comma scheme); official URL for that section is provided and verified."
+ },
+ {
+  "state": "New Hampshire",
+  "citation": "N.H. Rev. Stat. § 564-B:10-1013",
+  "official_url": "https://gc.nh.gov/rsa/html/LVI/564-B/564-B-10-1013.htm",
+  "url_kind": "official",
+  "verified_as_of": "2026-09-17",
+  "evidence": "curl -> HTTP 200; page text 'Section 564-B:10-1013 Certification of Trust.' within CHAPTER 564-B NEW HAMPSHIRE TRUST CODE ARTICLE 10; statute number present.",
+  "notes": "Official NH General Court site. gencourt.state.nh.us now 301-redirects to gc.nh.gov (verified); legacy deep path /rsa/html/LVI/564-B/10/564-B-10-1013.htm 404s - the live path uses /rsa/html/LVI/564-B/564-B-10-1013.htm."
+ }
+]

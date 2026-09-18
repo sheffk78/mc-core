@@ -1,0 +1,102 @@
+{
+ "utah_pdf_hint": {
+  "url": "https://le.utah.gov/xcode/Title75B/Chapter2/C75B-2-S1013_2025050720250507.pdf",
+  "status": 200,
+  "hit": false,
+  "ctx": {
+   "75B-2-1013": "",
+   "certificat": "",
+   "trust": ""
+  }
+ },
+ "utah_html": {
+  "url": "https://le.utah.gov/xcode/Title75B/Chapter2/75B-2-S1013.html",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "75B-2-1013": " Utah Code Section 75B-2-1013 var affectURL = \"75B-2-S1013_bills.html\"; var versionArr = [ ['C75B-2-S1013_2025050720250507.html','Current Version','C",
+   "certificat": ""
+  }
+ },
+ "california": {
+  "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=18100.5",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "18100\\.5": " California Code, PROB 18100.5 /* Hide page by default*/ html { display : none; } // = 0)) { window.top.location.replace(window.location); top.locatio",
+   "certificat": "pter 2 enacted by Stats. 1990, Ch. 79. ) 18100.5. (a) The trustee may present a certification of trust to any person in lieu of providing a copy of the trust instrument to establish the existence or terms of th"
+  }
+ },
+ "texas": {
+  "url": "https://statutes.capitol.texas.gov/Docs/PR/htm/PR.114.htm",
+  "status": 200,
+  "hit": false,
+  "ctx": {
+   "114\\.086": "",
+   "certificat": ""
+  }
+ },
+ "florida_senate": {
+  "url": "https://www.flsenate.gov/Laws/Statutes/2025/736.1017",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "736\\.1017": "736 FLORIDA TRUST CODE Entire Chapter SECTION 1017 Certification of trust. F.S. 736.1017 736.000000000000 Florida trust code 2025.00000000000 X 0736.1017 1017 736.1017 Certification of trust. \u2014 (1) Instead of",
+   "certificat": "t to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information: (a) The trust exists and the date the trust instrument was executed. "
+  }
+ },
+ "illinois": {
+  "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=076000030K1013",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "1013": " 760 ILCS 3/1013 (760 ILCS 3/1013) Sec. 1013. Certification of trust. (a) Instead of furnishing a copy of the trust instrument to a pers",
+   "certificat": "t to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information: (1) a statement that the trust exists and the date the trust instrume"
+  }
+ },
+ "ohio": {
+  "url": "https://codes.ohio.gov/ohio-revised-code/section-5810.13",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "5810\\.13": "key\"]=\"AD-AAB-ABP-PTJ\";window[\"adrum-start-time\"]=new Date().getTime(); Section 5810.13 - Ohio Revised Code | Ohio Laws Skip to main content Revised Code Keywords Section Number Go To Section Laws Ohio Const",
+   "certificat": "t to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing all of the following information: (1) A statement that the trust exists and the date the trust i"
+  }
+ },
+ "nc_leg": {
+  "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_36C/GS_36C-10-1013.pdf",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "36C-10-1013": "t Integer internal Indicates, which part of ISO 14289 standard is followed G.S. 36C-10-1013 Developer Express Inc. DXperience (tm) v24.1.7 Microsoft Office Word 2026-04-16T17:38:21-04:00 2026-04-16T17:38:21-04:0",
+   "certificat": ""
+  }
+ },
+ "michigan": {
+  "url": "https://legislature.mi.gov/documents/mcl/pdf/mcl-700-7913.pdf",
+  "status": 200,
+  "hit": false,
+  "ctx": {
+   "700\\.7913": "",
+   "certificat": ""
+  }
+ },
+ "maryland": {
+  "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=GET&section=14.5-910&ext=html",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "14\\.5-910": "$(\".Next\").click(function (e) { e.preventDefault(); var art = 'GET'; var sec = '14.5-910'; var enact = 'False'; var arch = 'False'; var temp = '/mgawebsite'; $.ajax({ url: temp + \"/api/Laws/GetNext\", data: { ",
+   "certificat": "t to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information: (1) That the trust exists and the date the trust instrument was execu"
+  }
+ },
+ "connecticut": {
+  "url": "https://www.cga.ct.gov/current/pub/chap_802f.htm#sec_45a-499zzz",
+  "status": 200,
+  "hit": false,
+  "ctx": {
+   "45a-499zzz": "",
+   "certificat": ""
+  }
+ }
+}

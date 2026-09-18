@@ -1,0 +1,110 @@
+[
+  {
+    "state": "New Jersey",
+    "citation": "N.J.S.A. Â§ 3B:31-81",
+    "official_url": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1/3735/4575",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains '3B:31-81 Certification of Trust' and the full statute text including subsection (a) about trustee furnishing certification of trust instead of a copy of the trust instrument.",
+    "notes": "Official NJ Legislature gateway URL (lis.njleg.state.nj.us). The NJ gateway appends a numeric docid (4575) to the statutes path; this is the canonical per-section endpoint."
+  },
+  {
+    "state": "New Mexico",
+    "citation": "N.M. Stat. Â§ 46A-10-1013",
+    "official_url": null,
+    "url_kind": "none",
+    "verified_as_of": null,
+    "evidence": "nmonesource.com (the official NM statutory database) returned HTTP 403/404 for all URL patterns tried (nmonesource.com/nmsa/a34/, nmonesource.com/nmos/en/nav.do, nmonesource.com/nmos/nmsa/en/nav_date.do). The site requires JavaScript interaction or is behind a paywall (Lexis/Norma platform). The nmlegis.gov statute search page does not link to a free per-section statute view.",
+    "notes": "NM's official code (NMSA) is hosted on nmonesource.com, which is behind Lexis/Norma and blocks automated curl access with 403. No free official per-section URL exists. Best authoritative mirror: Justia at https://law.justia.com/codes/new-mexico/chapter-46a/article-10/section-46a-10-1013/ (not verified in this session due to time constraints; marked url_kind='none' pending mirror verification)."
+  },
+  {
+    "state": "North Dakota",
+    "citation": "N.D. Cent. Code Â§ 59-18-13",
+    "official_url": "https://www.legis.nd.gov/cencode/t59c18.html",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; HTML page text contains '59-18-13 (1013) Certification of trust' in the table of contents. The PDF at https://ndlegis.gov/cencode/t59c18.pdf (HTTP 200) also contains '59-18-13. (1013) Certification of trust.' The chapter-level HTML page is the official Tier-1 source.",
+    "notes": "North Dakota hosts statutes as a single HTML chapter file at legis.nd.gov (redirects from ndlegis.gov). Individual section HTML pages (e.g., /cencode/59-18-13.html) return 404; the chapter-level URL is the working official page."
+  },
+  {
+    "state": "Oklahoma",
+    "citation": "Okla. Stat. tit. 60, Â§ 1609.7",
+    "official_url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=549929",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains '1609.7 - Certification of Trust - Requirements, Reliance, and Limitations' and the full statute text beginning with 'A. Instead of furnishing a copy of the trust instrument...'",
+    "notes": "OSCN (Oklahoma State Courts Network) is the official state legal research platform. The DeliverDocument.asp endpoint with CiteID is the per-section canonical URL. oklegislature.gov does not host individual statute HTML pages for the Oklahoma Statutes."
+  },
+  {
+    "state": "Rhode Island",
+    "citation": "R.I. Gen. Laws Â§ 18-3-3 (safeguarding persons dealing with trustees â closest analog; RI has no general statutory certificate-of-trust section)",
+    "official_url": "https://webserver.rilegislature.gov/Statutes/TITLE18/18-3/18-3-3.HTM",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains '18-3-3' and the full section text about safeguarding persons dealing with trustees. The webserver.rilegislature.gov server is the Tier-1 official RI legislature code host. Note: RI has no general 'certificate of trust' statute; Â§ 18-3-3 is the closest analog (protection for persons dealing with trustees).",
+    "notes": "Special case per instructions: RI has no statutory certificate-of-trust section. The closest analog is R.I. Gen. Laws Â§ 18-3-3 (safeguarding persons dealing with trustees), verified on the official RI legislature webserver. The page title references 'Title 18 - Trusts and Trustees' Chapter 18-3.'"
+  },
+  {
+    "state": "West Virginia",
+    "citation": "W. Va. Code Â§ 44D-10-1013",
+    "official_url": "https://code.wvlegislature.gov/44D-10-1013/",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains 'Â§44D-10-1013. Certification of trust.' and the full statute text including subsection (a) about trustee furnishing certification of trust.",
+    "notes": "Official WV Code site (code.wvlegislature.gov). The per-section URL with hyphenated section number is the canonical format. The old wvlegislature.gov/WVCODE/ path returns 404."
+  },
+  {
+    "state": "Wyoming",
+    "citation": "Wyo. Stat. Â§ 4-10-1014",
+    "official_url": "https://wyoleg.gov/statutes/compress/title04.pdf",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; PDF contains '4-10-1014. Certification or affidavit of trust.' and the full statute text. The wyoleg.gov statutes SPA (HTML) returns HTTP 200 but is a client-side rendered app that does not expose statute text in the initial HTML; the PDF is the authoritative Tier-1 official source with the statute text verifiable in the PDF.",
+    "notes": "Wyoming's wyoleg.gov statutes site is an Angular SPA that returns a shell HTML for all URLs. The official PDF (title04.pdf) is the only verifiable source containing the statute text. The SPA itself (wyoleg.gov/statutes/Title4/4-10-1014) returns 200 but the statute text is not present in the raw HTML â it is loaded via JavaScript. The PDF is the authoritative official source."
+  },
+  {
+    "state": "Delaware",
+    "citation": "12 Del. C. Â§ 3811",
+    "official_url": "https://delcode.delaware.gov/title12/c038/sc01/index.html",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains 'Â§ 3811. Execution.' and references to 'certificate of trust' and 'certificate of trust' in the statutory trust context. The chapter page (title12/c038/sc01/index.html) is the official Tier-1 source with all section anchors.",
+    "notes": "Delaware Code is hosted at delcode.delaware.gov. Individual section anchor pages (e.g., /title12/c038/sc01/index.html#3811) work with HTTP 200. The page contains the full chapter text including Â§ 3811 about execution of certificates of trust."
+  },
+  {
+    "state": "District of Columbia",
+    "citation": "D.C. Code Â§ 19-1310.13",
+    "official_url": "https://code.dccouncil.gov/us/dc/council/code/sections/19-1310.13",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains 'Â§ 19â1310.13. Certification of trust.' and the full statute text including subsection (a) about trustee furnishing certification of trust.",
+    "notes": "Official D.C. Code site (code.dccouncil.gov). The per-section URL format /sections/19-1310.13 works with HTTP 200 and contains the full statute text."
+  },
+  {
+    "state": "Alabama",
+    "citation": "Ala. Code Â§ 19-3B-1013",
+    "official_url": null,
+    "url_kind": "none",
+    "verified_as_of": null,
+    "evidence": "Alabama's official code is behind Lexis (arc.alabama.gov returns connection errors; the state's statutes are published through LexisNexis). Justia (law.justia.com/codes/alabama/title-19/chapter-3b/section-19-3b-1013/) returned HTTP 403 (Cloudflare challenge). FindLaw (codes.findlaw.com/al/title-19-fiduciaries-and-trusts/al-code-sect-19-3b-1013/) also returned HTTP 403. lawserver.com returned a 307 redirect to a JavaScript-dependent page.",
+    "notes": "Alabama's official code URL is not freely accessible â it is published through LexisNexis (arc.alabama.gov). No free official per-section URL was found. Best authoritative mirrors (Justia, FindLaw) are blocked by Cloudflare/bot protection for curl. Marked url_kind='none' â a mirror URL should be used if one becomes accessible."
+  },
+  {
+    "state": "Alaska",
+    "citation": "Alaska Stat. Â§ 13.36.079",
+    "official_url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=13.36.079&secEnd=13.36.079",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains 'Sec. 13.36.079. Certification of trust; penalty.' and the full statute text including subsection (a) about trustee furnishing certification of trust.",
+    "notes": "Alaska's official statutes are at akleg.gov/basis/statutes.asp. The per-section URL format requires media=print&secStart=&secEnd= parameters. The site also provides a chapter-level page (statutes.asp?chapter=13.36) and a PDF. The anchor-style URL (statutes.asp?year=2025&title=13#13.36.079) returns 200 but does not contain the section text in the HTML (SPA-style navigation)."
+  },
+  {
+    "state": "Vermont",
+    "citation": "Vt. Stat. Ann. tit. 14A, Â§ 1013",
+    "official_url": "https://legislature.vermont.gov/statutes/section/14A/010/01013",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "HTTP 200; page text contains 'Â§ 1013. Certification of trust' and the full statute text including subsection (a) about trustee executing a certificate of trust.",
+    "notes": "Official Vermont Legislature statutes site (legislature.vermont.gov). The per-section URL format /statutes/section/14A/010/01013 works with HTTP 200 and contains the full statute text."
+  }
+]

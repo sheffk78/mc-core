@@ -1,0 +1,92 @@
+{
+ "mi_7913_direct": {
+  "url": "https://legislature.mi.gov/doc.aspx?mcl-700-7913",
+  "status": 200,
+  "hit": true,
+  "ctx": {
+   "700\\.7913": " MCL - Section 700.7913 - Michigan Legislature let prefersDark = window.matchMedia(\"(prefers-color-scheme: dark)\").matches; let prefersLight = ",
+   "certification of trust": ""
+  }
+ },
+ "mi_7913_lawsonly": {
+  "url": "http://www.legislature.mi.gov/(S(rg0u4zblhxxq5qkxj05y2z45))/mileg.aspx?page=getobject&objectname=mcl-700-7913",
+  "status": 404,
+  "hit": false,
+  "ctx": {
+   "700\\.7913": "",
+   "certification": ""
+  }
+ },
+ "ct_499zzz": {
+  "url": "https://www.cga.ct.gov/current/pub/chap_802f.htm",
+  "status": 200,
+  "hit": false,
+  "ctx": {
+   "45a-499zzz": "",
+   "Certification of trust": ""
+  }
+ },
+ "ct_current_genstat": {
+  "url": "https://www.cga.ct.gov/current/chap_802f.htm",
+  "status": 404,
+  "hit": false,
+  "ctx": {
+   "45a-499zzz": "",
+   "Certification of trust": ""
+  }
+ },
+ "pa_7790_3": {
+  "url": "https://www.pacodeandbulletin.gov/Display/pacode?data=/data/pacode/data/020/020.20/020.20.7790.3",
+  "status": 500,
+  "hit": false,
+  "ctx": {
+   "7790\\.3": "",
+   "certification": ""
+  }
+ },
+ "pa_lawsource": {
+  "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2006/0/0610..HTM",
+  "status": 404,
+  "hit": false,
+  "ctx": {
+   "7790\\.3": ""
+  }
+ },
+ "ga_280_justia": {
+  "url": "https://law.justia.com/codes/georgia/2022/title-53/chapter-12/article-7/part-2/section-53-12-280/",
+  "status": 403,
+  "hit": true,
+  "ctx": {
+   "53-12-280": "aged',cUPMDTk:\"/codes/georgia/2022/title-53/chapter-12/article-7/part-2/section-53-12-280/?__cf_chl_tk=lWlEyhHsLMOZzPuJCoKCOH06lJr9YXv_gK19il7I8Y0-1789675034-1.0.1.1-wpG.JEBVd.M_T_2hqj021puZiuWLzZVPISe3Sj_ulMU",
+   "certification": ""
+  }
+ },
+ "ga_280_codepub": {
+  "url": "https://code.georgiacourts.gov/index.php/ocga/g-titles/title-53/chapter-12/article-7/part-2/section-53-12-280",
+  "status": 0,
+  "hit": false,
+  "ctx": {
+   "53-12-280": "",
+   "certification": ""
+  }
+ },
+ "ny_eptl_7_1_19": {
+  "url": "https://www.nysenate.gov/legislation/laws/EPT/7-1.19",
+  "status": 403,
+  "hit": true,
+  "ctx": {
+   "7-1\\.19": "lB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:\"/legislation/laws/EPT/7-1.19?__cf_chl_tk=0sRgfpNrbBXCgU6a8WAeH.zLpodfd6yFjIsWLvrlmYQ-1789675034-1.0.1.1-DP6TMgekeKR7rqbAydp0CBPU6hai3N5DhpZgAsz.QTk\"",
+   "dealing with a trustee": ""
+  }
+ },
+ "ny_eptl_7_1_5": {
+  "url": "https://www.nysenate.gov/legislation/laws/EPT/7-1.5",
+  "status": 403,
+  "hit": true,
+  "ctx": {
+   "7-1\\.5": "lB: '0',cTplC:0,cTplO:0,cTplV:5,cType: 'managed',cUPMDTk:\"/legislation/laws/EPT/7-1.5?__cf_chl_tk=nPknxxG3LD99FWd_xRqLjvBC7TzibSbwrEvv84plLWw-1789675035-1.0.1.1-3muiOuCjD2nBpPve3mGYEO_6ybznHq7tK3hBNhpQils\"",
+   "dealing with a trustee": "",
+   "certification": ""
+  }
+ }
+}

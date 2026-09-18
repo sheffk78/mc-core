@@ -1,0 +1,66 @@
+{
+ "task": "Find and verify the OFFICIAL (Tier-1 state legislature/code) URL for each statute",
+ "verify_date": "2026-09-17",
+ "states": [
+  {
+   "state": "New Jersey",
+   "citation": "N.J.S.A. \u00a7 3B:31-81",
+   "hint": "njleg.state.nj.us"
+  },
+  {
+   "state": "New Mexico",
+   "citation": "N.M. Stat. \u00a7 46A-10-1013",
+   "hint": "nmonesource.com / nmlegis.gov"
+  },
+  {
+   "state": "North Dakota",
+   "citation": "N.D. Cent. Code \u00a7 59-18-13",
+   "hint": "legis.nd.gov"
+  },
+  {
+   "state": "Oklahoma",
+   "citation": "Okla. Stat. tit. 60, \u00a7 1609.7",
+   "hint": "oklegislature.gov"
+  },
+  {
+   "state": "Rhode Island",
+   "citation": "No general COT statute \u2014 R.I. Gen. Laws \u00a7 18-3-3 (safeguarding persons dealing with trustees) as closest analog; note on page must say RI lacks a statutory COT section",
+   "hint": "webserver.rilin.state.ri.us / rigel"
+  },
+  {
+   "state": "West Virginia",
+   "citation": "W. Va. Code \u00a7 44D-10-1013",
+   "hint": "legis.wv.gov"
+  },
+  {
+   "state": "Wyoming",
+   "citation": "Wyo. Stat. \u00a7 4-10-1014",
+   "hint": "wyoleg.gov"
+  },
+  {
+   "state": "Delaware",
+   "citation": "12 Del. C. \u00a7 3811",
+   "hint": "delcode.delaware.gov"
+  },
+  {
+   "state": "District of Columbia",
+   "citation": "D.C. Code \u00a7 19-1310.13",
+   "hint": "code.dccouncil.gov"
+  },
+  {
+   "state": "Alabama",
+   "citation": "Ala. Code \u00a7 19-3B-1013",
+   "hint": "arc.alabama.gov / legislature \u2014 official likely via Lexis; mark kind"
+  },
+  {
+   "state": "Alaska",
+   "citation": "Alaska Stat. \u00a7 13.36.079",
+   "hint": "akleg.gov / docs.legis.state.ak.us"
+  },
+  {
+   "state": "Vermont",
+   "citation": "Vt. Stat. Ann. tit. 14A, \u00a7 1013",
+   "hint": "legislature.vermont.gov"
+  }
+ ]
+}

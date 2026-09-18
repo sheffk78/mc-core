@@ -1,0 +1,71 @@
+{
+ "task": "Find and verify the OFFICIAL (Tier-1 state legislature/code) URL for each statute",
+ "verify_date": "2026-09-17",
+ "states": [
+  {
+   "state": "Utah",
+   "citation": "Utah Code \u00a7 75B-2-1013",
+   "hint": "https://le.utah.gov/xcode/Title75B/Chapter2/C75B-2-S1013_2025050720250507.pdf"
+  },
+  {
+   "state": "California",
+   "citation": "Cal. Prob. Code \u00a7 18100.5",
+   "hint": "leginfo.legislature.ca.gov"
+  },
+  {
+   "state": "Texas",
+   "citation": "Tex. Prop. Code \u00a7 114.086",
+   "hint": "statutes.capitol.texas.gov"
+  },
+  {
+   "state": "Florida",
+   "citation": "Fla. Stat. \u00a7 736.1017",
+   "hint": "leg.state.fl.us / flsenate.gov"
+  },
+  {
+   "state": "New York",
+   "citation": "NY trust law \u2014 persons dealing with trustees: EPTL \u00a7 7-1.5 vs \u00a7 7-1.19 (verify which section actually safeguards persons dealing with trustees; cite the correct one)",
+   "hint": "nysenate.gov/legislation/laws/EPT"
+  },
+  {
+   "state": "Illinois",
+   "citation": "760 ILCS 3/1013",
+   "hint": "ilga.gov"
+  },
+  {
+   "state": "Pennsylvania",
+   "citation": "20 Pa.C.S. \u00a7 7790.3",
+   "hint": "pacodeandbulletin.gov / legit"
+  },
+  {
+   "state": "Ohio",
+   "citation": "Ohio Rev. Code \u00a7 5810.13",
+   "hint": "codes.ohio.gov"
+  },
+  {
+   "state": "Georgia",
+   "citation": "O.C.G.A. \u00a7 53-12-280",
+   "hint": "official free code likely unavailable (Lexis-copyrighted) \u2014 find best official/semi-official source, mark kind accordingly"
+  },
+  {
+   "state": "North Carolina",
+   "citation": "N.C.G.S. \u00a7 36C-10-1013",
+   "hint": "ncleg.gov / ncleg.net"
+  },
+  {
+   "state": "Michigan",
+   "citation": "MCL \u00a7 700.7913",
+   "hint": "legislature.mi.gov"
+  },
+  {
+   "state": "Maryland",
+   "citation": "Md. Code, Est. & Trusts \u00a7 14.5-910",
+   "hint": "mgaleg.maryland.gov / laws.maryland.gov"
+  },
+  {
+   "state": "Connecticut",
+   "citation": "Conn. Gen. Stat. \u00a7 45a-499zzz",
+   "hint": "cga.ct.gov"
+  }
+ ]
+}

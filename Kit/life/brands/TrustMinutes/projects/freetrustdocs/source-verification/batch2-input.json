@@ -1,0 +1,71 @@
+{
+ "task": "Find and verify the OFFICIAL (Tier-1 state legislature/code) URL for each statute",
+ "verify_date": "2026-09-17",
+ "states": [
+  {
+   "state": "Colorado",
+   "citation": "Colo. Rev. Stat. \u00a7 15-5-1013",
+   "hint": "leg.colorado.gov"
+  },
+  {
+   "state": "Oregon",
+   "citation": "Or. Rev. Stat. \u00a7 130.860",
+   "hint": "oregonlegislature.gov"
+  },
+  {
+   "state": "Tennessee",
+   "citation": "Tenn. Code Ann. \u00a7 35-15-1013",
+   "hint": "capitol.tn.gov / law.justia mirror if official unavailable"
+  },
+  {
+   "state": "Minnesota",
+   "citation": "Minn. Stat. \u00a7 501C.1013",
+   "hint": "revisor.mn.gov"
+  },
+  {
+   "state": "Wisconsin",
+   "citation": "Wis. Stat. \u00a7 701.1013",
+   "hint": "docs.legis.wisconsin.gov"
+  },
+  {
+   "state": "Missouri",
+   "citation": "Mo. Rev. Stat. \u00a7 456.10-1013",
+   "hint": "revisor.mo.gov"
+  },
+  {
+   "state": "Indiana",
+   "citation": "Ind. Code \u00a7 30-4-4-5",
+   "hint": "iga.in.gov"
+  },
+  {
+   "state": "Nevada",
+   "citation": "Nev. Rev. Stat. \u00a7 164.410",
+   "hint": "leg.state.nv.us / NRS"
+  },
+  {
+   "state": "South Carolina",
+   "citation": "S.C. Code \u00a7 62-7-1013",
+   "hint": "scstatehouse.gov"
+  },
+  {
+   "state": "South Dakota",
+   "citation": "S.D. Codified Laws \u00a7 55-4-51",
+   "hint": "sdlegislature.gov"
+  },
+  {
+   "state": "Virginia",
+   "citation": "Va. Code \u00a7 64.2-804",
+   "hint": "law.lis.virginia.gov"
+  },
+  {
+   "state": "Washington",
+   "citation": "RCW 11.98.075",
+   "hint": "app.leg.wa.gov"
+  },
+  {
+   "state": "Arizona",
+   "citation": "A.R.S. \u00a7 14-11013",
+   "hint": "azleg.gov"
+  }
+ ]
+}

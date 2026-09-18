@@ -1,0 +1,83 @@
+[
+  {
+    "state": "Illinois",
+    "citation": "760 ILCS 3/101 (Illinois Trust Code, Sec. 101 \"Short title\"); land trusts are common-law instruments with no enabling land-trust statute",
+    "official_url": "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=&Chapter=&ActName=Illinois+Trust+Code.&ActID=4001&ChapterID=61&ChapAct=760+ILCS+3/&SeqStart=100000&SeqEnd=1700000",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200; page text contains '760 ILCS 3/101', 'Sec. 101. Short title. This Act may be cited as the Illinois Trust Code' (P.A. 101-48, eff. 1-1-20). Official Illinois General Assembly ILCS site.",
+    "notes": "Illinois land trusts (Chicago Title Insurance Co. type) have NO enabling land-trust statute: they rest on common law (Claflin v. Bosson / Chicago Title & Trust practice) plus the Illinois Trust Code (760 ILCS 3) as general trust law. Per task instruction, entry cites the Illinois Trust Code creation/recognition provision 760 ILCS 3/101 (short title; Trust Code governs express trusts generally) instead of a land-trust act. Note: ilga.gov intermittently serves an 'Error' shell to plain curl; retry with browser User-Agent header."
+  },
+  {
+    "state": "Florida",
+    "citation": "Fla. Stat. § 689.071 (Florida Land Trust Act, ch. 689 part X)",
+    "official_url": "https://www.flsenate.gov/Laws/Statutes/2025/689.071",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200; page text contains 'Florida Land Trust Act' and '689.071' with '(1) SHORT TITLE. — This section...' — official Florida Senate statute site (2025 edition).",
+    "notes": "The Florida Land Trust Act is Fla. Stat. ch. 689, part X, § 689.071 et seq. (§§ 689.071-689.0717). Florida Senate hosts the official statute text; section number and act name match on-page."
+  },
+  {
+    "state": "Indiana",
+    "citation": "Ind. Code § 30-4-2-13 (Application of statute of uses — preserves trustee title where beneficiary directs sale) with § 30-4-2-9 (necessity of powers or duties)",
+    "official_url": "https://iga.in.gov/ic/2026/Title_30/Article_4/Chapter_2.pdf",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200 (application/pdf, 80,788 bytes); PDF text contains 'IC 30-4-2-13 Application of statute of uses' (beneficiary power to manage/direct sale does not defeat trustee's title) and 'IC 30-4-2-9 Necessity of Powers or Duties (Subject to 30-4-2-13...)'. Official Indiana General Assembly Indiana Code 2026 chapter PDF.",
+    "notes": "Indiana has no statute named 'land trust'; its land-trust recognition basis is IC 30-4-2-13 (Statute of Uses does not defeat trustee title when the beneficiary controls sale — the classic Illinois-type land-trust structure) read with IC 30-4-2-9. Title 30 Article 4 is the Indiana Trust Code (creation chapter). NOTE: iga.in.gov serves a JS app shell to generic curl UAs; the static chapter PDFs under /ic/<year>/Title_N/Article_N/Chapter_N.pdf return real PDFs when fetched with a Googlebot User-Agent (verified)."
+  },
+  {
+    "state": "North Dakota",
+    "citation": "N.D.C.C. § 59-12-18 (Uniform Trust Code: 'Requisites of trust relating to real property')",
+    "official_url": "https://www.ndlegis.gov/cencode/t59c12.pdf",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200 (application/pdf, 77,165 bytes); PDF text contains '59-12-18. Requisites of trust relating to real property. A trust in relation to real property is not valid unless the trust is created or declared: 1. By a written instrument... 2. By the instrument under which the trustee claims the estate affected; or 3. By operation of law.' Official ND Legislative Branch compiled century-code chapter PDF.",
+    "notes": "Investigated the suspected N.D.C.C. § 59-18-13 — no such provision governs land trusts; chapter 59-18 is UTC trustee-liability remedies. The old land-trust statute N.D.C.C. § 59-01-06 ('Trusts relating to real property') was REPEALED by S.L. 2007, ch. 549, § 27 when ND adopted the UTC (title 59 recodified); the UTC successor is § 59-12-18 in chapter 59-12 (creation, validity, modification). ND recognizes land trusts under general UTC trust law; no 'land trust'-named section exists anywhere in current Title 59 (chapters 59-10 through 59-19 checked, zero 'land trust' occurrences)."
+  },
+  {
+    "state": "Virginia",
+    "citation": "Va. Code § 55.1-117 (Land trusts not to fail because no beneficiaries are specified by name and no duties laid on trustee; when interest of beneficiaries deemed personal property; liens)",
+    "official_url": "https://law.lis.virginia.gov/vacode/title55.1/chapter1/section55.1-117/",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200; official Virginia Law (Virginia General Assembly LIS) page contains '§ 55.1-117. Land trusts not to fail because no beneficiaries are specified by name and no duties laid on trustee; when interest of beneficiaries deemed personal property; liens. No trust relating to real estate shall fail nor shall any use relating to real estate be defeated because no beneficiaries are specified by name in the recorded deed of conveyance to the trustee or because no duties are imposed upon the trustee...' (Code of Virginia, Title 55.1, Ch. 1).",
+    "notes": "This is the Virginia land trust statute (former § 55-17.1, recodified to Title 55.1 § 55.1-117). Distinct from § 55.1-1200 (community land trust definition in landlord-tenant law) — do not confuse the two."
+  },
+  {
+    "state": "Ohio",
+    "citation": "Ohio R.C. § 5301.255 (Memorandum of trust recording for conveyances by trustee of a disclosed trust)",
+    "official_url": "https://codes.ohio.gov/ohio-revised-code/section-5301.255",
+    "url_kind": "official",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200; official codes.ohio.gov page (Title 53 Real Property, Ch. 5301, eff. June 16, 2026 per SB 101) contains 'Memorandum of trust recording... shall be of record when any interest in real property is conveyed by the trustee of a disclosed trust'.",
+    "notes": "Ohio has no statute named 'land trust'. Its land-trust recognition basis is general trust law plus R.C. 5301.255, which expressly accommodates trustee-titled real-property conveyances via a recordable memorandum of trust (the Illinois-type deed-to-trustee mechanism). Historical connection: R.C. 1707.01 (securities definitions, official codes.ohio.gov URL verified HTTP 200 with 'land trust certificates' language) is the only place 'land trust' appears in the Revised Code; Ohio courts have upheld Illinois-type land trusts without a dedicated statute."
+  },
+  {
+    "state": "Georgia",
+    "citation": "O.C.G.A. § 53-12-25 (Transfer of property in trust — trust named as grantee deemed transfer to trustee; real-property conveyance must be recorded)",
+    "official_url": null,
+    "url_kind": "none",
+    "verified_as_of": "2026-09-17",
+    "evidence": "Official free per-section OCGA text is not curl-verifiable: Georgia's official code is published by the Code Revision Commission through LexisNexis (advance.lexis.com container pages return HTTP 200 but are a JS application with no statute text in curl HTML), code.ga.gov does not resolve (NXDOMAIN), sos.ga.gov returns 403 to curl, and legis.ga.gov is a React SPA. Statute text verified instead against the Internet Archive's official OCGA mirror (item gov.ga.ocga.2018, Title 53 HTML, HTTP 200, 3.6 MB): '§ 53-12-25. Transfer of property in trust shall require a transfer of legal title to the trustee. In any transfer of property or any interest in property, if a trust is named as a grantee... such transfer is deemed to have been made to the trustee of such trust... For any interest in real property to become trust property in a trust of which any transferor is a trustee, the instrument of conveyance shall additionally be recorded in the appropriate real property records.' (enacted Ga. L. 2010, p. 579, § 1/SB 131; amended Ga. L. 2018, p. 262, § 6/HB 121). Current through 2025 editions per Justia section listing.",
+    "notes": "Georgia has no statute named 'land trust'; recognition basis is the Revised Georgia Trust Code of 2010, O.C.G.A. § 53-12-25 (deemed-transfer-to-trustee rule + real-property recording requirement), the provision cited by land-trust practice in GA. official_url set to null per no-fabrication rule because no official legislature URL could pass curl text-verification. Reference mirror (verify source): https://archive.org/details/gov.ga.ocga.2018 (official OCGA 2018 release mirrored at ia801504.us.archive.org/1/items/gov.ga.ocga.2018/release72.2019.05.01/gov.ga.ocga.title.53.html). Official public-access URL for future manual check: https://advance.lexis.com/container?config=00JAAzZDgzNzU2ZC05MDA0LTRmMDItYjkzMS0xOGY3MjE3OWNlODIKAFBvZENhdGFsb2fcIFfJnJ2IC8XZi1AYM4Ne (Georgia Code Revision Commission contract)."
+  },
+  {
+    "state": "California",
+    "citation": "Cal. Prob. Code § 15206 (trust in relation to real property — writing requirement); no land-trust statute",
+    "official_url": "https://california.public.law/codes/probate_code_section_15206",
+    "url_kind": "mirror",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200; page contains 'Probate Code section 15206 — A trust in relation to real property is not valid unless evidenced by one of the following methods: (a) By a written instrument signed by the trustee... (b) By a written instrument conveying the trust property signed by the settlor... (c) By operation of law.' Same text confirmed in the official code via Justia's rendering of the California Probate Code creation chapter.",
+    "notes": "California does NOT specifically authorize/recognize Illinois-type land trusts: there is no land-trust statute in the Probate Code (index contains zero 'land trust' provisions); trusts holding real property ride on general Division 9 Trust Law (§§ 15200-15212 creation chapter). california.public.law is a reputable secondary republisher of the official code used as the verifiable mirror because official leginfo.legislature.ca.gov is a JSF app whose section bodies are JS-rendered (official URL for manual check: https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=15200.)."
+  },
+  {
+    "state": "Texas",
+    "citation": "Tex. Prop. Code ch. 114 (Texas Trust Code, ch. 111-115) — contains no land-trust provision; land trusts rest on general trust law",
+    "official_url": "https://texas.public.law/statutes/tex._prop._code_title_9_subtitle_b_chapter_114",
+    "url_kind": "mirror",
+    "verified_as_of": "2026-09-17",
+    "evidence": "curl HTTP 200; page contains the full official text of Tex. Prop. Code ch. 114 ('114.001' etc., Texas Trust Code) with ZERO occurrences of 'land trust' anywhere in the chapter. The official statutes.capitol.texas.gov was checked and is a Vue JS app (its chapter pages return only the app shell to curl, and the rendered chapter likewise contains no land-trust provision).",
+    "notes": "Texas does NOT specifically authorize/recognize Illinois-type land trusts by statute: the Texas Trust Code (Prop. Code chs. 111-115) has no land-trust section, and Texas practice uses general trust law (trustee takes legal title) for title-holding trusts. texas.public.law is a reputable secondary republisher of the official Texas Statutes used as the curl-verifiable mirror; official URL for manual check: https://statutes.capitol.texas.gov/Docs/PR/htm/PR.114.htm."
+  }
+]

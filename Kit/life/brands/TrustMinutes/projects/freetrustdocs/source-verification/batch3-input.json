@@ -1,0 +1,71 @@
+{
+ "task": "Find and verify the OFFICIAL (Tier-1 state legislature/code) URL for each statute",
+ "verify_date": "2026-09-17",
+ "states": [
+  {
+   "state": "Arkansas",
+   "citation": "Ark. Code \u00a7 28-73-1013",
+   "hint": "arcourts.gov / arkleg.state.ar.us"
+  },
+  {
+   "state": "Hawaii",
+   "citation": "Haw. Rev. Stat. \u00a7 554D-1013",
+   "hint": "capitol.hawaii.gov"
+  },
+  {
+   "state": "Idaho",
+   "citation": "Idaho Code \u00a7 68-114",
+   "hint": "legislature.idaho.gov"
+  },
+  {
+   "state": "Iowa",
+   "citation": "Iowa Code \u00a7 633A.4604",
+   "hint": "legis.iowa.gov"
+  },
+  {
+   "state": "Kansas",
+   "citation": "Kan. Stat. Ann. \u00a7 58a-1013",
+   "hint": "kslegislature.org"
+  },
+  {
+   "state": "Kentucky",
+   "citation": "Ky. Rev. Stat. \u00a7 386B.10-120",
+   "hint": "legislature.ky.gov"
+  },
+  {
+   "state": "Louisiana",
+   "citation": "La. Rev. Stat. \u00a7 9:2092 (certification of trust)",
+   "hint": "legis.la.gov"
+  },
+  {
+   "state": "Maine",
+   "citation": "Me. Rev. Stat. tit. 18-B, \u00a7 1013",
+   "hint": "mainelegislature.org"
+  },
+  {
+   "state": "Massachusetts",
+   "citation": "Mass. Gen. Laws c. 203E, \u00a7 1013",
+   "hint": "malegislature.gov"
+  },
+  {
+   "state": "Mississippi",
+   "citation": "Miss. Code \u00a7 91-8-1013",
+   "hint": "law.justia mirror / mscode.state.ms.us if live"
+  },
+  {
+   "state": "Montana",
+   "citation": "Mont. Code \u00a7 72-38-1013",
+   "hint": "leg.mt.gov"
+  },
+  {
+   "state": "Nebraska",
+   "citation": "Neb. Rev. Stat. \u00a7\u00a7 30-3834, 30-3835 (two-section scheme)",
+   "hint": "nebraskalegislature.gov"
+  },
+  {
+   "state": "New Hampshire",
+   "citation": "N.H. Rev. Stat. \u00a7 564-B:10-1013",
+   "hint": "gencourt.state.nh.us"
+  }
+ ]
+}

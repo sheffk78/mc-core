@@ -1,0 +1,13 @@
+[
+ {"name": "utah_pdf_hint", "url": "https://le.utah.gov/xcode/Title75B/Chapter2/C75B-2-S1013_2025050720250507.pdf", "patterns": ["75B-2-1013", "certificat", "trust"]},
+ {"name": "utah_html", "url": "https://le.utah.gov/xcode/Title75B/Chapter2/75B-2-S1013.html", "patterns": ["75B-2-1013", "certificat"]},
+ {"name": "california", "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=18100.5", "patterns": ["18100\\.5", "certificat"]},
+ {"name": "texas", "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.114.htm", "patterns": ["114\\.086", "certificat"]},
+ {"name": "florida_senate", "url": "https://www.flsenate.gov/Laws/Statutes/2025/736.1017", "patterns": ["736\\.1017", "certificat"]},
+ {"name": "illinois", "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=076000030K1013", "patterns": ["1013", "certificat"]},
+ {"name": "ohio", "url": "https://codes.ohio.gov/ohio-revised-code/section-5810.13", "patterns": ["5810\\.13", "certificat"]},
+ {"name": "nc_leg", "url": "https://www.ncleg.gov/EnactedLegislation/Statutes/PDF/BySection/Chapter_36C/GS_36C-10-1013.pdf", "patterns": ["36C-10-1013", "certificat"]},
+ {"name": "michigan", "url": "https://legislature.mi.gov/documents/mcl/pdf/mcl-700-7913.pdf", "patterns": ["700\\.7913", "certificat"]},
+ {"name": "maryland", "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=GET&section=14.5-910&ext=html", "patterns": ["14\\.5-910", "certificat"]},
+ {"name": "connecticut", "url": "https://www.cga.ct.gov/current/pub/chap_802c.htm#sec_45a-499zzz", "patterns": ["45a-499zzz", "certificat"]}
+]

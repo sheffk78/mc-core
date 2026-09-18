@@ -1,0 +1,477 @@
+{
+ "Utah": {
+  "sources": [
+   {
+    "label": "Utah Code \u00a7 75B-2-1013",
+    "url": "https://le.utah.gov/xcode/Title75B/Chapter2/75B-2-S1013.html",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "California": {
+  "sources": [
+   {
+    "label": "Cal. Prob. Code \u00a7 18100.5",
+    "url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=18100.5",
+    "kind": "official"
+   },
+   {
+    "label": "Cal. Prob. Code \u00a7 15206 (trust in relation to real property \u2014 writing requirement); no land-trust statute",
+    "url": "https://california.public.law/codes/probate_code_section_15206",
+    "kind": "mirror"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Texas": {
+  "sources": [
+   {
+    "label": "Tex. Prop. Code \u00a7 114.086",
+    "url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.114.htm",
+    "kind": "official"
+   },
+   {
+    "label": "Tex. Prop. Code ch. 114 (Texas Trust Code, ch. 111-115) \u2014 contains no land-trust provision; land trusts rest on general ",
+    "url": "https://texas.public.law/statutes/tex._prop._code_title_9_subtitle_b_chapter_114",
+    "kind": "mirror"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Florida": {
+  "sources": [
+   {
+    "label": "Fla. Stat. \u00a7 736.1017",
+    "url": "https://www.flsenate.gov/Laws/Statutes/2025/736.1017",
+    "kind": "official"
+   },
+   {
+    "label": "Fla. Stat. \u00a7 689.071 (Florida Land Trust Act, ch. 689 part X)",
+    "url": "https://www.flsenate.gov/Laws/Statutes/2025/689.071",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "New York": {
+  "sources": [
+   {
+    "label": "EPTL \u00a7 7-3.3 (replaces \u00a7 7-1.5); \u00a7 7-1.19 NOT applicable",
+    "url": "https://www.nysenate.gov/legislation/laws/EPT/7-3.3",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Illinois": {
+  "sources": [
+   {
+    "label": "760 ILCS 3/1013",
+    "url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=076000030K1013",
+    "kind": "official"
+   },
+   {
+    "label": "760 ILCS 3/101 (Illinois Trust Code, Sec. 101 \"Short title\"); land trusts are common-law instruments with no enabling la",
+    "url": "https://www.ilga.gov/legislation/ILCS/details?MajorTopic=&Chapter=&ActName=Illinois+Trust+Code.&ActID=4001&ChapterID=61&ChapAct=760+ILCS+3/&SeqStart=100000&SeqEnd=1700000",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Pennsylvania": {
+  "sources": [
+   {
+    "label": "20 Pa.C.S. \u00a7 7790.3",
+    "url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/20/00.077.090.003..HTM",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Ohio": {
+  "sources": [
+   {
+    "label": "Ohio Rev. Code \u00a7 5810.13",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-5810.13",
+    "kind": "official"
+   },
+   {
+    "label": "Ohio R.C. \u00a7 5301.255 (Memorandum of trust recording for conveyances by trustee of a disclosed trust)",
+    "url": "https://codes.ohio.gov/ohio-revised-code/section-5301.255",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Georgia": {
+  "sources": [
+   {
+    "label": "O.C.G.A. \u00a7 53-12-280",
+    "url": "https://law.onecle.com/georgia/title-53/53-12-280.html",
+    "kind": "mirror"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "North Carolina": {
+  "sources": [
+   {
+    "label": "N.C.G.S. \u00a7 36C-10-1013",
+    "url": "https://www.ncleg.gov/enactedlegislation/statutes/html/bysection/chapter_36c/gs_36c-10-1013.html",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Michigan": {
+  "sources": [
+   {
+    "label": "MCL \u00a7 700.7913",
+    "url": "https://legislature.mi.gov/doc.aspx?mcl-700-7913",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Maryland": {
+  "sources": [
+   {
+    "label": "Md. Code, Est. & Trusts \u00a7 14.5-910",
+    "url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=GET&section=14.5-910&ext=html",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Connecticut": {
+  "sources": [
+   {
+    "label": "Conn. Gen. Stat. \u00a7 45a-499zzz",
+    "url": "https://www.cga.ct.gov/current/pub/chap_802c.htm#sec_45a-499zzz",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Colorado": {
+  "sources": [
+   {
+    "label": "Colo. Rev. Stat. \u00a7 15-5-1013",
+    "url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Oregon": {
+  "sources": [
+   {
+    "label": "Or. Rev. Stat. \u00a7 130.860",
+    "url": "https://www.oregonlegislature.gov/bills_laws/ors/ors130.html",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Tennessee": {
+  "sources": [
+   {
+    "label": "Tenn. Code Ann. \u00a7 35-15-1013",
+    "url": "https://law.justia.com/codes/tennessee/title-35/chapter-15/part-10/section-35-15-1013/",
+    "kind": "mirror"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Minnesota": {
+  "sources": [
+   {
+    "label": "Minn. Stat. \u00a7 501C.1013",
+    "url": "https://www.revisor.mn.gov/statutes/cite/501C.1013",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Wisconsin": {
+  "sources": [
+   {
+    "label": "Wis. Stat. \u00a7 701.1013",
+    "url": "https://docs.legis.wisconsin.gov/statutes/statutes/701/x/1013",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Missouri": {
+  "sources": [
+   {
+    "label": "Mo. Rev. Stat. \u00a7 456.10-1013",
+    "url": "https://revisor.mo.gov/main/OneSection.aspx?section=456.10-1013",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Indiana": {
+  "sources": [
+   {
+    "label": "Ind. Code \u00a7 30-4-4-5",
+    "url": "https://iga.in.gov/ic/2026/Title_30/Article_4/Chapter_4/2026_IC_30-4-4-5.html",
+    "kind": "official"
+   },
+   {
+    "label": "Ind. Code \u00a7 30-4-2-13 (Application of statute of uses \u2014 preserves trustee title where beneficiary directs sale) with \u00a7 3",
+    "url": "https://iga.in.gov/ic/2026/Title_30/Article_4/Chapter_2.pdf",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Nevada": {
+  "sources": [
+   {
+    "label": "Nev. Rev. Stat. \u00a7 164.410",
+    "url": "https://www.leg.state.nv.us/nrs/nrs-164.html",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "South Carolina": {
+  "sources": [
+   {
+    "label": "S.C. Code \u00a7 62-7-1013",
+    "url": "https://www.scstatehouse.gov/code/t62c007.php",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "South Dakota": {
+  "sources": [
+   {
+    "label": "S.D. Codified Laws \u00a7 55-4-51",
+    "url": "https://sdlegislature.gov/Statutes/55-4-51",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Virginia": {
+  "sources": [
+   {
+    "label": "Va. Code \u00a7 64.2-804",
+    "url": "https://law.lis.virginia.gov/vacode/title64.2/chapter8/section64.2-804/",
+    "kind": "official"
+   },
+   {
+    "label": "Va. Code \u00a7 55.1-117 (Land trusts not to fail because no beneficiaries are specified by name and no duties laid on truste",
+    "url": "https://law.lis.virginia.gov/vacode/title55.1/chapter1/section55.1-117/",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Washington": {
+  "sources": [
+   {
+    "label": "RCW 11.98.075",
+    "url": "https://app.leg.wa.gov/rcw/default.aspx?cite=11.98.075",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Arizona": {
+  "sources": [
+   {
+    "label": "A.R.S. \u00a7 14-11013",
+    "url": "https://www.azleg.gov/ars/14/11013.htm",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Arkansas": {
+  "sources": [
+   {
+    "label": "Ark. Code \u00a7 28-73-1013",
+    "url": "https://law.onecle.com/arkansas/title-28/28-73-1013.html",
+    "kind": "mirror"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Hawaii": {
+  "sources": [
+   {
+    "label": "Haw. Rev. Stat. \u00a7 554D-1013",
+    "url": "https://data.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0554D/HRS_0554D-1013.htm",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Idaho": {
+  "sources": [
+   {
+    "label": "Idaho Code \u00a7 68-114",
+    "url": "https://legislature.idaho.gov/statutesrules/idstat/title68/t68ch1/sect68-114/",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Iowa": {
+  "sources": [
+   {
+    "label": "Iowa Code \u00a7 633A.4604",
+    "url": "https://www.legis.iowa.gov/docs/code/633A.4604.pdf",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Kansas": {
+  "sources": [
+   {
+    "label": "Kan. Stat. Ann. \u00a7 58a-1013",
+    "url": "https://www.kslegislature.gov/b2025_26/laws/058a_000_0000_chapter/058a_010_0000_article/058a_010_0013_section/058a_010_0013_k/",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Kentucky": {
+  "sources": [
+   {
+    "label": "Ky. Rev. Stat. \u00a7 386B.10-120",
+    "url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=43153",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Louisiana": {
+  "sources": [
+   {
+    "label": "La. Rev. Stat. \u00a7 9:2092 (certification of trust)",
+    "url": "https://www.legis.la.gov/legis/Law.aspx?d=106918",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Maine": {
+  "sources": [
+   {
+    "label": "Me. Rev. Stat. tit. 18-B, \u00a7 1013",
+    "url": "https://legislature.maine.gov/statutes/18-B/title18-Bsec1013.html",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Massachusetts": {
+  "sources": [
+   {
+    "label": "Mass. Gen. Laws c. 203E, \u00a7 1013",
+    "url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter203E/Section1013",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Mississippi": {
+  "sources": [
+   {
+    "label": "Miss. Code \u00a7 91-8-1013",
+    "url": "https://law.justia.com/codes/mississippi/title-91/chapter-8/article-10/section-91-8-1013/",
+    "kind": "mirror"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Montana": {
+  "sources": [
+   {
+    "label": "Mont. Code \u00a7 72-38-1013",
+    "url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0380/part_0100/section_0130/0720-0380-0100-0130.html",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "Nebraska": {
+  "sources": [
+   {
+    "label": "Neb. Rev. Stat. \u00a7\u00a7 30-3834, 30-3835 (two-section scheme)",
+    "url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-38,102",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "New Hampshire": {
+  "sources": [
+   {
+    "label": "N.H. Rev. Stat. \u00a7 564-B:10-1013",
+    "url": "https://gc.nh.gov/rsa/html/LVI/564-B/564-B-10-1013.htm",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ },
+ "North Dakota": {
+  "sources": [
+   {
+    "label": "N.D.C.C. \u00a7 59-12-18 (Uniform Trust Code: 'Requisites of trust relating to real property')",
+    "url": "https://www.ndlegis.gov/cencode/t59c12.pdf",
+    "kind": "official"
+   }
+  ],
+  "verified_as_of": "2026-09-17",
+  "human_legal_reviewed": false
+ }
+}

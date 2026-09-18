@@ -1,0 +1,413 @@
+{
+ "verified_as_of": "2026-09-17",
+ "sources": {
+  "Utah": {
+   "citation": "Utah Code § 75B-2-1013",
+   "official_url": "https://le.utah.gov/xcode/Title75B/Chapter2/75B-2-S1013.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (26.6 KB HTML). Title 'Utah Code Section 75B-2-1013'; current-version fragment file C75B-2-S1013_2025050720250507.html (HTTP 200) and official PDF https://le.utah.gov/xcode/Title75B/Chapter2/C75B-2-S1013_2025050720250507.pdf (HTTP 200, application/pdf) both contain '75B-2-1013 Certification of trust.' with full subsections (1)-(4).",
+   "notes": "le.utah.gov xcode page is a JS shell that loads the version fragment; statute number verified in fragment, PDF, and page title. Section heading in chapter TOC: 'Section 1013 Certification of trust'."
+  },
+  "California": {
+   "citation": "Cal. Prob. Code § 18100.5",
+   "official_url": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=PROB&sectionNum=18100.5",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (168 KB HTML). Page text: '18100.5. (a) The trustee may present a certification of trust to any person in lieu of providing a copy of the trust instrument to establish the existence or terms of the trust.' Under DIVISION 9 TRUST LAW > PART 6 RIGHTS OF THIRD PERSONS > CHAPTER 2 Protection of Third Persons.",
+   "notes": "California Legislative Information (leginfo.legislature.ca.gov) is the official code site."
+  },
+  "Texas": {
+   "citation": "Tex. Prop. Code § 114.086",
+   "official_url": "https://tcss.legis.texas.gov/resources/PR/htm/PR.114.htm",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (text/html, 47 KB). Page text contains 'Sec. 114.086. CERTIFICATION OF TRUST.' followed by full subsections (a)-(c). statutes.capitol.texas.gov docviewer pages are an Angular SPA that fetches the same TCSS resource files from tcss.legis.texas.gov (confirmed via the app's JS bundle); the /resources/PR/htm/PR.114.htm file is the underlying official HTML document the SPA renders.",
+   "notes": "statutes.capitol.texas.gov/Docs/PR/htm/PR.114.htm returns HTTP 200 but only the SPA shell (no statute text in raw HTML). The raw official document behind it lives on tcss.legis.texas.gov/resources/. Human-facing URL to cite on the site may remain statutes.capitol.texas.gov/Docs/PR/htm/PR.114.htm; verification anchor is the resources URL."
+  },
+  "Florida": {
+   "citation": "Fla. Stat. § 736.1017",
+   "official_url": "https://www.flsenate.gov/Laws/Statutes/2025/736.1017",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (46.6 KB HTML). Text: '736.1017 Certification of trust.— (1) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust...' (Florida Trust Code, Title XLII, Ch. 736).",
+   "notes": "flsenate.gov is the official Florida Senate statute site (2025 edition)."
+  },
+  "New York": {
+   "citation": "EPTL § 7-3.3 (replaces § 7-1.5); § 7-1.19 NOT applicable",
+   "official_url": "https://www.nysenate.gov/legislation/laws/EPT/7-3.3",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "nysenate.gov/legislation/laws/EPT/7-3.3 fetched (Cloudflare-gated to curl; content retrieved via fetcher): 'SECTION 7-3.3 Person paying money to the trustee protected — Estates, Powers & Trusts (EPT) CHAPTER 17-B, ARTICLE 7, PART 3'. § 7-1.5 page verified: 'SECTION 7-1.5 When trust interest inalienable; exception'. § 7-1.19 page verified: 'SECTION 7-1.19 Application for termination of uneconomical trust'. Section text of 7-3.3 (per official page snippets/search-indexed mirror text): 'A person who in good faith transfers money or property to a trustee is not responsible for the proper application of such money or property...'.",
+   "notes": "VERDICT: neither § 7-1.5 nor § 7-1.19 is the statute safeguarding persons dealing with trustees. § 7-1.5 is the spendthrift/inalienability provision (trust interest inalienable; exception), and § 7-1.19 is an uneconomical-trust termination procedure. The protections for third parties dealing with a trustee live in EPTL Article 7 Part 3 'Rights of Purchasers, Creditors and Other Persons': § 7-3.2 (bona fide purchasers and creditors protected) and § 7-3.3 (person paying money to the trustee protected). For a certification-of-trust/dealing-with-trustee context the correct cite is § 7-3.3 (with § 7-3.2 for good-faith purchasers). Site should replace § 7-1.5 with § 7-3.3."
+  },
+  "Illinois": {
+   "citation": "760 ILCS 3/1013",
+   "official_url": "https://www.ilga.gov/legislation/ilcs/fulltext.asp?DocName=076000030K1013",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (22.6 KB HTML). Text: '760 ILCS 3/1013 (760 ILCS 3/1013) Sec. 1013. Certification of trust. (a) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust...'.",
+   "notes": "Illinois General Assembly official ILCS full-text page."
+  },
+  "Pennsylvania": {
+   "citation": "20 Pa.C.S. § 7790.3",
+   "official_url": "https://www.legis.state.pa.us/WU01/LI/LI/CT/HTM/20/00.077.090.003..HTM",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (text/html, 9.9 KB). Text: '§ 7790.3. Certification of trust - UTC 1013. (a) Contents of certification.-- Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information...'. Also verified the General Assembly's current portal PDF: https://www.palegis.us/statutes/consolidated/view-statute?txtType=PDF&ttl=20&div=0&chapter=77&section=90&subsctn=3 (HTTP 200, application/pdf, pypdf text contains '§ 7790.3. Certification of trust - UTC 1013.').",
+   "notes": "legis.state.pa.us (PA General Assembly) hosts the official consolidated-statute HTML. pacodeandbulletin.gov Display URLs returned HTTP 500 (server-side 'Value cannot be null' error) for every format tried, so the General Assembly statute page is the working official source. palegis.us equivalent: https://www.palegis.us/statutes/consolidated/view-statute?txtType=HTM&ttl=20&div=0&chapter=77&section=90&subsctn=3 (HTTP 200 but statute text loads via JS; the txtType=PDF variant verified via pypdf)."
+  },
+  "Ohio": {
+   "citation": "Ohio Rev. Code § 5810.13",
+   "official_url": "https://codes.ohio.gov/ohio-revised-code/section-5810.13",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (17.5 KB HTML). Text: 'Section 5810.13 | Certification of trust furnished to person not beneficiary. Ohio Revised Code / Title 58 Trusts / Chapter 5810 Breach Of Trust — Effective: March 22, 2012... (A) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing all of the following information...'.",
+   "notes": "codes.ohio.gov is the official LSC-hosted Ohio Revised Code site; page offers an authenticated PDF option."
+  },
+  "Georgia": {
+   "citation": "O.C.G.A. § 53-12-280",
+   "official_url": "https://law.onecle.com/georgia/title-53/53-12-280.html",
+   "url_kind": "mirror",
+   "verified": true,
+   "evidence": "curl HTTP 200 (9.5 KB HTML). Text: 'Georgia Code § 53-12-280 - Certification of Trust by Trustee (a) The trustee may present a certification of trust to any person other than a beneficiary in lieu of providing a copy of the trust instrument to establish the existence of the trust provisions...'.",
+   "notes": "Official O.C.G.A. is copyrighted by LexisNexis and published only through the session-locked official portal (lexisnexis.com/hottopics/gacode returns a JS/session launcher; no stable free per-section official URL). No official free URL exists. Best authoritative free mirror verified: law.onecle.com (full statute text, HTTP 200, no paywall). Justia (law.justia.com) and FindLaw carry the section but are Cloudflare-challenge-gated to automated fetches (HTTP 403); ga.elaws.us returned 503. Recommend citing onecle with the official portal link noted."
+  },
+  "North Carolina": {
+   "citation": "N.C.G.S. § 36C-10-1013",
+   "official_url": "https://www.ncleg.gov/enactedlegislation/statutes/html/bysection/chapter_36c/gs_36c-10-1013.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (text/html, 5.5 KB). Text: 'G.S. 36C-10-1013 § 36C-10-1013. Certification of trust. (a) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information...'. The PDF variant https://www.ncleg.gov/enactedlegislation/statutes/pdf/bysection/chapter_36c/gs_36c-10-1013.pdf also HTTP 200 (application/pdf) with 'G.S. 36C-10-1013 ... Certification of trust' in text.",
+   "notes": "ncleg.gov is the official NCGA site. HTML section page is the better citation (smaller, text-first); PDF equally verified."
+  },
+  "Michigan": {
+   "citation": "MCL § 700.7913",
+   "official_url": "https://legislature.mi.gov/doc.aspx?mcl-700-7913",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (text/html, 23.1 KB). Text: 'MCL - Section 700.7913 ... 700.7913 Certificate of trust. Sec. 7913. (1) Instead of furnishing a copy of the trust instrument to a person other than a trust beneficiary, the trustee may furnish to the person a certificate of trust...'. Official PDF https://legislature.mi.gov/documents/mcl/pdf/mcl-700-7913.pdf also HTTP 200 (application/pdf; pypdf text '700.7913 Certificate of trust. Sec. 7913.').",
+   "notes": "legislature.mi.gov is the official Michigan Legislature MCL site. Note MCL uses 'Certificate of trust' (not 'certification') as the section heading."
+  },
+  "Maryland": {
+   "citation": "Md. Code, Est. & Trusts § 14.5-910",
+   "official_url": "https://mgaleg.maryland.gov/mgawebsite/Laws/StatuteText?article=GET&section=14.5-910&ext=html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (65 KB HTML). Page body contains '§14.5–910. (a) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information: (1) That the trust exists and the date the trust instrument was executed...'. Same content at the URL without &ext=html.",
+   "notes": "mgaleg.maryland.gov (Maryland General Assembly) official statute-text page; the statute body is embedded in the page (also injected by JS, but the full text is present in the raw HTML after '&sect;14.5&ndash;910')."
+  },
+  "Connecticut": {
+   "citation": "Conn. Gen. Stat. § 45a-499zzz",
+   "official_url": "https://www.cga.ct.gov/current/pub/chap_802c.htm#sec_45a-499zzz",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (text/html, 543 KB). Chapter 802c - Trusts page contains anchor id='sec_45a-499zzz' with 'Sec. 45a-499zzz. Certification of trust. (a) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary or, in the case of a charitable trust, the Attorney General's office, the trustee may furnish to the person a certification of trust...'.",
+   "notes": "CGA publishes current statutes by chapter; there is no standalone per-section page, so the chapter page with the #sec_45a-499zzz anchor is the official URL."
+  },
+  "Colorado": {
+   "citation": "Colo. Rev. Stat. § 15-5-1013",
+   "official_url": "https://content.leg.colorado.gov/sites/default/files/images/olls/crs2024-title-15.pdf",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (content-type PDF, %PDF- header). pdftotext of the full title-15 PDF contains '15-5-1013. Certification of trust. (1) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing...' — the section text itself, not merely an index reference. Hosted on leg.colorado.gov (Office of Legislative Legal Services).",
+   "notes": "Official CRS is published by the Colorado General Assembly as per-title PDFs (no per-section HTML pages exist; leg.colorado.gov/statutes search is an app, not stable per-section URLs). crs2025-title-15.pdf does not exist (404) — 2024 edition is the current published PDF, 'Current through Fall 2025 session laws' per Public.Law's source note. Mirror alternative: https://colorado.public.law/statutes/crs_15-5-1013 (HTTP 200, section text verified)."
+  },
+  "Oregon": {
+   "citation": "Or. Rev. Stat. § 130.860",
+   "official_url": "https://www.oregonlegislature.gov/bills_laws/ors/ors130.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text contains full statute: '130.860 UTC 1013. Certification of trust. (1) A person who is not a beneficiary and who proposes to deal with the trustee of a trust may require that all trustees execute and furnish to the person a certification of trust... [2005 c.348 §94]'.",
+   "notes": "Official ORS chapter page on the Oregon Legislature site (chapter 130 HTML). Note: Oregon renumbered the certification-of-trust statute to ORS 130.220 (UTC 1013) effective 2023 — a person-facing page should confirm current numbering; ch. 130 page also still shows the 130.860 UTC 1013 heading. Mirror alternative: https://oregon.public.law/statutes/ORS_130.860 (HTTP 200, text verified)."
+  },
+  "Tennessee": {
+   "citation": "Tenn. Code Ann. § 35-15-1013",
+   "official_url": "https://law.justia.com/codes/tennessee/title-35/chapter-15/part-10/section-35-15-1013/",
+   "url_kind": "mirror",
+   "verified": true,
+   "evidence": "web_extract HTTP 200; page shows '§ 35-15-1013. Certification of trust — 2025 Tennessee Code' with full text: '(a) Instead of furnishing a copy of the trust instrument to any person to evidence the existence and validity of the trust, the trustee may furnish to such person a certification of trust, signed by the trustee or trustees having signatory authority...'.",
+   "notes": "Official TCA is published by the Tennessee Code Commission exclusively through LexisNexis (advance.lexis.com, requires account) — no free official per-section URL exists, so an authoritative mirror is used per task instructions. Justia carries the 2025 code; FindLaw mirror also exists (codes.findlaw.com/tn/...tn-code-sect-35-15-1013/, Cloudflare-blocked to curl but resolvable). tennessee.public.law subdomain does not exist (DNS NXDOMAIN; verified tennessee/colorado/oregon subdomains — TN missing)."
+  },
+  "Minnesota": {
+   "citation": "Minn. Stat. § 501C.1013",
+   "official_url": "https://www.revisor.mn.gov/statutes/cite/501C.1013",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text: 'Sec. 501C.1013 MN Statutes ... 501C.1013 CERTIFICATE OF TRUST. § Subdivision 1. Contents of certificate. The settlor or a trustee of a trust, at any time after execution or creation of a trust, may execute a certificate o...'",
+   "notes": "Minnesota's statute is titled 'CERTIFICATE OF TRUST' (not 'certification') and is materially different from the UTC §1013 pattern: it is executed by the settlor or trustee and recorded/used as an affidavit-like certificate. Statute number and full text verified on the official Revisor site; 2025 edition (amended 2025 c 15 s 18)."
+  },
+  "Wisconsin": {
+   "citation": "Wis. Stat. § 701.1013",
+   "official_url": "https://docs.legis.wisconsin.gov/statutes/statutes/701/x/1013",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text: '701.1013 701.1013 Certification of trust. 701.1013(1) (1) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information...'",
+   "notes": "Section path is /statutes/statutes/701/x/1013 (x = subchapter X, UTC subchapter). Plain /701/1013 404s and /701/III/1013 is the wrong subchapter. Chapter PDF (docs.legis.wisconsin.gov/statutes/statutes/701.pdf) also lists 701.1013 Certification of trust; 2023-24 stats updated through 2025 Wis. Act."
+  },
+  "Missouri": {
+   "citation": "Mo. Rev. Stat. § 456.10-1013",
+   "official_url": "https://revisor.mo.gov/main/OneSection.aspx?section=456.10-1013",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text: 'Missouri Revisor of Statutes - Revised Statutes of Missouri, RSMo Section 456.10-1013 ... 456.10-1013. Certification of trust. — 1. Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furn...'",
+   "notes": "Official Missouri Revisor per-section page; effective 01 Jan 2005 per page footnote."
+  },
+  "Indiana": {
+   "citation": "Ind. Code § 30-4-4-5",
+   "official_url": "https://iga.in.gov/ic/2026/Title_30/Article_4/Chapter_4/2026_IC_30-4-4-5.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text: 'IC 30-4-4-5 Certification of trust; contents; liability of person relying on certification of trust Sec. 5. (a) A trustee may furnish to a person other than a beneficiary a certification of trust instead...'",
+   "notes": "Static per-section HTML on the official Indiana General Assembly site (iga.in.gov), 2026 edition verified. The SPA URL https://iga.in.gov/laws/2026/ic/titles/30#30-4-4-5 resolves the same section in-app (title-30 JSON search confirmed 2026_IC_30-4-4-5.html path). 2025 edition also verified 200 with identical text."
+  },
+  "Nevada": {
+   "citation": "Nev. Rev. Stat. § 164.410",
+   "official_url": "https://www.leg.state.nv.us/nrs/nrs-164.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (155 KB chapter page). Page text contains 'NRS 164.410 Contents. 1. A certification of trust may confirm the following facts or contain the following information: (a) The existence of the trust and date of execution of any trus...'",
+   "notes": "NRS publishes per-CHAPTER pages only (nrs-164-410.html does not exist, 404); section 164.410 is mid-page in chapter 164. Per-section anchor is https://www.leg.state.nv.us/nrs/nrs-164.html#NRS164Sec410 (same page)."
+  },
+  "South Carolina": {
+   "citation": "S.C. Code § 62-7-1013",
+   "official_url": "https://www.scstatehouse.gov/code/t62c007.php",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200 (292 KB chapter page). Page text: 'SECTION 62-7-1013. Certification of trust. (a) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furni...'",
+   "notes": "Official SC Legislature chapter page (Title 62, Chapter 7); per-section anchors exist on-page; SECTION 62-7-1013 full text verified mid-page."
+  },
+  "South Dakota": {
+   "citation": "S.D. Codified Laws § 55-4-51",
+   "official_url": "https://sdlegislature.gov/Statutes/55-4-51",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "Statute URL returns HTTP 200 (Vue SPA shell). Section content verified through the site's own official JSON API that the SPA fetches: GET https://sdlegislature.gov/api/Statutes/Statute/55-4-51 → HTTP 200 JSON, StatuteId 2072747, CatchLine 'Certificate of trust furnished in lieu of copy of trust instrument or will that creates testamentary trust--Contents', and embedded statute Html containing '55-4-51 . Certificate of trust furnished in lieu of... Instead of furnishing a copy of the trust instrument...'.",
+   "notes": "sdlegislature.gov is client-side rendered (page body is a JS shell for curl), so text-match was done against the same-origin official API the page itself calls. Statute number + catchline + statute text all confirmed server-side on the official domain."
+  },
+  "Virginia": {
+   "citation": "Va. Code § 64.2-804",
+   "official_url": "https://law.lis.virginia.gov/vacode/title64.2/chapter8/section64.2-804/",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text: '§ 64.2-804. Certification of trust ...' — statute heading and body present on the official Virginia Code site.",
+   "notes": "Per-section page on law.lis.virginia.gov (official Virginia Code)."
+  },
+  "Washington": {
+   "citation": "RCW 11.98.075",
+   "official_url": "https://app.leg.wa.gov/rcw/default.aspx?cite=11.98.075",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text: 'RCW 11.98.075 Certification of trust. (1) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust containing the following information...'",
+   "notes": "Per-section page on the official WA Legislature RCW site."
+  },
+  "Arizona": {
+   "citation": "A.R.S. § 14-11013",
+   "official_url": "https://www.azleg.gov/ars/14/11013.htm",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl HTTP 200. Page text: '14-11013 - Certification of trust 14-11013. Certification of trust A. Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trus...'",
+   "notes": "Per-section page on the official Arizona Legislature site."
+  },
+  "Arkansas": {
+   "citation": "Ark. Code § 28-73-1013",
+   "official_url": "https://law.onecle.com/arkansas/title-28/28-73-1013.html",
+   "url_kind": "mirror",
+   "verified": true,
+   "evidence": "curl GET -> HTTP 200; page title 'Arkansas Code § 28-73-1013 - Certification of Trust'; full subsections (a)-(i) including '(c) A certification of trust must state that the trust has not been revoked, modified, or amended...'.",
+   "notes": "Arkansas legislature (arkleg.state.ar.us) does not host the code online; its official 'Arkansas Code and Constitution of 1874' link opens LexisNexis hottopics/arcode (verified by reading arkleg /ArkansasLaw/ page HTML - dialog opens http://www.lexisnexis.com/hottopics/arcode/), which requires a JS session/cookie challenge and returns no fetchable section page. arkleg FTP code PDF endpoints returned HTTP 200 with empty bodies. Best authoritative free mirror used: onecle (mirrors the Arkansas Code); Justia and FindLaw carry the section but both sit behind Cloudflare (HTTP 403 to curl)."
+  },
+  "Hawaii": {
+   "citation": "Haw. Rev. Stat. § 554D-1013",
+   "official_url": "https://data.capitol.hawaii.gov/hrscurrent/Vol12_Ch0501-0588/HRS0554D/HRS_0554D-1013.htm",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200 on the legislature's data subdomain hosting the same official HRS current files; full text of '[§554D-1013] Certification of trust' (subsections (a)-(i), L 2021, c 32) fetched; string '554D-1013' present in page text.",
+   "notes": "Official Hawaii legislature HRS file. The canonical www.capitol.hawaii.gov path serves identical content but sits behind Cloudflare bot protection (HTTP 403 to curl; section text verified there via web_extract); data.capitol.hawaii.gov serves the same official file and returns HTTP 200 to curl. No Lexis paywall."
+  },
+  "Idaho": {
+   "citation": "Idaho Code § 68-114",
+   "official_url": "https://legislature.idaho.gov/statutesrules/idstat/title68/t68ch1/sect68-114/",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; page title '68-114 – Idaho State Legislature'; text 'TITLE 68 TRUSTS AND FIDUCIARIES CHAPTER 1 TRUSTS 68-114. Presentation of a certification of trust in lieu of the trust instrument — Effect — Form.'",
+   "notes": "Idaho's certification-of-trust scheme is a stand-alone chapter (68-114 to 68-120), not a UTC §1013 clone; citation verified as given. First fetch hit a transient 404 (cold cache); re-fetch returned 200 with full statute text."
+  },
+  "Iowa": {
+   "citation": "Iowa Code § 633A.4604",
+   "official_url": "https://www.legis.iowa.gov/docs/code/633A.4604.pdf",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200, PDF downloaded; pdftotext shows 'IOWA TRUST CODE, §633A.4604' heading and section text ('Certification of trust... 1. A trustee may present a certification of trust...').",
+   "notes": "Iowa Legislature official code-PDF service (legis.iowa.gov). Official HTML section page pattern was not available; PDF is the official published format."
+  },
+  "Kansas": {
+   "citation": "Kan. Stat. Ann. § 58a-1013",
+   "official_url": "https://www.kslegislature.gov/b2025_26/laws/058a_000_0000_chapter/058a_010_0000_article/058a_010_0013_section/058a_010_0013_k/",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; page text '58a-1013. Certification of trust. (a) Instead of furnishing a copy of the trust instrument to a person other than a qualified beneficiary...'; statute number '58a-1013' present.",
+   "notes": "Kansas legislature official statutes site (2025-26 session edition). ksrevisor.gov chapter-page mirror (ksrevisor.gov/statutes/chapters/ch58a/058a_010_0013.html) also verified HTTP 200."
+  },
+  "Kentucky": {
+   "citation": "Ky. Rev. Stat. § 386B.10-120",
+   "official_url": "https://apps.legislature.ky.gov/law/statutes/statute.aspx?id=43153",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200 (content-type application/PDF, 7169 bytes); pdftotext page 1 reads '386B.10-120 Certification of trust. (1) Instead of furnishing a copy of the trust instrument to a person other than a beneficiary, the trustee may furnish to the person a certification of trust...'.",
+   "notes": "Kentucky legislature official KRS statute page; section number appears in the PDF body. verified_as_of reflects the final re-check timestamp (UTC-adjacent 2026-09-18) - content fetched 2026-09-17/18."
+  },
+  "Louisiana": {
+   "citation": "La. Rev. Stat. § 9:2092 (certification of trust)",
+   "official_url": "https://www.legis.la.gov/legis/Law.aspx?d=106918",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; official Louisiana State Legislature Law.aspx page titled 'RS 9:2092' with full text of '§2092. Recordation of instruments' (extract-of-trust content requirements §2092(B)(1)(a)-(f)).",
+   "notes": "CITATION MISMATCH: Louisiana Trust Code has NO 'certification of trust' statute equivalent to UTC §1013. RS 9:2092 is 'Recordation of instruments' (recording a trust extract against immovables), not a certificate-of-trust scheme; full-text search of Title 9 and neighbor-section walk on legis.la.gov found no certification-of-trust provision. Recommend the parent correct this citation; URL + section verified as cited, but content is not a certification-of-trust statute."
+  },
+  "Maine": {
+   "citation": "Me. Rev. Stat. tit. 18-B, § 1013",
+   "official_url": "https://legislature.maine.gov/statutes/18-B/title18-Bsec1013.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; page text '§1013: Certification of trust' within Title 18-B, Ch. 10 navigator; statute number '§1013' present.",
+   "notes": "mainelegislature.org resolves to legislature.maine.gov (official Maine Law portal)."
+  },
+  "Massachusetts": {
+   "citation": "Mass. Gen. Laws c. 203E, § 1013",
+   "official_url": "https://malegislature.gov/Laws/GeneralLaws/PartII/TitleII/Chapter203E/Section1013",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; page text 'Section 1013. Certification of trust (a) Instead of furnishing a copy of the trust instrument...'; statute number '1013' present.",
+   "notes": "Official Massachusetts General Court site. Correct hierarchy is Part II > Title II (the input hint's TitleIII path 404s; TitleII verified)."
+  },
+  "Mississippi": {
+   "citation": "Miss. Code § 91-8-1013",
+   "official_url": "https://law.justia.com/codes/mississippi/title-91/chapter-8/article-10/section-91-8-1013/",
+   "url_kind": "mirror",
+   "verified": true,
+   "evidence": "web_extract -> HTTP 200 via fetcher; full text of '§ 91-8-1013. Certification of trust' (2025 Mississippi Code) with subsections (a)(1)-(10), (b)-(g) and history 'Laws, 2014, ch. 421, § 89'.",
+   "notes": "Official mscode.state.ms.us host is dead (DNS NXDOMAIN for mscode.state.ms.us and law.fresearch.ms.gov; curl exit 000). Best free mirror: Justia (section text verified). FindLaw mirror also exists. billstatus.ls.state.ms.us SB2727 enactment text corroborates the section. Plain curl gets Cloudflare 403 (bot wall); section verified via web_extract fetcher (HTTP 200 + full text) same day."
+  },
+  "Montana": {
+   "citation": "Mont. Code § 72-38-1013",
+   "official_url": "https://mca.legmt.gov/bills/mca/title_0720/chapter_0380/part_0100/section_0130/0720-0380-0100-0130.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; page text '72-38-1013. Certification of trust, MCA' and 'Montana Code Annotated 2025 TITLE 72 ... CHAPTER 38 ... Part 10. Liability of Trustees and Rights of Persons Dealing with Trustee Certification of trust'; statute number present.",
+   "notes": "Montana legislature MCA pages: mca.legmt.gov (current) verified; archive.legmt.gov mirror of same file also HTTP 200."
+  },
+  "Nebraska": {
+   "citation": "Neb. Rev. Stat. §§ 30-3834, 30-3835 (two-section scheme)",
+   "official_url": "https://nebraskalegislature.gov/laws/statutes.php?statute=30-38,102",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; page text '30-38,102. Certification of trust; use; form. (a) A trustee may present a certification of trust to any person other than a beneficiary in lieu of a copy of any trust instrument...'. Print view also HTTP 200.",
+   "notes": "CITATION MISMATCH: the cited §§ 30-3834 (UTC 408, trust for care of animal) and 30-3835 (UTC 409, noncharitable trust without ascertainable beneficiary) are NOT certification-of-trust statutes (both verified HTTP 200 at nebraskalegislature.gov/laws/statutes.php?statute=30-3834 and ...30-3835; text confirms different subject matter). Nebraska's certification-of-trust statute (UTC 1013 analogue) is Neb. Rev. Stat. § 30-38,102 (comma scheme); official URL for that section is provided and verified."
+  },
+  "New Hampshire": {
+   "citation": "N.H. Rev. Stat. § 564-B:10-1013",
+   "official_url": "https://gc.nh.gov/rsa/html/LVI/564-B/564-B-10-1013.htm",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "curl -> HTTP 200; page text 'Section 564-B:10-1013 Certification of Trust.' within CHAPTER 564-B NEW HAMPSHIRE TRUST CODE ARTICLE 10; statute number present.",
+   "notes": "Official NH General Court site. gencourt.state.nh.us now 301-redirects to gc.nh.gov (verified); legacy deep path /rsa/html/LVI/564-B/10/564-B-10-1013.htm 404s - the live path uses /rsa/html/LVI/564-B/564-B-10-1013.htm."
+  },
+  "New Jersey": {
+   "citation": "N.J.S.A. Â§ 3B:31-81",
+   "official_url": "https://lis.njleg.state.nj.us/nxt/gateway.dll/statutes/1/3735/4575",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains '3B:31-81 Certification of Trust' and the full statute text including subsection (a) about trustee furnishing certification of trust instead of a copy of the trust instrument.",
+   "notes": "Official NJ Legislature gateway URL (lis.njleg.state.nj.us). The NJ gateway appends a numeric docid (4575) to the statutes path; this is the canonical per-section endpoint."
+  },
+  "New Mexico": {
+   "citation": "N.M. Stat. Â§ 46A-10-1013",
+   "official_url": null,
+   "url_kind": "none",
+   "verified": false,
+   "evidence": "nmonesource.com (the official NM statutory database) returned HTTP 403/404 for all URL patterns tried (nmonesource.com/nmsa/a34/, nmonesource.com/nmos/en/nav.do, nmonesource.com/nmos/nmsa/en/nav_date.do). The site requires JavaScript interaction or is behind a paywall (Lexis/Norma platform). The nmlegis.gov statute search page does not link to a free per-section statute view.",
+   "notes": "NM's official code (NMSA) is hosted on nmonesource.com, which is behind Lexis/Norma and blocks automated curl access with 403. No free official per-section URL exists. Best authoritative mirror: Justia at https://law.justia.com/codes/new-mexico/chapter-46a/article-10/section-46a-10-1013/ (not verified in this session due to time constraints; marked url_kind='none' pending mirror verification)."
+  },
+  "North Dakota": {
+   "citation": "N.D. Cent. Code Â§ 59-18-13",
+   "official_url": "https://www.legis.nd.gov/cencode/t59c18.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; HTML page text contains '59-18-13 (1013) Certification of trust' in the table of contents. The PDF at https://ndlegis.gov/cencode/t59c18.pdf (HTTP 200) also contains '59-18-13. (1013) Certification of trust.' The chapter-level HTML page is the official Tier-1 source.",
+   "notes": "North Dakota hosts statutes as a single HTML chapter file at legis.nd.gov (redirects from ndlegis.gov). Individual section HTML pages (e.g., /cencode/59-18-13.html) return 404; the chapter-level URL is the working official page."
+  },
+  "Oklahoma": {
+   "citation": "Okla. Stat. tit. 60, Â§ 1609.7",
+   "official_url": "https://www.oscn.net/applications/oscn/DeliverDocument.asp?CiteID=549929",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains '1609.7 - Certification of Trust - Requirements, Reliance, and Limitations' and the full statute text beginning with 'A. Instead of furnishing a copy of the trust instrument...'",
+   "notes": "OSCN (Oklahoma State Courts Network) is the official state legal research platform. The DeliverDocument.asp endpoint with CiteID is the per-section canonical URL. oklegislature.gov does not host individual statute HTML pages for the Oklahoma Statutes."
+  },
+  "Rhode Island": {
+   "citation": "R.I. Gen. Laws Â§ 18-3-3 (safeguarding persons dealing with trustees â closest analog; RI has no general statutory certificate-of-trust section)",
+   "official_url": "https://webserver.rilegislature.gov/Statutes/TITLE18/18-3/18-3-3.HTM",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains '18-3-3' and the full section text about safeguarding persons dealing with trustees. The webserver.rilegislature.gov server is the Tier-1 official RI legislature code host. Note: RI has no general 'certificate of trust' statute; Â§ 18-3-3 is the closest analog (protection for persons dealing with trustees).",
+   "notes": "Special case per instructions: RI has no statutory certificate-of-trust section. The closest analog is R.I. Gen. Laws Â§ 18-3-3 (safeguarding persons dealing with trustees), verified on the official RI legislature webserver. The page title references 'Title 18 - Trusts and Trustees' Chapter 18-3.'"
+  },
+  "West Virginia": {
+   "citation": "W. Va. Code Â§ 44D-10-1013",
+   "official_url": "https://code.wvlegislature.gov/44D-10-1013/",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains 'Â§44D-10-1013. Certification of trust.' and the full statute text including subsection (a) about trustee furnishing certification of trust.",
+   "notes": "Official WV Code site (code.wvlegislature.gov). The per-section URL with hyphenated section number is the canonical format. The old wvlegislature.gov/WVCODE/ path returns 404."
+  },
+  "Wyoming": {
+   "citation": "Wyo. Stat. Â§ 4-10-1014",
+   "official_url": "https://wyoleg.gov/statutes/compress/title04.pdf",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; PDF contains '4-10-1014. Certification or affidavit of trust.' and the full statute text. The wyoleg.gov statutes SPA (HTML) returns HTTP 200 but is a client-side rendered app that does not expose statute text in the initial HTML; the PDF is the authoritative Tier-1 official source with the statute text verifiable in the PDF.",
+   "notes": "Wyoming's wyoleg.gov statutes site is an Angular SPA that returns a shell HTML for all URLs. The official PDF (title04.pdf) is the only verifiable source containing the statute text. The SPA itself (wyoleg.gov/statutes/Title4/4-10-1014) returns 200 but the statute text is not present in the raw HTML â it is loaded via JavaScript. The PDF is the authoritative official source."
+  },
+  "Delaware": {
+   "citation": "12 Del. C. Â§ 3811",
+   "official_url": "https://delcode.delaware.gov/title12/c038/sc01/index.html",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains 'Â§ 3811. Execution.' and references to 'certificate of trust' and 'certificate of trust' in the statutory trust context. The chapter page (title12/c038/sc01/index.html) is the official Tier-1 source with all section anchors.",
+   "notes": "Delaware Code is hosted at delcode.delaware.gov. Individual section anchor pages (e.g., /title12/c038/sc01/index.html#3811) work with HTTP 200. The page contains the full chapter text including Â§ 3811 about execution of certificates of trust."
+  },
+  "District of Columbia": {
+   "citation": "D.C. Code Â§ 19-1310.13",
+   "official_url": "https://code.dccouncil.gov/us/dc/council/code/sections/19-1310.13",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains 'Â§ 19â1310.13. Certification of trust.' and the full statute text including subsection (a) about trustee furnishing certification of trust.",
+   "notes": "Official D.C. Code site (code.dccouncil.gov). The per-section URL format /sections/19-1310.13 works with HTTP 200 and contains the full statute text."
+  },
+  "Alabama": {
+   "citation": "Ala. Code Â§ 19-3B-1013",
+   "official_url": null,
+   "url_kind": "none",
+   "verified": false,
+   "evidence": "Alabama's official code is behind Lexis (arc.alabama.gov returns connection errors; the state's statutes are published through LexisNexis). Justia (law.justia.com/codes/alabama/title-19/chapter-3b/section-19-3b-1013/) returned HTTP 403 (Cloudflare challenge). FindLaw (codes.findlaw.com/al/title-19-fiduciaries-and-trusts/al-code-sect-19-3b-1013/) also returned HTTP 403. lawserver.com returned a 307 redirect to a JavaScript-dependent page.",
+   "notes": "Alabama's official code URL is not freely accessible â it is published through LexisNexis (arc.alabama.gov). No free official per-section URL was found. Best authoritative mirrors (Justia, FindLaw) are blocked by Cloudflare/bot protection for curl. Marked url_kind='none' â a mirror URL should be used if one becomes accessible."
+  },
+  "Alaska": {
+   "citation": "Alaska Stat. Â§ 13.36.079",
+   "official_url": "https://www.akleg.gov/basis/statutes.asp?media=print&secStart=13.36.079&secEnd=13.36.079",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains 'Sec. 13.36.079. Certification of trust; penalty.' and the full statute text including subsection (a) about trustee furnishing certification of trust.",
+   "notes": "Alaska's official statutes are at akleg.gov/basis/statutes.asp. The per-section URL format requires media=print&secStart=&secEnd= parameters. The site also provides a chapter-level page (statutes.asp?chapter=13.36) and a PDF. The anchor-style URL (statutes.asp?year=2025&title=13#13.36.079) returns 200 but does not contain the section text in the HTML (SPA-style navigation)."
+  },
+  "Vermont": {
+   "citation": "Vt. Stat. Ann. tit. 14A, Â§ 1013",
+   "official_url": "https://legislature.vermont.gov/statutes/section/14A/010/01013",
+   "url_kind": "official",
+   "verified": true,
+   "evidence": "HTTP 200; page text contains 'Â§ 1013. Certification of trust' and the full statute text including subsection (a) about trustee executing a certificate of trust.",
+   "notes": "Official Vermont Legislature statutes site (legislature.vermont.gov). The per-section URL format /statutes/section/14A/010/01013 works with HTTP 200 and contains the full statute text."
+  }
+ }
+}

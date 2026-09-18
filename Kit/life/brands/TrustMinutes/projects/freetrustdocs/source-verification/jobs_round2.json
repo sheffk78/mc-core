@@ -1,0 +1,12 @@
+[
+ {"name": "mi_7913_direct", "url": "https://legislature.mi.gov/doc.aspx?mcl-700-7913", "patterns": ["700\\.7913", "certification of trust"]},
+ {"name": "mi_7913_lawsonly", "url": "http://www.legislature.mi.gov/(S(rg0u4zblhxxq5qkxj05y2z45))/mileg.aspx?page=getobject&objectname=mcl-700-7913", "patterns": ["700\\.7913", "certification"]},
+ {"name": "ct_499zzz", "url": "https://www.cga.ct.gov/current/pub/chap_802f.htm", "patterns": ["45a-499zzz", "Certification of trust"]},
+ {"name": "ct_current_genstat", "url": "https://www.cga.ct.gov/current/chap_802f.htm", "patterns": ["45a-499zzz", "Certification of trust"]},
+ {"name": "pa_7790_3", "url": "https://www.pacodeandbulletin.gov/Display/pacode?data=/data/pacode/data/020/020.20/020.20.7790.3", "patterns": ["7790\\.3", "certification"]},
+ {"name": "pa_lawsource", "url": "https://www.legis.state.pa.us/WU01/LI/LI/US/HTM/2006/0/0610..HTM", "patterns": ["7790\\.3"]},
+ {"name": "ga_280_justia", "url": "https://law.justia.com/codes/georgia/2022/title-53/chapter-12/article-7/part-2/section-53-12-280/", "patterns": ["53-12-280", "certification"]},
+ {"name": "ga_280_codepub", "url": "https://code.georgiacourts.gov/index.php/ocga/g-titles/title-53/chapter-12/article-7/part-2/section-53-12-280", "patterns": ["53-12-280", "certification"]},
+ {"name": "ny_eptl_7_1_19", "url": "https://www.nysenate.gov/legislation/laws/EPT/7-1.19", "patterns": ["7-1\\.19", "dealing with a trustee"]},
+ {"name": "ny_eptl_7_1_5", "url": "https://www.nysenate.gov/legislation/laws/EPT/7-1.5", "patterns": ["7-1\\.5", "dealing with a trustee", "certification"]}
+]
