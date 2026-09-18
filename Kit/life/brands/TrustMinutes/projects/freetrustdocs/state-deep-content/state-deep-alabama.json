@@ -1,0 +1,27 @@
+{
+  "state": "Alabama",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "When a trustee presents a certification of trust to a bank or title company in Alabama, the institution checks the certificate against Ala. Code ÃÂ§19-3B-1013. The statute permits a trustee to furnish a certification instead of the full trust instrument, provided the certificate identifies the trust and its execution date, the settlor, the currently acting trustee and the trustee's address, the trustee's powers, whether the trust is revocable or irrevocable and the identity of any person holding a power to revoke, the authority of cotrustees to sign and whether all or fewer than all are required, the trust's taxpayer identification number, and the manner of taking title to trust property. The certificate must also state that the trust has not been revoked, modified, or amended in any manner that would make the representations incorrect. If the certificate is incomplete, the institution may require the trustee to furnish excerpts from the original trust instrument and amendments that designate the trustee and confer the power to act in the pending transaction.",
+    "faq": [
+      {
+        "q": "Who signs a certificate of trust in Alabama?",
+        "a": "Under Ala. Code ÃÂ§19-3B-1013(b), a certification of trust may be signed or otherwise authenticated by any trustee. The statute does not require all trustees to sign, though the certificate must identify the currently acting trustee and state the trustee's powers. The certificate must also state that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect."
+      },
+      {
+        "q": "What must an Alabama certificate of trust contain?",
+        "a": "Ala. Code ÃÂ§19-3B-1013 lists the required contents: a statement that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable or irrevocable and the identity of any person holding a power to revoke, the authority of cotrustees to sign and whether all or fewer than all are required, the trust's taxpayer identification number, and the manner of taking title to trust property."
+      },
+      {
+        "q": "Can a bank in Alabama require the full trust after receiving a certificate?",
+        "a": "Under Ala. Code ÃÂ§19-3B-1013(e), a recipient may require the trustee to furnish copies of excerpts from the original trust instrument and amendments that designate the trustee and confer power to act in the pending transaction. The statute's anti-bad-faith provision in subsection (h) provides that a person who requests the complete trust documents without cause may be liable for damages and attorney's fees."
+      },
+      {
+        "q": "Is a certificate of trust the same as a trust agreement in Alabama?",
+        "a": "No. A certification of trust under Ala. Code ÃÂ§19-3B-1013 is a short declaration summarizing the required contents, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certification need not contain the dispositive terms of a trust. A certificate that omits any required content does not conform to the statute."
+      }
+    ],
+    "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would make the representations incorrect falls short of ÃÂ§19-3B-1013's required contents. So does a certificate that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by a trustee who is not currently acting, also fails the statute. Omitting the trustee's address is another common error. In each case the institution may require the full trust instrument, and an unnecessary request made without cause can expose the institution to damages under ÃÂ§19-3B-1013(h).",
+    "state_notes": "Alabama adopted the Uniform Trust Code as Ala. Code Title 19, Chapter 3B, providing a comprehensive trust framework. The certification of trust statute ÃÂ§19-3B-1013 follows the UTC ÃÂ§1013 model closely. Alabama also has a separate business trust statute under Ala. Code Title 10A, Chapter 16, which governs Massachusetts-style business trusts and provides a distinct framework for commercial trust structures. The UTC applies to express trusts and does not directly govern business trusts formed under Title 10A. Alabama's trust law is traditional and conservative, making it predictable but less competitive with top trust jurisdictions for complex planning. The state imposes state income tax on trust income and does not have a DAPT statute for self-settled asset protection trusts, and the state provides a robust framework for trust administration under its comprehensive trust code."
+  }
+}

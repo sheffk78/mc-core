@@ -1,0 +1,27 @@
+{
+ "state": "Montana",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certification of trust in Montana, the recipient checks the document against MCA ÃÂ§ 72-38-1013. The statute permits a trustee to furnish a certification instead of a copy of the trust instrument to a person other than a beneficiary. The certification must contain: that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the relevant powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee; and, if the governing law of the trust is not the law of Montana, the identity of the state whose laws govern the trust. The certification must state that the trust has not been revoked, modified, or amended in any manner causing representations to be incorrect.",
+  "faq": [
+   {
+    "q": "What governing law disclosure does Montana require in a certification of trust?",
+    "a": "Under MCA ÃÂ§ 72-38-1013(1)(g), if the governing law of the trust is not the law of Montana, the certification must include the identity of the state whose laws govern the trust. This disclosure requirement is unique among UTC states and is not found in the standard UTC ÃÂ§ 1013 model. Montana further provides that this governing-law disclosure may not be construed as consent by any person receiving the certification to the jurisdiction or application of laws of any state under MCA ÃÂ§ 72-38-1013(10)."
+   },
+   {
+    "q": "How long can a trust last in Montana under the Rule Against Perpetuities?",
+    "a": "Montana has not abolished the Rule Against Perpetuities. Under MCA ÃÂ§ 72-2-1002, a nonvested property interest is invalid unless it is certain to vest or terminate no later than 21 years after the death of an individual then alive, or the interest either vests or terminates within 90 years after its creation. This 90-year maximum limits dynasty trust planning in Montana compared to states that have abolished the rule entirely."
+   },
+   {
+    "q": "Does Montana have a self-settled asset protection trust statute?",
+    "a": "No. Montana does not have a self-settled asset protection trust (DAPT) statute. The Montana Uniform Trust Code provides spendthrift trust protections under Part 5, MCA ÃÂ§ÃÂ§ 72-38-501 et seq., but these protections do not extend to shield the settlor's own interest from the settlor's creditors. Trust planners seeking asset protection for the settlor must consider other jurisdictions. This provision reflects the state's approach to trust certification."
+   },
+   {
+    "q": "Who may sign a Montana certification of trust?",
+    "a": "Under MCA ÃÂ§ 72-38-1013, the certification may be signed or otherwise authenticated by any trustee. Unlike Missouri, which requires all trustees to sign, Montana permits a single trustee to sign the certification. Upon request, the trustee shall acknowledge the certification so it may be recorded. No specific notary or witness requirement applies to the certification under the Montana UTC. This provision reflects the state's approach to trust certification."
+   }
+  ],
+  "common_mistakes": "A common error is omitting the governing law disclosure when the trust is governed by a state other than Montana. MCA ÃÂ§ 72-38-1013(1)(g) requires this disclosure, and its absence causes the certification to fall short of the statute's required contents. Another mistake is assuming that Montana allows perpetual dynasty trusts. Montana's 90-year perpetuities limit under MCA ÃÂ§ 72-2-1002 means that trusts exceeding that duration are invalid. A third error is failing to include the statement that the trust has not been revoked or modified in a manner making the representations incorrect. Without this statement, the certification does not conform, and the recipient may require the full trust instrument.",
+  "state_notes": "Montana enacted its Uniform Trust Code in 2013, effective October 1, 2013, codified at MCA Title 72, Chapter 38. The certification of trust statute at MCA ÃÂ§ 72-38-1013 includes a unique governing law disclosure requirement not found in the standard UTC model. Montana has not abolished the Rule Against Perpetuities, so dynasty trusts are limited to 90 years. The state has no state income tax and no state estate or inheritance tax, making it tax-favorable for trust situs. Montana does not have a DAPT statute but provides spendthrift trust protections under the UTC. The trust code includes comprehensive provisions for directed trustees, trust decanting, and trust protector arrangements. Business trusts in Montana are typically structured as LLCs or corporations under the state's business entity statutes rather than under a separate statutory business trust framework."
+ }
+}

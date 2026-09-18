@@ -1,0 +1,27 @@
+{
+  "state": "Oregon",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "Under ORS 130.860, a certification of trust must contain: that the trust exists and the date the trust instrument was executed; identity of the settlor; identity and address of the currently acting trustee; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the existence or nonexistence of any power to modify or amend the trust and the identity of any person holding such power; authority of cotrustees to sign or authenticate and whether all or fewer than all are required to exercise trustee powers; the last four digits of the settlor's Social Security number or the trust's employer identification number; manner of taking title to trust property; and the state, country, or jurisdiction under the laws of which the trust was established. ORS 130.860(4) requires that the certification state the trust has not been revoked, modified, or amended in any manner causing the representations to be incorrect. Need not contain dispositive terms under ORS 130.860(5).",
+    "faq": [
+      {
+        "q": "Does Oregon require a certification of trust to be notarized?",
+        "a": "Oregon does not require notarization or witnesses for the certification of trust under ORS 130.860. However, the certification must be signed or otherwise authenticated by all the trustees, which is a stricter requirement than most UTC states. For trust instruments, Oregon does not require notarization for validity. For business trusts under ORS 128.575, filing with the Office of the Secretary of State is required."
+      },
+      {
+        "q": "What must an Oregon certification of trust contain?",
+        "a": "ORS 130.860(2) requires: that the trust exists and date the trust instrument was executed; the identity of the settlor; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; authority of cotrustees and whether all or fewer than all are required; the last four digits of the settlor's Social Security number or the trust's employer identification number; manner of taking title to trust property; and the state, country, or jurisdiction of which the trust was established."
+      },
+      {
+        "q": "Why does Oregon require all trustees to sign the certification?",
+        "a": "ORS 130.860(3) requires the certification of trust to be signed or otherwise authenticated by all the trustees. This is stricter than most UTC states, which allow any single trustee to sign. The requirement ensures that all trustees have reviewed and endorsed the representations made in the certification. A person dealing with the trustee may also require the certification to be executed by one or more settlors or beneficiaries if they are reasonably related to a pending transaction."
+      },
+      {
+        "q": "How does Oregon's certification of trust differ from the standard UTC model?",
+        "a": "ORS 130.860 is notably more detailed than the standard UTC Section 1013 model. It adds requirements for disclosure of modification or amendment powers, partial Social Security number or employer identification number, and the governing jurisdiction of the trust. It also requires all trustees to sign rather than any single trustee. A person dealing with the trustee may require the certification to be adapted to the person's own standard form under ORS 130.860(7). These additional requirements make Oregon's certification one of the most comprehensive in the country."
+      }
+    ],
+    "common_mistakes": "A certification that omits the statement that the trust has not been revoked or modified in a manner making the representations incorrect does not satisfy ORS 130.860(4). Failing to include the last four digits of the settlor's Social Security number or the trust's employer identification number is a common omission, as ORS 130.860(2)(h) requires one or the other. A certificate signed by only one trustee when multiple trustees are acting fails the all-trustee signature requirement of ORS 130.860(3). Omitting the governing jurisdiction of the trust is another frequent error, as ORS 130.860(2)(j) requires this disclosure. For business trusts, failing to file with the Office of the Secretary of State under ORS 128.575 can create legal exposure.",
+    "state_notes": "Oregon adopted the Oregon Uniform Trust Code at Or. Rev. Stat. ch. 130, effective January 1, 2006. The certification of trust statute at ORS 130.860 follows the UTC Section 1013 model but is more detailed, adding requirements for modification powers, partial SSN or EIN, and governing jurisdiction. Oregon has specific statutory provisions for business trusts at ORS 128.560 et seq., requiring Secretary of State filing and annual reports. Oregon's stewardship trust concept at ORS 130.193, combined with ORS 105.965(1), is exempt from the rule against perpetuities, allowing perpetual trusts. Oregon has a modified rule against perpetuities at ORS 105.950 with a 90-year wait-and-see rule for general trusts. The state allows trust decanting under ORS 130.631 et seq. and nonjudicial settlement agreements under ORS 130.045. Oregon does not have a state estate or inheritance tax but does impose state income tax on trusts. Oregon does not have specific self-settled asset protection trust legislation."
+  }
+}

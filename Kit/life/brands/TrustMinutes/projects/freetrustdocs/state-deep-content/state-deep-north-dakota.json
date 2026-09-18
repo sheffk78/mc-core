@@ -1,0 +1,27 @@
+{
+  "state": "North Dakota",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "Under NDCC 59-18-13, a trustee may furnish a certification of trust to any person in lieu of a copy of the trust instrument. The certification must contain: that the trust exists and the effective date of the trust instrument; the name of the trust if a name is given; the identity of each settlor; identity and address of the currently acting trustee; applicable powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; and the authority of cotrustees to sign or authenticate and whether all or less than all are required to exercise trustee powers. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. It need not contain dispositive terms. A person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. A person making a bad-faith demand for the complete trust instrument is liable for damages.",
+    "faq": [
+      {
+        "q": "Does North Dakota require a certification of trust to be notarized?",
+        "a": "North Dakota does not require notarization or witnesses for a trust to be valid under the ND Uniform Trust Code. The certification of trust under NDCC 59-18-13 does not carry a specific notarization requirement. However, notarization is recommended for practical purposes such as bank acceptance and real estate recording. The trust instrument itself must be in writing, signed by the settlor, and delivered to the trustee with intent to create a trust."
+      },
+      {
+        "q": "What information must a North Dakota certification of trust include?",
+        "a": "NDCC 59-18-13 requires the certification to state: that the trust exists and the effective date of the trust instrument; the name of the trust if a name is given; the identity of each settlor; the identity and address of the currently acting trustee; the applicable powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; and the authority of cotrustees to sign or authenticate and whether all or less than all are required."
+      },
+      {
+        "q": "Can a third party rely on a North Dakota certification of trust?",
+        "a": "Yes. Under NDCC 59-18-13, a person acting in reliance without knowledge of incorrectness is not liable and may assume the facts stated in the certification. A person making a bad-faith demand for the complete trust instrument is liable for damages. The certification does not limit the right to obtain the trust instrument in judicial proceedings. The statute allows the trustee to furnish excerpts from the trust instrument designating the trustee and conferring power to act."
+      },
+      {
+        "q": "How does North Dakota treat business trusts in relation to certificates of trust?",
+        "a": "North Dakota has a specific business trust statute at NDCC 47-02-27.4, which provides that a business trust has perpetual existence and may not be terminated or revoked by a beneficial owner except in accordance with its governing instrument. The ND Uniform Trust Code applies to express trusts including business trusts. North Dakota's business trust framework provides flexibility for business organization through trust structures, with perpetual duration being a key feature."
+      }
+    ],
+    "common_mistakes": "A certification that omits the statement that the trust has not been revoked or modified in a manner making the representations incorrect does not satisfy NDCC 59-18-13. Failing to include the identity of each settlor is another common omission, as the statute requires identity of each settlor rather than allowing withholding. A certificate that does not address whether all or less than all cotrustees are required to exercise trustee powers leaves ambiguity about signing authority. For business trusts, neglecting to reference the perpetual existence provision under NDCC 47-02-27.4 can miss an important structural detail. The certification must also include the effective date of the trust instrument, not merely the date of execution, which is a subtle but important distinction.",
+    "state_notes": "North Dakota adopted the North Dakota Uniform Trust Code at NDCC Title 59, Chapters 59-09 through 59-19, effective 2005. The certification of trust statute at NDCC 59-18-13 follows the UTC model with state-specific additions including the trust name and reference to statutory trustee powers. North Dakota provides a specific business trust statute at NDCC 47-02-27.4 granting perpetual existence to business trusts. The state has modified the statutory rule against perpetuities, and business trusts benefit from perpetual duration. North Dakota imposes state income tax on trust income for resident trusts but has no state estate or inheritance tax. The trust code includes provisions for trust modification, termination of uneconomic trusts, and cy pres doctrine application. The state's agricultural economy and rural character influence trust planning, particularly for family farm and ranch succession planning."
+  }
+}

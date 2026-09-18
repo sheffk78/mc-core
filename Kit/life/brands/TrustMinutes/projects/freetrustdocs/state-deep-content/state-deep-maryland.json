@@ -1,0 +1,27 @@
+{
+ "state": "Maryland",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certification of trust to a Maryland bank or title company, the institution checks the certificate against the requirements of Md. Code Ann., Est. & Trs. 14.5-910: that it identifies the trust and its execution date, the settlor, the currently acting trustees and their powers, whether the trust is revocable and who holds the power to revoke, how multiple trustees sign, and how title is taken. The statute's purpose is to let institutions rely on the certificate without receiving the entire trust instrument, which keeps the dispositive and distribution terms private. If the certificate is incomplete, the institution may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction, or both.",
+  "faq": [
+   {
+    "q": "Does Maryland require a certification of trust to be notarized?",
+    "a": "No. Maryland does not require a notary or witnesses for the certification of trust itself under 14.5-910(b). The certification may be signed or otherwise authenticated by a trustee acting in the pending transaction. For trust instruments, Maryland does not require notarization for validity of a revocable living trust, but notarization is recommended for practical purposes such as recording real property deeds."
+   },
+   {
+    "q": "What must a Maryland certification of trust contain?",
+    "a": "Under 14.5-910(a), a certification of trust must contain: existence of the trust and the date the trust instrument was executed, identity of the settlor, identity and address of the currently acting trustee, powers of the trustee in the pending transaction, revocability or irrevocability and the identity of a person holding a power to revoke, authority of cotrustees and whether all or fewer than all are required, the trust's taxpayer identification number, and the manner and name in which title to trust property may be taken."
+   },
+   {
+    "q": "Can a bank demand the entire trust after I present a certificate in Maryland?",
+    "a": "Under 14.5-910, a person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. Good-faith reliance allows enforcement against trust property. Bad-faith demands for the full trust instrument may result in damages. Maryland specifically allows title insurance producers and insurers to obtain a copy of the trust instrument when real property is being sold or encumbered under 14.5-910(h)(2)."
+   },
+   {
+    "q": "How does Maryland's statutory trust framework affect certificate-of-trust pages?",
+    "a": "Maryland has a comprehensive statutory trust framework under the Maryland Statutory Trust Act (Title 12, Corporations and Associations). A statutory trust files a certificate of trust with the Department of Assessments and Taxation (SDAT), becoming a separate legal entity. The governing instrument remains private and is not filed with SDAT, only the certificate of trust is public. Maryland statutory trusts are widely used as Delaware Statutory Trust alternatives for real estate investment trusts and 1031 exchange DSTs."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect falls short of 14.5-910(c)'s required contents. So does one that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by fewer than all currently acting trustees, also fails. For statutory trusts, another common error is failing to file the certificate of trust with SDAT, which is required for the trust to become a separate legal entity under Title 12.",
+  "state_notes": "Maryland adopted the Maryland Trust Act in 2014, effective January 1, 2015, which is based on the Uniform Trust Code but includes Maryland-specific modifications. The certification of trust statute at 14.5-910 follows the UTC model closely, requiring a list of specified contents and providing reliance protections for third parties. Maryland is notable for having one of the most well-developed statutory trust acts in the United States, originally called the Maryland Business Trust Act and renamed to the Maryland Statutory Trust Act in 2004. Maryland is one of only two states that still imposes both an estate tax and an inheritance tax. The Maryland Statutory Trust Act is widely used for DST/1031 exchange vehicles, with statutory trusts serving as popular alternatives to Delaware Statutory Trusts."
+ }
+}

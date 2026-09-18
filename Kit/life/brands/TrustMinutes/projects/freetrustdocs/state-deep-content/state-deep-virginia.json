@@ -1,0 +1,27 @@
+{
+ "state": "Virginia",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under Va. Code 64.2-804, a trustee may furnish a certification of trust to a third party instead of the full trust instrument. The certification must contain that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, the revocability or irrevocability of the trust and the identity of any person holding a power to revoke, the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee, the trust's taxpayer identification number, and the manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. A certification may be signed or otherwise authenticated by any trustee.",
+  "faq": [
+   {
+    "q": "Does Virginia require a certification of trust to be notarized?",
+    "a": "Va. Code 64.2-804 does not require notarization or witnesses for the certification of trust itself. The certification may be signed or otherwise authenticated by any trustee. While the Virginia Uniform Trust Code does not statutorily require witnesses for trust execution, best practice includes two witnesses and a notary public for highest enforceability, particularly for revocable trusts and real property transactions."
+   },
+   {
+    "q": "What must a Virginia certification of trust contain?",
+    "a": "Va. Code 64.2-804 lists eight required items: trust existence and execution date, settlor identity, acting trustee identity and address, trustee powers, revocability and identity of any person holding a power to revoke, cotrustee signing authority and whether all or less than all are required, the trust's taxpayer identification number, and the manner of taking title. Dispositive terms need not be included."
+   },
+   {
+    "q": "Can a bank request the complete trust after I present a Virginia certification?",
+    "a": "Under Va. Code 64.2-804, a recipient may require the trustee to furnish copies of excerpts from the original trust instrument and amendments which designate the trustee and confer power to act in the pending transaction. The statute provides reliance protections for persons acting in good faith without knowledge of incorrectness, and a person requesting the trust instrument in addition to the certification may be liable for damages if the court determines they did not act in good faith."
+   },
+   {
+    "q": "How does Virginia handle business trusts for certification purposes?",
+    "a": "Virginia Code 55.1-117 sets forth parameters for certain trusts to hold real property. Virginia recognizes common law business trusts and Massachusetts trusts, which may be used for real estate holding and business purposes. Business trusts are generally treated under common law principles unless organized under specific business entity statutes, and the certification of trust under 64.2-804 applies to all trusts governed by the Virginia Uniform Trust Code."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect falls short of Va. Code 64.2-804. Leaving out the taxpayer identification number or the manner of taking title to trust property also fails the statute. A certification signed by fewer than all currently acting trustees, or one that describes trustee powers that do not match the pending transaction, will not satisfy the statute. In each case the recipient may require the full trust instrument, and an unnecessary request can expose the requester to liability.",
+  "state_notes": "Virginia adopted the Virginia Uniform Trust Code (Code of Virginia Title 64.2, Chapter 7) in 2005. Va. Code 64.2-804 governs certification of trust. Virginia repealed its state estate tax in 2006 and imposes income tax on trust income. Virginia recognizes Domestic Asset Protection Trusts but with limitations: the grantor must appoint a trustee within the state and keep a portion of the assets within Virginia. The statute of limitations for creditors is five years. Virginia adopted the Uniform Trust Decanting Act (64.2-779.1 et seq.), allowing trustees to modify irrevocable trusts under certain circumstances. The state's trust framework is further supported by the Uniform Principal and Income Act and the Uniform Directed Trust Act for comprehensive trust administration, management, and beneficiary protections."
+ }
+}

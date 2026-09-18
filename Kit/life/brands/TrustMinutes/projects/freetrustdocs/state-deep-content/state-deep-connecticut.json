@@ -1,0 +1,27 @@
+{
+  "state": "Connecticut",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "When a trustee presents a certification of trust in Connecticut, the recipient checks the certificate against Conn. Gen. Stat. ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§45a-499zzz. The statute permits a trustee to furnish a certification instead of the full trust instrument, provided the certificate states that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable or irrevocable and the identity of any person holding a power to revoke, the authority of cotrustees to sign and whether all or fewer than all are required, and the manner of taking title to trust property. The certification must also state that the trust has not been revoked, modified, or amended in any manner that would make the representations incorrect.",
+    "faq": [
+      {
+        "q": "Who signs a certificate of trust in Connecticut?",
+        "a": "Under Conn. Gen. Stat. ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§45a-499zzz(b), a certification of trust may be signed or otherwise authenticated by any trustee. The statute does not require all cotrustees to sign, though the certificate must identify the currently acting trustee and state the trustee's powers. The certificate must also state that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect."
+      },
+      {
+        "q": "What must a Connecticut certificate of trust contain?",
+        "a": "Conn. Gen. Stat. ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§45a-499zzz lists the required contents: a statement that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable or irrevocable and the identity of any person holding a power to revoke, the authority of cotrustees to sign and whether all or fewer than all are required, and the manner of taking title to trust property."
+      },
+      {
+        "q": "Can a bank in Connecticut require the complete trust after receiving a certificate?",
+        "a": "Under Conn. Gen. Stat. ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§45a-499zzz, a recipient acting in good faith may require the trustee to furnish copies of excerpts from the trust instrument that designate the trustee and confer power to act in the pending transaction. The statute's reliance provisions protect persons who act in good faith on the basis of a conforming certificate The statute's reliance provisions protect persons who act in good faith on the basis of a conforming certificate and may enforce the transaction against trust property."
+      },
+      {
+        "q": "Is a certificate of trust the same as a trust agreement in Connecticut?",
+        "a": "No. A certification of trust under Conn. Gen. Stat. ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§45a-499zzz is a short declaration summarizing the required contents, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certification need not contain the dispositive terms of a trust. A certificate that omits any required content does not conform to the statute."
+      }
+    ],
+    "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would make the representations incorrect falls short of Conn. Gen. Stat. ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§45a-499zzz's required contents. So does a certificate that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by fewer than all cotrustees when the statute requires it, also fails the statute. Omitting the manner of taking title to trust property is another common error.",
+    "state_notes": "Connecticut's certification of trust statute, Conn. Gen. Stat. ÃÂÃÂÃÂÃÂÃÂÃÂÃÂÃÂ§45a-499zzz, is part of the Connecticut Uniform Trust Code in Title 45a, Chapter 36. The statute follows the UTC model closely. Connecticut is a traditional trust jurisdiction with a strong legal infrastructure. The state imposes state income tax on trust income and has a state estate tax with a relatively low exemption threshold. Connecticut does not have a DAPT statute. The state's trust modification and decanting provisions are available under the UTC framework. Connecticut's trust law is well-developed and predictable, though the tax environment is less favorable than top trust-friendly states Connecticut is a traditional trust jurisdiction with a well-developed legal infrastructure and a strong body of trust case law. The state's trust modification and decanting provisions are available under the UTC framework, providing flexibility for trust administration and planning."
+  }
+}

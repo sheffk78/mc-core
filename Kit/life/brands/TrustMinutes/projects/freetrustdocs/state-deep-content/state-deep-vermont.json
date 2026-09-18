@@ -1,0 +1,27 @@
+{
+ "state": "Vermont",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under 14A V.S.A. 1013, a trustee may furnish a certificate of trust to a third party instead of the full trust instrument. The certificate must be upon the representation that the statements are true and correct, with the signature of the trustee under oath before a notary public or other official authorized to administer oaths. The certificate must include the name of the trust if one is given, the date of the trust instrument, the name of each settlor, the name of each original trustee, the name and address of each trustee empowered to act, an abstract of the provisions authorizing the trustee to act in the manner contemplated, a statement that the trust instrument has not been revoked or amended as to the authorizing provisions and that the trust exists, a statement that no provisions of the trust instrument limit the authority so granted, and a statement as to whether the trust is supervised by any court and, if so, that all necessary approval has been obtained.",
+  "faq": [
+   {
+    "q": "Does Vermont require a certificate of trust to be notarized?",
+    "a": "Yes. Under 14A V.S.A. 1013, the certificate of trust must be signed by the trustee under oath before a notary public or other official authorized to administer oaths. Vermont does not require witnesses for trust execution, but the notarization requirement for the certificate is specific to the Vermont Trust Code and applies to the certification itself, separate from any recording obligation."
+   },
+   {
+    "q": "What must a Vermont certificate of trust contain?",
+    "a": "14A V.S.A. 1013 requires nine categories: trust name if given, date of the trust instrument, name of each settlor, name of each original trustee, name and address of each trustee empowered to act, an abstract of the provisions authorizing the trustee to act, a statement that the trust has not been revoked or amended as to the authorizing provisions, a statement that no provisions limit the authority granted, and a statement about court supervision and any necessary approval. The certificate must be signed under oath before a notary."
+   },
+   {
+    "q": "Can a third party request the complete trust instrument after receiving a Vermont certificate?",
+    "a": "Under 14A V.S.A. 1013, a recipient may require the trustee to furnish copies of excerpts from the original trust instrument and amendments which designate the trustee and confer power to act in the pending transaction. The statute provides that the certificate is conclusive proof of the matters contained within it unless a third party has actual knowledge to the contrary."
+   },
+   {
+    "q": "Is a certificate of trust the same as a trust agreement in Vermont?",
+    "a": "No. The certificate is a short signed declaration summarizing the information 14A V.S.A. 1013 requires, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certificate need not contain distribution terms and may include excerpts designating the trustee and succession documents for the trust agreement under Vermont law and practice."
+   }
+  ],
+  "common_mistakes": "A certificate that omits the statement that the trust instrument has not been revoked or amended as to the authorizing provisions falls short of 14A V.S.A. 1013. Leaving out the abstract of the provisions authorizing the trustee to act in the manner contemplated prevents a third party from confirming the trustee's authority for the pending transaction. A certificate that fails to state whether the trust is supervised by any court and whether all necessary approval has been obtained also fails the statute. In each case the recipient may require the full trust instrument, and the certificate does not serve as conclusive proof of matters not contained within it.",
+  "state_notes": "Vermont adopted the Vermont Trust Code (14A V.S.A. 101-1204) in 2009, based on the Uniform Trust Code with Vermont-specific modifications. Vermont repealed its state estate tax for deaths occurring after January 1, 2016, making it favorable for estate planning. The state imposes income tax on trust income. Vermont does not have a specific Domestic Asset Protection Trust statute. The certificate of trust statute includes conclusive proof provisions and specific amendment and revocation notice requirements. Vermont has a strong agricultural and conservation trust tradition reflecting its rural New England character. The state's trust framework is supplemented by common law principles and principles of equity governing trust administration, settlement, ongoing management, beneficiary protections, fiduciary accountability, court oversight, and trust modification procedures under Vermont law."
+ }
+}

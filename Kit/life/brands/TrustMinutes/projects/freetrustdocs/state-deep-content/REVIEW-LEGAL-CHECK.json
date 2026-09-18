@@ -1,0 +1,94 @@
+{
+  "verdict": "fix_required",
+  "issues": [
+    {
+      "file": "state-deep-utah.json",
+      "block": "faq",
+      "quote": "the settlor and acting trustee identity and address",
+      "problem": "Misstates Utah Code Â§ 75B-2-1013 (formerly Â§ 75-7-1013). The statute requires the settlor's identity only (no address) and the trustee's identity and address. The FAQ phrasing implies the settlor's address is also required, which is false.",
+      "severity": "blocker",
+      "suggested_fix": "Change to: 'the settlor's identity, and the acting trustee's identity and address'"
+    },
+    {
+      "file": "state-deep-utah.json",
+      "block": "common_mistakes",
+      "quote": "an incorrect statement means the certification is materially deficient",
+      "problem": "The phrase 'materially deficient' is not statutory language and misstates the consequence. Under Â§ 75B-2-1013(e), the recipient may require the trustee to furnish excerpts from the original trust instrument â the statute does not declare the certification 'materially deficient' as a legal consequence.",
+      "severity": "blocker",
+      "suggested_fix": "Replace with: 'the recipient may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction.'"
+    },
+    {
+      "file": "state-deep-california.json",
+      "block": "how_it_works",
+      "quote": "If the certificate is incomplete or the institution lacks cause to demand more, it may require the full trust instrument before proceeding.",
+      "problem": "The clause 'the institution lacks cause to demand more' inverts the statute's meaning. Cal. Prob. Code Â§ 18100.5(e) permits a recipient to require excerpts when the certification is incomplete; it does not permit requiring the full instrument when the institution 'lacks cause.' The sentence is grammatically confusing and could mislead readers about when an institution may demand the full instrument.",
+      "severity": "blocker",
+      "suggested_fix": "Rewrite as: 'If the certificate is incomplete, the institution may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction, or both.'"
+    },
+    {
+      "file": "state-deep-texas.json",
+      "block": "how_it_works",
+      "quote": "the institution may demand the full trust instrument before acting",
+      "problem": "Overstates Tex. Prop. Code Â§ 114.086(e). The statute permits a recipient to require 'copies of those excerpts from the original trust instrument and later amendments to the trust instrument that designate the trustee and confer on the trustee the power to act in the pending transaction.' It does not authorize demanding the full trust instrument.",
+      "severity": "blocker",
+      "suggested_fix": "Change to: 'the institution may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction.'"
+    },
+    {
+      "file": "state-deep-texas.json",
+      "block": "faq",
+      "quote": "a statement that the trust has not been amended or revoked in a way that would invalidate the certification",
+      "problem": "Misstates the statutory language of Tex. Prop. Code Â§ 114.086(c). The statute says the certification 'must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations contained in the certification to be incorrect.' The draft says 'invalidate the certification' which is not the statutory standard.",
+      "severity": "blocker",
+      "suggested_fix": "Change to: 'a statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations contained in the certification to be incorrect.'"
+    },
+    {
+      "file": "state-deep-texas.json",
+      "block": "common_mistakes",
+      "quote": "failing to state the trustee’s powers in a way that matches the pending transaction",
+      "problem": "Tex. Prop. Code Â§ 114.086(a)(4) requires 'one or more powers of the trustee or a statement that the trust powers include at least all the powers granted a trustee by Subchapter A, Chapter 113.' The statute does not require the listed powers to match the pending transaction. This is a false claim about the statute's requirements.",
+      "severity": "blocker",
+      "suggested_fix": "Change to: 'failing to include one or more powers of the trustee or a statement that the trust powers include at least all the powers granted a trustee by Subchapter A, Chapter 113.'"
+    },
+    {
+      "file": "state-deep-texas.json",
+      "block": "common_mistakes",
+      "quote": "if the certificate does not reflect the authority of all co-trustees",
+      "problem": "Tex. Prop. Code Â§ 114.086(b) states 'A certification of trust may be signed or otherwise authenticated by any trustee.' The statute does not require all co-trustees to sign or their authority to be reflected. This is a false claim about the statute.",
+      "severity": "blocker",
+      "suggested_fix": "Change to: 'if the certificate is not signed or authenticated by at least one trustee, since any trustee may sign or authenticate the certification.'"
+    },
+    {
+      "file": "state-deep-texas.json",
+      "block": "common_mistakes",
+      "quote": "the institution may reject it and demand the full trust instrument",
+      "problem": "Overstates Tex. Prop. Code Â§ 114.086(e). The statute permits a recipient to require 'copies of those excerpts from the original trust instrument and later amendments,' not the full trust instrument. This is a false claim about the statute's scope.",
+      "severity": "blocker",
+      "suggested_fix": "Change to: 'the institution may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction.'"
+    },
+    {
+      "file": "state-deep-utah.json",
+      "block": "state_notes",
+      "quote": "one of the shortest creditor notice periods in the nation",
+      "problem": "Unverifiable claim about Utah's Domestic Asset Protection Trust statute. The cited statute (Â§ 75B-2-1013) does not address creditor notice periods for DAPTs. This claim cannot be verified against the statutes being reviewed and may be inaccurate.",
+      "severity": "minor",
+      "suggested_fix": "Remove or verify against the specific DAPT statute (Â§ 75B-1-310 et seq.) before including."
+    },
+    {
+      "file": "state-deep-utah.json",
+      "block": "state_notes",
+      "quote": "added trust decanting authority in 2025",
+      "problem": "Unverifiable claim against the cited statute. Â§ 75B-2-1013 does not address trust decanting. This claim cannot be verified from the statutes being reviewed.",
+      "severity": "minor",
+      "suggested_fix": "Remove or verify against the specific decanting statute before including."
+    },
+    {
+      "file": "state-deep-utah.json",
+      "block": "state_notes",
+      "quote": "does not tax trust income at the state level for non-resident trusts",
+      "problem": "Tax law claim not verifiable against the trust certification statute. Â§ 75B-2-1013 does not address trust income taxation. This claim cannot be verified from the statutes being reviewed.",
+      "severity": "minor",
+      "suggested_fix": "Remove or verify against Utah tax statutes before including."
+    }
+  ],
+  "checked_at": "2026-09-17"
+}

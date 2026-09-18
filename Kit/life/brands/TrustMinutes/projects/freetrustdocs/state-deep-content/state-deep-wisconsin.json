@@ -1,0 +1,27 @@
+{
+ "state": "Wisconsin",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under Wis. Stat. 701.1013, a trustee may furnish a certification of trust to a third party instead of the full trust instrument. The certification must contain that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, the revocability or irrevocability of the trust and the identity of any person holding power to revoke, the authority of the cotrustee to sign or authenticate and whether all or less than all cotrustees are required, and the manner in which title to trust property may be taken. The certification must also include a statement that the trust has not been revoked, modified, or amended in a manner that would make the representations incorrect. The certification need not contain dispositive terms.",
+  "faq": [
+   {
+    "q": "Does Wisconsin require a certification of trust to be notarized?",
+    "a": "Wis. Stat. 701.1013 does not require notarization or witnesses for the certification of trust itself. The certification may be signed or otherwise authenticated by any trustee. No specific notary or witness requirement is mentioned in the statute for the certification, and no recording requirement is specified in the statute for the certification of trust under Wisconsin law or the Wisconsin Trust Code."
+   },
+   {
+    "q": "What must a Wisconsin certification of trust contain?",
+    "a": "Wis. Stat. 701.1013 lists seven required items: trust existence and date of execution, settlor identity, acting trustee identity and address, trustee powers, revocability and identity of any person holding power to revoke, cotrustee signing authority and whether all or less than all are required, and the manner in which title to trust property may be taken. The certification must also include a statement that the trust has not been revoked, modified, or amended in a manner that would make the representations incorrect."
+   },
+   {
+    "q": "Can a bank request the complete trust after I present a Wisconsin certification?",
+    "a": "Under Wis. Stat. 701.1013, a recipient may require the trustee to furnish excerpts designating the trustee and conferring powers for the pending transaction. The statute provides that a person acting in reliance without knowledge of incorrectness is not liable, and good faith transactions are enforceable against trust property. A person making a bad-faith request for the full trust instrument beyond the certification is liable for costs, expenses, attorney fees, and damages."
+   },
+   {
+    "q": "How does Wisconsin treat business trusts for certification purposes?",
+    "a": "Wisconsin treats business trusts and Massachusetts trusts under common law. The Wisconsin Trust Code (ch. 701) applies to express, charitable or noncharitable, and testamentary or living trusts, and trusts created pursuant to statute, judgment, or decree administered as express trusts. Wisconsin does not have a specific statutory business trust entity act or a business trust registration statute like Delaware or Nevada."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in a manner that would make the representations incorrect falls short of Wis. Stat. 701.1013. Leaving out the manner in which title to trust property may be taken also fails the statute. A certification signed by fewer than all currently acting trustees, or one that describes trustee powers that do not match the pending transaction, will not satisfy the statute. In each case the recipient may require the full trust instrument, and a bad-faith demand can expose the recipient to liability for costs, expenses, attorney fees, and damages.",
+  "state_notes": "Wisconsin adopted the Wisconsin Trust Code (Wis. Stat. ch. 701) effective April 1, 2014, with certification governed by 701.1013. The state includes a comprehensive decanting framework (701.1301-701.1322) added in 2018. Wisconsin has not abolished the Rule Against Perpetuities; trusts are generally limited to lives in being plus 21 years or 90 years under UTC-style provisions. Wisconsin does not allow self-settled asset protection trusts. The state has no state estate tax. Wisconsin's statute provides penalties for bad-faith requests for the full trust instrument beyond certification. The trust code includes strong provisions for trust administration and trustee accountability, and the state's trust framework is further supported by the Uniform Principal and Income Act for trust management, administration, ongoing beneficiary protections, and fiduciary oversight."
+ }
+}

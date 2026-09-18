@@ -1,0 +1,64 @@
+You are drafting educational content blocks for ONE state page on freetrustdocs.com (a free trust-document generator; AdSense rejected the site for 'low value content' — we are adding genuinely useful, well-sourced state content).
+
+HARD UPL GUARDRAILS (violations = failed output):
+- Descriptive only: state WHAT THE LAW IS/DOES ('Under <cite>, a certification must contain...'), NEVER advice ('you should', 'your best option', 'we recommend').
+- No outcome promises: never 'your assets will be protected', no specific tax-savings assertions. Use 'may' + point to 'a licensed <State> attorney' where a decision point exists.
+- No attorney-client framing anywhere. Educational summary based on public statutes.
+- Only cite statutes given to you in FACTS below (they are verified). If a claim needs a statute you were not given and cannot keep generic, OMIT the claim.
+- No sovereign-citizen/UCC-fringe framing.
+
+OUTPUT: write a JSON file (UTF-8) to the exact OUTPUT path given. Schema:
+{
+ "state": "<State>",
+ "document": "certificate-of-trust",
+ "blocks": {
+   "how_it_works": "120-170 words. Plain-language walkthrough of what happens when someone presents this document to a bank/title company in <State>: what the institution checks, why it relies on the certificate instead of the full trust instrument (cite the statute's purpose), what happens if information is missing (institution may demand the full trust instrument). Factual, statute-grounded.",
+   "faq": [ {"q": "...", "a": "60-90 words, statute-grounded, descriptive"} , ... exactly 4 items ],
+   "common_mistakes": "100-140 words. 3 concrete, statute-grounded examples of how a certificate fails (e.g., missing revocability statement, trustee powers not matching the pending transaction, unsigned by all required trustees) and the statutory consequence (institution may require the full instrument).",
+   "state_notes": "120-170 words. What makes <State> different (UTC vs non-UTC position, recording/recording-not-required nuance, institutional practice). Use ONLY the FACTS provided plus generic trust-law knowledge that needs no citation."
+ }
+}
+Voice: clean, plain, no marketing fluff, no 'our tool' pitches, no emoji. Reading level: general adult.
+FACTS (from the site's verified research file — trust these over your memory; if a FACTS field is empty, write around it):
+{
+ "citation": "Tex. Prop. Code \u00a7 114.086",
+ "utc_adopted": false,
+ "cert_required_contents": {
+  "governing_section": "Tex. Prop. Code \u00a7 114.086",
+  "contents": [
+   "Date of execution of trust instrument",
+   "Identity of grantor/settlor",
+   "Name and address of trustee",
+   "Powers of the trustee (complying with statutory requirements)",
+   "Whether trust is revocable and who holds power to revoke",
+   "Authority of co-trustees and how title should be taken",
+   "Statement that trust has not been amended/revoked in a way invalidating the certification"
+  ],
+  "must_contain": "Statement that trust has not been revoked/modified to invalidate certification; identity of trustee and powers",
+  "exclusions": "Need not contain dispositive provisions or full trust instrument.",
+  "statutory_form": "No mandatory statutory form; required content list specified by statute."
+ },
+ "execution_requirements": {
+  "notary": "Not explicitly required by statute for certification itself, but third party may require notarized acknowledgment. Typically notarized in practice.",
+  "witnesses": "Not statutorily required.",
+  "recording": "May be recorded in real property records. Not required.",
+  "other": "Beneficiaries are entitled to see trust provisions; third parties may rely on cert without liability if no actual knowledge of error."
+ },
+ "business_trust_treatment": {
+  "type": "Explicitly EXCLUDED from the Texas Trust Code by Tex. Prop. Code \u00a7 111.003(3). Governed by common law or other statutes.",
+  "notes": "Business trusts are not 'express trusts' under the Texas Trust Code. Texas follows common law for business trust formation and operation."
+ },
+ "favorable_trust_laws": [
+  "No state income tax",
+  "Community property state offers estate planning advantages for married couples",
+  "Spendthrift trusts recognized under common law",
+  "Strong homestead protections"
+ ],
+ "unique_factors": [
+  "Has NOT adopted UTC; uses Texas Trust Code (Property Code Title 9)",
+  "Business trusts explicitly excluded from the statutory trust code",
+  "Community property state with no state income tax",
+  "Unique blend of statutory trust rules and reenacted common law (\u00a7 111.005)"
+ ],
+ "note": "Texas has NOT adopted the UTC; certification of trust governed by Tex. Prop. Code \u00a7 114.086 (Texas Trust Code, Property Code Title 9, Subtitle B \u2014 NOT the Estates Code). Business trusts are explicitly EXCLUDED from the Texas Trust Code by Tex. Prop. Code \u00a7 111.003(3)."
+}

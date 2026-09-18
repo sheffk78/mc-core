@@ -1,0 +1,27 @@
+{
+ "state": "New Hampshire",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "New Hampshire's certification of trust is governed by RSA 564-B:10-1013 under the New Hampshire Trust Code (RSA Chapter 564-B, enacted 2004, effective 2006). The statute provides that instead of furnishing the trust instrument to a non-beneficiary, the trustee may furnish a certification of trust containing: that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the authority of cotrustees to sign or authenticate and whether all or less than all are required to exercise trustee powers; the trust's taxpayer identification number; and the manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. It need not contain the dispositive terms.",
+  "faq": [
+   {
+    "q": "What is the alternative statutory certificate form for real property in New Hampshire?",
+    "a": "Under RSA 564-B:10-1013(k), New Hampshire provides an alternative statutory certificate form for real and personal property conveyances. For real property, this certificate gives conclusive evidence of trustee authority when recorded with deed formalities in the registry of deeds. For personal property, the trustee's signature must be sworn before a notary public. This alternative form is not required for general certifications but provides enhanced evidentiary weight for property transactions."
+   },
+   {
+    "q": "Does New Hampshire allow self-settled asset protection trusts?",
+    "a": "Yes. RSA 564-B:5-505A permits self-settled spendthrift trusts, also known as qualified dispositions, that shield assets from the settlor's creditors after a 2-year statute of limitations. New Hampshire is one of the few states allowing domestic asset protection trusts. The 2-year SOL begins when the trust is established and the settlor is not a beneficiary during that period. This provision makes New Hampshire a favorable jurisdiction for asset protection planning within the United States."
+   },
+   {
+    "q": "Can a New Hampshire trust last indefinitely?",
+    "a": "Yes. RSA 564-B:4-402A abolished the Rule Against Perpetuities for trusts in New Hampshire, allowing perpetual dynasty trusts of unlimited duration. Purpose trusts under RSA 564-B:4-409 also have no time limit. This makes New Hampshire a favorable jurisdiction for multi-generational wealth transfer planning without the duration constraints found in states that retain the common law rule against perpetuities. This provision reflects the state's approach to trust certification."
+   },
+   {
+    "q": "What tax advantages does New Hampshire offer for trusts?",
+    "a": "New Hampshire has no state income tax and no capital gains tax on trust income. Trusts governed by New Hampshire law are not subject to New Hampshire state income tax. The state also has no estate or inheritance tax. These tax advantages, combined with the state's flexible trust code, make New Hampshire a premier trust situs for high-net-worth estate planning."
+   }
+  ],
+  "common_mistakes": "A common error is failing to include the statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. Without this statement, the certification does not conform to RSA 564-B:10-1013. Another mistake is assuming that the alternative certificate form under subsection (k) is required for all transactions. It is optional and applies only to real and personal property conveyances. A third error is omitting the trust's taxpayer identification number, which RSA 564-B:10-1013 requires. A certification that does not include the identity and address of the currently acting trustee also falls short of the statute's required contents.",
+  "state_notes": "New Hampshire's Trust Code (RSA Chapter 564-B) is one of the most comprehensive and favorable trust frameworks in the country. RSA 564-B:10-1013 governs the certification of trust and includes an alternative statutory certificate form for real property conveyances under subsection (k). New Hampshire is a premier trust situs due to its combination of no state income or capital gains tax on trusts, perpetual dynasty trusts, self-settled asset protection trusts with a 2-year SOL, directed and divided trust provisions, trust protector and advisor frameworks, and nonjudicial settlement agreements. The state also offers quiet trust provisions, flexible trust modification rules, and a comprehensive directed trustee framework. New Hampshire regularly updates its trust code to maintain its competitive edge. This provision reflects the state's approach to trust certification."
+ }
+}

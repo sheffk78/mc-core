@@ -1,0 +1,27 @@
+{
+ "state": "West Virginia",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under W.Va. Code 44D-10-1013, a trustee may furnish a certification of trust to a third party instead of the full trust instrument. The certification must contain that the trust exists and the date the trust instrument was executed, the identity of the grantor, the identity and address of the currently acting trustee, the powers of the trustee, the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust, the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee, the trust's taxpayer identification number, and the manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. The certification may be signed or otherwise authenticated by any trustee.",
+  "faq": [
+   {
+    "q": "Does West Virginia require a certification of trust to be notarized?",
+    "a": "W.Va. Code 44D-10-1013 does not require notarization or witnesses for the certification of trust itself. The certification may be signed or otherwise authenticated by any trustee. No notary or witness requirement is specified for the certification, though the underlying trust instrument must be executed with the same formalities as a deed under W.Va. Code 44D-4-401, and real property transferred to a trust must be recorded in the county clerk's office."
+   },
+   {
+    "q": "What must a West Virginia certification of trust contain?",
+    "a": "W.Va. Code 44D-10-1013 lists eight required items: trust existence and execution date, grantor identity, acting trustee identity and address, trustee powers, revocability and identity of any person holding a power to revoke, cotrustee signing authority and whether all or less than all are required, the trust's taxpayer identification number, and the manner of taking title. Dispositive terms need not be included."
+   },
+   {
+    "q": "Can a third party request the complete trust instrument after receiving a West Virginia certificate?",
+    "a": "Under W.Va. Code 44D-10-1013(e), a recipient may require the trustee to furnish copies of excerpts from the original trust instrument and amendments which designate the trustee and confer power to act in the pending transaction. Subsection (h) provides that a person requesting the trust instrument in addition to the certification is liable for damages if the court determines they did not act in good faith."
+   },
+   {
+    "q": "How does West Virginia handle business trusts for certification purposes?",
+    "a": "West Virginia recognizes statutory trusts under the West Virginia Uniform Statutory Trust Act, W.Va. Code 47-24-1 et seq. A statutory trust is a separate legal entity with limited liability for beneficial owners. Common law business trusts are also recognized, but the statutory trust framework provides greater certainty. The Uniform Trust Code applies to express trusts and does not directly govern business trusts formed under the statutory trust act."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect falls short of W.Va. Code 44D-10-1013(c). Leaving out the taxpayer identification number or the manner of taking title to trust property also fails the statute. A certification signed by fewer than all currently acting trustees, or one that describes trustee powers that do not match the pending transaction, will not satisfy the statute. In each case the recipient may require the full trust instrument, and an unnecessary request can expose the requester to liability under the statute.",
+  "state_notes": "West Virginia adopted the Uniform Trust Code as W.Va. Code Chapter 44D, including 44D-10-1013 for certification of trust. The state also enacted the Uniform Directed Trust Act (44D-8A) and the Uniform Trust Decanting Act (44D-8B). West Virginia has no state estate tax and no state inheritance tax, though it does impose state income tax on trust income. The state follows the common law Rule Against Perpetuities unless modified by the trust instrument. West Virginia's UTC adoption aligns it with neighboring states in the Appalachian and Mid-Atlantic region. The state's trust framework is further supported by the Uniform Principal and Income Act and the Uniform Settlement Act for trust administration, management, beneficiary protections, ongoing fiduciary oversight, dispute resolution, and court proceedings."
+ }
+}

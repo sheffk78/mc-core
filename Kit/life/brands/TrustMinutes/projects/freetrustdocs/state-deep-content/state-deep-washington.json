@@ -1,0 +1,27 @@
+{
+ "state": "Washington",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under RCW 11.98.075, a trustee may furnish a certification of trust to a third party instead of the full trust instrument. The certification must contain that the trust exists and the date the trust instrument was executed, the identity of the trustor, the identity and address of the currently acting trustee, relevant powers of the trustee, the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust, the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee, and the name of the trust or the titling of the trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. A certification may be signed or otherwise authenticated by any trustee or by an attorney for the trust.",
+  "faq": [
+   {
+    "q": "Does Washington require a certification of trust to be notarized?",
+    "a": "RCW 11.98.075 does not require notarization or witnesses for the certification of trust itself. A certification may be signed or otherwise authenticated by any trustee or by an attorney for the trust. Washington does not require notarization for trust instruments, though electronic signing is permitted. For real property transactions, acknowledgment may be required for recording with the county auditor where the property is located."
+   },
+   {
+    "q": "What must a Washington certification of trust contain?",
+    "a": "RCW 11.98.075 lists seven required items: trust existence and execution date, trustor identity, acting trustee identity and address, relevant trustee powers, revocability and identity of any person holding a power to revoke, cotrustee signing authority and whether all or less than all are required, and the name of the trust or titling of trust property. Dispositive terms need not be included."
+   },
+   {
+    "q": "Can a bank request the complete trust after I present a Washington certification?",
+    "a": "Under RCW 11.98.075, a recipient may require the trustee to furnish excerpts and any other reasonable information. The statute provides reliance protections for persons acting in good faith without knowledge of incorrectness, and a person requesting the trust instrument in addition to the certification may be liable for damages if the court determines they did not act in good faith."
+   },
+   {
+    "q": "How does Washington treat Massachusetts business trusts?",
+    "a": "Washington recognizes Massachusetts trusts under RCW Chapter 23.90. Any Massachusetts trust desiring to do business in Washington must file with the Secretary of State a verified copy of the trust instrument and any amendments, the assumed business name, and the names and addresses of its trustees. Massachusetts trusts are treated as statutory business entities subject to filing requirements and are bound by the terms of the filed trust instrument."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect falls short of RCW 11.98.075. Leaving out the name of the trust or the titling of the trust property also fails the statute. A certification signed by fewer than all currently acting trustees, or one that describes trustee powers that do not match the pending transaction, will not satisfy the statute. In each case the recipient may require the full trust instrument, and an unnecessary request can expose the requester to liability under the statute.",
+  "state_notes": "Washington adopted Uniform Trust Code provisions in 2011, with trust administration governed by RCW Title 11, Chapter 11.98 and Chapter 11.103. RCW 11.98.075 governs certification of trust. Washington has no state income tax, no state estate tax, and no inheritance tax, making it highly favorable for trust situs. However, Washington does not have a specific Domestic Asset Protection Trust statute or dynasty trust legislation extending the rule against perpetuities beyond common law limits. Massachusetts trusts must register with the Secretary of State. Electronic signing of trusts is permitted without witness or notary requirements. The state's trust framework is further supported by the Uniform Directed Trust Act and the Uniform Trust Decanting Act for comprehensive administration, management, and trust planning purposes."
+ }
+}

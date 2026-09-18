@@ -1,0 +1,27 @@
+{
+ "state": "Georgia",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certificate of trust in Georgia, the recipient checks the certificate against O.C.G.A. \u00a7 53-12-280, which is Georgia's adoption of Uniform Trust Code \u00a7 1013. The statute permits the certificate to contain some or all of the following: that the trust exists and the date of the trust and any amendments, the identity of each settlor, the identity and address of each current trustee and, if more than one, the number and identity of those required to exercise the powers of the trustee, the relevant powers of the trustee and any restrictions or limitations on those powers, the revocability or irrevocability of the trust, how trust property should be titled, and except as disclosed, that the transaction at issue requires no consent or action by any person other than the certifying trustee.",
+  "faq": [
+   {
+    "q": "Does Georgia require a certificate of trust to be notarized?",
+    "a": "Georgia does not require notarization or witnesses for the execution of a trust or for the certificate of trust under O.C.G.A. \u00a7 53-12-280. The statute requires the certificate to be signed by each trustee. A third party, such as a bank or title company, may require an acknowledgment before a notary as a condition of accepting the certificate under the statute."
+   },
+   {
+    "q": "What must a Georgia certificate of trust contain?",
+    "a": "Under O.C.G.A. \u00a7 53-12-280, the certificate may contain some or all of the following: that the trust exists and the date of the trust and any amendments, the identity of each settlor, the identity and address of each current trustee and the number and identity of those required to exercise trustee powers, the relevant powers and any restrictions, the revocability or irrevocability, how trust property should be titled, and that the transaction requires no consent or action by any person other than the certifying trustee."
+   },
+   {
+    "q": "Can a bank ask for the entire trust after I present a certificate?",
+    "a": "Under O.C.G.A. \u00a7 53-12-280 and the Georgia Trust Code, a person who asks for the complete trust documents in addition to a valid certificate, without cause, may be liable for damages including attorney's fees. The statute's reliance rules protect third parties who accept a conforming certificate in good faith. Where required contents are incomplete, the institution may ask for the full instrument."
+   },
+   {
+    "q": "Is a certificate of trust the same as a trust agreement in Georgia?",
+    "a": "No. The certificate is a short, signed declaration summarizing the information O.C.G.A. \u00a7 53-12-280 requires, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certificate need not contain dispositive provisions. A certificate omitting any required content, such as the settlor identity or trustee powers, does not conform to the statute's requirements."
+   }
+  ],
+  "common_mistakes": "A certificate that omits the statement that the trust has not been revoked, modified, or amended in a manner causing the representations to be incorrect falls short of O.C.G.A. \u00a7 53-12-280's requirements. So does one that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by fewer than all currently acting trustees when the statute requires each trustee to sign, also fails the statute.",
+  "state_notes": "Georgia has adopted the Revised Georgia Trust Code, effective July 1, 2010, which is based on the Uniform Trust Code. The certification of trust is governed by O.C.G.A. \u00a7 53-12-280, which is the UTC \u00a7 1013 adoption. Georgia treats a trust as a property relationship rather than a legal entity, and common law business trusts operate in the state without separate statutory status. Georgia does not have a specific statutory business trust act; business trusts are treated under common law principles supplemented by the Georgia Trust Code. The statute's two-sided design lets institutions rely on certificates in good faith while a person who asks for the complete trust documents without cause may be liable for damages and attorney's fees under the Georgia Trust Code."
+ }
+}

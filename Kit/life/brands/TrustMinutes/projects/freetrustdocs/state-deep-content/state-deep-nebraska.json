@@ -1,0 +1,27 @@
+{
+ "state": "Nebraska",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Nebraska uses a two-section certification of trust scheme under Neb. Rev. Stat. ÃÂ§ÃÂ§ 30-38,102 and 30-38,103. Section 30-38,102 provides that a trustee may present a certification of trust to any person other than a beneficiary in lieu of a copy of any trust instrument to establish the existence or terms of the trust. The certification shall be in the form of an affidavit and signed and acknowledged by all acting trustees. Section 30-38,103 sets forth the contents the certification may confirm, including: the existence of the trust and the date of execution or the date of death of the decedent; the identity of the grantor, settlor, or testator and each currently acting trustee; the powers of the trustee and any restrictions; the name or method of choosing successor trustees; the revocability or irrevocability and the identity of any person holding a power to revoke; whether all or less than all trustees must act; the identifying number of the trust and whether it is a SSN or EIN; the name of",
+  "faq": [
+   {
+    "q": "Why must a Nebraska certification of trust be in the form of an affidavit?",
+    "a": "Under Neb. Rev. Stat. ÃÂ§ 30-38,102(b), the certification of trust must be in the form of an affidavit and signed and acknowledged by all acting trustees. This affidavit requirement makes the Nebraska certification more formal than the standard UTC model. The affidavit form ensures that the certification is sworn and acknowledged, providing an additional layer of formality for third parties relying on the document."
+   },
+   {
+    "q": "What beneficiary information must a Nebraska certification include?",
+    "a": "Neb. Rev. Stat. ÃÂ§ 30-38,103(a)(8) uniquely requires the certification to include the name of each beneficiary and the relationship of each beneficiary to the grantor, settlor, or testator. This provision is not found in the standard UTC certification of trust model and makes the Nebraska certification more detailed than most state certifications. The inclusion of beneficiary names and relationships provides the recipient with greater certainty about the trust's scope and the interests at stake."
+   },
+   {
+    "q": "Can a Nebraska certification of trust be used for homestead exemption purposes?",
+    "a": "Yes. Neb. Rev. Stat. ÃÂ§ 30-38,103(a)(11) permits the certification to include any information necessary to establish a person's ownership of a homestead for homestead exemption purposes under ÃÂ§ÃÂ§ 77-3501 to 77-3529. This provision is unique to Nebraska and reflects the state's homestead exemption framework. A certification containing this information may help a trustee establish homestead ownership when dealing with trust-held real property in Nebraska."
+   },
+   {
+    "q": "Does Nebraska require a person to accept a certification of trust in lieu of the full trust?",
+    "a": "No. Neb. Rev. Stat. ÃÂ§ 30-38,102(a) provides that notwithstanding any provision of the Nebraska UTC, no person is required to accept and rely solely on a certification of trust in lieu of a copy of, or excerpts from, the trust instrument itself. This provision protects third parties who prefer to review the full trust instrument. A recipient may request the full instrument or excerpts designating the trustee and conferring power to act."
+   }
+  ],
+  "common_mistakes": "A common error is failing to include the affidavit form requirement. Neb. Rev. Stat. ÃÂ§ 30-38,102(b) requires the certification to be in the form of an affidavit and signed and acknowledged by all acting trustees. A certification that is merely signed but not in affidavit form does not conform. Another frequent mistake is omitting the beneficiary names and relationships required by ÃÂ§ 30-38,103(a)(8). A certification that leaves out the homestead exemption information when it is relevant to the transaction may also cause the recipient to require additional documentation. Failing to include the statement that the trust has not been revoked or amended to make representations incorrect is another common deficiency.",
+  "state_notes": "Nebraska's certification of trust is uniquely structured as a two-statute scheme under Neb. Rev. Stat. ÃÂ§ÃÂ§ 30-38,102 and 30-38,103, rather than the single UTC ÃÂ§ 1013 model. The statute requires the certification to be in affidavit form and signed by all acting trustees, which is more formal than most UTC states. Nebraska uniquely requires beneficiary names and relationships, homestead exemption information, and the trust's identifying number (SSN or EIN). Nebraska's perpetuities opt-out mechanism under ÃÂ§ 76-2002 allows perpetual dynasty trusts when properly drafted. The state does not have a DAPT statute but provides spendthrift trust protections. Nebraska has a state income tax that applies to trust income for Nebraska-resident fiduciaries, but trusts with no Nebraska connection can avoid it. The Nebraska UTC was updated in 2026 (LB838) with an operative date of July 18, 2026."
+ }
+}

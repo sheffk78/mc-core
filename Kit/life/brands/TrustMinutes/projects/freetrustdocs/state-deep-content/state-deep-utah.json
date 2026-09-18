@@ -1,0 +1,27 @@
+{
+ "state": "Utah",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under Utah Code § 75B-2-1013, a certification of trust is a document that confirms the existence and key terms of a trust without disclosing the trust's dispositive provisions. When a bank or title company in Utah receives a certification of trust, it checks that the document identifies the trust, the settlor, the acting trustee, and the trustee's powers relevant to the pending transaction. The institution relies on the certification because the statute permits a recipient to accept it in lieu of the full trust instrument, so long as the certification states the trust has not been revoked or modified in any manner that would make the representations incorrect. If the certification is missing required information ,  such as the trustee's address, the revocability status, or the authority of cotrustees ,  the institution may the recipient may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction.",
+  "faq": [
+   {
+    "q": "What must a certification of trust contain under Utah law?",
+    "a": "Under Utah Code § 75B-2-1013, a certification must state: that the trust exists and when executed; the settlor's identity, and the acting trustee's identity and address; the trustee powers relevant to the pending transaction; whether the trust is revocable or irrevocable and who holds a power to revoke; whether all or fewer than all cotrustees may sign; and the name in which title to trust property may be taken. The certification must state the trust has not been revoked or modified in any manner that would make the representations incorrect."
+   },
+   {
+    "q": "Who can sign or authenticate a certification of trust?",
+    "a": "Under the Utah Uniform Trust Code, a certification of trust may be signed or otherwise authenticated by any trustee. The statute does not require all trustees to sign. However, if the certification does not state whether all or fewer than all cotrustees are required to exercise the trustee's powers, a recipient may require the full trust instrument to determine that authority. Utah does not require witnesses or notarization for the certification itself, though recording or real property transactions may require acknowledgment."
+   },
+   {
+    "q": "Does a certification of trust reveal the trust's terms or beneficiaries?",
+    "a": "No. Under Utah Code § 75B-2-1013, a certification of trust need not contain the dispositive terms of the trust. It confirms only the trust's existence, the identities of the settlor and acting trustee, the trustee's powers relevant to the pending transaction, and the trust's revocability status. The statute expressly permits a recipient to accept the certification in lieu of the full trust instrument, which protects the trust's private terms from disclosure to third parties such as banks or title companies."
+   },
+   {
+    "q": "Can a bank or title company require the full trust instrument?",
+    "a": "Yes. Under Utah Code § 75B-2-1013, a recipient may require excerpts designating the trustee and conferring the power to act. If the certification of trust is missing required information ,  for example, the identity of the settlor, the trustee's address, or the authority of cotrustees ,  the institution may the recipient may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction."
+   }
+  ],
+  "common_mistakes": "A certification of trust commonly fails when it omits the trustee's address, which Utah Code § 75B-2-1013 requires as part of the trustee's identity. A second frequent error is stating the trust is revocable when it is irrevocable, or vice versa, because the statute requires the certification to state the revocability status and the identity of any person holding a power to revoke ,  the recipient may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction. A third common mistake is failing to specify whether all cotrustees or fewer than all may sign to exercise the trustee's powers; without this, a recipient under § 75B-2-1013 may require the full trust instrument.",
+  "state_notes": "Utah is a Uniform Trust Code jurisdiction, having recodified the UTC to Title 75B effective 2025, with the certification statute renumbered to § 75B-2-1013 (formerly § 75-7-1013, effective May 7, 2025). Unlike some non-UTC states, Utah's certification requirements are fully aligned with the uniform act, providing consistent institutional recognition. Utah does not require recording of the certification of trust, though real property transactions may require notarization or acknowledgment for recording purposes. Under § 75B-2-1013, a certification may state the trust’s existence, the settlor’s identity, the acting trustee’s identity and address, the trustee’s powers, whether the trust is revocable, and the signature authority of co-trustees ,  the same core contents the Uniform Trust Code’s § 1013 prescribes, which is why Utah certifications are widely accepted by financial institutions."
+ }
+}

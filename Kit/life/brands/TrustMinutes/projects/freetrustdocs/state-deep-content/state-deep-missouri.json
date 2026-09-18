@@ -1,0 +1,27 @@
+{
+ "state": "Missouri",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certification of trust in Missouri, the recipient checks the document against Mo. Rev. Stat. ÃÂ§ 456.10-1013. The statute permits a trustee to furnish a certification instead of a copy of the trust instrument. The certification must identify that the trust exists and state the execution date, identify the settlor, identify the currently acting trustee and the trustee's address, state the trustee's powers, state whether the trust is revocable or irrevocable and identify the person holding the power to revoke, state the authority of cotrustees to sign and whether all or less than all are required, include the trust's taxpayer identification number, and state the manner of taking title to trust property. The certification must also state that the trust has not been revoked, modified, or amended in a manner making the representations incorrect. The statute does not require the certification to contain dispositive terms.",
+  "faq": [
+   {
+    "q": "Does Missouri require all trustees to sign the certification of trust?",
+    "a": "Yes. Under Mo. Rev. Stat. ÃÂ§ 456.10-1013(2), the certification of trust must be signed by all trustees. This is stricter than many Uniform Trust Code states that permit any single trustee to sign. A certification signed by fewer than all currently acting trustees does not conform to the statute, and the recipient may require a corrected certification or the full trust instrument."
+   },
+   {
+    "q": "What additional information does Missouri require in a certification of trust?",
+    "a": "Missouri uniquely requires the trust's taxpayer identification number in the certification, a requirement not found in the standard UTC model. The certification must also include the manner of taking title to trust property and a statement that the trust has not been revoked, modified, or amended in a manner making the representations incorrect. The statute lists eight required categories of information under ÃÂ§ 456.10-1013."
+   },
+   {
+    "q": "Can Missouri abolish the Rule Against Perpetuities for trusts?",
+    "a": "Missouri has abolished the Rule Against Perpetuities for trusts, allowing trusts to last indefinitely. This makes Missouri a dynasty trust jurisdiction. The abolition applies to both revocable and irrevocable trusts, and there is no time limit on the duration of a Missouri trust created under the Missouri Uniform Trust Code. The perpetual duration allows multi-generational wealth transfer without the constraints found in states that retain the common law rule."
+   },
+   {
+    "q": "Does Missouri have a statutory business trust entity act?",
+    "a": "Missouri does not have a specific statutory business trust entity act comparable to Delaware or Nevada. Business trusts in Missouri are recognized under common law as unincorporated associations or common law trusts. The Missouri Uniform Trust Code (ch. 456) governs express trusts but does not contain a separate business trust registration statute. This provision reflects the state's approach to trust certification."
+   }
+  ],
+  "common_mistakes": "A common error is omitting the statement that the trust has not been revoked or modified in a manner making the representations incorrect. Without this statement, the certification does not conform to ÃÂ§ 456.10-1013. Another frequent mistake is failing to include the taxpayer identification number, which Missouri uniquely requires. A certification signed by fewer than all currently acting trustees also fails the statute, which requires the signature of every trustee. A certificate describing trustee powers that do not match the pending transaction may cause the institution to reject the certification and require the full trust instrument. This provision reflects the state's approach to trust certification.",
+  "state_notes": "Missouri adopted the Uniform Trust Code in 2004, effective January 1, 2005, codified at Mo. Rev. Stat. ch. 456. The state's certification of trust statute at ÃÂ§ 456.10-1013 is notably more demanding than the standard UTC model due to the all-trustee signature requirement and the inclusion of the trust's taxpayer identification number. Missouri has abolished the Rule Against Perpetuities, making it a favorable dynasty trust jurisdiction. The state does not impose a state income tax on trust income for non-grantor trusts where the trustee and beneficiaries are not Missouri residents. Missouri does not allow self-settled asset protection trusts. Business trusts operate under common law without a separate statutory entity framework. The statute provides reliance protection for third parties who accept a conforming certification in good faith."
+ }
+}

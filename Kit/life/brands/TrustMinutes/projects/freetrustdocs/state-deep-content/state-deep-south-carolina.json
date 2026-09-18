@@ -1,0 +1,27 @@
+{
+  "state": "South Carolina",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "Under SC Code Section 62-7-1013, a certification of trust must contain: that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the powers of the trustee, which may reference SCTC powers; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required; and the manner of taking title to trust property. The certification must state that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect. Need not contain the dispositive terms of a trust. A statutory form is provided in Section 62-7-1013(k). For real property transactions, the certificate must be executed and acknowledged in a manner permitting recordation. A recipient may require excerpts designating the trustee and conferring power to act.",
+    "faq": [
+      {
+        "q": "Does South Carolina require a certification of trust to be notarized?",
+        "a": "The South Carolina Trust Code does not require witnesses for trust execution. For real property transactions involving a certificate of trust, the certificate must be executed and acknowledged before a notary public or other official authorized to administer oaths, in a manner permitting recordation in the Office of the Register of Deeds or Clerk of Court. Trust instruments affecting real property may be recorded, but general trust instruments are not required to be recorded."
+      },
+      {
+        "q": "What must a South Carolina certification of trust contain?",
+        "a": "SC Code Section 62-7-1013 requires the certification to state: that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required; and the manner of taking title to trust property."
+      },
+      {
+        "q": "Is a statutory form available for South Carolina certificates of trust?",
+        "a": "Yes. SC Code Section 62-7-1013(k) provides a statutory form for certificates of trust, which is uncommon among UTC states. The statutory form simplifies compliance with the required contents under Section 62-7-1013. The form follows the standard UTC certification model while incorporating South Carolina-specific provisions. Using the statutory form helps ensure that all required elements are included and reduces the risk of an incomplete certification."
+      },
+      {
+        "q": "How does South Carolina handle business trusts and certificates of trust?",
+        "a": "South Carolina recognizes business trusts under SC Code Section 33-53-10, which requires every business trust created at common law in the State or doing business in the State under an express trust instrument to record the instrument creating the trust with the Register of Deeds. Business trusts are treated as common law trusts with recording requirements and are subject to the South Carolina Trust Code provisions where applicable. The certification of trust statute at Section 62-7-1013 applies to express trusts governed by the South Carolina Trust Code."
+      }
+    ],
+    "common_mistakes": "A certification that omits the statement that the trust has not been revoked or modified in a manner making the representations incorrect does not satisfy SC Code Section 62-7-1013. Failing to include the identity of the settlor is another common omission. A certificate that does not address whether all or less than all cotrustees are required to exercise powers leaves ambiguity about signing authority. For business trusts, failing to record the instrument creating the trust with the Register of Deeds under SC Code Section 33-53-10 can create title defects. The statutory form at Section 62-7-1013(k) is available and using it helps avoid omissions. Assuming the certification provides the same protections as a full UTC certification is incorrect, as South Carolina's trust code is a modified UTC adoption.",
+    "state_notes": "South Carolina adopted the South Carolina Trust Code at Title 62, Article 7, in 2005, closely modeled on the Uniform Trust Code. The certification of trust statute at SC Code Section 62-7-1013 follows the UTC Section 1013 model with a statutory form provided in Section 62-7-1013(k). South Carolina does not have a Domestic Asset Protection Trust statute, making it less favorable for asset protection compared to leading trust jurisdictions. The rule against perpetuities applies, limiting trust duration to lives in being plus 21 years, except for cemetery care trusts under SC Code Section 62-7-406. South Carolina imposes state income tax on trust income but has no separate state estate tax beyond the federal system. Spendthrift provisions are recognized under the Trust Code. The state provides a statutory certificate of trust form, which is uncommon among UTC states and helps standardize compliance."
+  }
+}

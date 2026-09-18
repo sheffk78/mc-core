@@ -1,0 +1,27 @@
+{
+ "state": "Mississippi",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certification of trust to a Mississippi bank or title company, the institution checks the certificate against the requirements of Miss. Code 91-8-1013: that it identifies the trust and its existence date, the settlor, the currently acting trustees and their powers, whether the trust is revocable and who holds the power to revoke, how multiple trustees sign, and how title is taken. The statute's purpose is to let institutions rely on the certification without receiving the entire trust instrument. The certification must be signed by the trustee or trustees having signature authority and attested by a notary public. If the certification is incomplete, the institution may require the trustee to furnish copies of all or part of the trust instrument for transactions for the pending transaction.",
+  "faq": [
+   {
+    "q": "Does Mississippi require a certification of trust to be notarized?",
+    "a": "Yes. Mississippi is unique among UTC states in requiring the certification of trust to be attested by a notary public under Miss. Code 91-8-1013(a). The trust instrument itself also requires notarization for practical validity and recording. Mississippi does not currently recognize digital-only trusts, and the trust must be printed and physically signed. Real property held in trust requires notarized deeds for recording."
+   },
+   {
+    "q": "What must a Mississippi certification of trust contain?",
+    "a": "Miss. Code 91-8-1013 requires: an affirmation of the current existence of the trust and the date it came into existence, the identity of the settlor or settlors, the identity and address of the currently acting trustee or trustees, the administrative or managerial powers of the trustee in a pending transaction, the revocability or irrevocability and the identity of any person holding a power to revoke the trust, signature authority indicating whether all or less than all are required, and the name in which title to trust property may be taken."
+   },
+   {
+    "q": "Can a bank demand the entire trust after I present a certificate in Mississippi?",
+    "a": "Under Miss. Code 91-8-1013, a person relying on the certification without actual knowledge of incorrectness is not liable and may assume the facts. Third parties are not required to enter contracts and may demand additional information to clarify ambiguities. The trustee may provide copies of all or part of the trust document. Any person relying on the certification is indemnified from trust assets for costs and damages from beneficiary actions. Failure to request a certification does not affect these protections."
+   },
+   {
+    "q": "How does Mississippi's certification of trust protect third parties?",
+    "a": "Miss. Code 91-8-1013 provides that any person relying on the certification is indemnified from trust assets for costs and damages from beneficiary actions. Third parties are not required to enter contracts and may demand additional information to clarify ambiguities. A person relying on the certification without actual knowledge of incorrectness is not liable and may assume the facts. Judicial proceedings are not limited by the certification requirement, and the trustee may provide copies of all or part of the trust document."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect falls short of Miss. Code 91-8-1013's required contents. So does one that omits the notary attestation, which is explicitly required under 91-8-1013(a) and is unique among UTC states. Failing to include successor trustee conditions or a statement that a third party may rely on successor authority without proof is another common error. For real property transactions, omitting the name in which title to trust property may be taken also falls short. A certification signed by fewer than all trustees having signature authority also fails the statute.",
+  "state_notes": "Mississippi's certification of trust statute at Miss. Code 91-8-1013 is notably more detailed than the standard UTC 1013 model, requiring notary attestation, successor trustee conditions, beneficiary indemnification for third parties, and explicit provisions allowing third parties to demand additional information to clarify ambiguities. Mississippi adopted the Mississippi Uniform Trust Code in 2009, effective January 1, 2011, under Title 91, Chapter 8. Mississippi has no state income tax, making it tax-favorable for trust administration. The Mississippi Secretary of State has been actively involved in trust law reform, publishing legislative reports on directed trustees, trust protectors, and uneconomic trust modifications. Mississippi's UTC includes unique provisions for enforcement of no-contest clauses and allows modification or termination of uneconomic trusts Mississippi does not impose a state estate or inheritance tax, making it neutral for trust taxation from a state tax perspective."
+ }
+}

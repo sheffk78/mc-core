@@ -1,0 +1,27 @@
+{
+ "state": "Idaho",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certificate of trust in Idaho, the recipient checks the certificate against Idaho Code 68-114 through 68-118. Under 68-114, a trustee may present a certification of trust to any person in lieu of a copy of any trust instrument to establish the existence or terms of the trust. The certification must be in the form of an affidavit signed and acknowledged by all acting trustees. Under 68-115, the certification may confirm: the existence of the trust and the date of execution of any trust instrument, the identity of the settlor and each currently acting trustee, the powers of the trustee and any restrictions imposed on the trustee in dealing with assets of the trust, the revocability or irrevocability of the trust and the identity of any person holding a power to revoke it, whether all or less than all may act to exercise identified powers, the identifying number of the trust, and the form in which title to assets of the trust is to be taken.",
+  "faq": [
+   {
+    "q": "Does Idaho require a certificate of trust to be notarized?",
+    "a": "Yes, in practice. Idaho Code 68-114(2) requires the certification of trust to be in the form of an affidavit signed and acknowledged by all of the currently acting trustees. The term acknowledged means the affidavit must be notarized. No witnesses are required by statute. Recording with the county recorder where real property is located is permitted but not required for a transfer."
+   },
+   {
+    "q": "What must an Idaho certificate of trust contain?",
+    "a": "Under Idaho Code 68-114 and 68-115, the certification must be an affidavit signed and acknowledged by all acting trustees. It may confirm: the existence of the trust and date of execution, the identity of the settlor and each acting trustee, the powers of the trustee and any restrictions, the revocability or irrevocability and the identity of any person holding a power to revoke, whether all or less than all trustees must act, the identifying number of the trust, and the form in which title to assets is to be taken."
+   },
+   {
+    "q": "Can a bank ask for the entire trust after I present a certificate?",
+    "a": "Under Idaho Code 68-114(1), no person is required to accept and rely solely on a certification of trust in lieu of the trust instrument itself. This means a bank or other institution may require the complete trust document even if a conforming certificate is presented. The statute's reliance provisions are narrower than those in UTC states, giving institutions more discretion to request the full instrument."
+   },
+   {
+    "q": "Is a certificate of trust the same as a trust agreement in Idaho?",
+    "a": "No. The certificate is a short, signed and acknowledged affidavit summarizing the information Idaho Code 68-114 and 68-115 require, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certification need not contain the dispositive provisions of the trust under 68-116. A certificate omitting any required content does not conform to the statute's requirements."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked or amended to make any representations incorrect falls short of Idaho Code 68-115(2)'s requirements. So does one that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. Because Idaho requires an affidavit signed and acknowledged by all currently acting trustees, a certificate signed by fewer than all trustees fails the statute. In each case the institution may require the full trust instrument under Idaho Code Title 68.",
+  "state_notes": "Idaho has NOT adopted the Uniform Trust Code, instead relying on the older Uniform Trustees' Powers Act (Title 68, Chapter 1) and common law. Idaho's certification of trust provisions predate the UTC, having been added in 1998 (ch. 302). The certification of trust must be in the form of an affidavit signed and acknowledged by all currently acting trustees, which is stricter than UTC states that require only one trustee to sign. Idaho Code 55-111 has completely abolished the rule against perpetuities, allowing trusts of unlimited duration for both real and personal property. Idaho has no state estate or inheritance tax, making it attractive for trust situs purposes. Idaho does not currently authorize self-settled domestic asset protection trusts under state law."
+ }
+}

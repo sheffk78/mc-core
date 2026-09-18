@@ -1,0 +1,27 @@
+{
+ "state": "Minnesota",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a settlor or trustee presents a certificate of trust to a Minnesota bank or title company, the institution checks the certificate against the requirements of Minn. Stat. 501C.1013: that it identifies the trust and its execution date, the settlor and original trustees for real property transactions, the trustees empowered to act and their powers, how many trustees are required to act, and whether the trust has terminated or been revoked. The statute's purpose is to let institutions rely on the certificate without receiving the entire trust instrument. The certificate must be on representation that the statements are true and correct and no other provisions limit trustee powers. For real property transactions, the certificate must also identify each settlor and each original trustee and contain the standard authorization statement for transactions.",
+  "faq": [
+   {
+    "q": "Does Minnesota require a certificate of trust to be notarized?",
+    "a": "Yes. Under Minn. Stat. 501C.1013, Subd. 1, the signature of the settlor or trustee must be under oath before a notary public or other official authorized to administer oaths. This notarization requirement applies to the certificate of trust itself, distinguishing Minnesota from many other UTC states where notarization is not a statutory requirement for the certification of trust document under the statute."
+   },
+   {
+    "q": "What must a Minnesota certificate of trust contain?",
+    "a": "Minn. Stat. 501C.1013 requires: name of the trust if given, date of the trust instrument, name and address of each trustee empowered to act, either a standard statement about trustee powers to sell, convey, pledge, mortgage, lease, or transfer property or information about trustee powers relevant to the purpose, the number of trustees required to act, and a statement whether the trust has terminated or the instrument has been revoked. For real property transactions, it must also identify each settlor and each original trustee."
+   },
+   {
+    "q": "Can a bank demand the entire trust after I present a certificate in Minnesota?",
+    "a": "Under Minn. Stat. 501C.1013, a person relying on the certificate without actual knowledge of incorrectness is not liable and may assume the facts. The certificate must be on representation that the statements are true and correct and no other provisions limit trustee powers. A recipient may also require the settlor or trustee to furnish copies of the trust instrument and later amendments that designate the trustee and confer powers for the pending transaction."
+   },
+   {
+    "q": "How does Minnesota's certificate of trust differ from the UTC model?",
+    "a": "Minnesota's statute is executed by the settlor or trustee rather than only by trustees, and it requires the signature to be under oath before a notary public. The statute also has specific subdivisions for real property transactions that require identification of each settlor and each original trustee and a standard authorization statement. The certificate must state that no other provisions limit trustee powers, and amendment or revocation is only effective as to a party upon actual notice."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement whether the trust has terminated or the instrument has been revoked falls short of Minn. Stat. 501C.1013's required contents. So does one that omits the number of trustees required to act, because a title company cannot confirm signing authority without it. For real property transactions, failing to identify each settlor and each original trustee is a common error. A certificate that is not signed under oath before a notary public fails the notarization requirement of Subd. 1. Another error is failing to include the standard authorization statement for real property transactions under Subd. 2.",
+  "state_notes": "Minnesota's certificate of trust statute at Minn. Stat. 501C.1013 follows the Minnesota Uniform Trust Code (ch. 501C), enacted 2015 and effective January 1, 2016. The statute is notably detailed for real property transactions, with specific subdivisions addressing real property recording, the role of the county recorder and registrar of titles, and amendment and revocation procedures with actual notice requirements. Minnesota extended its Rule Against Perpetuities from 90 years to 500 years effective August 1, 2025, making it one of the newest dynasty trust jurisdictions. Minnesota does not have a state estate or inheritance tax. The statute is executed by the settlor or trustee with materially different contents from UTC 1013, and the notarization requirement distinguishes Minnesota from many other UTC states."
+ }
+}

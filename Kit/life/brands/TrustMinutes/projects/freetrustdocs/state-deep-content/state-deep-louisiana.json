@@ -1,0 +1,27 @@
+{
+ "state": "Louisiana",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Louisiana does not have a certificate-of-trust statute comparable to the Uniform Trust Code. Instead, Louisiana uses a recording mechanism called an extract of trust under RS 9:2092. When trust property includes immovables or other property whose title must be recorded to affect third parties, the settlor or trustee may execute an extract of trust for recordation in the parish where the property is located. Under RS 9:2092(B)(1), the extract must include the name of the trust, whether it is revocable or irrevocable, the name of each settlor, the name of each trustee and the beneficiary or beneficiaries, the date of execution, and a brief legal description of any trust-held immovable property. Unless the extract recites any modification or restriction of the trustee's powers, the trustee has all powers and duties granted under the Louisiana Trust Code. A clerk-certified copy of the trust instrument or extract may also be recorded.",
+  "faq": [
+   {
+    "q": "Does Louisiana have a certificate-of-trust statute?",
+    "a": "No. Louisiana has not adopted the Uniform Trust Code and does not have a certificate-of-trust statute. Instead, Louisiana uses the extract of trust recording mechanism under RS 9:2092, which is a civil-law property recording tool designed to affect third-party rights in immovable property. The extract is not a certification of trust in the UTC sense but a remedial instrument applied retroactively to substantially compliant extracts."
+   },
+   {
+    "q": "What must a Louisiana extract of trust contain?",
+    "a": "Under RS 9:2092(B)(1), the extract must be executed by either the settlor or the trustee and must include: the name of the trust if any, a statement as to whether the trust is revocable or irrevocable, the name of each settlor, the name of each trustee and the name or other description of the beneficiary or beneficiaries, the date of execution of the trust, and if the trust instrument contains a transfer of immovable property, a brief legal description of the property."
+   },
+   {
+    "q": "Can a third party request the complete trust instrument after receiving an extract in Louisiana?",
+    "a": "Louisiana's extract of trust is a recording mechanism, not a certification that confers reliance protections comparable to UTC states. The provisions are remedial and applied retroactively to substantially compliant extracts. For foreign trusts with Louisiana immovable property, RS 9:2262.2 requires filing the trust instrument, extract, or certified copy in the parish where the property is located. Third parties dealing with trust property should consult Louisiana's civil law recording framework rather than relying on a certification-of-trust statute."
+   },
+   {
+    "q": "How are trusts created in Louisiana given its civil law system?",
+    "a": "Under RS 9:1752, an inter vivos trust in Louisiana may be created only by authentic act (a notarized act before a notary and two witnesses in the Louisiana civil law tradition) or by an act under private signature executed in the presence of two witnesses and duly acknowledged by the settlor or by the affidavit of one of the attesting witnesses. A notary is required for an authentic act. Testamentary trusts must comply with Louisiana testamentary formalities, including holographic will or olographic testament requirements."
+   }
+  ],
+  "common_mistakes": "The most common error is treating Louisiana as if it has a UTC-style certification of trust statute. Louisiana does not. Another error is omitting the brief legal description of immovable property from the extract when the trust holds real estate, which RS 9:2092(B)(1) requires for recordation. Failing to execute the extract with the proper civil-law formalities (authentic act with notary and two witnesses, or private signature with two witnesses and acknowledgment) also renders the extract ineffective for its remedial recordation purpose. Practitioners should also remember that Louisiana's trust duration rules under RS 9:1831 limit most trusts to 50 years, which is far shorter than the perpetuities periods in UTC states.",
+  "state_notes": "Louisiana is the only U.S. state with a civil law system derived from French and Spanish law, making its trust law fundamentally different from all other states. The trust concept was introduced by statute in 1952 and is purely statutory, not common law. Louisiana uses the term settlor and usufruct, a civil law property concept where one person has use of property owned by another. The extract of trust recording system under RS 9:2092 is unique to Louisiana's civil law property recording traditions. Louisiana retains forced heirship under Civil Code Arts. 1493-1494, requiring that a portion of a decedent's estate go to children under age 24 or children of any age with disabilities, which constrains trust planning. Trust terms are limited under RS 9:1831, with most non-charitable purpose trusts capped at 50 years."
+ }
+}

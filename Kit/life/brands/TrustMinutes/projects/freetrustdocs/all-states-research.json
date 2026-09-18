@@ -52,7 +52,8 @@
         "verified_as_of": "2026-09-17",
         "human_legal_reviewed": false,
         "evidence": "curl HTTP 200 (168 KB HTML). Page text: '18100.5. (a) The trustee may present a certification of trust to any person in lieu of providing a copy of the trust instrument to establish the existence or terms of the trust.' Under DIVISION 9 TRUST LAW > PART 6 RIGHTS OF THIRD PERSONS > CHAPTER 2 Protection of Third Persons."
-      }
+      },
+      "cot_note": "Probate Code Division 9 (15000-19530) governs independent trusts; structure verified 2026-09-18"
     },
     {
       "state": "Texas",
@@ -665,7 +666,8 @@
         "verified_as_of": "2026-09-17",
         "human_legal_reviewed": false,
         "evidence": "curl HTTP 200 (26.6 KB HTML). Title 'Utah Code Section 75B-2-1013'; current-version fragment file C75B-2-S1013_2025050720250507.html (HTTP 200) and official PDF https://le.utah.gov/xcode/Title75B/Chapter2/C75B-2-S1013_2025050720250507.pdf (HTTP 200, application/pdf) both contain '75B-2-1013 Certification of trust.' with full subsections (1)-(4)."
-      }
+      },
+      "cot_note": "Utah Uniform Trust Code certification statute: Utah Code 75-7-1013 (verified 2026-09-17)"
     },
     {
       "state": "Vermont",

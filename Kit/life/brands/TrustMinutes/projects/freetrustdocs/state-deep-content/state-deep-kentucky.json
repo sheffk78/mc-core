@@ -1,0 +1,27 @@
+{
+ "state": "Kentucky",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certification of trust to a Kentucky bank or title company, the institution checks the certificate against the requirements of KRS 386B.10-120: that it identifies the trust and its execution date, the settlor, the currently acting trustees and their powers, whether the trust is revocable and who holds the power to revoke, how multiple trustees sign, and how title is taken. The statute's purpose is to let institutions rely on the certificate without receiving the entire trust instrument, which keeps the dispositive and distribution terms private. If the certificate is incomplete, the institution may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction, or both. The District Court has exclusive jurisdiction over matters under this section.",
+  "faq": [
+   {
+    "q": "Does Kentucky require a certification of trust to be notarized?",
+    "a": "No. Kentucky does not require a notary or witnesses for a trust under the Kentucky Uniform Trust Code. The trust is created when the settlor has capacity, indicates intention to create the trust, there is a definite beneficiary, the trustee has duties, and the same person is not sole trustee and sole beneficiary. Notarization is recommended for practical purposes such as bank acceptance and recording but is not a statutory requirement for trust validity."
+   },
+   {
+    "q": "What must a Kentucky certification of trust contain?",
+    "a": "KRS 386B.10-120 lists the required contents: existence of the trust and the trust date, identity of the settlor, address of the currently acting trustee, powers of the trustee, revocability or irrevocability and the identity of the person holding a power to revoke, authority of cotrustees and whether all or less than all are required, and the manner of taking title to trust property. The certificate must also state that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect."
+   },
+   {
+    "q": "Can a bank demand the entire trust after I present a certificate in Kentucky?",
+    "a": "Under KRS 386B.10-120, a person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. Good-faith reliance allows enforcement against trust property. Bad-faith demands for the full trust instrument may result in damages. A recipient may also require the trustee to furnish copies of excerpts from the original trust instrument and later amendments that designate the trustee and confer powers for the pending transaction."
+   },
+   {
+    "q": "Is a certification of trust the same as the full trust agreement in Kentucky?",
+    "a": "No. The certification is a short, signed declaration summarizing the information KRS 386B.10-120 requires, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certificate need not contain dispositive terms and may include excerpts designating the trustee and succession documents. A certificate omitting any required content does not conform to the statute."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect falls short of KRS 386B.10-120's required contents. So does one that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by fewer than all currently acting trustees when the statute requires all, also fails. In each case the institution may require the full trust instrument, and a bad-faith demand may result in damages under the statute.",
+  "state_notes": "Kentucky adopted the Uniform Trust Code relatively recently through KRS Chapter 386B, enacted by 2014 Ky. Acts ch. 25 and effective July 15, 2014. The certification of trust statute at KRS 386B.10-120 follows the UTC model closely, requiring a list of specified contents and providing reliance protections for third parties. Kentucky is notable for requiring District Court to have exclusive jurisdiction over certification of trust matters under this section. The state's business trust provisions are governed by KRS 386.370-386.440, which define business trusts and provide for their formation, operation, and governance. Kentucky repealed its common law rule against perpetuities in 2010 and replaced it with a 360-year permissible period of power of alienation under KRS 381.224, making it a moderately favorable dynasty trust jurisdiction."
+ }
+}

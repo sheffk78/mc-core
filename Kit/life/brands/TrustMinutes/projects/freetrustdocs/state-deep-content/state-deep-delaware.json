@@ -1,0 +1,27 @@
+{
+  "state": "Delaware",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "When a trustee presents a certification of trust in Delaware, the recipient checks the certificate against 12 Del. C. ÃÂ§3811. Delaware does not have a UTC-based certification of trust statute for private trusts. Instead, ÃÂ§3811 governs certificates of trust for Delaware statutory trusts (business trusts). Under ÃÂ§3811(a), a certificate of trust must be executed by all of the trustees of the statutory trust and must state: the name of the statutory trust, that the governing instrument has been duly executed in accordance with the Delaware Statutory Trust Act, the name and address of each trustee, the powers of the trustees, the manner in which trustees are to sign or otherwise authenticate instruments, and whether all or fewer than all trustees are required to exercise the powers of the trustees The statute expressly provides that a certification need not contain the dispositive terms of a trust.",
+    "faq": [
+      {
+        "q": "Who signs a certificate of trust in Delaware?",
+        "a": "Under 12 Del. C. ÃÂ§3811(a), a certificate of trust for a Delaware statutory trust must be executed by all of the trustees of the statutory trust. Each trustee must sign or otherwise authenticate the certificate. Trustees who execute certificates are deemed to swear or affirm, subject to penalties for perjury, that the facts stated are true. For private trusts, Delaware relies on common law principles and the trust instrument's own provisions for certification."
+      },
+      {
+        "q": "What must a Delaware certificate of trust contain?",
+        "a": "12 Del. C. ÃÂ§3811(a) lists the required contents for statutory trust certificates: the name of the statutory trust, a statement that the governing instrument has been duly executed in accordance with the Delaware Statutory Trust Act, the name and address of each trustee, the powers of the trustees, the manner in which trustees are to sign or otherwise authenticate instruments, and whether all or fewer than all trustees are required to exercise the powers of the trustees."
+      },
+      {
+        "q": "Can a bank in Delaware require the complete trust after receiving a certificate?",
+        "a": "Under 12 Del. C. ÃÂ§3811, a person dealing with a trustee in good faith reliance on a certificate may enforce the transaction as if the representations were correct. The statute provides that trustees who execute certificates are deemed to swear or affirm, subject to penalties for perjury, that the facts stated are true. For private trusts, Delaware relies on common law principles and the trust instrument's own provisions for certification."
+      },
+      {
+        "q": "Is a certificate of trust the same as a trust agreement in Delaware?",
+        "a": "No. A certificate of trust under 12 Del. C. ÃÂ§3811 is a short declaration summarizing the required contents for statutory trusts, while the trust agreement is the full governing instrument containing the dispositive and distribution terms. The statute expressly provides that a certification need not contain the dispositive terms of a trust. For private trusts, Delaware relies on common law principles and the trust instrument's own provisions for certification."
+      }
+    ],
+    "common_mistakes": "A common error is treating Delaware's statutory trust certificate requirements as applicable to private trusts. The certificate of trust under 12 Del. C. ÃÂ§3811 applies only to Delaware statutory trusts (business trusts). For private trusts, Delaware relies on common law principles and the trust instrument's own provisions, and there is no statutory certification requirement. Another common error is omitting the statement that the governing instrument has been duly executed in accordance with the Delaware Statutory Trust Act. A certificate that omits the name or address of any trustee, or fails to state whether all or fewer than all trustees are required to exercise powers, also falls short of ÃÂ§3811(a).",
+    "state_notes": "Delaware's trust law is among the most favorable in the United States. The Delaware Statutory Trust Act, 12 Del. C. ÃÂ§ÃÂ§3570-3576, provides a comprehensive framework for statutory trusts including business trusts. Delaware has a well-established trust industry with the Delaware Court of Chancery providing expert judicial oversight. The state imposes no state income tax on trusts that are not domiciled in Delaware, and the trust statute provides strong privacy protections. Delaware allows directed trusts under ÃÂ§3313 and ÃÂ§3313A, trust protectors, and broad decanting powers under ÃÂ§3528. The state also permits nonjudicial settlement agreements under ÃÂ§3338. Delaware statutory trusts must file a certificate of trust with the Secretary of State under ÃÂ§3810 The state's trust industry benefits from the Delaware Court of Chancery, which provides expert judicial oversight and a well-developed body of trust case law."
+  }
+}

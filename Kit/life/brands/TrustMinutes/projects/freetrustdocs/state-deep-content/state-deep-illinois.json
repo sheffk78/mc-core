@@ -1,0 +1,27 @@
+{
+ "state": "Illinois",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certificate of trust in Illinois, the recipient checks the certificate against 760 ILCS 3/1013, the Illinois Trust and Trustees Act. Illinois is a non-UTC state and does not have a statutory certification of trust form modeled on the Uniform Trust Code. Instead, Illinois courts have recognized the certificate of trust as a valid form of proof under the general principles of the Trust and Trustees Act. A trustee may present a written statement confirming the trust's existence, the identity of the trustee, and the trustee's powers. The certificate serves to establish the trustee's authority to act in the pending transaction without disclosing the trust's dispositive terms. Illinois courts have upheld the use of such certificates in real estate transactions and banking contexts, and the certificate provides a practical alternative to producing the full trust instrument in commercial dealings.",
+  "faq": [
+   {
+    "q": "Does Illinois have a statutory form for a certificate of trust?",
+    "a": "No. Illinois has not adopted the Uniform Trust Code, and 760 ILCS 3/1013 does not prescribe a statutory form for a certificate of trust. Illinois courts have recognized certificates of trust as valid proof of a trustee's authority under the general principles of the Trust and Trustees Act. The certificate must be in writing and signed by the trustee. Third parties, such as banks and title companies, may require the certificate to be acknowledged before a notary as a condition of acceptance under the Act."
+   },
+   {
+    "q": "What must an Illinois certificate of trust contain?",
+    "a": "Under 760 ILCS 3/1013, there is no prescribed list of required contents for a certificate of trust. Illinois courts have generally accepted a certificate that identifies the trust, names the trustee, and states the trustee's authority to act in the pending transaction. The certificate should be in writing and signed by the trustee. Because Illinois is not a UTC state, the certificate need not follow the Uniform Trust Code's required contents under UTC 1013. The certificate must provide sufficient assurance of the trustee's authority for the pending transaction."
+   },
+   {
+    "q": "Can a bank ask for the entire trust after I present a certificate?",
+    "a": "Under 760 ILCS 3/1013, a bank or other institution may request the complete trust instrument if the certificate does not provide sufficient assurance of the trustee's authority. Illinois courts have not adopted the UTC's anti-bad-faith provisions for requesting the full trust. A third party may rely on the certificate in good faith, but the statute does not impose liability on a person who requests the complete trust instrument to verify the trustee's authority under the Trust and Trustees Act."
+   },
+   {
+    "q": "Is a certificate of trust the same as a trust agreement in Illinois?",
+    "a": "No. The certificate is a short, signed statement confirming the trust's existence and the trustee's authority under 760 ILCS 3/1013, while the trust agreement is the full instrument containing the dispositive and distribution terms. Illinois courts have recognized the certificate as a valid form of proof without requiring the full trust instrument. A certificate omitting the trustee's identity or authority does not provide sufficient assurance under the Trust and Trustees Act."
+   }
+  ],
+  "common_mistakes": "A common mistake is assuming Illinois follows the Uniform Trust Code's certification requirements. Illinois has not adopted the UTC, and 760 ILCS 3/1013 does not prescribe a statutory form or required contents for a certificate of trust. Another mistake is presenting a certificate that is unsigned or unsigned by the currently acting trustee, which Illinois courts may not accept as sufficient proof of authority. A third mistake is failing to include the trust's identification and the trustee's powers, which can lead a bank or title company to request the full trust instrument. A fourth mistake is assuming the certificate must contain distribution terms, which the Illinois Trust and Trustees Act does not require.",
+  "state_notes": "Illinois has NOT adopted the Uniform Trust Code and governs trusts under 760 ILCS 3/1013, the Illinois Trust and Trustees Act. Illinois is a non-UTC state, and its certification of trust framework relies on general trust law principles rather than a statutory certification form. Illinois courts have recognized the certificate of trust as a valid form of proof of a trustee's authority. The Trust and Trustees Act provides the substantive framework for trust administration, and certificates of trust are evaluated under general principles of trust law rather than UTC 1013. Illinois does not have a specific statutory business trust act, and business trusts are treated under common law principles supplemented by the Illinois Trust and Trustees Act in the state."
+ }
+}

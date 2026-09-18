@@ -1,0 +1,27 @@
+{
+ "state": "South Dakota",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under SDCL 55-4-51, a trustee, settlor, grantor, or trustor may present a certificate of trust to a third party in lieu of the full trust instrument. The certificate must identify the trust by its current name and any previous name, state the date the trust instrument or will was executed, name the settlor, list each original trustee and the name and address of each trustee currently empowered to act, describe the applicable trustee powers including the ability to sell, convey, pledge, mortgage, lease, or transfer title, state whether the trust is irrevocable or revocable and whether it has been revoked, note any court supervision and restrictions, describe property to be conveyed if applicable, and include a statement that the trust has not been modified or amended in a manner causing the representations to be incorrect. The signature must be acknowledged or verified under oath before a notary public.",
+  "faq": [
+   {
+    "q": "Does South Dakota require a certificate of trust to be notarized?",
+    "a": "Yes. SDCL 55-4-51 requires the certificate to be signed by a trustee, settlor, grantor, or trustor and acknowledged or verified under oath before a notary public or other official authorized to administer oaths. The notary requirement applies to the certification itself, separate from any recording obligation for real property transactions where the certificate may be recorded in the office of the register of deeds."
+   },
+   {
+    "q": "What must a South Dakota certificate of trust contain?",
+    "a": "SDCL 55-4-51 requires eight categories of information: trust existence and execution date, settlor name, original and current trustees with addresses, applicable trustee powers including the number required to act, irrevocability or revocation status, court supervision details, property description if applicable, and a statement that the trust has not been modified in a manner causing representations to be incorrect. Dispositive terms need not be included."
+   },
+   {
+    "q": "Can a third party request the complete trust after receiving a certificate?",
+    "a": "Under SDCL 55-4-51, a recipient may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction. The statute does not authorize a blanket request for the complete instrument when the certificate is incomplete, and the trustee may provide the certificate alone without furnishing the full trust agreement."
+   },
+   {
+    "q": "Is a certificate of trust the same as a trust declaration in South Dakota?",
+    "a": "No. A certificate of trust under SDCL 55-4-51 is a short signed declaration summarizing the trust's existence, trustees, powers, and limitations. A trust declaration or instrument contains the full dispositive and distribution terms. The statute expressly provides that the certificate need not contain dispositive terms and may include excerpts designating the trustee and succession documents for the trust agreement itself."
+   }
+  ],
+  "common_mistakes": "A certificate that omits the statement that the trust has not been modified or amended in a manner causing the representations to be incorrect falls short of SDCL 55-4-51. Leaving out the revocability statement and the identity of the person holding the power to revoke prevents a title company from confirming who must sign a deed. A certificate describing trustee powers that do not match the pending transaction, or signed by fewer than all currently acting trustees, also fails the statute. In each case the recipient may require the full trust instrument, and an unnecessary request can expose the requester to liability.",
+  "state_notes": "South Dakota is a premier trust jurisdiction with no state income tax, no state estate tax, and no inheritance tax. The state abolished the rule against perpetuities, allowing true perpetual dynasty trusts. SDCL 55-4-51 governs certification of trust, while SDCL Title 47, Chapter 14A provides a comprehensive business trust framework under the South Dakota Business Trust Act. South Dakota was among the first states to allow perpetual trusts and continues to refine its trust legislation through the Governor's Trust Task Force. Directed trusts are authorized under SDCL 55-1B, and the state permits trust decanting and the use of trust protectors. The state's favorable tax environment and strong asset protection laws make it a leading choice for domestic asset protection planning."
+ }
+}

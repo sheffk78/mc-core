@@ -1,0 +1,27 @@
+{
+ "state": "Hawaii",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certificate of trust in Hawaii, the recipient checks the certificate against HRS 554D-1013, which is Hawaii's adoption of Uniform Trust Code 1013. The statute permits the trustee to furnish a certification of trust instead of a copy of the trust instrument. The certification must contain: that the trust exists, the date the trust instrument was executed, and the name of the trust, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust, the authority of co-trustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee, and if an action is to be undertaken through an agent, that delegation of the action to an agent is not prohibited by the trust instrument.",
+  "faq": [
+   {
+    "q": "Does Hawaii require a certificate of trust to be notarized?",
+    "a": "HRS 554D-1013 does not specifically require notarization for the certificate itself. The statute permits the certification to be signed or otherwise authenticated by any trustee. A third party, such as a bank or title company, may require an acknowledgment before a notary as a condition of accepting the certificate under the statute. No witnesses or recording are specifically required for the certification under HRS Chapter 554D."
+   },
+   {
+    "q": "What must a Hawaii certificate of trust contain?",
+    "a": "Under HRS 554D-1013, the certification must contain: that the trust exists, the date of execution, the identity of the settlor, the identity and address of the trustee, the powers of the trustee, the revocability or irrevocability and the identity of any person holding a power to revoke, the authority of co-trustees and whether all or less than all are required. The certification must state the trust has not been revoked, modified, or amended in any manner causing the representations to be incorrect."
+   },
+   {
+    "q": "Can a bank ask for the entire trust after I present a certificate?",
+    "a": "Under HRS 554D-1013, a person who asks for the complete trust documents in addition to a valid certificate, without cause, may be liable for damages. The statute's reliance rules protect third parties who accept a conforming certificate in good faith. Where required contents are incomplete, the institution may ask for the full instrument. The statute expressly provides that a certification need not contain the dispositive terms of a trust."
+   },
+   {
+    "q": "Is a certificate of trust the same as a trust agreement in Hawaii?",
+    "a": "No. The certificate is a short, signed declaration summarizing the information HRS 554D-1013 requires, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certification need not contain distribution terms. A certificate omitting any required content, such as the settlor identity or trustee powers, does not conform to the statute's requirements under HRS Chapter 554D."
+   }
+  ],
+  "common_mistakes": "A certificate that omits the statement that the trust has not been revoked, modified, or amended in any manner causing the representations to be incorrect falls short of HRS 554D-1013's requirements. So does one that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by fewer than all currently acting trustees when the statute requires all, also fails the statute under HRS Chapter 554D.",
+  "state_notes": "Hawaii adopted the Uniform Trust Code through Act 32 of the Session Laws of Hawaii 2021, effective January 1, 2022, making Hawaii's trust code one of the most modern in the nation. The certification of trust is governed by HRS 554D-1013, which is the UTC 1013 adoption. Hawaii treats a trust as a property relationship rather than a legal entity, and common law business trusts operate in the state without separate statutory status. Hawaii does not have a specific Massachusetts or business trust statute; business trusts are treated under common law principles and general trust law under HRS Chapter 554D. The statute's two-sided design lets institutions rely on certificates in good faith while a person who asks for the complete trust documents without cause may be liable for damages."
+ }
+}

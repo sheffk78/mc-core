@@ -1,0 +1,27 @@
+{
+ "state": "Texas",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "Under Tex. Prop. Code § 114.086, a certificate of trust is a written representation by a trustee that provides certain identified information about the trust and the trustee’s powers. When a bank or title company is asked to rely on the certificate instead of the full trust instrument, it may accept the certification at face value as long as the information appears complete and consistent with the transaction at hand. The statute permits the certification to omit dispositive provisions and the full terms of the trust, keeping the document concise while still giving the institution the core details it needs to proceed. If the certificate is missing information the institution requires ,  for example, the identity of a co-trustee or the scope of trustee powers relevant to the pending transaction ,  the institution may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction.",
+  "faq": [
+   {
+    "q": "What must a Texas certificate of trust contain?",
+    "a": "Under Tex. Prop. Code § 114.086, the certification must include the date of execution of the trust instrument, the identity of the grantor or settlor, the name and address of the trustee, the trustee’s powers, whether the trust is revocable and who holds the power to revoke, the authority of co-trustees and how title should be taken, and a statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations contained in the certification to be incorrect."
+   },
+   {
+    "q": "Does Texas require a specific statutory form for the certificate?",
+    "a": "No. Texas does not prescribe a mandatory statutory form for the certificate of trust. The statute specifies a required list of contents that the certification must include, but the document itself may be drafted in any format that conveys the required information. The trust instrument may also provide for a form of certification, and under § 114.086 the trustee’s certification carries the same weight regardless of format."
+   },
+   {
+    "q": "Is a notary or witness required for the certificate?",
+    "a": "The Texas statute does not explicitly require a notary or witnesses for the certification itself. However, a third party such as a bank or title company may require a notarized acknowledgment before relying on the certificate. In practice, certificates are typically notarized to satisfy institutional requirements, even though the statute does not mandate it. The lack of a statutory notary requirement means the certification can be executed without one, but institutions may impose their own conditions."
+   },
+   {
+    "q": "Can a third party rely on the certificate without reading the full trust?",
+    "a": "Yes. Under the statute, a third party may rely on the certification of trust without examining the full instrument and is not liable for relying on the certification in good faith. The protection applies as long as the third party has no actual knowledge of any error in the certification. Beneficiaries, by contrast, remain entitled to see the full trust provisions."
+   }
+  ],
+  "common_mistakes": "A certificate of trust fails when it omits required statutory content. One common error is leaving out the revocability statement or the identity of the person holding the power to revoke, which leaves the institution unable to determine whether the trustee’s authority is limited. Another is failing to include one or more powers of the trustee or a statement that the trust powers include at least all the powers granted a trustee by Subchapter A, Chapter 113 ,  for example, certifying general trustee powers when the transaction requires specific authority such as the power to sell real property. Because Texas reenacted common-law trust rules alongside the Property Code, a certificate that cites only statutory sections can omit duties a Texas institution still expects to see addressed.",
+  "state_notes": "Texas has not adopted the Uniform Trust Code. Certification of trust is governed by the Texas Trust Code, specifically Property Code Title 9, Subtitle B (Tex. Prop. Code § 114.086), not the Estates Code. Business trusts are explicitly excluded from the Texas Trust Code by Tex. Prop. Code § 111.003(3) and are governed by common law or other statutes rather than the statutory trust provisions. As a community property state with no state income tax, Texas offers estate planning advantages for married couples that interact with trust structures in ways unique to its jurisdiction. Spendthrift trusts are recognized under common law, and strong homestead protections provide additional layers of asset protection that do not depend on the trust instrument alone."
+ }
+}

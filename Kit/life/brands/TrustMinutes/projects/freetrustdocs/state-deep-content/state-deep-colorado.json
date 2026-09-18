@@ -1,0 +1,27 @@
+{
+  "state": "Colorado",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "When a trustee presents a certification of trust in Colorado, the recipient checks the certificate against Colo. Rev. Stat. ÃÂÃÂÃÂÃÂ§15-5-1013. The statute permits a trustee to furnish a certification instead of the full trust instrument, provided the certificate states that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable or irrevocable and the identity of any person holding a power to revoke, the authority of cotrustees to sign and whether all or fewer than all are required, and the name in which title to trust property may be taken. The certification must also state that the trust has not been revoked, modified, or amended in any manner that would make the representations incorrect.",
+    "faq": [
+      {
+        "q": "Who signs a certificate of trust in Colorado?",
+        "a": "Under Colo. Rev. Stat. ÃÂÃÂÃÂÃÂ§15-5-1013(2), a certification of trust may be signed or otherwise authenticated by any trustee. The statute does not require all cotrustees to sign, though the certificate must identify the currently acting trustee and state the trustee's powers. The certificate must also state that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect."
+      },
+      {
+        "q": "What must a Colorado certificate of trust contain?",
+        "a": "Colo. Rev. Stat. ÃÂÃÂÃÂÃÂ§15-5-1013(1) lists the required contents: a statement that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable or irrevocable and the identity of any person holding a power to revoke, the authority of cotrustees to sign and whether all or fewer than all are required, and the name in which title to trust property may be taken."
+      },
+      {
+        "q": "Can a bank in Colorado require the complete trust after receiving a certificate?",
+        "a": "Under Colo. Rev. Stat. ÃÂÃÂÃÂÃÂ§15-5-1013, a recipient acting in good faith may require the trustee to furnish copies of excerpts from the trust instrument that designate the trustee and confer power to act in the pending transaction. The statute's reliance provisions protect persons who act in good faith on the basis of a conforming certificate The statute's reliance provisions protect persons who act in good faith on the basis of a conforming certificate and may enforce the transaction against trust property."
+      },
+      {
+        "q": "Is a certificate of trust the same as a trust agreement in Colorado?",
+        "a": "No. A certification of trust under Colo. Rev. Stat. ÃÂÃÂÃÂÃÂ§15-5-1013 is a short declaration summarizing the required contents, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certification need not contain the dispositive terms of a trust. A certificate that omits any required content does not conform to the statute."
+      }
+    ],
+    "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would make the representations incorrect falls short of ÃÂÃÂÃÂÃÂ§15-5-1013(3)'s required contents. So does a certificate that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by fewer than all cotrustees when the statute requires it, also fails the statute. Omitting the name in which title to trust property may be taken is another common error.",
+    "state_notes": "Colorado's certification of trust statute, Colo. Rev. Stat. ÃÂÃÂÃÂÃÂ§15-5-1013, is part of the Colorado Uniform Trust Code enacted by SB 18-180, effective January 1, 2019. Colorado is one of the more recent UTC adopters, and its trust code incorporates modern provisions including trust decanting, nonjudicial settlement agreements, alternative dispute resolution, virtual representation, and directed trusts. Colorado has abolished the common law rule against perpetuities for trusts created after July 1, 2006, allowing perpetual dynasty trusts. Colorado has no state estate or inheritance tax and a flat, low income tax rate. The Colorado UTC explicitly excludes business trusts from its scope, treating them as separate entities under common law Colorado has abolished the common law rule against perpetuities for trusts created after July 1, 2006, allowing perpetual dynasty trusts. The state's trust code is modern and comprehensive, providing a favorable environment for trust administration and planning."
+  }
+}

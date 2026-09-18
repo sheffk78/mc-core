@@ -1,0 +1,27 @@
+{
+ "state": "Michigan",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certificate of trust to a Michigan bank or title company, the institution checks the certificate against the requirements of MCL 700.7913: that it identifies the trust and its execution date, the settlor, the currently acting trustees and their powers, whether the trust is revocable and who holds the power to revoke, how multiple trustees sign, and how title is taken. The statute's purpose is to let institutions rely on the certificate without receiving the entire trust instrument, which keeps the dispositive and distribution terms private. If the certificate is incomplete, the institution may require the trustee to furnish excerpts from the original trust instrument and later amendments that designate the trustee and confer the power to act in the pending transaction, or both for transactions.",
+  "faq": [
+   {
+    "q": "Does Michigan require a certificate of trust to be notarized?",
+    "a": "Michigan's certificate of trust must be in the form of an affidavit under MCL 700.7913(2), which effectively requires it to be sworn or acknowledged. This is a unique requirement among the states. Notarization is recommended for practical purposes such as bank acceptance and real estate recording. For trust instruments, Michigan does not impose a general witness or notarization requirement for trust validity under MCL 700.7401-700.7402."
+   },
+   {
+    "q": "What must a Michigan certificate of trust contain?",
+    "a": "Under MCL 700.7913, a certificate of trust must include: the name of the trust, date of the trust, and date of each operative trust instrument; name and address of each current trustee; powers of the trustee relating to the purposes for which the certificate is being offered; revocability or irrevocability and the identity of any person holding a power to revoke the trust; and authority of cotrustees to sign or authenticate and whether all or less than all are required."
+   },
+   {
+    "q": "Who can sign a Michigan certificate of trust?",
+    "a": "Under MCL 700.7913, the certificate of trust may be signed or authenticated by the settlor, any trustee, or an attorney for the settlor or trustee. This is notably broader than the UTC model, which typically limits signing authority to trustees only. The affidavit requirement means the signer must swear or acknowledge the certificate before an official authorized to administer oaths."
+   },
+   {
+    "q": "Can a bank demand the entire trust after I present a certificate in Michigan?",
+    "a": "Under MCL 700.7913, a person acting in reliance without knowledge of incorrectness is not liable and may assume the facts. Good-faith reliance allows enforcement against trust property. Bad-faith demands for the full trust instrument may result in damages. A recipient may also require the trustee to furnish copies of excerpts from the original trust instrument and later amendments that designate the trustee and confer powers for the pending transaction."
+   }
+  ],
+  "common_mistakes": "A certification that omits the statement that the trust has not been revoked, modified, or amended in any manner that would cause the representations to be incorrect falls short of MCL 700.7913's required contents. So does one that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate that is not in the form of an affidavit fails the unique Michigan requirement under MCL 700.7913(2). A certificate signed only by a trustee when the settlor or an attorney could also sign is not incorrect, but omitting the affidavit form is a fatal error.",
+  "state_notes": "Michigan's certificate of trust statute at MCL 700.7913 is unique in requiring the certificate to be in the form of an affidavit, the only state among these with an explicit affidavit requirement. Michigan also uniquely allows the certificate of trust to be signed by the settlor or an attorney for the settlor or trustee, not just by a trustee. The Michigan Trust Code (MTC) at MCL Chapter 700, Article VII, effective April 1, 2010, is described as a uniquely Michigan document drawing from both the UTC and existing Michigan law. Michigan's 360-year trust duration for personal property under the Personal Property in Trust Act of 2008 is one of the longer statutory periods. Michigan has no dedicated business trust statute, relying entirely on common law and the general trust code."
+ }
+}

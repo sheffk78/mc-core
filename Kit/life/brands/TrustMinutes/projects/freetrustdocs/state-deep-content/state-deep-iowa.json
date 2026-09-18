@@ -1,0 +1,27 @@
+{
+ "state": "Iowa",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "When a trustee presents a certificate of trust in Iowa, the recipient checks the certificate against Iowa Code 633A.1013, which is Iowa's adoption of Uniform Trust Code 1013. The statute permits the trustee to furnish a certification of trust instead of a copy of the trust instrument to establish the existence or terms of the trust. The certification must be signed by the trustee and may contain: that the trust exists, the date of execution of the trust instrument, the identity of the settlor, the identity and address of the trustee, the powers of the trustee, the revocability or irrevocability of the trust and the identity of any person holding a power to revoke the trust, the authority of co-trustees, and the manner in which title to trust assets is held.",
+  "faq": [
+   {
+    "q": "Does Iowa require a certificate of trust to be notarized?",
+    "a": "Iowa Code 633A.1013 does not specifically require notarization for the certificate itself. The statute requires the certification to be signed by the trustee. A third party, such as a bank or title company, may require an acknowledgment before a notary as a condition of accepting the certificate under the statute. No witnesses are required by statute, and recording the certificate with the county recorder is not mandated by Iowa law."
+   },
+   {
+    "q": "What must an Iowa certificate of trust contain?",
+    "a": "Under Iowa Code 633A.1013, the certification must be signed by the trustee and may contain: that the trust exists and the date of execution, the identity of the settlor, the identity and address of the trustee, the powers of the trustee, the revocability or irrevocability and the identity of any person holding a power to revoke, the authority of co-trustees, and the manner in which title to trust assets is held. The certification must state the trust has not been revoked or modified causing the representations to be incorrect."
+   },
+   {
+    "q": "Can a bank ask for the entire trust after I present a certificate?",
+    "a": "Under Iowa Code 633A.1013, a person who asks for the complete trust documents in addition to a valid certificate, without cause, may be liable for damages and attorney's fees. The statute's reliance rules protect third parties who accept a conforming certificate in good faith. Where required contents are incomplete, the institution may ask for the full instrument. Iowa's certification provisions provide the same protections as the Uniform Trust Code 1013."
+   },
+   {
+    "q": "Is a certificate of trust the same as a trust agreement in Iowa?",
+    "a": "No. The certificate is a short, signed declaration summarizing the information Iowa Code 633A.1013 requires, while the trust agreement is the full instrument containing the dispositive and distribution terms. The statute expressly provides that a certification need not contain the dispositive provisions of the trust. A certificate omitting any required content, such as the settlor identity or trustee powers, does not conform to the statute's requirements under Iowa's Uniform Trusts Code."
+   }
+  ],
+  "common_mistakes": "A certificate that omits the statement that the trust has not been revoked or modified in a manner causing the representations to be incorrect falls short of Iowa Code 633A.1013's requirements. So does one that leaves out the revocability statement and the identity of the person holding the power to revoke, because a title company handling a sale cannot confirm who must sign a deed without it. A certificate describing trustee powers that do not match the pending transaction, or signed by a trustee who is no longer acting, also fails the statute. Another common error is failing to include the trust's identifying number or the manner in which title is held.",
+  "state_notes": "Iowa has adopted the Uniform Trust Code as Iowa Code Chapter 633A, the Iowa Uniform Trusts Code. The certification of trust is governed by Iowa Code 633A.1013, which is the UTC 1013 adoption. Iowa treats a trust as a property relationship rather than a legal entity, and common law business trusts operate in the state without separate statutory status. Iowa has not enacted a separate business trust statute. The statute's two-sided design lets institutions rely on certificates in good faith while a person who asks for the complete trust documents without cause may be liable for damages and attorney's fees. Iowa's trust code provides the same reliance protections as the Uniform Trust Code for third parties accepting a conforming certificate."
+ }
+}

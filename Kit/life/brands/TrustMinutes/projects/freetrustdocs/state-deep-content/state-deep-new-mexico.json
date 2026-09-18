@@ -1,0 +1,27 @@
+{
+ "state": "New Mexico",
+ "document": "certificate-of-trust",
+ "blocks": {
+  "how_it_works": "New Mexico's certification of trust is governed by NMSA 46A-10-1013 under the New Mexico Uniform Trust Code (NMSA 1978, Chapter 46A, enacted 2003, effective July 1, 2003; recompiled 2007). The statute provides that instead of furnishing the trust instrument to a non-beneficiary, the trustee may furnish a certification of trust containing: that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the authority of co-trustees to sign or authenticate and whether all or less than all are required to exercise trustee powers; the trust's taxpayer identification number; the manner of taking title to trust property; and, if an action is to be undertaken through an agent, that delegation to an agent is not prohibited by the trust instrument.",
+  "faq": [
+   {
+    "q": "What is the ninth required element unique to New Mexico's certification of trust?",
+    "a": "Under NMSA 46A-10-1013, the certification of trust must include a statement that if an action is to be undertaken through an agent, delegation to an agent is not prohibited by the trust instrument. This ninth required element is not found in the standard UTC certification model and reflects New Mexico's concern with agent delegation authority in trust administration. The inclusion of this element ensures that the recipient is informed whether the trustee may delegate trust actions to an agent."
+   },
+   {
+    "q": "How does New Mexico's community property status affect trust planning?",
+    "a": "New Mexico is a community property state, which can provide significant tax basis advantages for married couples using community property trusts. When a married couple holds property as community property and places it in a trust, the trust can preserve the community property character for tax purposes. This can provide a step-up in basis at death for the entire community property interest, reducing capital gains tax exposure for the surviving spouse and beneficiaries."
+   },
+   {
+    "q": "Does New Mexico allow perpetual dynasty trusts?",
+    "a": "No. New Mexico has not abolished the Rule Against Perpetuities. Under NMSA 45-2-901 (Uniform Probate Code), the statutory rule against perpetuities requires interests to vest or terminate within 21 years after the death of an individual then alive. However, NMSA 45-2-904 provides exceptions for certain interests including property interests held in trust, which can provide some flexibility in dynasty trust planning."
+   },
+   {
+    "q": "Can a New Mexico trust be decanted to modify its terms?",
+    "a": "Yes. New Mexico adopted the Uniform Trust Decanting Act in 2017 (NMSA 46-12-101 through 46-12-129), which allows trustees to modify trust terms by appointing trust property to a new trust. The decanting provisions provide flexible trust modification tools without requiring court approval or beneficiary consent in many cases, making New Mexico a favorable jurisdiction for trust administration and modification. This provision reflects the state's approach to trust certification."
+   }
+  ],
+  "common_mistakes": "A common error is omitting the agent delegation declaration required by NMSA 46A-10-1013(9). This ninth element is unique to New Mexico and must state whether delegation to an agent is permitted by the trust instrument. Another mistake is assuming New Mexico allows perpetual dynasty trusts. The state retains the Rule Against Perpetuities under NMSA 45-2-901, which limits trust duration to 21 years after the death of an individual then alive. Failing to include the taxpayer identification number is another common error, since NMSA 46A-10-1013 requires it. A certification that does not include the statement that the trust has not been revoked or amended to make representations incorrect also falls short of the statute.",
+  "state_notes": "New Mexico's Uniform Trust Code is codified at NMSA 1978, Chapter 46A, enacted 2003 and recompiled 2007. The certification of trust statute at NMSA 46A-10-1013 includes a unique ninth required element regarding agent delegation not prohibited by the trust instrument. New Mexico is a community property state, which provides tax basis advantages for married couples using community property trusts. The state adopted the Uniform Trust Decanting Act in 2017, providing flexible trust modification tools. New Mexico does not have a DAPT statute and retains the Rule Against Perpetuities, limiting dynasty trust planning. The state imposes a state income tax on trust income for resident trusts but has no state estate or inheritance tax. New Mexico's trust code is well-integrated with its Uniform Probate Code, providing a cohesive estate planning framework."
+ }
+}

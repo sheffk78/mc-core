@@ -1,0 +1,27 @@
+{
+  "state": "Ohio",
+  "document": "certificate-of-trust",
+  "blocks": {
+    "how_it_works": "Under ORC Chapter 5810, a certification of trust may be presented in lieu of a copy of the trust instrument. The certification must contain: a statement that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; and the authority of cotrustees to sign or authenticate and whether all or less than all are required to exercise powers of the trustee. The certification must state that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect. Need not contain dispositive terms. Any trustee may sign. The certification does not affect the use of memorandum of trust under ORC Chapter 5301 for recording purposes with real property.",
+    "faq": [
+      {
+        "q": "Does Ohio require a certification of trust to be notarized?",
+        "a": "Ohio does not require notarization or witnesses for trust execution under the Ohio Trust Code at ORC Chapters 5801 through 5811. The certification of trust under ORC Chapter 5810 does not carry a specific notarization requirement. However, notarization is recommended for authenticity and to prevent challenges. For real property transfers into trust, deeds must be notarized and recorded. The trust instrument itself must be in writing and signed by the settlor."
+      },
+      {
+        "q": "What must an Ohio certification of trust contain?",
+        "a": "ORC Chapter 5810 requires the certification to state: that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; and the authority of cotrustees to sign or authenticate and whether all or less than all are required to exercise powers of the trustee."
+      },
+      {
+        "q": "Can a bank or title company require the complete trust instrument after receiving a certificate?",
+        "a": "Under the Ohio Trust Code, a person dealing with the trustee may rely on the certification of trust. The statute provides that any trustee may sign the certification. The certification does not affect the use of memorandum of trust under ORC Chapter 5301 for real property recording. A person acting in good faith who relies on the certification is protected."
+      },
+      {
+        "q": "How does Ohio handle business trusts and their certification?",
+        "a": "Ohio has a comprehensive statutory business trust framework at ORC Chapter 1746, effective March 18, 1983. A business trust is declared a permitted form of association and a separate unincorporated legal entity. The trust instrument must be filed with the Secretary of State before transacting business. Trustees have broad general powers. Business trusts can merge, consolidate, or sell assets under the statute."
+      }
+    ],
+    "common_mistakes": "A certification that omits the statement that the trust has not been revoked or modified in a manner making the representations incorrect does not satisfy ORC Chapter 5810. Failing to include the identity of the settlor is another common omission. A certificate that does not address whether all or less than all cotrustees are required to exercise powers leaves ambiguity about signing authority. For business trusts, failing to file the trust instrument with the Secretary of State under ORC Chapter 1746 before transacting business can create legal exposure. The certification must also not affect the use of memorandum of trust under ORC Chapter 5301, which serves a separate purpose for real property recording.",
+    "state_notes": "Ohio adopted the Ohio Trust Code at ORC Chapters 5801 through 5811, a modified UTC effective March 22, 2012 via Senate Bill 117. The certification of trust statute follows the UTC model. Ohio does not require witnesses or notarization for valid trust execution under the Ohio Trust Code. The state has a comprehensive statutory business trust framework at ORC Chapter 1746, one of the most comprehensive in the nation. Ohio allows dynasty trusts through ORC Section 2131.09(B), which permits opt-out of the rule against perpetuities if the trust instrument specifically states RAP does not apply and the trustee has unlimited power to sell all trust assets or terminate the entire trust. Ohio does not allow self-settled asset protection trusts. Ohio has no state estate tax. Ohio also recognizes a separate memorandum of trust concept under ORC Chapter 5301 distinct from certification of trust for real property transactions."
+  }
+}
