@@ -1,0 +1,27 @@
+{
+  "state": "Indiana",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Indiana is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. Indiana governs trusts under the Indiana Trust Code at Ind. Code tit. 30, art. 4, an independent framework originally enacted in 1971 and maintained separately rather than adopting the UTC. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. The certification of trust under Ind. Code § 30-4-4-5 allows any trustee to sign, and Indiana uniquely permits the certification to contain dispositive terms, giving more flexibility than the UTC standard. The code also includes a choice of law provision at IC 30-4-1-11 allowing the settlor to select governing law.",
+    "faq": [
+      {
+        "q": "Does an Indiana declaration of trust need to be notarized or witnessed?",
+        "a": "The Indiana Trust Code does not require witnesses or notarization for the certification of trust, which may be signed or authenticated by any trustee under Ind. Code § 30-4-4-5(b). No recording requirement is specified in the statute. For real property transfers into the trust, deeds carry their own formal requirements. Third parties acting in reliance without knowledge of incorrectness are protected, and good faith transactions are enforceable against trust property."
+      },
+      {
+        "q": "What goes in a certification of trust under Ind. Code § 30-4-4-5?",
+        "a": "The certification must contain: trust existence and execution date, settlor identity, trustee identity and address, trustee powers, revocability and who holds the power to revoke, co-trustee signing authority, and the manner of taking title. It must state the trust has not been revoked, modified, or amended in a way that would make the representations incorrect. Unlike the UTC, Indiana allows the certification to contain dispositive terms, and a recipient may require excerpts conferring transaction powers."
+      },
+      {
+        "q": "How long can an Indiana trust last?",
+        "a": "Indiana extended its Rule Against Perpetuities to 360 years effective July 1, 2019, for trusts created after that date, permitting dynasty trusts across multiple generations. The state pairs this with quiet trust provisions allowing beneficiaries to go uninformed for a specified period, directed trusts, decanting, and Domestic Asset Protection Trust legislation. Indiana has no state estate tax, adding to its appeal as a trust situs."
+      },
+      {
+        "q": "How does Indiana treat business trusts?",
+        "a": "Indiana treats business trusts and Massachusetts trusts under common law, recognizing them as unincorporated associations. The Indiana Trust Code at IC 30-4 governs trusts generally but contains no specific business trust registration statute, unlike Delaware's statutory trust or Nevada's framework. A declaration of trust under the Indiana Trust Code is a private family arrangement, separate from any common law business trust vehicle used for commercial purposes."
+      }
+    ],
+    "common_mistakes": "A common mistake is assuming Indiana follows the Uniform Trust Code, when the Indiana Trust Code at Ind. Code tit. 30, art. 4 dates to 1971 and is maintained independently despite having been cited as a model during UTC drafting. Another frequent error is omitting dispositive terms from a certification when Indiana uniquely permits including them under IC § 30-4-4-5. People also assume older trusts qualify for the 360-year perpetuities period, which applies only to trusts created after July 1, 2019. Quiet trust provisions are overlooked, including the role of court-appointed representatives. Failing to fund the trust through retitled property remains a recurring problem, and assuming asset protection applies automatically misreads Indiana's DAPT framework, which carries its own requirements.",
+    "state_notes": "Indiana operates under the Indiana Trust Code at Ind. Code tit. 30, art. 4, one of the oldest comprehensive trust codes in the country, enacted in 1971 and independently maintained rather than adopting the UTC. The certification of trust is governed by Ind. Code § 30-4-4-5, which may be signed by any trustee and, unlike the UTC, may contain dispositive terms. Indiana extended its Rule Against Perpetuities to 360 years effective July 1, 2019 for trusts created after that date, and offers quiet trusts with court-appointed representatives, directed trusts, decanting, and Domestic Asset Protection Trust legislation. A choice of law provision at IC 30-4-1-11 lets the settlor select governing law unless contrary to Indiana public policy. Indiana has no state estate tax, and bad-faith insistence on complete trust records beyond a certification can create liability for damages."
+  }
+}

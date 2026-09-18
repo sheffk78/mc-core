@@ -1,0 +1,27 @@
+{
+  "state": "Vermont",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust is the written instrument that creates a trust. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. Under the Vermont Trust Code (14A V.S.A. §§ 101-1204, adopted 2009), the instrument must be signed by the settlor. Vermont does not require witnesses for trust execution. However, the certificate of trust must be signed under oath before a notary public or other official authorized to administer oaths. Trust instruments affecting real property may be recorded in municipal land records, but general trust instruments are not required to be recorded. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, 14A V.S.A.",
+    "faq": [
+      {
+        "q": "Does a Vermont declaration of trust have to be notarized or witnessed?",
+        "a": "Under the Vermont Trust Code, the trust instrument must be signed by the settlor. Witnesses are not required for trust execution. However, the certificate of trust must be signed under oath before a notary public or other official authorized to administer oaths. Notarization or an acknowledgment may still be required for recording purposes, such as real property transactions or a certificate of trust. Vermont does not require witnesses for the trust instrument itself."
+      },
+      {
+        "q": "Does Vermont have an estate tax that affects trust planning?",
+        "a": "Vermont repealed its state estate tax for deaths occurring after January 1, 2016, making it favorable for estate planning. However, the state imposes income tax on trust income. Vermont has no specific Domestic Asset Protection Trust (DAPT) statute. The state adopted the Uniform Trust Code with Vermont-specific modifications in 2009. Dynasty trusts are governed by the rule against perpetuities or applicable wait-and-see statutes. Vermont has a comprehensive trust code that provides clear statutory guidance for trustees and beneficiaries."
+      },
+      {
+        "q": "What goes in a certificate of trust under 14A V.S.A. § 1013?",
+        "a": "Under 14A V.S.A. § 1013, the certificate must be signed under oath before a notary public or an official authorized to administer oaths. It must include the name of the trust, the date of the trust instrument, the name of each settlor, the name of each original trustee, the name and address of each trustee empowered to act, an abstract of the provisions authorizing the trustee to act, a statement that the trust has not been revoked or amended, and whether the trust is supervised by any court."
+      },
+      {
+        "q": "How does Vermont treat business trusts?",
+        "a": "Vermont does not have a specific statutory scheme for business or Massachusetts trusts. Business trusts are generally treated under common law trust principles or may be structured as other business entities under Vermont business organization statutes. The Vermont Trust Code governs express trusts and is supplemented by common law and principles of equity. Business trusts operating in Vermont may be structured as LLCs, corporations, or limited partnerships under Vermont's business entity statutes rather than as a separate statutory trust category."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Vermont law requires witnesses for trust execution (it does not, though the certificate of trust must be signed under oath before a notary public), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is treating Vermont like a DAPT state: Vermont has no specific Domestic Asset Protection Trust statute, so self-settled asset protection trusts are not available under Vermont law. People also assume Vermont has no income tax on trusts; the state does impose income tax on trust income. Documents that omit the oath requirement for the certificate of trust, or that do not include the nine statutory elements listed in § 1013, create avoidable friction during administration.",
+    "state_notes": "Vermont operates under the Vermont Trust Code (14A V.S.A. §§ 101-1204), adopted 2009, with the certificate of trust at 14A V.S.A. § 1013. The certificate must be signed under oath before a notary public or other official authorized to administer oaths. Vermont repealed its state estate tax for deaths occurring after January 1, 2016, making it favorable for estate planning. The state imposes income tax on trust income. Vermont has no specific Domestic Asset Protection Trust (DAPT) statute. The state adopted the Uniform Trust Code with Vermont-specific modifications in 2009. Dynasty trusts are governed by the rule against perpetuities or applicable wait-and-see statutes. Vermont has a strong agricultural and conservation trust tradition reflecting its rural New England character. The certificate of trust statute is more detailed than the standard UTC provision and includes conclusive proof provisions and specific amendment/revocation notice requirements."
+  }
+}

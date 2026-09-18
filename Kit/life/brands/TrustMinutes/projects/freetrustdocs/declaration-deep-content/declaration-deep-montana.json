@@ -1,0 +1,27 @@
+{
+  "state": "Montana",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Montana is the written instrument that creates a trust under the Montana Uniform Trust Code, MCA Title 72, Chapter 38, effective October 1, 2013. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. Montana does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though it is recommended for practical purposes. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, MCA Â§72-38-1013 lists what a certification of trust may contain, and a third party may require the trustee to furnish excerpts.",
+    "faq": [
+      {
+        "q": "Does Montana require notarization or witnesses for a trust instrument?",
+        "a": "Under the Montana Uniform Trust Code, the trust instrument does not require witnesses or notarization for validity. MCA Section 72-38-1013 provides that upon request, the trustee shall acknowledge the certification of trust so it may be recorded, which typically involves a notary. For real property transactions, deeds must be notarized and recorded in the county where the property is located. Montana recognizes remote online notarization. The trust instrument itself can be signed without a notary, but practical acceptance by financial institutions often calls for an acknowledgment."
+      },
+      {
+        "q": "Can a Montana trust last indefinitely, and does Montana allow self-settled asset protection trusts?",
+        "a": "Montana follows the Uniform Statutory Rule Against Perpetuities at MCA Section 72-2-1002, which allows nonvested interests to vest or terminate within 90 years of creation or 21 years after a life in being. Montana has not abolished the rule against perpetuities or extended it to allow perpetual dynasty trusts. Montana does not have a self-settled asset protection trust statute. Montana offers spendthrift trust protections under the UTC. Montana has no state income tax, no state estate tax, and no inheritance tax."
+      },
+      {
+        "q": "What goes in a certification of trust under MCA Â§72-38-1013?",
+        "a": "The certification may contain: that the trust exists and the date of execution, the identity of the settlor, the identity and address of the acting trustee, the trustee's relevant powers, whether the trust is revocable or irrevocable and the identity of the person holding the power to revoke, and the authority of cotrustees to sign. The certification must state the trust has not been revoked or amended in a manner causing representations to be incorrect."
+      },
+      {
+        "q": "How does Montana treat business trusts?",
+        "a": "Montana does not have a specific business trust or Massachusetts trust statute separate from the Montana Uniform Trust Code. Business trusts operating in Montana are typically structured as LLCs, corporations, or limited partnerships under Montana's business entity statutes. The Montana UTC applies to express trusts generally. Montana's LLC Act, business corporation statutes, and partnership statutes are the primary vehicles for business entities that might function similarly to business trusts. Foreign business trusts may operate in Montana subject to foreign entity registration requirements."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Montana law requires witnesses for trust execution (it does not), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is treating a business trust like a family trust: Montana does not have a dedicated business trust registration framework, and business trusts are governed by common law principles supplemented by the general trust code. People also assume asset-protection provisions apply on their own; Montana does not authorize self-settled asset protection trusts. The governing-law disclosure requirement in Montana's certification of trust is unique among UTC states and is frequently overlooked. Documents that omit a successor trustee create avoidable friction during administration.",
+    "state_notes": "Montana operates under the Montana Uniform Trust Code, MCA Title 72, Chapter 38, enacted in 2013 and effective October 1, 2013. The certification of trust statute is MCA Â§72-38-1013, which allows any trustee to sign the certification. Montana follows the Uniform Statutory Rule Against Perpetuities at MCA Â§72-2-1002, limiting dynasty trusts to 90 years. Montana does not allow self-settled asset protection trusts. Montana has no state income tax, no state estate tax, and no inheritance tax. The certification of trust uniquely requires disclosure of the governing law state if it is not Montana, and this disclosure may not be construed as consent to the jurisdiction of any state. Montana's trust code includes comprehensive provisions for spendthrift and discretionary trusts, trustee duties, directed trustees, trust decanting, and trust protectors."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "state": "New Hampshire",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in New Hampshire is the written instrument that creates a trust under the New Hampshire Trust Code, RSA Chapter 564-B, effective 2006. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. New Hampshire does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though it is strongly recommended to minimize disputes about authenticity. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, RSA 564-B:10-1013 lists what a certification of trust may contain.",
+    "faq": [
+      {
+        "q": "Does New Hampshire require notarization or witnesses for a trust instrument?",
+        "a": "Under the New Hampshire Trust Code, the trust instrument does not require witnesses or notarization for validity. RSA 564-B:10-1013(k) provides that for the alternative statutory certificate for real property conveyances, the certificate must be executed with formalities required for a deed of real property and recorded in the registry of deeds. For the personal-property certificate, the trustee's signature must be sworn before a notary public. New Hampshire permits remote online notarization."
+      },
+      {
+        "q": "Can a New Hampshire trust last indefinitely, and does New Hampshire allow asset protection trusts?",
+        "a": "New Hampshire is one of the most favorable trust jurisdictions in the United States. RSA 564-B:4-402 abolished the rule against perpetuities for trusts, allowing perpetual dynasty trusts of unlimited duration. RSA 564-B:5-505A permits self-settled spendthrift trusts that shield assets from the settlor's creditors after a 2-year statute of limitations. New Hampshire has no state income tax and no capital gains tax on trust income. New Hampshire has no state estate or inheritance tax."
+      },
+      {
+        "q": "What goes in a certification of trust under RSA 564-B:10-1013?",
+        "a": "The certification may confirm the trust's existence and date of execution, the identity of the settlor and acting trustee, the trustee's powers, whether the trust is revocable or irrevocable, the authority of cotrustees, the trust's taxpayer identification number, and the manner of taking title to trust property. The certification must state the trust has not been revoked or amended in any manner that would cause the representations to be incorrect."
+      },
+      {
+        "q": "How does New Hampshire treat business trusts?",
+        "a": "New Hampshire has one of the most comprehensive business trust frameworks in the country. RSA 564-B treats trusts broadly, including business trusts, directed trusts, and divided trusts. RSA 564-B:7-711 specifically provides for divided trusts and directed trusts, allowing segregation of investment, distribution, and administrative functions among different fiduciaries. New Hampshire recognizes common law business trusts and provides a modern statutory framework."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming New Hampshire law requires witnesses for trust execution (it does not), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is treating a New Hampshire trust like a standard UTC state: New Hampshire has a separate alternative statutory certificate form under RSA 564-B:10-1013(k) for real and personal property conveyances that gives conclusive evidence of trustee authority when recorded with deed formalities. People also assume asset-protection provisions require a specific trust type; New Hampshire's self-settled spendthrift trust statute has a 2-year statute of limitations that must be satisfied. Documents that omit a successor trustee create avoidable friction during administration.",
+    "state_notes": "New Hampshire operates under the New Hampshire Trust Code, RSA Chapter 564-B, enacted 2004 and effective 2006. The certification of trust statute is RSA 564-B:10-1013, which allows any trustee to sign the certification. New Hampshire abolished the rule against perpetuities under RSA 564-B:4-402A, allowing perpetual dynasty trusts. New Hampshire permits self-settled spendthrift trusts under RSA 564-B:5-505A with a 2-year statute of limitations. New Hampshire has no state income tax, no capital gains tax on trust income, and no state estate or inheritance tax. New Hampshire offers directed and divided trust provisions, trust protector and trust advisor frameworks, nonjudicial settlement agreements, nonjudicial dispute resolution, quiet trust provisions, and decanting authority under RSA 564-B:4-418. Business trusts follow a broad statutory framework under RSA 564-B."
+  }
+}

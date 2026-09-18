@@ -1,0 +1,27 @@
+{
+ "state": "Maine",
+ "document": "declaration-of-trust",
+ "blocks": {
+  "how_it_works": "A declaration of trust in Maine is governed by the Maine Uniform Trust Code, Title 18-B of the Maine Revised Statutes, enacted in 2003 and effective July 1, 2005. The trust is created when the settlor, with capacity, indicates an intention to create it, a definite beneficiary exists, and the trustee has duties, with the same person not serving as sole trustee and sole beneficiary. Maine does not require a notary or witnesses for the trust instrument itself, though notarization is recommended for practical purposes such as bank acceptance and real estate recording. Deeds transferring real property to the trust must be acknowledged under Maine deed recording statutes, and Maine recognizes remote online notarization. Once signed, the trust is funded by retitling accounts and deeding property to the trustee. When third parties need proof, 18-B M.R.S. Section 1013 permits the trustee to furnish a certification of trust instead of the full instrument.",
+  "faq": [
+   {
+    "q": "Does a Maine declaration of trust have to be notarized or witnessed?",
+    "a": "No. Under the Maine Uniform Trust Code (Title 18-B), the trust instrument does not require notarization or witnesses to be valid. Notarization is still recommended for practical purposes, since banks and recording offices commonly expect it. For real property held in trust, the deed itself must be acknowledged and recorded under Maine deed recording statutes, which is a separate step from creating the trust. Maine also recognizes remote online notarization, which can simplify signings for parties in different locations. The trust instrument itself remains the operative document for validity."
+   },
+   {
+    "q": "How long can a Maine trust last?",
+    "a": "Maine adopted the Uniform Statutory Rule Against Perpetuities (33-A M.R.S. Section 101 et seq.), under which a nonvested property interest is invalid unless it vests or terminates within 21 years after a life in being or within 90 years after creation. This caps dynasty trust duration at 90 years, longer than the common law rule but far shorter than states that abolished it. Maine has no self-settled asset protection trust statute, and spendthrift protections follow the standard UTC model."
+   },
+   {
+    "q": "What goes in a certification of trust under 18-B M.R.S. Section 1013?",
+    "a": "The certification may contain some or all of: that the trust exists and the date the instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the trustee's powers, revocability and who holds the power to revoke, cotrustee signing authority, the trust's taxpayer identification number, and the manner of taking title to trust property. It may be signed by any trustee, need not contain dispositive terms, and a recipient may require excerpts designating the trustee and conferring powers."
+   },
+   {
+    "q": "Does Maine allow pet trusts and other special trusts?",
+    "a": "Yes. Maine follows the UTC model in providing specific statutory authority for pet trusts at 18-B M.R.S. Section 408, allowing a trust to be created for the care of an animal. The code also includes decanting authority at Section 414B, which lets an appropriate trustee distribute property to a new trust with different terms, and provisions recognizing trust protectors and directed trustee arrangements. These tools give Maine settlors flexibility for correction and administration that earlier trust law lacked. Charitable and noncharitable express trusts are both covered by the code."
+   }
+  ],
+  "common_mistakes": "Common issues include assuming Maine requires notarization or witnesses for the trust instrument itself (it requires neither under Title 18-B, though recording-related steps such as deeds call for acknowledgment), and leaving the trust unfunded so property never moves through a new deed or retitled accounts. Another frequent error is assuming dynasty duration is unlimited: Maine's Uniform Statutory Rule Against Perpetuities caps nonvested interests at 90 years after creation, so multi-generational planning has a fixed horizon. People also assume self-settled asset protection is available; Maine has no DAPT statute, and the spendthrift provision does not shield the settlor's own creditors. Documents that omit a successor trustee, ignore the pet trust and decanting provisions at Sections 408 and 414B, or mismatch the certification described in Section 1013 create avoidable friction.",
+  "state_notes": "Maine operates under the Maine Uniform Trust Code, Title 18-B of the Maine Revised Statutes, enacted by PL 2003, c. 618 and effective July 1, 2005. Certification of trust contents are set by 18-B M.R.S. Section 1013, which may be signed or authenticated by any trustee, and a recipient may require excerpts designating the trustee and conferring powers. Maine follows the Uniform Statutory Rule Against Perpetuities at 33-A M.R.S. Section 101 et seq., with a 90-year wait-and-see period, so dynasty duration is finite. The code provides pet trusts (Section 408), decanting (Section 414B), trust protectors, and directed trustee arrangements. Maine has no state estate or inheritance tax but imposes state income tax on trust income for Maine-resident fiduciaries. Maine does not authorize self-settled asset protection trusts, though spendthrift protections follow the UTC model. Remote online notarization is recognized for practical signings."
+ }
+}

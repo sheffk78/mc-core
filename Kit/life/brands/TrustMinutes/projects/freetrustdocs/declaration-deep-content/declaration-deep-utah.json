@@ -1,0 +1,27 @@
+{
+  "state": "Utah",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust is the written instrument that creates a trust. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. Under the Utah Uniform Trust Code (Utah Code Title 75B, Chapter 2), the instrument must be signed by the settlor. Utah does not require witnesses, does not require notarization for the trust instrument itself, and recognizes electronic-only trusts. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, Utah Code § 75B-2-1013 lists what a certification of trust may contain, and a third party may require the trustee to furnish excerpts.",
+    "faq": [
+      {
+        "q": "Does a Utah declaration of trust have to be notarized or witnessed?",
+        "a": "Under the Utah Uniform Trust Code, the trust instrument must be signed by the settlor. Witnesses are not required, and notarization is not required for the trust instrument itself. Notarization or an acknowledgment may still be required for recording purposes, such as real property transactions or a certificate of trust. Utah also recognizes electronic-only trusts, so the signed instrument does not have to exist on paper."
+      },
+      {
+        "q": "Can a Utah trust continue for 1,000 years?",
+        "a": "Yes. Utah permits 1,000-year dynasty trusts, an extremely long perpetuities period that allows wealth transfers across many generations. Utah also permits self-settled spendthrift trusts when specific statutory requirements are met. These rules come from Utah Code Title 75B, which sets the ground rules for how long a trust may last and when it can protect trust property. A document's wording and how the trust is administered still determine what happens in any particular case."
+      },
+      {
+        "q": "What goes in a certification of trust under Utah Code § 75B-2-1013?",
+        "a": "The statute lists the contents: that the trust exists and the date the instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the trustee's powers for the pending transaction, whether the trust is revocable and who holds the power to revoke, cotrustee signing authority, and the name in which title to trust assets is held. A third party may require the trustee to furnish excerpts."
+      },
+      {
+        "q": "How does Utah treat business trusts?",
+        "a": "Business trusts are treated as business entities, not as ordinary family trusts. Utah requires foreign business trusts to register with the Division of Corporations and Commercial Code under Utah Code Title 16, Chapter 15, and they need a registered agent, similar to corporations and LLCs. This registration path is separate from a declaration of trust created under the Utah Uniform Trust Code, which does not involve entity registration."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Utah law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds or certificates of trust may call for an acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is treating a business trust like a family trust: Utah requires foreign business trusts to register with the Division of Corporations and Commercial Code and to maintain a registered agent. People also assume asset-protection provisions apply on their own; Utah's statute permits self-settled asset protection trusts only when its statutory requirements are met. Documents that omit a successor trustee, or that do not match the certification of trust described in § 75B-2-1013, create avoidable friction during administration.",
+    "state_notes": "Utah operates under the Utah Uniform Trust Code, Utah Code Title 75B, Chapter 2, and the state recognizes electronic-only trusts. Certification of trust contents are set by § 75B-2-1013, and a third party may require the trustee to furnish excerpts from the trust instrument. Utah levies no state estate tax, no inheritance tax, and no gift tax. The state permits 1,000-year dynasty trusts, an exceptionally long perpetuities period for multi-generational transfers. Utah Code Title 75B, Chapter 1, Part 3 provides the Domestic Asset Protection Trust statute, which permits self-settled asset protection trusts that meet its statutory requirements, and self-settled spendthrift trusts are permitted with specific statutory requirements. Business trusts follow a separate track: Utah requires foreign business trusts to register with the Division of Corporations and Commercial Code under Utah Code Title 16, Chapter 15 and, like corporations and LLCs, they need a registered agent."
+  }
+}

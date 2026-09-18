@@ -1,0 +1,27 @@
+{
+  "state": "Florida",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Florida is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. The Florida Trust Code at Chapter 736 provides the governing framework, adopting the UTC with Florida-specific modifications. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. The settlor may serve as trustee or name another individual or institution. Florida permits self-settled spendthrift trusts under section 736.0502, and offers strong asset protection statutes alongside constitutional homestead protections. The certification of trust under section 736.1017 allows trustees to confirm trust terms to third parties without disclosing the full instrument, covering powers of direction and trust director details where applicable.",
+    "faq": [
+      {
+        "q": "Does a Florida declaration of trust need to be notarized or witnessed?",
+        "a": "Florida does not require witnesses for the certification of trust, and notarization is not statutorily required for the certification itself. The certification may be signed or otherwise authenticated by any trustee, though a third party may require an acknowledgment before relying on it. For real property transfers into the trust, deeds must be notarized and recorded in county records where the property is located."
+      },
+      {
+        "q": "What goes in a certification of trust under Fla. Stat. § 736.1017?",
+        "a": "The statute lists required contents: trust existence and execution date, settlor identity, trustee identity and address, trustee powers, whether the trust contains powers of direction and who the trust directors are, revocability and who holds the power to revoke, co-trustee authority, and the manner of taking title. It need not contain dispositive terms, and trust director details are unnecessary if no directors exist."
+      },
+      {
+        "q": "How does Florida treat business trusts?",
+        "a": "Florida explicitly excludes business trusts from the Florida Trust Code under section 736.0102(2). Business trusts providing certificates to beneficiaries operate outside the code entirely, governed instead by common law principles. Florida also excludes land trusts under section 689.071 from most trust code provisions. This separation means a declaration of trust under the Florida Trust Code follows different rules than business trust vehicles."
+      },
+      {
+        "q": "Can a Florida trust protect assets from creditors?",
+        "a": "Florida permits self-settled spendthrift trusts under section 736.0502 and maintains strong asset protection statutes. Homestead protections add another layer of security for Florida residents. These provisions combine with the state's UTC-based framework to make Florida favorable for trust planning. How protections apply in any specific situation depends on the trust terms, the timing of transfers, whether the trust is revocable or irrevocable, and applicable statutory requirements."
+      }
+    ],
+    "common_mistakes": "A common mistake is assuming Florida requires witnesses or notarization for the certification of trust, when neither is statutorily mandated and the certification may be signed by any trustee. Another frequent error is treating business trusts like ordinary family trusts, when Florida explicitly excludes business trusts from the Florida Trust Code under section 736.0102(2) and separately carves out land trusts under section 689.071. People also forget that third parties may require an acknowledgment before relying on a certification, and that failing to fund the trust through retitled deeds and accounts leaves property outside it. Finally, overlooking the power-of-direction entries in section 736.1017 certifications creates friction when trust directors exist and are not identified.",
+    "state_notes": "Florida operates under the Florida Trust Code at Chapter 736, adopting the UTC with modifications for uniform rules and interstate consistency. The certification of trust is governed by Fla. Stat. § 736.1017, which lists required contents including powers of direction and trust director identity, with no mandatory statutory form. The certification need not contain dispositive terms and need not include trust director details if no directors exist. Florida permits self-settled spendthrift trusts under section 736.0502 and maintains strong asset protection statutes alongside constitutional homestead protections. Business trusts are explicitly excluded from the code under section 736.0102(2), and land trusts under section 689.071 are largely excluded as well. Third parties relying in good faith on a certification may enforce the transaction against trust property as if the representations were correct."
+  }
+}

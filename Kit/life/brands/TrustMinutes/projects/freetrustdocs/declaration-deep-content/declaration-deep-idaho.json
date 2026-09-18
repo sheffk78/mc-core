@@ -1,0 +1,27 @@
+{
+  "state": "Idaho",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Idaho is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. Idaho has not adopted the UTC, relying instead on Idaho Code Title 68, Chapter 1 and the Uniform Trustees' Powers Act at sections 68-104 through 68-112. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. Idaho's certification of trust rules are stricter than UTC states: under Idaho Code § 68-114(2), the certification must be an affidavit signed and acknowledged by all currently acting trustees, not just one. The state has completely abolished the rule against perpetuities at Idaho Code § 55-111, permitting trusts of unlimited duration for multi-generational planning.",
+    "faq": [
+      {
+        "q": "Does an Idaho certification of trust need to be notarized?",
+        "a": "Yes. Under Idaho Code § 68-114(2), the certification of trust must be in the form of an affidavit signed and acknowledged by all of the currently acting trustees. This is stricter than UTC states, which allow any single trustee to sign an ordinary certification. Acknowledgment means notarization, and no witnesses are specified. No person is required to accept a certification in lieu of the trust instrument itself under § 68-114(1)."
+      },
+      {
+        "q": "What goes in an Idaho certification of trust under Idaho Code § 68-115?",
+        "a": "The certification may confirm: trust existence and execution date, settlor identity, currently acting trustees, trustee powers and any restrictions, revocability and who holds the power to revoke, whether all or fewer than all trustees must act, the trust's identifying number and whether it is a social security or employer identification number, the establishing jurisdiction, and the form in which title is taken. It must also state the signatures are those of all currently acting trustees."
+      },
+      {
+        "q": "How long can an Idaho trust last?",
+        "a": "Idaho has completely abolished the rule against perpetuities. Idaho Code § 55-111 states there shall be no rule against perpetuities applicable to real or personal property, allowing trusts of unlimited duration. Idaho is one of only a handful of states, alongside Alaska and South Dakota, to take this approach, making it exceptionally favorable for perpetual dynasty trusts. The state has no estate tax or inheritance tax."
+      },
+      {
+        "q": "How does Idaho treat business trusts?",
+        "a": "Idaho has no specific business trust statute. Business trusts operate under common law principles and general trust law under Idaho Code Title 68, with no separate statutory framework or registration requirement. For business activities, LLCs, corporations, and partnerships under Idaho Code Title 30 remain the standard vehicles. A declaration of trust under Title 68 is distinct from any common law business trust arrangement."
+      }
+    ],
+    "common_mistakes": "The most common Idaho mistake is following UTC signing practice, when Idaho Code § 68-114(2) requires the certification to be an affidavit signed and acknowledged by all currently acting trustees, not just one trustee. Another frequent error is assuming Idaho follows the Uniform Trust Code, when the state never adopted it and instead maintains the Uniform Trustees' Powers Act at Idaho Code §§ 68-104 through 68-112. People also overlook the affidavit's required statement that the signatures are those of all currently acting trustees under § 68-115(2). Third parties sometimes assume they must accept a certification, when § 68-114(1) says no person is required to accept one in lieu of the instrument. Finally, asset protection planning misfires because Idaho does not authorize self-settled domestic asset protection trusts.",
+    "state_notes": "Idaho operates under Idaho Code Title 68, Chapter 1, and has not adopted the UTC, relying instead on the Uniform Trustees' Powers Act at Idaho Code §§ 68-104 through 68-112. The certification of trust is governed by Idaho Code §§ 68-114 through 68-118 and must be an affidavit signed and acknowledged by all currently acting trustees under § 68-114(2), a stricter standard than UTC states. The certification may confirm the trust's identifying number, the establishing jurisdiction, and title form under § 68-115, and need not contain dispositive provisions under § 68-116. Idaho has completely abolished the rule against perpetuities at Idaho Code § 55-111, permitting perpetual trusts for real and personal property. The state has no estate tax or inheritance tax. Idaho does not currently authorize self-settled domestic asset protection trusts."
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "verdict": "fix_required",
+  "checked_claims": 77,
+  "issues": [
+    {
+      "file": "declaration-deep-california.json",
+      "severity": "blocker",
+      "quote": "allowing third parties to rely on it without demanding the full trust instrument",
+      "problem": "Contains the banned phrase 'demand the full trust instrument' (as 'demanding the full trust instrument'). This phrase is prohibited under UPL guidelines because it implies the trustee can be compelled to produce the full instrument, which contradicts the statutory purpose of Cal. Prob. Code § 18100.5 — the certification is meant to serve as a substitute for the full instrument.",
+      "suggested_fix": "Replace 'without demanding the full trust instrument' with 'without requiring the full trust instrument' or 'without needing the complete trust instrument'."
+    },
+    {
+      "file": "declaration-deep-california.json",
+      "severity": "minor",
+      "quote": "demands the full trust documents from a trustee in addition to the declaration of trust",
+      "problem": "Near-miss of banned phrase 'demand the full trust instrument'. Uses 'documents' instead of 'instrument', which is not the exact banned phrase, but the substantive meaning is identical and could trigger the same UPL concern in review.",
+      "suggested_fix": "Replace 'demands the full trust documents' with 'requests the complete trust records' or 'seeks the full trust instrument' (only if the instrument reference is contextually appropriate)."
+    }
+  ]
+}

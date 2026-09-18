@@ -1,0 +1,27 @@
+{
+ "state": "California",
+ "document": "declaration-of-trust",
+ "blocks": {
+  "how_it_works": "A declaration of trust is a written statement signed by trustees confirming the trust's existence and key terms. In California, it must be an acknowledged declaration, signed by all currently acting trustees and notarized. The declaration identifies the trust by its creation date and the settlor who created it, and lists the trustee or trustees currently acting with their powers in the transaction at hand. It states whether the trust is revocable or irrevocable and names anyone who holds the power to revoke it. When the trust holds real property, the declaration may include a legal description of that property and how title is held. The declaration serves as proof of the trust's existence and the trustee's authority, allowing third parties to rely on it without requiring the full trust instrument. California's anti-bad-faith provision means a person who requests the complete trust records in addition to the declaration, without cause, may be liable for damages and attorney fees.",
+  "faq": [
+   {
+    "q": "What must a California declaration of trust contain?",
+    "a": "California requires the declaration to state the trust exists and its execution date, identify the settlor and trustee, state whether the trust is revocable or irrevocable and who holds the power to revoke, show the signature authority of multiple trustees, include the trust identification number, describe the manner of taking title to trust assets, and provide a legal description of any real property held in the trust. It must also state the trust has not been revoked or modified in a way that makes the representations incorrect."
+   },
+   {
+    "q": "Is notarization required for a California declaration of trust?",
+    "a": "Yes. California law requires the declaration to be in the form of an acknowledged declaration, which means it must be signed by all currently acting trustees and notarized by a licensed notary public. The notarization step is a statutory requirement under California law, distinguishing California from some other states where notarization is optional or only needed for recording purposes under state law."
+   },
+   {
+    "q": "Can a declaration of trust be recorded in California?",
+    "a": "Yes, a declaration of trust may be recorded with the county recorder in the county where real property is located. Recording is permitted but not required for real property transfers. The declaration functions as proof of the trust's existence and the trustee's authority even without recording, and third parties may rely on it without requiring the full trust instrument from the trustee."
+   },
+   {
+    "q": "What are the anti-bad-faith protections in California?",
+    "a": "Under California Probate Code section 18100.5(h), a person who requests the complete trust records from a trustee in addition to the declaration of trust, without cause, may be liable for damages and attorney fees. This provision protects trustees from bad-faith demands and encourages third parties to accept the declaration as sufficient proof of the trust's existence and the trustee's authority."
+   }
+  ],
+  "common_mistakes": "A common mistake is assuming the declaration replaces the full trust instrument. The declaration is a summary document that proves the trust exists and the trustee has authority; it does not contain all the trust's terms. Another error is failing to have all currently acting trustees sign the declaration, which California requires. Some people skip notarization, but California statutorily requires an acknowledged declaration. Trusts that hold real property should include a legal description of the property, and omitting this can delay transactions. Finally, trustees sometimes do not update the declaration after a change in trustee status, which can cause confusion when a new trustee tries to use it with third parties.",
+  "state_notes": "California has not adopted the Uniform Trust Code and maintains its own comprehensive trust law under Probate Code Division 9 (sections 15000 through 19530). It is the largest U.S. trust jurisdiction that has not adopted the UTC. Under California law, a trust is treated as a property relationship rather than a separate legal entity. This distinction matters for how trusts interact with creditors and how they are taxed. California recognizes business trusts at common law but does not create a separate statutory entity for them. Spouses should check how title is held, as community property rules can affect how a couple's home is titled in the trust. The declaration of trust is governed specifically by Probate Code section 18100.5, which sets out the required contents and the anti-bad-faith protections for trustees who present certifications in good faith."
+ }
+}

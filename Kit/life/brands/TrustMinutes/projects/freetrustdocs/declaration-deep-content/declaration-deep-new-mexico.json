@@ -1,0 +1,27 @@
+{
+  "state": "New Mexico",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in New Mexico is the written instrument that creates a trust under the New Mexico Uniform Trust Code, NMSA 1978 Chapter 46A, effective July 1, 2003. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. New Mexico does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though it is strongly recommended and often required by financial institutions. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies.",
+    "faq": [
+      {
+        "q": "Does New Mexico require notarization or witnesses for a trust instrument?",
+        "a": "Under the New Mexico Uniform Trust Code, the trust instrument does not require witnesses for validity. Notarization is not required for the trust instrument itself, though it is strongly recommended and often required by financial institutions. For the certification of trust affecting real property title, the recipient may require acknowledgment so it can be recorded. New Mexico permits remote online notarization."
+      },
+      {
+        "q": "Can a New Mexico trust last indefinitely, and does New Mexico allow asset protection trusts?",
+        "a": "New Mexico has not abolished the rule against perpetuities. NMSA 45-2-901 retains the statutory rule requiring interests to vest or terminate within 21 years after the death of an individual then alive. NMSA 45-2-904 provides exceptions for certain interests including property interests held in trust. New Mexico does not have a self-settled asset protection trust statute. New Mexico imposes state income tax on trust income for resident trusts."
+      },
+      {
+        "q": "What goes in a certification of trust under NMSA 46A-10-1013?",
+        "a": "The certification may confirm the trust's existence and date of execution, the identity of the settlor and acting trustee, the trustee's powers, whether the trust is revocable or irrevocable, the authority of co-trustees, the trust's taxpayer identification number, the manner of taking title to trust property, and whether delegation to an agent is not prohibited by the trust instrument. The certification must state the trust has not been revoked or amended in any manner that would cause the representations to be incorrect."
+      },
+      {
+        "q": "How does New Mexico treat business trusts?",
+        "a": "New Mexico does not have a specific Massachusetts-style business trust statute. Business trusts in New Mexico are governed by common law principles and the NM UTC. The NM UTC applies to express trusts, charitable or noncharitable, including those created for business purposes. New Mexico does not have a separate statutory business trust registration framework. New Mexico's community property laws affect how business trust interests are held by married couples."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming New Mexico law requires witnesses for trust execution (it does not), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is assuming New Mexico allows perpetual dynasty trusts; it has not abolished the rule against perpetuities, and the 21-year rule applies under NMSA 45-2-901. People also assume asset-protection provisions apply on their own; New Mexico does not authorize self-settled asset protection trusts. The ninth certification element regarding agent delegation not being prohibited is unique to New Mexico and is frequently overlooked. As a community property state, New Mexico trust planning for married couples involves additional considerations that are often not addressed in standard trust documents.",
+    "state_notes": "New Mexico operates under the New Mexico Uniform Trust Code, NMSA 1978 Chapter 46A, enacted in 2003 and effective July 1, 2003. The certification of trust statute is NMSA 46A-10-1013, which allows any trustee to sign the certification. New Mexico has not abolished the rule against perpetuities; NMSA 45-2-901 retains the statutory rule requiring interests to vest within 21 years after a life in being. New Mexico does not allow self-settled asset protection trusts. New Mexico imposes state income tax on trust income for resident trusts but has no state estate or inheritance tax. New Mexico is a community property state, which provides tax basis advantages for married couples using community property trusts. The Uniform Trust Decanting Act was adopted in 2017 under NMSA 46-12-101 through 46-12-129. Business trusts are governed by common law principles and the NM UTC."
+  }
+}

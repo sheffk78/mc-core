@@ -1,0 +1,27 @@
+{
+  "state": "Washington",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust is the written instrument that creates a trust. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. Under Washington law, the trust instrument must be signed by the settlor (trustor). Washington does not require witnesses for trust execution. Notarization is not required for the trust instrument itself. Electronic signing is permitted. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, RCW 11.98.075 lists what a certification of trust may contain, and a third party may require the trustee to furnish excerpts.",
+    "faq": [
+      {
+        "q": "Does a Washington declaration of trust have to be notarized or witnessed?",
+        "a": "Under Washington law, the trust instrument must be signed by the settlor. Washington does not require witnesses for trust execution. Notarization is not required for the trust instrument itself. Electronic signing is permitted. For real property transactions, acknowledgment may be required for recording. The certification of trust under RCW 11.98.075 may be signed or otherwise authenticated by any trustee or by an attorney for the trust."
+      },
+      {
+        "q": "Can Washington protect assets from the settlor's own creditors?",
+        "a": "Washington does not have a specific Domestic Asset Protection Trust (DAPT) statute. The state does not authorize self-settled asset protection trusts under a dedicated statute. Spendthrift provisions may protect beneficiaries from their own creditors, but the settlor's interest in a revocable trust remains reachable by the settlor's own creditors. Trust planning in Washington focuses on the state's favorable tax treatment rather than specific asset protection legislation."
+      },
+      {
+        "q": "What goes in a certification of trust under RCW 11.98.075?",
+        "a": "The statute lists the contents: that the trust exists and the date the trust instrument was executed; the identity of the trustor; the identity and address of the currently acting trustee; relevant powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee; and the name of the trust or the titling of the trust"
+      },
+      {
+        "q": "How does Washington treat business trusts?",
+        "a": "Washington recognizes Massachusetts trusts (business trusts) under RCW Chapter 23.90. Any Massachusetts trust desiring to do business in Washington must file with the Secretary of State a verified copy of the trust instrument and any amendments, the assumed business name, and the names and addresses of its trustees. Massachusetts trusts are treated as statutory business entities subject to filing requirements and are bound by the terms of the filed trust instrument."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Washington law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds may call for acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is assuming Washington has DAPT legislation: the state does not have a specific self-settled asset protection trust statute, so asset protection planning must rely on other trust features. People also assume Washington has dynasty trust provisions extending the perpetuities period; the state does not appear to have abolished or extended the rule against perpetuities beyond common law limits. Documents that omit a successor trustee, or that do not match the certification of trust described in RCW 11.98.075, create avoidable friction during administration.",
+    "state_notes": "Washington operates under Revised Code of Washington (RCW) Title 11, Chapter 11.98 (Trusts) and Chapter 11.103 (Uniform Trust Code provisions adopted 2011), with the certification of trust at RCW 11.98.075. The state levies no state income tax, no state estate tax, and no inheritance tax, making it highly favorable for trust situs. Washington does not have a specific Domestic Asset Protection Trust (DAPT) statute. The state does not have specific dynasty trust legislation extending the rule against perpetuities beyond common law limits. Washington adopted Uniform Trust Code provisions in 2011, providing modern trust administration rules. The state permits electronic signing of trusts without witness or notary requirements. Massachusetts trusts must register with the Secretary of State under RCW Chapter 23.90. Washington's combination of no income tax, no estate tax, and no inheritance tax makes it attractive for tax-sensitive trust planning despite the lack of specific DAPT or dynasty trust statutes."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "state": "Kansas",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Kansas is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. Kansas adopted the Uniform Trust Code as the Kansas Uniform Trust Code at K.S.A. Chapter 58A, enacted in 2002, using UTC section numbers in its citations, such as K.S.A. § 58a-1013 for the certification of trust. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. The certification must be acknowledged, and it allows trustees to confirm trust terms to third parties without disclosing dispositive terms. Kansas follows the Uniform Statutory Rule Against Perpetuities at K.S.A. §§ 59-3401 et seq., with a 90-year wait-and-see period for nonvested interests.",
+    "faq": [
+      {
+        "q": "Does a Kansas certification of trust need to be notarized?",
+        "a": "The statute refers to an acknowledged certification of trust under K.S.A. § 58a-1013(a), which implies notarized acknowledgment, and the certification may be signed or otherwise authenticated by any trustee under § 58a-1013(b). No witnesses or recording are specifically required. This acknowledgment step is a Kansas feature worth confirming during preparation, since some UTC states do not include it in their certification provisions."
+      },
+      {
+        "q": "What goes in a certification of trust under K.S.A. § 58a-1013?",
+        "a": "The certification contains: trust existence and execution date, settlor identity, trustee identity and address, trustee powers, revocability and who holds the power to revoke, co-trustee signing authority and whether all or fewer than all must act, and the manner of taking title. It must state the trust has not been revoked, modified, or amended in a way that would make the representations incorrect. It need not contain dispositive terms, and a recipient may require excerpts conferring transaction powers."
+      },
+      {
+        "q": "How long can a Kansas trust last?",
+        "a": "Kansas follows the Uniform Statutory Rule Against Perpetuities at K.S.A. §§ 59-3401 et seq. A nonvested interest is valid if it is certain to vest or terminate within 21 years after the death of an individual then alive, or within 90 years after creation. This 90-year period supports long-term trusts but is shorter than states that have extended or abolished the perpetuities period, making Kansas a traditional rather than dynasty-focused jurisdiction."
+      },
+      {
+        "q": "Is there a deadline to contest a Kansas revocable trust?",
+        "a": "Yes. K.S.A. § 58a-604 requires a contest of a revocable trust to be commenced within one year of the settlor's death or four months from the date of first publication of notice to creditors, whichever is earlier. This specific limitation period gives Kansas revocable trusts a defined window of stability after the settlor's death, distinct from general probate litigation timelines, and is a notable feature of the Kansas Uniform Trust Code."
+      }
+    ],
+    "common_mistakes": "A common mistake is skipping the acknowledgment on a Kansas certification of trust, since K.S.A. § 58a-1013(a) refers to an acknowledged certification even though § 58a-1013(b) permits any trustee to sign. Another frequent error is assuming extended dynasty periods apply, when Kansas uses the standard USRAP 90-year window at K.S.A. §§ 59-3401 et seq. and does not authorize self-settled domestic asset protection trusts. People also miss the contest deadline under § 58a-604, which can be as short as four months from first publication of notice to creditors. Failing to fund the trust through retitled property remains a recurring problem, and treating business trusts as registered entities misreads Kansas, which handles them under common law with no separate statute.",
+    "state_notes": "Kansas operates under the Kansas Uniform Trust Code at K.S.A. Chapter 58A, enacted in 2002 and amended in 2012, using UTC section numbers within its own citation scheme. The certification of trust is governed by K.S.A. § 58a-1013, which refers to an acknowledged certification, allows any trustee to authenticate it, and permits a recipient to require excerpts designating the trustee and conferring transaction powers. Kansas follows the Uniform Statutory Rule Against Perpetuities at K.S.A. §§ 59-3401 et seq., with the standard 90-year wait-and-see period. K.S.A. § 58a-604 sets a one-year limit from the settlor's death, or four months from first publication of notice to creditors, whichever is earlier, for contesting a revocable trust. Kansas does not authorize self-settled domestic asset protection trusts and has no state estate or inheritance tax."
+  }
+}

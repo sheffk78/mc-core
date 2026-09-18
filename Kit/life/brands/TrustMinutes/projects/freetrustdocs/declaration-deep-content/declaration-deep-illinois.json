@@ -1,0 +1,27 @@
+{
+  "state": "Illinois",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Illinois is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. The Illinois Trust Code at 760 ILCS 3/ provides the governing framework, offering an optional statutory certification form at section 1013(j) that simplifies the process. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. The settlor may serve as trustee or name another individual or institution. Illinois also recognizes oral trusts, though they must be proven by clear and convincing evidence, making written declarations the practical standard. The optional statutory form reduces ambiguity for third parties such as banks and title companies that rely on the certification.",
+    "faq": [
+      {
+        "q": "Does an Illinois declaration of trust need to be notarized or witnessed?",
+        "a": "The Illinois Trust Code does not require witnesses for trust execution. Notarization is not statutorily required for the certification of trust itself, though a third party may require acknowledgment. The certification must be signed or otherwise authenticated by one or more trustees. For real property transfers, deeds must be notarized and recorded in the county where the property is located."
+      },
+      {
+        "q": "What is the optional statutory form in 760 ILCS 3/1013(j)?",
+        "a": "Section 1013(j) provides an optional statutory certification form that lists the required contents: trust existence and date, settlor identity, trustee identity and address, trustee powers, revocability and revocation power holder, co-trustee authority, the trust taxpayer identification number, and the manner of taking title. Using this form is not mandatory, and other forms are not barred. The form reduces guesswork for trustees and third parties alike."
+      },
+      {
+        "q": "How does Illinois treat business trusts?",
+        "a": "Illinois recognizes both common law business trusts and statutory business trusts under the Illinois Business Trust Act at 760 ILCS 35/. Business trusts are separate legal entities that operate outside the general trust code framework. The Illinois Business Trust Act provides a statutory structure for these entities, including provisions for governance, dissolution, and fiduciary duties. This dual approach gives Illinois flexibility for both traditional and business trust planning."
+      },
+      {
+        "q": "What is the Illinois Land Trust?",
+        "a": "The Illinois Land Trust is a unique statutory trust form governed by 765 ILCS 405/ and used heavily in real estate. It provides privacy by keeping the beneficial owner's name out of public property records, since title is held by the trustee. This vehicle is separate from the general trust framework under the Illinois Trust Code and serves a specific purpose for real estate ownership confidentiality."
+      }
+    ],
+    "common_mistakes": "A common mistake is assuming Illinois requires witnesses or notarization for trust validity, when neither is statutorily required. Another frequent error is neglecting to fund the trust after execution, leaving property outside the trust and defeating its purpose entirely. People also confuse the optional statutory certification form with a mandatory requirement, when section 1013(j) expressly states that use of other forms is not barred. Business trust planning may be mishandled by applying the general trust code provisions to a statutory business trust governed by 760 ILCS 35/. Finally, oral trusts are permitted but require clear and convincing evidence, a higher standard than written instruments, and failing to understand this can lead to disputes.",
+    "state_notes": "Illinois operates under the Illinois Trust Code at 760 ILCS 3/, a UTC-based framework providing uniform rules and interstate consistency. The certification of trust is governed by 760 ILCS 3/1013, with an optional statutory form at subsection (j). The certification must include the trust's taxpayer identification number, a detail not required in all UTC states, and must state that the trust has not been revoked, modified, or amended in a manner that would make the representations incorrect. The Illinois Land Trust statute at 765 ILCS 405/ offers a privacy vehicle for real estate ownership. Business trusts exist under both common law and the statutory framework at 760 ILCS 35/. Oral trusts are permitted but must be proven by clear and convincing evidence. Third parties acting in good faith on the certification are protected from liability."
+  }
+}

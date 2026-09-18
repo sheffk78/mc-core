@@ -1,0 +1,27 @@
+{
+  "state": "Virginia",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust is the written instrument that creates a trust. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. Under the Virginia Uniform Trust Code (Code of Virginia Title 64.2, Chapter 7), the instrument must be signed by the settlor. Virginia does not statutorily require witnesses for trust execution, though best practice includes two witnesses and a notary public for highest enforceability. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, Va. Code § 64.2-804 lists what a certification of trust may contain, and a third party may require the trustee to furnish excerpts.",
+    "faq": [
+      {
+        "q": "Does a Virginia declaration of trust have to be notarized or witnessed?",
+        "a": "Under the Virginia Uniform Trust Code, the trust instrument must be signed by the settlor. The Code does not statutorily require witnesses for trust execution, though best practice includes two witnesses and a notary public for highest enforceability, particularly for revocable trusts. Notarization is not strictly required for trust validity but is recommended. Real property transactions require acknowledgment for recording."
+      },
+      {
+        "q": "Can Virginia protect assets from the settlor's own creditors?",
+        "a": "Virginia recognizes Domestic Asset Protection Trusts (DAPTs) but with limitations: the grantor must appoint a trustee within the state and keep a portion of the assets within Virginia. The statute of limitations for creditors is five years. Virginia's DAPT provisions are more restrictive than leading trust jurisdictions like South Dakota or Wyoming, requiring an in-state trustee and in-state assets. The trust must comply with specific statutory requirements to qualify for asset protection."
+      },
+      {
+        "q": "What goes in a certification of trust under Va. Code § 64.2-804?",
+        "a": "The statute lists the contents: that the trust exists and the date the trust instrument was executed; the identity of the settlor; the identity and address of the currently acting trustee; the powers of the trustee; the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required to exercise powers of the trustee; the trust's taxpayer identification number; and the manner of taking title to"
+      },
+      {
+        "q": "How does Virginia treat business trusts?",
+        "a": "Virginia recognizes common law business trusts and Massachusetts trusts, which may be used for real estate holding and business purposes. Virginia Code § 55.1-117 sets forth parameters for certain trusts to hold real property, though most settlors use a signed trust agreement. Business trusts are generally treated under common law principles unless organized under specific business entity statutes. Virginia does not have a comprehensive statutory business trust framework comparable to states like Tennessee or Delaware."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Virginia law requires witnesses for trust execution (the Code does not statutorily require them, though best practice recommends two witnesses and a notary), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is assuming Virginia's DAPT statute is as permissive as leading trust jurisdictions: Virginia requires an in-state trustee and in-state assets, making it more restrictive than states like South Dakota or Wyoming. People also assume Virginia has no income tax on trusts; the state does impose income tax on trust income. Documents that omit a successor trustee, or that do not match the certification of trust described in § 64.2-804, create avoidable friction during administration.",
+    "state_notes": "Virginia operates under the Virginia Uniform Trust Code (Code of Virginia Title 64.2, Chapter 7), adopted 2005, with the certification of trust at Va. Code § 64.2-804. Virginia repealed its state estate tax in 2006. The state imposes income tax on trust income. Virginia recognizes Domestic Asset Protection Trusts (DAPTs) but with limitations: the grantor must appoint a trustee within the state and keep a portion of the assets within Virginia. The statute of limitations for creditors is five years. Virginia adopted the Uniform Trust Decanting Act (§§ 64.2-779.1 et seq.), allowing trustees to modify irrevocable trusts under certain circumstances. Spendthrift provisions are recognized and enforceable. Virginia's Uniform Trust Code is well-developed and includes specific provisions for pet trusts (§ 64.2-726) and other specialized trusts."
+  }
+}

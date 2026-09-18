@@ -1,0 +1,27 @@
+{
+  "state": "Alabama",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Alabama is the written instrument that creates a trust under the Alabama Uniform Trust Code (Ala. Code Title 19, Chapter 3B). The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. The trust is created when the settlor transfers property to another person as trustee, declares that the settlor holds identifiable property as trustee, or exercises a power of appointment in favor of a trustee. The instrument must be in writing and signed by the settlor. Alabama does not require witnesses or notarization for trust validity, though notarization is standard practice for real property transfers. The trust becomes active when funded: real property moves by a new deed recorded with the probate court, and accounts are retitled in the trust's name. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. Ala. Code \u00c2\u00a7 19-3B-1013 lists what a certification of trust may contain.",
+    "faq": [
+      {
+        "q": "Does an Alabama declaration of trust need to be notarized or witnessed?",
+        "a": "Under the Alabama Uniform Trust Code, the trust instrument must be signed by the settlor. Witnesses are not required, and notarization is not required for the trust instrument itself. Notarization or an acknowledgment may still be required for recording purposes, such as real property transactions or a certificate of trust. Real property transferred to a trust must be recorded with the probate court in the county where the property is located."
+      },
+      {
+        "q": "What goes in a certification of trust under Ala. Code \u00c2\u00a7 19-3B-1013?",
+        "a": "The statute lists the contents: that the trust exists and the date the instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the trustee's powers for the pending transaction, whether the trust is revocable and who holds the power to revoke, cotrustee signing authority, and the name in which title to trust assets is held. The certification must also state that the trust has not been revoked, modified, or amended in a manner that would cause representations to be incorrect."
+      },
+      {
+        "q": "How does Alabama treat business trusts?",
+        "a": "Alabama recognizes and regulates business trusts under Ala. Code Title 10A, Chapter 16. A business trust is defined as a form of business organization where property is conveyed to trustees to hold and manage for the benefit of beneficial owners. The statute provides for establishment for lawful purposes, certificates of ownership with limited liability, and recordation of declarations of trust. Common law business trusts are also recognized under general common law principles."
+      },
+      {
+        "q": "Can Alabama trusts protect assets from creditors?",
+        "a": "Alabama does not have a Domestic Asset Protection Trust statute for self-settled asset protection trusts. The spendthrift provision under Ala. Code \u00c2\u00a7 19-3B-502 protects trust assets from beneficiaries' creditors, but it does not shield the settlor's own creditors. Alabama's trust code follows the standard UTC model for creditor protections. Third-party spendthrift trusts remain a standard tool for asset protection planning in the state."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Alabama law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds or certificates of trust may call for an acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is confusing the Alabama Uniform Trust Code with the separate business trust statute under Title 10A, Chapter 16. People also assume asset-protection provisions apply on their own; Alabama does not authorize self-settled asset protection trusts. Documents that omit a successor trustee create avoidable friction during administration.",
+    "state_notes": "Alabama operates under the Alabama Uniform Trust Code, Ala. Code Title 19, Chapter 3B, and the state has a separate business trust statute under Title 10A, Chapter 16. Certification of trust contents are set by \u00c2\u00a7 19-3B-1013, and a third party may require the trustee to furnish excerpts from the trust instrument. Alabama levies state income tax on trust income but has no state estate tax. The state does not authorize self-settled domestic asset protection trusts. Alabama has not abolished the Rule Against Perpetuities, so dynasty trust duration is limited unless the trust instrument provides otherwise. The state offers standard UTC modification tools including nonjudicial settlement agreements, modification for changed circumstances, and modification by consent. Business trusts follow a separate track under Title 10A, Chapter 16, with their own recordation requirements."
+  }
+}

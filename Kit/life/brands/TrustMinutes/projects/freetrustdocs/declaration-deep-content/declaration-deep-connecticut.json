@@ -1,0 +1,27 @@
+{
+  "state": "Connecticut",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Connecticut is the written instrument that creates a trust under the Connecticut Uniform Trust Code (Conn. Gen. Stat. Â§ 45a-499a et seq.). The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. The trust is created when the settlor transfers property to another person as trustee, declares that the settlor holds identifiable property as trustee, or exercises a power of appointment in favor of a trustee. The instrument must be in writing and signed by the settlor. Connecticut does not require witnesses or notarization for trust validity, though notarization is recommended. Real property held in trust requires recording of deeds per standard real property law. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, Conn. Gen. Stat. Â§ 45a-499zzz lists what a certification of trust may contain.",
+    "faq": [
+      {
+        "q": "Does a Connecticut declaration of trust need to be notarized or witnessed?",
+        "a": "Under the Connecticut Uniform Trust Code, the trust instrument must be signed by the settlor. Witnesses are not required, and notarization is not required for the trust instrument itself. Notarization or an acknowledgment may still be required for recording purposes, such as real property transactions or a certificate of trust. Connecticut also has a unique probate court system with jurisdiction over trust matters, which adds a layer of judicial oversight not present in every state."
+      },
+      {
+        "q": "What goes in a certification of trust under Conn. Gen. Stat. Â§ 45a-499zzz?",
+        "a": "The statute lists the contents: that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable and who holds the power to revoke, cotrustee signing authority, and the name in which title to trust property is held. The certification must also state that the trust has not been revoked, modified, or amended in a manner that would cause the representations to be incorrect."
+      },
+      {
+        "q": "How does Connecticut treat business trusts?",
+        "a": "Connecticut has a dedicated statutory trust act under Conn. Gen. Stat. Â§ 34-500 et seq., the Connecticut Statutory Trust Act. A statutory trust must file a certificate of trust with the Secretary of the State under Â§ 34-503, and trustees must execute certificates under Â§ 34-504. This creates a registration-based framework separate from the普通 UTC trust. The Connecticut Statutory Trust Act is one of the few states with a specific business trust statute that provides a clear formation and governance path."
+      },
+      {
+        "q": "When did Connecticut adopt the Uniform Trust Code?",
+        "a": "Connecticut enacted its Uniform Trust Code through P.A. 19-137, effective January 1, 2020. This was a relatively recent adoption, meaning Connecticut's trust law reflects modern UTC provisions including directed trust statutes, trust protector powers, and decanting authority. The code applies to express trusts and trust administration under the UTC framework, while the older Connecticut Statutory Trust Act governs business trusts separately."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Connecticut law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds or certificates of trust may call for an acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is confusing the Connecticut UTC with the Connecticut Statutory Trust Act; the UTC governs personal trusts while the Statutory Trust Act governs business trusts, and they follow different procedures. People also assume Connecticut has no business trust statute; it does, and it requires filing with the Secretary of the State.",
+    "state_notes": "Connecticut operates under the Connecticut Uniform Trust Code, Conn. Gen. Stat. Â§ 45a-499a et seq., enacted by P.A. 19-137 effective January 1, 2020. Certification of trust contents are set by Â§ 45a-499zzz, and a third party may require the trustee to furnish excerpts from the trust instrument. Connecticut levies state income tax on trust income and has a state estate tax. The state has a unique probate court system with jurisdiction over trust matters. Connecticut also has a dedicated Connecticut Statutory Trust Act (Â§ 34-500 et seq.) for business trusts, requiring filing of a certificate of trust with the Secretary of the State. The Connecticut UTC adoption is relatively recent (2020), incorporating modern provisions such as directed trust statutes and trust protector powers. The county-by-county probate court system distinguishes Connecticut from states with unified probate courts."
+  }
+}

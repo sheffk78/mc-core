@@ -1,0 +1,27 @@
+{
+  "state": "North Carolina",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in North Carolina is the written instrument that creates a trust under N.C.G.S. Chapter 36C, the North Carolina Uniform Trust Code effective January 1, 2006. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. The trust instrument must be signed by the settlor. North Carolina does not require witnesses for trust execution, and notarization is customary but not statutorily required for trust validity. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, N.C.G.S. \u00c2\u00a7 36C-10-1013 lists what a certification of trust may contain, and a third party may require the trustee to furnish excerpts.",
+    "faq": [
+      {
+        "q": "Does a North Carolina declaration of trust have to be notarized or witnessed?",
+        "a": "Under N.C.G.S. Chapter 36C, the trust instrument must be signed by the settlor. Witnesses are not required, and notarization is not statutorily required for trust validity. Notarization or an acknowledgment may still be required for recording purposes, such as real property transactions or a certification of trust. For business trusts, a memorandum of the declaration of trust must be recorded in the county where land is held under N.C.G.S. \u00c2\u00a7 39-46."
+      },
+      {
+        "q": "Can a North Carolina trust continue forever?",
+        "a": "Yes. North Carolina repealed the Rule Against Perpetuities effective August 19, 2007, under N.C.G.S. \u00c2\u00a7 41-15, allowing dynasty trusts of unlimited duration. This makes North Carolina one of the premier jurisdictions for multi-generational wealth transfer. The repeal applies broadly, and trusts can be structured for perpetual duration. The specific terms of the trust instrument and how the trust is administered still determine what happens in any particular case."
+      },
+      {
+        "q": "What goes in a certification of trust under N.C.G.S. \u00c2\u00a7 36C-10-1013?",
+        "a": "The statute lists the contents: that the trust exists and the date the instrument was executed, the identity of the settlor (unless withheld under a provision in the trust instrument), the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable or irrevocable and who holds the power to revoke, cotrustee signing authority and whether all or less than all are required, the trust's taxpayer identification number, and the manner of taking title to trust property. A third party may require the"
+      },
+      {
+        "q": "How does North Carolina treat business trusts?",
+        "a": "North Carolina has a statutory business trust framework at N.C.G.S. Chapter 39, Article 8 (\u00c2\u00a7\u00c2\u00a7 39-44 to 39-48), enacted in 1977. The definition of business trust explicitly includes Illinois land trusts, Delaware statutory trusts, and Massachusetts business trusts. Business trusts may acquire and hold real estate in their trust names and may sue and be sued in their trust names. A memorandum of the declaration of trust must be recorded in the county where land is held. Prior deeds are validated under \u00c2\u00a7 39-47."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming North Carolina law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds or certificates of trust may call for an acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is treating a business trust like a family trust: North Carolina requires a memorandum of the declaration of trust to be recorded for business trusts holding real estate. People also assume the settlor's identity must always appear in the certification of trust, but N.C.G.S. \u00c2\u00a7 36C-10-1013 uniquely allows withholding the settlor's identity if the trust instrument so provides. Documents that omit a successor trustee, or that do not match the certification of trust described in \u00c2\u00a7 36C-10-1013, create avoidable friction during administration.",
+    "state_notes": "North Carolina operates under the North Carolina Uniform Trust Code, N.C.G.S. Chapter 36C (effective January 1, 2006), and the certification of trust contents are set by \u00c2\u00a7 36C-10-1013. A third party may require the trustee to furnish excerpts from the trust instrument. North Carolina repealed the Rule Against Perpetuities effective August 19, 2007, under N.C.G.S. \u00c2\u00a7 41-15, making it one of the few states with truly unlimited dynasty trust duration. The state has no state estate tax or inheritance tax. North Carolina's business trust statute (Chapter 39, Article 8) is specifically tailored to real estate holding and explicitly recognizes Delaware statutory trusts and Massachusetts business trusts by name. The certification of trust uniquely allows withholding the settlor's identity if the trust instrument so provides. North Carolina also has a Uniform Trust Decanting Act under Article 8B of Chapter 36C."
+  }
+}

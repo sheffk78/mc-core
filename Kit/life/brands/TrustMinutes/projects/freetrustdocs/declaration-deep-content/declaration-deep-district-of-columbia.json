@@ -1,0 +1,27 @@
+{
+  "state": "District of Columbia",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in the District of Columbia is the written instrument that creates a trust under D.C.'s adoption of the Uniform Trust Code (D.C. Code Title 19, Chapter 13). The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. The trust is created by a written instrument executed by the settlor or other evidence of the trust relationship. D.C.'s UTC adoption is one of the earlier ones, effective March 10, 2004 under D.C. Law 15-104, making its trust code well-established. The trust becomes active when it is funded: real property moves by a new deed recorded with the D.C. Recorder of Deeds, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, D.C. Code Â§ 19-1310.13 lists what a certification of trust may contain.",
+    "faq": [
+      {
+        "q": "Does a District of Columbia declaration of trust need to be notarized or witnessed?",
+        "a": "Under D.C.'s UTC framework, the trust instrument does not require notarization or witnesses for validity, though notarization is standard practice. Real property transferred to a trust must be recorded with the D.C. Recorder of Deeds. Notarization or an acknowledgment may still be required for recording purposes, and for statutory trusts, a certificate of trust must be filed with the Department of Licensing and Consumer Protection."
+      },
+      {
+        "q": "What goes in a certification of trust under D.C. Code Â§ 19-1310.13?",
+        "a": "The statute lists the contents including: that the trust exists and the date the instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, and whether the trust is revocable and who holds the power to revoke. Additional contents address co-trustee signing authority, the trust's taxpayer identification number, and the manner of taking title to trust property. The certification may be signed by any trustee."
+      },
+      {
+        "q": "How does D.C. protect against bad-faith demands for trust documents?",
+        "a": "D.C. Code Â§ 19-1310.13(h) provides that a person who demands the trust instrument in addition to a certification of trust is liable for damages if a court determines they did not act in good faith. This provision discourages parties from unnecessarily requesting the full trust instrument when a certification of trust would suffice. A person acting in reasonable reliance without knowledge of incorrectness is not liable and may enforce the transaction against trust property."
+      },
+      {
+        "q": "What makes D.C.'s trust code distinctive?",
+        "a": "D.C.'s UTC allows settlors to modify beneficiary notification duties through multiple mechanisms under Â§ 19-1301.05(c), including designating a trust protector-like role. D.C. also provides for electronic records and signatures in trust matters under Â§ 19-1311.02, conforming to federal e-signature law. The statutory trust registration process through the Department of Licensing and Consumer Protection is distinctive. D.C. is the only federal district with its own comprehensive trust code, and as the nation's capital, D.C. trusts may involve unique federal considerations not present in other jurisdictions."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming D.C. law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds or certificates of trust may call for an acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is confusing the certification of trust with the trust instrument itself; D.C. Code Â§ 19-1310.13 explicitly states that the certification need not contain the dispositive terms of a trust. People also assume D.C. has no business trust statute; D.C. statutory trusts must file form DST-1 with the Department of Licensing and Consumer Protection, which is a distinctive registration requirement.",
+    "state_notes": "District of Columbia operates under D.C. Code Title 19, Chapter 13 (Uniform Trust Code), adopted by D.C. Law 15-104, effective March 10, 2004. Certification of trust contents are set by Â§ 19-1310.13, and a third party may require the trustee to furnish excerpts from the trust instrument. D.C. levies a high income tax rate of up to 10.75%, making it less favorable for trust situs compared to no-tax states. D.C. has no state estate tax. The code uniquely allows settlors to modify beneficiary notification duties through multiple mechanisms under Â§ 19-1301.05(c), including designating a trust protector-like role. Electronic records and signatures are permitted in trust matters under Â§ 19-1311.02, conforming to federal e-signature law. D.C. statutory trusts must file a certificate of trust (form DST-1) with the Department of Licensing and Consumer Protection. The statutory trust registration process is distinctive to D.C. among trust jurisdictions."
+  }
+}

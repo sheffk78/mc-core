@@ -1,0 +1,27 @@
+{
+  "state": "Delaware",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Delaware is the written instrument that creates a trust under Delaware's trust governance framework. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. Delaware is a leading trust jurisdiction with a long history of trust legislation, including the Delaware Trust Act (12 Del. C. Chapter 33) and the Delaware Statutory Trust Act (25 Del. C. Chapter 38). The trust is created when the settlor transfers property to another person as trustee, declares that the settlor holds identifiable property as trustee, or exercises a power of appointment in favor of a trustee. The instrument must be in writing and signed by the settlor. Delaware does not require witnesses or notarization for trust validity, though notarization is standard practice. Real property transferred to a trust must be recorded with the county recorder. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies.",
+    "faq": [
+      {
+        "q": "Does a Delaware declaration of trust need to be notarized or witnessed?",
+        "a": "Under Delaware law, the trust instrument must be signed by the settlor. Witnesses are not required, and notarization is not required for the trust instrument itself. Notarization or an acknowledgment may still be required for recording purposes, such as real property transactions. For Delaware statutory trusts, a certificate of trust must be filed with the Delaware Secretary of State under Â§ 3810."
+      },
+      {
+        "q": "How does Delaware handle certification of trust for statutory trusts?",
+        "a": "Delaware does not have a UTC-based certification of trust statute for private trusts. For Delaware statutory trusts, the certificate of trust is governed by 12 Del. C. Â§ 3811 and must be filed with the Secretary of State. The certificate contains the name of the statutory trust, the name and address of the trustee, and other identifying information. This filing requirement distinguishes Delaware statutory trusts from ordinary private trusts, which do not require a certificate of trust."
+      },
+      {
+        "q": "What makes Delaware a leading trust jurisdiction?",
+        "a": "Delaware offers comprehensive trust legislation including directed trust provisions (Â§ 3556), trust protectors and advisors (Â§ 3536), decanting authority (Â§ 3528), and the Qualified Dispositions in Trust Act (Â§ 3570 and 3586) for domestic asset protection trusts. Delaware also abolished the common law rule against perpetuities under 25 Del. C. Â§ 503, allowing perpetual dynasty trusts. These provisions make Delaware one of the most sophisticated trust governance environments in the United States."
+      },
+      {
+        "q": "How does Delaware treat business trusts?",
+        "a": "Delaware has a comprehensive statutory trust framework under the Delaware Statutory Trust Act (25 Del. C. Chapter 38). A statutory trust is formed by filing a certificate of trust with the Delaware Secretary of State under Â§ 3810. The governing instrument (trust agreement) sets out the rights and obligations of trustees and beneficial interests. Statutory trusts offer liability protection for trustees and beneficial interests, and they are commonly used for securitization, investment funds, and real estate holding structures."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Delaware law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds or certificates of trust may call for an acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is confusing private trusts with Delaware statutory trusts; statutory trusts require filing with the Secretary of State while private trusts do not. People also assume Delaware's UTC-based certification of trust applies to all trusts; it applies only to statutory trusts, and the certificate of trust filing requirement is separate from the private trust certification process.",
+    "state_notes": "Delaware operates under the Delaware Trust Act (12 Del. C. Chapter 33) and the Delaware Statutory Trust Act (25 Del. C. Chapter 38). Delaware does not have a UTC-based certification of trust statute for private trusts; instead, it governs statutory trusts through a registration framework with certificate of trust filing requirements. Certification of trust for statutory trusts is set by 12 Del. C. Â§ 3811. Delaware levies no state income tax on trust income for non-resident beneficiaries, has no state estate tax, and no state inheritance tax. Delaware abolished the common law rule against perpetuities under 25 Del. C. Â§ 503, allowing perpetual dynasty trusts. The state offers directed trust provisions, trust protectors and advisors, decanting authority, and the Qualified Dispositions in Trust Act for domestic asset protection. Delaware's trust industry is well-established, making it one of the most popular jurisdictions for trust situs."
+  }
+}

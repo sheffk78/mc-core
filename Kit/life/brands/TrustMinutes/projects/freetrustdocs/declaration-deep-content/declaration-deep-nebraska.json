@@ -1,0 +1,27 @@
+{
+  "state": "Nebraska",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Nebraska is the written instrument that creates a trust under the Nebraska Uniform Trust Code, Neb. Rev. Stat. Chapter 30, Article 38, effective January 1, 2005. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. Nebraska does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though the certification of trust must be in the form of an affidavit and signed and acknowledged by all acting trustees. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies.",
+    "faq": [
+      {
+        "q": "Does Nebraska require notarization or witnesses for a trust instrument?",
+        "a": "Under the Nebraska Uniform Trust Code, the trust instrument does not require witnesses for validity. Notarization is not required for the trust instrument itself, though the certification of trust must be in the form of an affidavit and signed and acknowledged by all acting trustees under Neb. Rev. Stat. Â§30-38,102(b). For real property transactions, deeds transferring property into the trust must be notarized and recorded in the county where the property is located. Nebraska does not currently recognize digital-only trusts; the trust must be printed and physically signed."
+      },
+      {
+        "q": "Can a Nebraska trust last forever, and does Nebraska allow asset protection trusts?",
+        "a": "Nebraska modified its Statutory Rule Against Perpetuities in 2002 under Section 76-2002 to permit dynasty trusts: a nonvested property interest is invalid unless it vests or terminates within 21 years after a life in being, or within 90 years after creation, but the governing instrument may state that the rule against perpetuities does not apply, effectively allowing perpetual dynasty trusts when properly drafted. Nebraska does not have a self-settled asset protection trust statute. Nebraska has no state estate or inheritance tax."
+      },
+      {
+        "q": "What goes in a certification of trust under Nebraska's two-section scheme?",
+        "a": "Nebraska uses a two-statute scheme. Section 30-38,102 requires the certification to be an affidavit signed and acknowledged by all acting trustees, and no person must accept and rely solely on it. Section 30-38,103 allows the certification to confirm the trust's existence and date, the identity of the grantor and each acting trustee, the trustee's powers, revocability, the identifying number and whether it is a SSN or EIN, the name of each beneficiary and their relationship to the grantor, the governing jurisdiction, the form of title, and homestead exemption information."
+      },
+      {
+        "q": "How does Nebraska treat business trusts?",
+        "a": "Nebraska does not have a specific business trust or Massachusetts trust statute separate from the Nebraska Uniform Trust Code. Business trusts operating in Nebraska are typically structured as LLCs, corporations, or limited partnerships under Nebraska's business entity statutes. Nebraska's trust code applies to express trusts generally. The Nebraska LLC Act, business corporation statutes, and partnership statutes are the primary vehicles for business entities. Foreign business trusts may operate in Nebraska subject to foreign entity registration requirements. Nebraska's trust code covers charitable and noncharitable express trusts."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Nebraska law requires witnesses for trust execution (it does not), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is assuming any single trustee can sign the certification: Nebraska requires ALL acting trustees to sign and acknowledge the certification under Â§30-38,102(b), which is stricter than many UTC states. People also assume asset-protection provisions apply on their own; Nebraska does not authorize self-settled asset protection trusts. Nebraska uniquely requires the name of each beneficiary and their relationship to the grantor in the certification, a provision not found in the standard UTC model. The homestead exemption information requirement is also unique and frequently overlooked.",
+    "state_notes": "Nebraska operates under the Nebraska Uniform Trust Code, Neb. Rev. Stat. Chapter 30, Article 38, enacted in 2003 (LB 130) and effective January 1, 2005. The certification of trust is governed by a two-section scheme at Neb. Rev. Stat. Â§§30-38,102 and 30-38,103, requiring all acting trustees to sign the certification in affidavit form. Nebraska modified its Statutory Rule Against Perpetuities in 2002 to allow perpetual dynasty trusts through an opt-out mechanism in the governing instrument. Nebraska does not allow self-settled asset protection trusts. Nebraska has a state income tax on trust income for resident fiduciaries but no state estate or inheritance tax. Business trusts are treated under common law without a dedicated statutory business trust registration framework. The Nebraska UTC was updated in 2026 (LB838) with an operative date of July 18, 2026."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "state": "Georgia",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Georgia is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. The Revised Georgia Trust Code at O.C.G.A. Title 53, Chapter 12, effective July 1, 2010, provides the governing framework and applies to trusts regardless of creation date, subject to vested rights protections. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. Georgia does not require witnesses or notarization for trust execution, though deeds moving real property must be notarized and recorded in the county where the property sits. The certification of trust at O.C.G.A. § 53-12-280 may be recorded in recordable form with the clerk of superior court, a public record option few states offer.",
+    "faq": [
+      {
+        "q": "Does a Georgia declaration of trust need to be notarized or witnessed?",
+        "a": "Georgia does not require witnesses or notarization for valid trust execution under the Georgia Trust Code. Notarization is recommended but not statutorily required for the trust instrument itself. For real property transfers into the trust, deeds must be notarized and recorded in the county where the property is located. A certification of trust in recordable form may also be recorded with the clerk of superior court."
+      },
+      {
+        "q": "What goes in a certification of trust under O.C.G.A. § 53-12-280?",
+        "a": "The certification may contain some or all of: trust existence and date, settlor identity, each current trustee's identity and address, trustee powers and restrictions, revocability, how trust property should be titled, and a statement that the transaction requires no consent from anyone other than the certifying trustee. It must be signed by each trustee, must state the trust has not been revoked or amended in a way that makes the representations incorrect, and need not contain dispositive provisions."
+      },
+      {
+        "q": "How long can a Georgia trust last?",
+        "a": "Georgia allows extended-duration trusts under its Uniform Statutory Rule Against Perpetuities at O.C.G.A. § 44-6-200 through § 44-6-206, permitting interests to remain nonvested for up to 360 years. This is among the longer statutory periods in the nation and supports multi-generational planning. Georgia does not permit self-settled asset protection trusts, so duration flexibility does not extend to self-settled creditor protection."
+      },
+      {
+        "q": "How does Georgia treat business trusts?",
+        "a": "Georgia has no dedicated business trust statute and no requirement to file a business trust instrument with the Secretary of State. Business trusts are treated under common law principles supplemented by the Georgia Trust Code, which applies to express trusts including those used for business purposes. This common law approach is less formal than the separate business trust entity statutes maintained in states like Ohio or Pennsylvania."
+      }
+    ],
+    "common_mistakes": "A common mistake is assuming Georgia requires witnesses or notarization for the trust instrument itself, when the Georgia Trust Code requires neither. Another frequent error is skipping notarization and county recording for deeds moving real property into the trust, since those transfer steps do carry formal requirements. People also overlook the option to record a certification of trust in recordable form with the clerk of superior court. Business trusts get misclassified as entities requiring Secretary of State registration, when Georgia handles them at common law with no filing requirement. Assuming self-settled asset protection applies automatically is incorrect, since Georgia does not permit those trusts, and demanding complete trust records in bad faith can create liability for damages including attorney fees.",
+    "state_notes": "Georgia operates under the Revised Georgia Trust Code at O.C.G.A. Title 53, Chapter 12, effective July 1, 2010, applying to all trusts regardless of creation date subject to vested rights protections. The certification of trust is governed by O.C.G.A. § 53-12-280, must be signed by each trustee, and may be recorded in recordable form with the clerk of superior court. Georgia permits extended-duration trusts of up to 360 years under its Uniform Statutory Rule Against Perpetuities at O.C.G.A. § 44-6-200 through § 44-6-206, among the longer statutory periods nationally. The state has no estate tax or inheritance tax, making it favorable for trust situs. The code includes pet trust provisions at O.C.G.A. § 53-12-28 and a Prudent Investor Act provision at O.C.G.A. § 53-12-340. Georgia does not permit self-settled asset protection trusts, and bad-faith insistence on complete trust records beyond a certification can create liability for damages including attorney fees."
+  }
+}

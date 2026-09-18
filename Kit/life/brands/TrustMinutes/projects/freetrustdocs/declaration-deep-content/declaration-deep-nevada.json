@@ -1,0 +1,27 @@
+{
+  "state": "Nevada",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Nevada is the written instrument that creates a trust under Nevada's trust law, spread across NRS Chapters 163, 164, 165, and 166. Nevada has not adopted the Uniform Trust Code. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. Nevada does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, NRS Â§164.410 lists what a certification of trust may contain.",
+    "faq": [
+      {
+        "q": "Does Nevada require notarization or witnesses for a trust instrument?",
+        "a": "Under Nevada trust law, the trust instrument does not require witnesses or notarization for validity. NRS Â§164.410(2) requires the certification of trust to be signed by all currently acting trustees, but does not mandate notarization for the certification itself. For real property transactions, deeds transferring property into the trust must be notarized and recorded in the county where the property is located. Nevada permits electronic signing. The trust instrument itself can be signed without a notary, but practical acceptance by financial institutions often calls for an acknowledgment."
+      },
+      {
+        "q": "Can a Nevada trust last indefinitely, and does Nevada allow self-settled asset protection trusts?",
+        "a": "Nevada permits 365-year dynasty trusts under NRS Section 11.1031, one of the longest perpetuities periods in the nation. Nevada also allows self-settled spendthrift trusts under NRS Chapter 166, with only a 2-year seasoning period. Nevada has no state income tax, no state estate tax, and no inheritance tax. Nevada requires at least one Nevada trustee and some Nevada administration for DAPTs. The combination of long dynasty trusts, short DAPT seasoning, and no state income tax makes Nevada highly favorable for trust planning."
+      },
+      {
+        "q": "What goes in a certification of trust under NRS Â§164.410?",
+        "a": "NRS Section 164.410 allows the certification to confirm: the trust's existence and date of execution, the identity of the settlor and each acting trustee, the trustee's powers and any restrictions on dealing with trust assets, revocability and the identity of the person holding the power to revoke, whether all or less than all trustees must act, a declaration regarding situs and governing law, and the form in which title to trust assets is taken. The certification must state the trust has not been revoked or amended to make representations incorrect."
+      },
+      {
+        "q": "How does Nevada treat business trusts?",
+        "a": "Nevada has a comprehensive statutory business trust framework under NRS Chapter 88A. A business trust must file a certificate of trust with the Secretary of State under NRS 88A.210. Nevada also recognizes common law business trusts and Massachusetts trusts. The statutory framework provides additional certainty and limited liability features. NRS Chapter 88A includes provisions for series trusts, foreign business trusts, and detailed governance provisions."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Nevada law requires witnesses for trust execution (it does not), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is treating a Nevada business trust like a private family trust: Nevada requires business trusts to file a certificate of trust with the Secretary of State under NRS 88A.210, creating a public record. People also assume all states allow self-settled asset protection trusts; Nevada does, but only with a 2-year seasoning period and a Nevada trustee requirement. The declaration regarding situs and governing law in Nevada's certification of trust is unique and is frequently omitted. Documents that omit the declaration regarding trustee incapacity and succession create gaps in the certification.",
+    "state_notes": "Nevada operates under its own trust law framework spread across NRS Chapters 163, 164, 165, and 166, and has not adopted the Uniform Trust Code. The certification of trust statute is NRS Â§164.410, which requires signatures of all currently acting trustees. Nevada permits 365-year dynasty trusts under NRS Â§11.1031, one of the longest perpetuities periods in the nation. Nevada allows self-settled spendthrift trusts under NRS Chapter 166 with a 2-year seasoning period. Nevada has no state income tax, no state estate tax, and no inheritance tax. Business trusts must file a certificate of trust with the Secretary of State under NRS 88A.210. Nevada's certification of trust uniquely includes a declaration regarding situs, domicile, and governing law, and a declaration regarding trustee incapacity and succession under NRS 163.605."
+  }
+}

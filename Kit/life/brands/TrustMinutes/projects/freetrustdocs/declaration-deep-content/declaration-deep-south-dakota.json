@@ -1,0 +1,27 @@
+{
+  "state": "South Dakota",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust is the written instrument that creates a trust. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. Under South Dakota Codified Laws Title 55, Chapters 55-1 through 55-4, the instrument must be signed by the settlor. South Dakota does not require witnesses for trust execution. The certificate of trust must be acknowledged or verified under oath before a notary public or other official authorized to administer oaths. For real property transactions, the certificate may be recorded in the office of the register of deeds. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies.",
+    "faq": [
+      {
+        "q": "Does a South Dakota declaration of trust have to be notarized or witnessed?",
+        "a": "Under South Dakota law, the trust instrument must be signed by the settlor. Witnesses are not required for trust execution, and notarization is not required for the trust instrument itself. However, the certificate of trust must be acknowledged or verified under oath before a notary public or other official authorized to administer oaths. Notarization may also be required for recording purposes, such as real property transactions or a certificate of trust."
+      },
+      {
+        "q": "Can a South Dakota trust continue forever?",
+        "a": "Yes. South Dakota abolished the rule against perpetuities, allowing true perpetual dynasty trusts. This means a trust can last indefinitely, making the state one of the leading trust jurisdictions for multi-generational wealth transfers. The state also permits trust decanting, trust protectors, and directed trusts. These rules come from SDCL Title 55, which sets the ground rules for how long a trust may last and when it can protect trust property."
+      },
+      {
+        "q": "What goes in a certificate of trust under SDCL § 55-4-51?",
+        "a": "The statute lists the contents: that the trust exists, the current name of the trust, any previous name if changed, and the date the trust instrument or will was executed; the name of the settlor, grantor, trustor, testator, or testatrix; the name of each original trustee and the name and address of each trustee currently empowered to act; the applicable powers of the trustee selected by the signer, including powers to sell, convey, pledge, mortgage, lease, or transfer title to property, and the number of trustees required to act; a"
+      },
+      {
+        "q": "How does South Dakota treat business trusts?",
+        "a": "Business trusts are treated as separate legal entities, not as ordinary family trusts. South Dakota has a comprehensive statutory framework for business trusts under SDCL Title 47, Chapter 14A (South Dakota Business Trust Act). Business trusts are treated as separate legal entities with beneficial owners, trustees, and transferable interests. The Act provides for formation, governance, liability of beneficial owners and trustees, mergers, conversions, and dissolutions. Foreign business trusts must register under Chapter 14B."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming South Dakota law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds or certificates of trust may call for an acknowledgment), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is treating a business trust like a family trust: South Dakota requires foreign business trusts to register with the Secretary of State and the business trust framework under Chapter 14A governs formation, governance, and dissolution separately from a declaration of trust created under the trust code. People also assume asset-protection provisions apply on their own; South Dakota's Third Party Discretionary Support Trusts and self-settled asset protection trusts require specific statutory conditions.",
+    "state_notes": "South Dakota operates under SDCL Title 55 (Fiduciaries and Trusts), Chapters 55-1 through 55-4, with the certificate of trust at SDCL § 55-4-51 and the business trust framework at SDCL Title 47, Chapter 14A. The state levies no state income tax, no state estate tax, and no inheritance tax, making it one of the most favorable trust situs in the country. South Dakota abolished the rule against perpetuities, allowing true perpetual dynasty trusts. The state offers strong asset protection through Third Party Discretionary Support Trusts (SDCL 55-1-24 through 55-1-43), directed trusts under SDCL 55-1B, and comprehensive decanting provisions. The Governor's Trust Task Force meets annually to refine trust legislation. South Dakota chartered trust companies benefit from favorable regulatory treatment. The certificate of trust must be signed by a trustee, settlor, grantor, or trustor and acknowledged or verified under oath before a notary public."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "state": "Oregon",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Oregon is the written instrument that creates a trust under Or. Rev. Stat. ch. 130 (Oregon Uniform Trust Code), enacted 2005 and effective January 1, 2006. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. The trust instrument must be signed by the settlor. Oregon does not require witnesses or notarization for trust validity. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, ORS 130.860 lists what a certification of trust may contain. Oregon's certification of trust statute is notably more detailed than the standard UTC model.",
+    "faq": [
+      {
+        "q": "Does an Oregon declaration of trust have to be notarized or witnessed?",
+        "a": "Under Or. Rev. Stat. ch. 130, the trust instrument does not require witnesses or notarization for validity. Notarization is recommended for practical purposes such as bank acceptance and real estate recording, but it is not a statutory requirement for trust validity. For business trusts under ORS 128.575, filing with the Office of the Secretary of State is required. Recording is not generally required for non-business trust instruments. Oregon does not require registration of trusts with any court."
+      },
+      {
+        "q": "Can an Oregon trust continue for many generations?",
+        "a": "Yes. Oregon has stewardship trusts under ORS 130.193, which combined with ORS 105.965(1), are exempt from the rule against perpetuities, allowing perpetual trusts if the terms clearly elect this. Oregon also has a modified rule against perpetuities under ORS 105.950 with a 90-year wait-and-see rule for general trusts, but stewardship trusts and certain nondonative transfers are excluded. The specific terms of the trust instrument and how the trust is administered still determine what happens in any particular case."
+      },
+      {
+        "q": "What goes in a certification of trust under ORS 130.860?",
+        "a": "ORS 130.860(2) requires the certification to contain: that the trust exists and the date the trust instrument was executed, the identity of the settlor, the identity and address of the currently acting trustee, the powers of the trustee, whether the trust is revocable or irrevocable and the identity of any person holding a power to revoke, whether any power to modify or amend the trust exists and the identity of any person holding such power, the authority of cotrustees to sign or authenticate and whether all or fewer than all"
+      },
+      {
+        "q": "How does Oregon treat business trusts?",
+        "a": "Oregon has specific statutory provisions for business trusts under ORS 128.560 et seq. ORS 128.560 defines a business trust as any association, including a real estate investment trust, engaged in or operating a business under a written trust agreement or declaration of trust, the beneficial interest under which is divided into transferable certificates of participation or shares. ORS 128.575 requires filing with the Secretary of State. ORS 128.595 requires annual reports. Oregon business trusts are regulated entities subject to certain corporate laws under ORS 128.580."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Oregon law requires witnesses or notarization for the trust instrument itself (it requires neither, though recording-related steps such as deeds call for notarization), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. A notable Oregon-specific pitfall is that ORS 130.860 requires ALL trustees to sign the certification of trust, unlike most UTC states that allow any single trustee to sign. People also overlook the additional disclosure requirements in Oregon's certification, including the modification/amendment powers, partial SSN/EIN, and governing jurisdiction, which make it one of the most comprehensive certification requirements in the country. The stewardship trust election under ORS 130.193 is a distinctive Oregon feature that must be clearly stated in the trust instrument to take effect.",
+    "state_notes": "Oregon operates under Or. Rev. Stat. ch. 130 (Oregon Uniform Trust Code), enacted 2005 and effective January 1, 2006. Certification of trust contents are set by ORS 130.860 (UTC 1013). Oregon's certification of trust statute is more detailed than the standard UTC model, requiring disclosure of modification/amendment powers, partial SSN/EIN, and the governing jurisdiction of the trust. Oregon requires ALL trustees to sign the certification of trust under ORS 130.860(3), unlike most UTC states that allow any single trustee to sign. Oregon has stewardship trusts under ORS 130.193, a distinctive Oregon creation that can opt out of the rule against perpetuities, providing perpetual trust capability. Oregon has a detailed, separate statutory framework for business trusts under ORS 128.560-128.600 that requires Secretary of State filing, annual reports, and subjects them to certain corporate laws. Oregon does not have a state estate or inheritance tax."
+  }
+}

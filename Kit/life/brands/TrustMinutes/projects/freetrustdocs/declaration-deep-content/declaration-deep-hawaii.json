@@ -1,0 +1,27 @@
+{
+  "state": "Hawaii",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Hawaii is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. Hawaii adopted the Uniform Trust Code at HRS Chapter 554D, effective January 1, 2022 through Act 32 of the 2021 Session Laws, making it one of the most recently modernized trust codes. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. The certification of trust under HRS § 554D-1013 allows trustees to confirm trust terms to third parties without disclosing dispositive provisions. Hawaii also permits self-settled asset protection trusts under the Permitted Transfers in Trust Act at HRS Chapter 554E, and statutory decanting under Chapter 554D, Article 3.",
+    "faq": [
+      {
+        "q": "Does a Hawaii declaration of trust need to be notarized or witnessed?",
+        "a": "No notary, witnesses, or recording are specifically required for the certification of trust under HRS § 554D-1013, which may be signed or otherwise authenticated by any trustee. The recipient may, however, require copies of excerpts from the original trust instrument and amendments that designate the trustee and confer power to act in the pending transaction. The certification itself need not contain the dispositive terms of the trust."
+      },
+      {
+        "q": "What goes in a certification of trust under HRS § 554D-1013?",
+        "a": "The certification lists: trust existence, execution date, and trust name; settlor identity; trustee identity and address; trustee powers; revocability and who holds the power to revoke; co-trustee signing authority and whether all or fewer than all are needed; and, if an action goes through an agent, that delegation is not prohibited by the instrument. It must state the trust has not been revoked, modified, or amended in any way that would make the representations incorrect."
+      },
+      {
+        "q": "Can a Hawaii trust protect assets from the settlor's creditors?",
+        "a": "Yes, Hawaii is a DAPT state through the Permitted Transfers in Trust Act at HRS Chapter 554E, which allows self-settled irrevocable trusts protected from most claims of the settlor's creditors. Hawaii is one of a minority of states combining this with a statutory decanting framework under HRS Chapter 554D, Article 3. Decanting lets trustees move assets from an older irrevocable trust into a new one with updated terms, subject to the 60-day beneficiary notice requirement."
+      },
+      {
+        "q": "How does Hawaii treat business trusts?",
+        "a": "Hawaii has no specific Massachusetts or business trust statute. Business trusts operate under common law principles and general trust law under HRS Chapter 554D, with no separate statutory framework. For business activities, LLCs and corporations under Hawaii's business entity statutes remain the standard vehicles. A declaration of trust under the Hawaii UTC is distinct from any common law business trust arrangement."
+      }
+    ],
+    "common_mistakes": "A common mistake is assuming Hawaii's trust law has been settled for decades, when the Hawaii UTC only took effect January 1, 2022 under Act 32, so older guidance may not reflect the current code. Another frequent error is treating decanting as unrestricted, when HRS Chapter 554D Article 3 imposes a 60-day beneficiary notice requirement and distinguishes expanded-discretion from limited-discretion trusts. People also assume the certification under HRS § 554D-1013 must be notarized or recorded, when no such steps are specified. Asset protection provisions are assumed automatic, when HRS Chapter 554E sets its own requirements. Failing to fund the trust through retitled deeds and accounts remains the classic error, and business trust planning is often misaligned with Hawaii's common law approach.",
+    "state_notes": "Hawaii operates under the Uniform Trust Code at HRS Chapter 554D, effective January 1, 2022 through Act 32 of the 2021 Session Laws, one of the most recent UTC adoptions in the nation. The certification of trust is governed by HRS § 554D-1013, which permits a trustee to furnish a certification instead of the trust instrument and allows a recipient to require excerpts designating the trustee and conferring transaction powers. Hawaii is a DAPT state through the Permitted Transfers in Trust Act at HRS Chapter 554E and offers statutory decanting under HRS Chapter 554D, Article 3, with a 60-day beneficiary notice requirement and distinctions between expanded-discretion and limited-discretion trusts. The rule against perpetuities at HRS § 525-1 follows the USRAP, validating nonvested interests that vest within 90 years. Hawaii has no state estate or inheritance tax."
+  }
+}

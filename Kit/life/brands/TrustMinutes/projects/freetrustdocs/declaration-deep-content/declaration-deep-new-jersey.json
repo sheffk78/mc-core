@@ -1,0 +1,27 @@
+{
+  "state": "New Jersey",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in New Jersey is the written instrument that creates a trust under the New Jersey Uniform Trust Code, N.J.S.A. 3B:31-1 through 3B:31-84, effective January 1, 2016. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. New Jersey does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though it is strongly recommended and often required by financial institutions. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies.",
+    "faq": [
+      {
+        "q": "Does New Jersey require notarization or witnesses for a trust instrument?",
+        "a": "Under the New Jersey Uniform Trust Code, the trust instrument does not require witnesses or notarization for validity. However, notarization is strongly recommended and often required by financial institutions. N.J.S.A. 3B:31-81 requires the certification of trust to be signed by all currently acting trustees. For real property transactions, recording may be required. New Jersey allows remote online notarization (RON). No specific witness requirement for trust execution exists under the NJ UTC. Revocable trusts require the settlor's signature and delivery to the trustee."
+      },
+      {
+        "q": "Can a New Jersey trust last forever, and does New Jersey allow asset protection trusts?",
+        "a": "New Jersey abolished the rule against perpetuities under N.J.S.A. 46:2F-9, allowing perpetual dynasty trusts for both real and personal property. The common law rule against perpetuities is not in force in New Jersey. New Jersey does not have a self-settled asset protection trust statute. New Jersey imposes a state income tax on trust income for resident trusts where at least one trustee is a New Jersey resident. New Jersey also has an inheritance tax for certain beneficiary classes."
+      },
+      {
+        "q": "What goes in a certification of trust under N.J.S.A. 3B:31-81?",
+        "a": "The certification may confirm the trust's existence and date of execution, the identity of the settlor and acting trustee, the trustee's powers, whether the trust is revocable or irrevocable, the authority of co-trustees, and the name in which title to trust property may be taken. The certification must be signed by all persons identified as currently acting as trustee and must state the trust has not been revoked or amended in any manner that would cause the representations to be incorrect."
+      },
+      {
+        "q": "How does New Jersey treat business trusts?",
+        "a": "New Jersey does not have a specific business trust statute modeled on the Massachusetts business trust. Business trusts in New Jersey are governed by common law principles and general trust law under the NJ UTC. New Jersey treats business trusts as unincorporated business organizations under common law. The NJ UTC applies to express trusts, including those created for business purposes."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming New Jersey law requires witnesses for trust execution (it does not), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is assuming any single trustee can sign the certification: New Jersey requires ALL currently acting trustees to sign the certification under N.J.S.A. 3B:31-81, which is stricter than the model UTC. People also assume New Jersey is a favorable trust situs overall; while it abolished the rule against perpetuities, it imposes a state income tax on trust income for resident trusts and an inheritance tax for certain beneficiary classes. The NJ UTC's requirement that all trustees sign the certification is a notable departure from the model UTC and is frequently overlooked.",
+    "state_notes": "New Jersey operates under the New Jersey Uniform Trust Code, N.J.S.A. 3B:31-1 through 3B:31-84, enacted in 2015 and effective January 1, 2016. The certification of trust statute is N.J.S.A. 3B:31-81, which requires all currently acting trustees to sign the certification. New Jersey abolished the rule against perpetuities under N.J.S.A. 46:2F-9, allowing perpetual dynasty trusts. New Jersey does not allow self-settled asset protection trusts. New Jersey imposes a state income tax on trust income for resident trusts and an inheritance tax for Class C and D beneficiaries. Business trusts are generally treated under common law without a dedicated statutory business trust registration framework. The NJ UTC closely follows the model UTC with state-specific modifications in fiduciary duties and beneficiary information rights."
+  }
+}

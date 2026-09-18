@@ -1,0 +1,27 @@
+{
+ "state": "Michigan",
+ "document": "declaration-of-trust",
+ "blocks": {
+  "how_it_works": "A declaration of trust in Michigan operates under the Michigan Trust Code, found in Article VII of the Estates and Protected Individuals Code (EPIC), MCL Chapter 700, effective April 1, 2010. Under MCL Sections 700.7401 and 700.7402, a trust is created when the settlor has capacity, a valid trust purpose exists, and the instrument is executed with the formalities Michigan law requires. Michigan does not impose a general witness or notarization requirement for trust validity, though notarization is recommended for real estate transactions and deeds moving property into the trust must be notarized and recorded. Michigan does not require registration of trusts with any court under MCL Section 700.7209. When proof of authority is needed, MCL Section 700.7913 provides a certificate of trust that must be in the form of an affidavit and may be signed by the settlor, any trustee, or an attorney for the settlor or trustee.",
+  "faq": [
+   {
+    "q": "Does a Michigan declaration of trust have to be notarized or witnessed?",
+    "a": "Michigan does not impose a general witness or notarization requirement for trust validity under MCL Sections 700.7401 through 700.7402. Notarization is recommended for real estate transactions, and deeds transferring real property into the trust must be notarized and recorded. The certificate of trust is the exception: under MCL Section 700.7913(2), it must be in the form of an affidavit, which effectively requires it to be sworn or acknowledged. Michigan also does not require registration of trusts with any court under MCL Section 700.7209, so registration is optional."
+   },
+   {
+    "q": "What goes in a Michigan certificate of trust under MCL 700.7913?",
+    "a": "The certificate must include the trust's name, the date of the trust and each operative instrument, the name and address of each current trustee, the trustee's powers for the purpose the certificate is offered, revocability and who holds the power to revoke, and cotrustee signing authority, including whether all or fewer than all must act. It must state the trust has not been revoked or amended in a manner that makes the representations incorrect. The certificate takes affidavit form; the settlor, a trustee, or an attorney may sign it."
+   },
+   {
+    "q": "How long can a Michigan trust last?",
+    "a": "Michigan uses a dual-track approach. The Statutory Rule Against Perpetuities at MCL Section 554.91 provides a 90-year wait-and-see period, but the Personal Property Trust Perpetuities Act (MCL Chapter 554, Act 148 of 2008, Section 554.93) extends the duration to 360 years for trusts holding personal property. That 360-year period is one of the longer statutory durations available. Michigan does not authorize self-settled asset protection trusts, so a settlor cannot shield trust assets from personal creditors, and Michigan has no state estate tax, which simplifies planning at the state level."
+   },
+   {
+    "q": "How does Michigan treat business trusts?",
+    "a": "Michigan does not have a dedicated business trust statute. Business trusts are treated under common law principles as supplemented by the Michigan Trust Code, which is part of Article VII of EPIC. The Michigan Trust Code is described as a uniquely Michigan document, drawing from both the Uniform Trust Code and existing Michigan law. There is no requirement to file a business trust instrument with the Department of State, so business trusts operate as common law trusts rather than registered entities."
+   }
+  ],
+  "common_mistakes": "Common issues include assuming Michigan requires notarization or witnesses for the trust instrument itself (it does not under MCL Sections 700.7401 through 700.7402, though deeds into the trust must be notarized and recorded), and overlooking the affidavit form: the certificate of trust under MCL Section 700.7913(2) must be in the form of an affidavit, the only such requirement in this group of states. People also miss that the certificate may be signed by the settlor or an attorney, not just trustees. Assuming a 90-year duration cap is the whole story is another error, since the Personal Property Trust Perpetuities Act extends duration to 360 years for trusts holding personal property under MCL Section 554.93. Registering the trust with a court is unnecessary because MCL Section 700.7209 makes registration optional. Unfunded trusts and omitted successor trustees remain frequent problems.",
+  "state_notes": "Michigan operates under the Michigan Trust Code, Article VII of EPIC (MCL Chapter 700, Act 386 of 1998, effective April 1, 2010). The certificate of trust at MCL Section 700.7913 is unique: it must be in the form of an affidavit and may be signed or authenticated by the settlor, any trustee, or an attorney for the settlor or trustee. It lists the trust name and instrument dates, current trustees, relevant trustee powers, revocability, and cotrustee authority, and need not include dispositive terms. Duration follows a dual track: a 90-year wait-and-see period under MCL Section 554.91, extended to 360 years for personal property trusts under the Personal Property Trust Perpetuities Act (Act 148 of 2008, MCL Section 554.93). Michigan has no dedicated business trust statute, relying on common law and the trust code. Trust registration with a court is optional under MCL Section 700.7209, there is no state estate tax, and self-settled asset protection trusts are not authorized."
+ }
+}

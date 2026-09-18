@@ -1,0 +1,27 @@
+{
+  "state": "Missouri",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Missouri is the written instrument that creates a trust under the Missouri Uniform Trust Code, Mo. Rev. Stat. ch. 456, effective January 1, 2005. The settlor signs the instrument, stating an intent to hold property for named beneficiaries and appointing a trustee to manage it. Missouri does not require witnesses for trust execution, and notarization is not mandated by statute for the trust instrument itself, though a third party may require acknowledgment. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, Mo. Rev. Stat. Â§ 456.10-1013 lists what a certification of trust may contain, and a third party may require the trustee to furnish excerpts.",
+    "faq": [
+      {
+        "q": "Does a Missouri declaration of trust need to be notarized or witnessed?",
+        "a": "Under the Missouri Uniform Trust Code, the trust instrument does not require witnesses or notarization for validity. However, Mo. Rev. Stat. Â§ 456.10-1013(2) provides that a third party may require the certification of trust to be acknowledged or guaranteed, which may involve a notary. For real property transactions, deeds transferring property into the trust must be notarized and recorded in the county where the property is located. The trust instrument itself can be signed without a notary, but practical acceptance by banks and title companies often calls for an acknowledgment."
+      },
+      {
+        "q": "Can a Missouri trust continue forever, and does Missouri allow asset protection trusts?",
+        "a": "Missouri has abolished the Rule Against Perpetuities, allowing trusts of unlimited duration for dynasty planning. Missouri does not allow self-settled asset protection trusts. The Missouri Uniform Trust Code, enacted in 2004 and effective January 1, 2005, provides the statutory framework for trust creation, modification, and termination. Missouri has no state estate or inheritance tax. The abolition of the perpetuities rule is one of Missouri's most significant trust law features."
+      },
+      {
+        "q": "What goes in a certification of trust under Mo. Rev. Stat. Â§ 456.10-1013?",
+        "a": "Under the Missouri Uniform Trust Code, the trust instrument does not require witnesses or notarization for validity. Missouri has abolished the Rule Against Perpetuities, allowing trusts of unlimited duration for dynasty planning. Missouri does not allow self-settled asset protection trusts. Missouri has no state estate or inheritance tax. The Missouri UTC provides the statutory framework for trust creation, modification, and termination. The abolition of the perpetuities rule is one of Missouri's most significant trust law features."
+      },
+      {
+        "q": "How does Missouri treat business trusts?",
+        "a": "Missouri treats business trusts under common law principles. The Missouri Uniform Trust Code governs express trusts but does not contain a specific statutory business trust entity act. Business trusts in Missouri are recognized as unincorporated associations or common law trusts. Missouri does not have a business trust registration statute comparable to Delaware or Nevada. Missouri has historically recognized the validity of Massachusetts business trusts under common law principles."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Missouri law requires witnesses for trust execution (it does not), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is assuming any single trustee can sign the certification of trust: Missouri requires ALL trustees to sign the certification under Â§ 456.10-1013(2), which is stricter than many UTC states. People also assume asset-protection provisions apply on their own; Missouri does not authorize self-settled asset protection trusts. Documents that omit a successor trustee, or that do not match the certification of trust described in Â§ 456.10-1013, create avoidable friction during administration. The TIN requirement in Missouri's certification is also unique among many UTC states and is frequently overlooked.",
+    "state_notes": "Missouri operates under the Missouri Uniform Trust Code, Mo. Rev. Stat. ch. 456, enacted in 2004 and effective January 1, 2005. The certification of trust statute is Mo. Rev. Stat. Â§ 456.10-1013, which requires all currently acting trustees to sign the certification. Missouri has abolished the Rule Against Perpetuities, allowing trusts of unlimited duration for dynasty planning. Missouri does not impose a state income tax on trust income for non-grantor trusts where the trustee and beneficiaries are not Missouri residents. Missouri does not allow self-settled asset protection trusts and has no state estate or inheritance tax. Business trusts are treated under common law without a dedicated statutory business trust registration framework. The state's certification of trust is notably more demanding than the standard UTC model due to the all-trustee signature requirement and the inclusion of the trust's taxpayer identification number."
+  }
+}

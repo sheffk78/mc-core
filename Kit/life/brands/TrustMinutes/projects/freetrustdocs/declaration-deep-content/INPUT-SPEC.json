@@ -1,0 +1,61 @@
+{
+ "Utah": {
+  "statutory_citation": "Utah Code Title 75B, Chapter 2 (Utah Uniform Trust Code); Utah Code \u00a7 75B-2-1013 (certification of trust); Utah Code Title 75B, Chapter 1, Part 3 (Asset Protection Trust)",
+  "execution_requirements": "Under the Utah Uniform Trust Code, the trust instrument must be signed by the settlor. Utah does not require witnesses for trust execution. Notarization is not required for the trust instrument itself, but real property transactions and certificates of trust may require notarization or acknowledgment for recording purposes. Utah recognizes electronic-only trusts.",
+  "business_trust_treatment": "Utah requires foreign business trusts to register with the Division of Corporations and Commercial Code under Utah Code Title 16, Chapter 15. Business trusts are treated as business entities requiring a registered agent and are subject to registration requirements similar to corporations and LLCs. Massachusetts-style business trusts must comply with foreign entity registration requirements.",
+  "favorable_trust_laws": "Utah has no state estate tax, no inheritance tax, and no gift tax. The state permits 1,000-year dynasty trusts, providing an extremely long perpetuities period. Utah has a Domestic Asset Protection Trust (DAPT) statute under Utah Code Title 75B, Chapter 1, Part 3, permitting self-settled asset protection trusts that meet its statutory requirements. Self-settled spendthrift trusts are permitted with specific statutory requirements.",
+  "unique_factors": "Utah has a Domestic Asset Protection Trust statute under Utah Code Title 75B, Chapter 1, Part 3. The state permits 1,000-year dynasty trusts, effectively allowing multi-generational wealth transfer. Utah recognizes electronic-only trusts, which is progressive for digital estate planning.",
+  "cert_of_trust_requirements": "Under Utah Code \u00a7 75B-2-1013, a certification of trust must contain: (a) that the trust exists and the date the trust instrument was executed; (b) the identity of the settlor; (c) the identity and address of the currently acting trustee; (d) the powers of the trustee in the pending transaction; (e) the revocability or irrevocability of the trust and the identity of any person holding a power to revoke; (f) the authority of cotrustees to sign or otherwise authenticate and whether all or less than all are required in order to exercise powers of the trustee; (g) the name in which title to trust p"
+ },
+ "California": {
+  "statutory_citation": "Cal. Prob. Code \u00a7 18100.5",
+  "execution_requirements": {
+   "notary": "Required. Certification must be in the form of an 'acknowledged declaration' signed by all currently acting trustees.",
+   "witnesses": "Not statutorily required for certification of trust.",
+   "recording": "May be recorded with county recorder where real property is located. Not required for transfers but permitted.",
+   "other": "Anti-bad-faith provision: person demanding full trust docs in addition to cert, without cause, may be liable for damages/attorney fees."
+  },
+  "business_trust_treatment": {
+   "type": "Common law recognized; not a separate statutory entity under California law.",
+   "notes": "California treats a trust as a property relationship, not a legal entity. Massachusetts/business trusts exist at common law."
+  },
+  "favorable_trust_laws": [
+   "Anti-bad-faith protections for trustees presenting certs (Prob. Code \u00a7 18100.5(h))",
+   "Strong protections for third parties relying on certifications in good faith",
+   "Robust trust administration framework under Probate Code Division 9 (\u00a7\u00a7 15000\u201319530)"
+  ],
+  "unique_factors": [
+   "Has NOT adopted the UTC; maintains independent comprehensive trust law under Probate Code Division 9",
+   "Largest U.S. trust jurisdiction without UTC adoption",
+   "Trust is a property relationship, not a legal entity under state law",
+   "Certification may be recorded but recording is not mandatory for real property transfers"
+  ],
+  "cert_of_trust_requirements": "{\"governing_section\": \"Cal. Prob. Code \\u00a7 18100.5\", \"contents\": [\"Existence of trust and date of execution\", \"Identity of settlor(s)\", \"Identity and powers of currently acting trustee(s)\", \"Revocability/irrevocability and identity of person holding power to revoke\", \"Signature authority of multiple trustees\", \"Trust identification number (SSN or EIN)\", \"Manner of taking title to trust assets\", \"Legal description of real property held in trust\"], \"must_contain\": \"Statement that trust has not been revoked/modified in a manner causing representations to be incorrect; statement signed by all c"
+ },
+ "Texas": {
+  "statutory_citation": "Tex. Prop. Code \u00a7 114.086",
+  "execution_requirements": {
+   "notary": "Not explicitly required by statute for certification itself, but third party may require notarized acknowledgment. Typically notarized in practice.",
+   "witnesses": "Not statutorily required.",
+   "recording": "May be recorded in real property records. Not required.",
+   "other": "Beneficiaries are entitled to see trust provisions; third parties may rely on cert without liability if no actual knowledge of error."
+  },
+  "business_trust_treatment": {
+   "type": "Explicitly EXCLUDED from the Texas Trust Code by Tex. Prop. Code \u00a7 111.003(3). Governed by common law or other statutes.",
+   "notes": "Business trusts are not 'express trusts' under the Texas Trust Code. Texas follows common law for business trust formation and operation."
+  },
+  "favorable_trust_laws": [
+   "No state income tax",
+   "Community property state offers estate planning advantages for married couples",
+   "Spendthrift trusts recognized under common law",
+   "Strong homestead protections"
+  ],
+  "unique_factors": [
+   "Has NOT adopted UTC; uses Texas Trust Code (Property Code Title 9)",
+   "Business trusts explicitly excluded from the statutory trust code",
+   "Community property state with no state income tax",
+   "Unique blend of statutory trust rules and reenacted common law (\u00a7 111.005)"
+  ],
+  "cert_of_trust_requirements": "{\"governing_section\": \"Tex. Prop. Code \\u00a7 114.086\", \"contents\": [\"Date of execution of trust instrument\", \"Identity of grantor/settlor\", \"Name and address of trustee\", \"Powers of the trustee (complying with statutory requirements)\", \"Whether trust is revocable and who holds power to revoke\", \"Authority of co-trustees and how title should be taken\", \"Statement that trust has not been amended/revoked in a way invalidating the certification\"], \"must_contain\": \"Statement that trust has not been revoked/modified to invalidate certification; identity of trustee and powers\", \"exclusions\": \"Need n"
+ }
+}

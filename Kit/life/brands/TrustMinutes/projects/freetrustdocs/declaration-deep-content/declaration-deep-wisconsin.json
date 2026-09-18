@@ -1,0 +1,27 @@
+{
+  "state": "Wisconsin",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust is the written instrument that creates a trust. The settlor states an intent to hold property for named beneficiaries and appoints a trustee to manage it. Under the Wisconsin Trust Code (Wis. Stat. ch. 701, enacted 2013, effective April 1, 2014), the instrument must be signed by the settlor. Wisconsin does not require witnesses for trust execution. The certification of trust under Wis. Stat. § 701.1013 may be signed or otherwise authenticated by any trustee; no notary or witness requirement is specified for the certification itself. The trust becomes active when it is funded: real property moves by a new deed to the trustee, and bank and brokerage accounts are retitled in the name of the trust or trustee. A successor trustee named in the document takes over if the acting trustee steps down, becomes incapacitated, or dies. When proof of the trust is needed, Wis. Stat. § 701.1013 lists what a certification of trust may contain.",
+    "faq": [
+      {
+        "q": "Does Wisconsin require notarization for a declaration of trust?",
+        "a": "Wisconsin does not require notarization or witnesses for trust execution under the Wisconsin Trust Code. The certification of trust under § 701.1013 may be signed or otherwise authenticated by any trustee, with no notary or witness requirement specified for the certification itself. No recording requirement is specified in the statute for the certification. However, real property transferred to a trust must be recorded with the county clerk."
+      },
+      {
+        "q": "Can Wisconsin protect assets from the settlor's own creditors?",
+        "a": "Wisconsin does not allow self-settled asset protection trusts (DAPTs). The state's spendthrift provisions protect beneficiaries from their own creditors, but the settlor's interest in a revocable trust remains fully reachable by the settlor's own creditors. Effective trust planning in Wisconsin therefore focuses on comprehensive decanting provisions and strong third-party protections rather than relying on self-settled asset protection strategies for the grantor."
+      },
+      {
+        "q": "What goes in a certification of trust under Wis. Stat. § 701.1013?",
+        "a": "The statute lists the contents: that the trust exists and date instrument executed; identity of settlor; identity and address of currently acting trustee; powers of trustee; revocability or irrevocability of trust and identity of any person holding power to revoke; authority of cotrustee to sign or authenticate and whether all or less than all cotrustees required; and manner in which title to trust property may be taken."
+      },
+      {
+        "q": "How does Wisconsin treat business trusts?",
+        "a": "Wisconsin treats business trusts and Massachusetts trusts under common law. The Wisconsin Trust Code (ch. 701) applies to express, charitable or noncharitable, and testamentary or living trusts, and trusts created pursuant to statute, judgment, or decree administered as express trusts. Wisconsin does not have a specific statutory business trust entity act. Business trusts are recognized under common law as unincorporated associations. Wisconsin does not have a business trust registration statute like Delaware or Nevada."
+      }
+    ],
+    "common_mistakes": "Common issues include assuming Wisconsin law requires notarization for trust execution (it does not, though real property transfers must be recorded), and leaving the trust unfunded so that property never actually moves into it through a new deed or retitled accounts. Another frequent mix-up is assuming Wisconsin has DAPT legislation: the state does not allow self-settled asset protection trusts. People also assume Wisconsin's trust code is outdated; the state adopted a comprehensive UTC-based Trust Code in 2013 with modern provisions including a detailed decanting framework added in 2018. Documents that omit the statement that the trust has not been revoked or modified, or that do not match the certification requirements of § 701.1013, create avoidable friction during administration.",
+    "state_notes": "Wisconsin operates under the Wisconsin Trust Code (Wis. Stat. ch. 701, enacted 2013, effective April 1, 2014), with the certification of trust at Wis. Stat. § 701.1013. The certification may be signed or otherwise authenticated by any trustee. Wisconsin has no state estate tax. The trust code includes comprehensive decanting provisions (§§ 701.1301-701.1322) added in 2018, with detailed provisions on trust limitation on decanting, change in compensation, relief from liability, removal and replacement of authorized fiduciary, and tax-related limitations. Wisconsin does not allow self-settled asset protection trusts (DAPTs). The state does not statutorily require witnesses or notarization for trust execution. Wisconsin's statute provides penalties for bad-faith demands for the full trust instrument beyond certification, including liability for costs, expenses, attorney fees, and damages. The certification of trust closely follows the UTC model."
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "state": "Iowa",
+  "document": "declaration-of-trust",
+  "blocks": {
+    "how_it_works": "A declaration of trust in Iowa is the written instrument that creates a trust by stating the settlor's intent to hold property for named beneficiaries and appointing a trustee to manage it. Iowa governs trusts under the Iowa Trust Code at Iowa Code Chapter 633A, an independent framework substantially based on UTC concepts with significant Iowa-specific modifications. The trust becomes active when funded through retitling real property by deed or transferring financial accounts into the trust name. Iowa's certification of trust at Iowa Code § 633A.4604 is more detailed than the UTC model: it must name all currently acting trustees, state how multiple trustees decide, and be certified under penalty of perjury or sworn before a notary public under chapter 9B. The statute even penalizes unreasonable refusal to accept a certification between $500 and $10,000.",
+    "faq": [
+      {
+        "q": "Does an Iowa certification of trust need to be notarized?",
+        "a": "Under Iowa Code § 633A.4604(2), the certification must be dated and either certified under penalty of perjury pursuant to Iowa law or subscribed and sworn to under penalty of perjury before a notary public per chapter 9B. It must be signed by a currently acting trustee or the attorney of an acting trustee. No witnesses are specified. This swearing requirement is more detailed than the standard UTC certification approach."
+      },
+      {
+        "q": "What goes in an Iowa certification of trust under § 633A.4604?",
+        "a": "The certification must state the names of all currently acting trustees, and if there is more than one, whether they may act individually, by majority, or unanimously. It must state the trust has not been revoked, modified, or amended in a way that would make the representations incorrect. It need not contain dispositive provisions. A person may require proof of the trustee's identity and excerpts conferring power for the pending transaction."
+      },
+      {
+        "q": "How long can an Iowa trust last?",
+        "a": "Iowa retains the traditional common law rule against perpetuities under Iowa Code § 558.68: a nonvested interest is valid only if it must vest within 21 years after one or more lives in being at creation. Iowa has not adopted the USRAP or extended the perpetuities period, which limits dynasty trust planning compared to states with longer periods. The Iowa Trust Code does provide robust trust modification and termination provisions."
+      },
+      {
+        "q": "Can an Iowa trust protect assets from the settlor's creditors?",
+        "a": "Iowa does not authorize self-settled domestic asset protection trusts. Under Iowa Code § 633A.2303, if the settlor is a beneficiary of the trust, a transferee or creditor can reach the maximum amount the trustee could distribute to the settlor. This makes Iowa a traditional trust jurisdiction for asset protection purposes. Planning that relies on self-settled protection structures may not achieve the intended result under Iowa law."
+      }
+    ],
+    "common_mistakes": "A common mistake is signing a certification with only one trustee's name, when Iowa Code § 633A.4604 requires stating the names of all currently acting trustees and specifying whether they act individually, by majority, or unanimously. Another frequent error is skipping the penalty-of-perjury or notary swearing step required under § 633A.4604(2)(e). People also assume dynasty trusts work in Iowa, when the common law perpetuities rule at Iowa Code § 558.68 remains in force. Assuming self-settled asset protection applies is incorrect under § 633A.2303. On the other side, third parties sometimes refuse certifications without cause, not realizing § 633A.4604 imposes damages, a $500 to $10,000 penalty, and attorney fees for unreasonable refusal, with identity verification capped at 10 business days.",
+    "state_notes": "Iowa operates under the Iowa Trust Code at Iowa Code Chapter 633A, enacted in 1999 and substantially revised in 2005, with further amendments in 2010, 2012, 2019, and 2021, an independent framework built on UTC concepts with Iowa-specific modifications. The certification of trust is governed by Iowa Code § 633A.4604, which requires naming all currently acting trustees, specifying multi-trustee decision rules, and certification under penalty of perjury or notarization under chapter 9B. A person acting in reliance after verifying trustee identity within 10 business days is protected, while unreasonable refusal to accept a certification can trigger damages, a $500 to $10,000 penalty, and attorney fees. Iowa retains the common law rule against perpetuities at Iowa Code § 558.68 and does not authorize self-settled asset protection trusts under § 633A.2303. The state has no estate or inheritance tax."
+  }
+}
