@@ -1,0 +1,181 @@
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+// Palo Alto â Scene data for the Palo Alto, California city guide video
+// 2 hospitals (Lucile Packard Children's Hospital Stanford, El Camino Hospital)
+// 0 birth centers, 3 doulas (portrait), California Medi-Cal covers doulas
+// ââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+
+import { TJBCityVideoData } from './types';
+
+export const palo_alto_caData: TJBCityVideoData = {
+  video_metadata: {
+    title: "Palo Alto Birth Guide: Hospitals, Doulas, Midwives & More",
+    city: "Palo Alto",
+    state: "California",
+    slug: "palo-alto-ca",
+    duration_seconds: 291.6,
+    fps: 30,
+    medicaid: true,
+    hasBirthCenter: false,
+    hasAppScreenshot: true,
+  },
+  scenes: [
+    {
+      scene_id: "01_hook",
+      scene_type: "tjb_city_hook",
+      duration_seconds: 13.37,
+      narration: "Just found out you're pregnant in Palo Alto? Congratulations! Now you've got eighty tabs open on hospitals, doulas, midwives, and insurance. Let's close every single one of them right now.",
+      text_content: {
+        city: "Palo Alto",
+        state: "California",
+        slug: "palo-alto-ca",
+        subtitle: "Your Birth Planning Guide",
+      },
+      image_source: "images/palo-alto-ca-birth-doula-skyline-v2.webp",
+    },
+    {
+      scene_id: "02_overview",
+      scene_type: "tjb_city_bridge",
+      duration_seconds: 23.77,
+      narration: "Here's what we're covering in this video: two Palo Alto-area hospitals where doulas and midwives are welcome â Lucile Packard Children's Hospital Stanford and El Camino Hospital â the doulas you can work with, what everything costs, how California's Medi-Cal can help, and a free app that builds your birth plan step by step. Let's start with where you can deliver.",
+      text_content: {
+        city: "Palo Alto",
+        state: "California",
+        slug: "palo-alto-ca",
+      },
+    },
+    {
+      scene_id: "03_hospital_1",
+      scene_type: "tjb_hospital_card",
+      duration_seconds: 33.43,
+      narration: "Lucile Packard Children's Hospital Stanford is Palo Alto's primary maternity hospital, home to a Level IV NICU â the highest level of newborn intensive care anywhere. It's part of Stanford Medicine, with private labor and delivery suites and a dedicated Johnson Center for Pregnancy and Newborn Services. Obstetricians, neonatologists, certified nurse-midwives, and lactation consultants work as one team, and doulas are welcomed as part of your support crew. Around-the-clock anesthesia and language interpretation are available.",
+      image_source: "images/fremont-ca-lpch.webp",
+      text_content: {
+        name: "Lucile Packard Children's Hospital Stanford",
+        address: "725 Welch Road, Palo Alto, CA 94304",
+        description: "Lucile Packard Children's Hospital Stanford is the primary maternity hospital for Palo Alto families, offering a Level IV NICU â the highest level of neonatal care â with advanced technology for the most complex cases. The hospital features private labor and delivery suites, a dedicated Johnson Center for Pregnancy and Newborn Services, and a multidisciplinary care team including obstetricians, neonatologists, certified nurse-midwives, and lactation consultants. Doulas are welcome as support persons. The hospital is affiliated with Stanford Medicine and provides 24/7 anesthesia coverage. Language interpretation services are available.",
+        badges: ["Doula-Friendly", "NICU Level IV", "Stanford Medicine"],
+      },
+    },
+    {
+      scene_id: "03_hospital_2",
+      scene_type: "tjb_hospital_card",
+      duration_seconds: 30.47,
+      narration: "El Camino Hospital in Mountain View is about ten miles from Palo Alto and offers a Level III NICU in collaboration with Stanford Medicine. You'll find private birthing suites, 24/7 anesthesia and neonatology coverage, certified nurse-midwives, and lactation consultants on staff. Doulas are welcome as part of your birth team, and the hospital is Baby-Friendly designated, committed to evidence-based maternity care. Both its Mountain View and Los Gatos campuses have on-site NICUs.",
+      image_source: "images/el-camino-hospital.webp",
+      text_content: {
+        name: "El Camino Hospital",
+        address: "2500 Grant Rd, Mountain View, CA 94040",
+        description: "El Camino Hospital in Mountain View is about ten miles from Palo Alto and offers a Level III NICU in collaboration with Stanford Medicine. The hospital features private birthing suites, 24/7 anesthesia and neonatology coverage, certified nurse-midwives, and lactation consultants. Doulas are welcome as support persons. The hospital is a Baby-Friendly designated facility committed to evidence-based maternity care practices. Both the Mountain View and Los Gatos campuses offer on-site NICUs.",
+        badges: ["Doula-Friendly", "NICU Level III", "Baby-Friendly"],
+      },
+    },
+    {
+      scene_id: "04_providers_1",
+      scene_type: "tjb_provider_portrait",
+      duration_seconds: 27.10,
+      narration: "First up is Blossom Birth and Family, a true Palo Alto institution serving Silicon Valley families for over two decades from its Ramona Street location downtown. They offer birth and postpartum doula support, childbirth education classes, and lactation services, with a community room and lending library for new parents. Birth doula packages in the Bay Area typically run fifteen hundred to three thousand dollars, and Blossom is accepting new clients now.",
+      image_source: "images/provider-palo-alto-ca-blossom.webp",
+      text_content: {
+        name: "Blossom Birth and Family",
+        practice: "Blossom Birth and Family",
+        photo: "images/provider-palo-alto-ca-blossom.webp",
+        isVerified: true,
+        isMidwife: false,
+        description: "Blossom Birth and Family is a Palo Alto institution for pregnancy, birth, and early parenthood, serving Silicon Valley families for over two decades from its Ramona Street location in downtown Palo Alto. The center offers birth and postpartum doula support, childbirth education classes, and lactation services, with a community room and lending library for new parents.",
+        costRange: "$1,500â$3,000",
+        serviceArea: ["Palo Alto", "Silicon Valley"],
+        acceptingClients: true,
+        services: ["Birth Doula", "Childbirth Education", "Lactation Support"],
+      },
+    },
+    {
+      scene_id: "04_providers_2",
+      scene_type: "tjb_provider_portrait",
+      duration_seconds: 29.27,
+      narration: "Doula by Mari supports families across Palo Alto, the Peninsula, and the South Bay, with hands-on experience at Stanford and local birth centers. She offers continuous labor support, comfort measures, and advocacy, plus birth-plan development and prenatal preparation visits. Mari welcomes clients planning unmedicated births, epidurals, or cesarean deliveries, and her birth doula care falls within the Bay Area's typical fifteen-hundred-to-three-thousand-dollar range.",
+      image_source: "images/provider-palo-alto-ca-mari.webp",
+      text_content: {
+        name: "Doula by Mari",
+        practice: "Doula by Mari",
+        photo: "images/provider-palo-alto-ca-mari.webp",
+        isVerified: true,
+        isMidwife: false,
+        description: "Doula by Mari provides birth doula services to families in Palo Alto and across the Peninsula and South Bay, with hospital experience at Stanford and local birth centers. The practice offers labor support, comfort measures, and advocacy, plus birth-plan development and prenatal preparation visits, and welcomes clients planning unmedicated births, epidurals, or cesarean deliveries.",
+        costRange: "$1,500â$3,000",
+        serviceArea: ["Palo Alto", "Peninsula"],
+        acceptingClients: true,
+        services: ["Birth Doula"],
+      },
+    },
+    {
+      scene_id: "04_providers_3",
+      scene_type: "tjb_provider_portrait",
+      duration_seconds: 24.47,
+      narration: "Nubia Jones is a certified birth and postpartum doula with twenty-five years in the birth field and fourteen years serving families professionally, now bringing that experience to the Bay Area from New York. A mom of five, she's also a parent educator, breastfeeding counselor, and student midwife. She offers birth doula support, postpartum care, and overnight newborn care, and she's accepting Palo Alto families now.",
+      image_source: "images/provider-palo-alto-ca-nubia.webp",
+      text_content: {
+        name: "Nubia Jones",
+        practice: "Nubia Jones Birth & Postpartum Doula",
+        photo: "images/provider-palo-alto-ca-nubia.webp",
+        isVerified: true,
+        isMidwife: false,
+        description: "Nubia Jones is a certified birth and postpartum doula with 25 years in the birth field and 14 years professionally serving families, now relocating to the Bay Area from New York as of fall 2026 and listing Palo Alto among her service cities. A mom of five, she is also a parent educator, certified breastfeeding counselor, integrative nutrition health coach, and student midwife. She offers birth doula support, postpartum care, and overnight newborn care.",
+        costRange: "$1,500â$3,000",
+        serviceArea: ["Palo Alto", "Bay Area"],
+        acceptingClients: true,
+        services: ["Birth Doula", "Postpartum Doula", "Newborn Care"],
+      },
+    },
+    {
+      scene_id: "05_app",
+      scene_type: "tjb_app_feature",
+      duration_seconds: 23.27,
+      narration: "Here's the part every Palo Alto mom should know about. The True Joy Birthing app is completely free â no account, no catch. Nine guided sections walk you through your entire birth plan. You can find and message doulas and midwives near you right inside the app. Then export your plan as a PDF to share with your provider. It's the tool every mom needs in her pocket.",
+      text_content: {
+        headline: "Build Your Birth Plan",
+        features: [
+          "Nine guided sections â hospital preferences, pain management, who's in the room",
+          "Find and connect with doulas and midwives near you",
+          "Export a PDF to share with your provider",
+          "Free. No account needed. Works on iPhone.",
+        ],
+      },
+    },
+    {
+      scene_id: "06_cost",
+      scene_type: "tjb_cost_reveal",
+      duration_seconds: 28.17,
+      narration: "Here's the reality: a doula in Palo Alto and the Bay Area typically costs fifteen hundred to three thousand dollars, reflecting the area's higher cost of living. Packages usually include prenatal visits, continuous labor support, and postpartum check-ins. And California's Medi-Cal program now covers doula services statewide, so families on Medi-Cal can access support at no out-of-pocket cost. The investment is real, but the support is worth every dollar.",
+      text_content: {
+        costRange: "$1,500â$3,000",
+        label: "Doulas Â· $1.5Kâ$3K Â· Medi-Cal covers",
+        description: "Most doulas offer payment plans. Medi-Cal covers doula care statewide.",
+      },
+    },
+    {
+      scene_id: "07_insurance",
+      scene_type: "tjb_insurance_branch",
+      duration_seconds: 42.80,
+      narration: "Good news for Palo Alto families: California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023. That includes prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal directly through the Department of Health Care Services. If you're on Medi-Cal, confirm your doula is an enrolled provider in Santa Clara County, then access support at little or no cost. Call 1-800-541-5555 or visit dhcs.ca.gov to learn more.",
+      text_content: {
+        branch: "covers",
+        stateName: "CA",
+        headline: "California Medi-Cal Covers Doula Care",
+        detail: "California's Medi-Cal program has covered full-spectrum doula services as a preventive benefit since January 1, 2023, including prenatal and postpartum visits, labor and delivery support, and support for miscarriage, stillbirth, and abortion. Enrolled doulas bill Medi-Cal through the Department of Health Care Services. Palo Alto families on Medi-Cal can access doula support through enrolled providers in Santa Clara County. Confirm your doula is a Medi-Cal enrolled provider before your first visit.",
+        policyBadge: "CA Medi-Cal",
+        amount: "Covered since Jan 2023",
+        phoneNumber: "1-800-541-5555",
+      },
+    },
+    {
+      scene_id: "08_cta",
+      scene_type: "tjb_city_cta",
+      duration_seconds: 15.50,
+      narration: "A birth plan tells your care team exactly what matters to you. You can build yours with the free PDF birth plan, watch our walkthrough series, or use the mobile app. It's all free, and it's all ready for you right now. We'll put the link below.",
+      text_content: {
+        city: "Palo Alto",
+        slug: "palo-alto-ca",
+      },
+    },
+  ],
+};
