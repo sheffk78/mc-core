@@ -399,6 +399,21 @@ Created by Shelbi Kohler, certified birth doula.
         'privacy_status': 'public',
         'made_for_kids': False,
     },
+    'newport-beach-ca': {
+        'title': 'Newport Beach Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)',
+        'description': "Newport Beach, California doula and birth plan guide by True Joy Birthing. Find local doulas, hospital info, costs, and Medi-Cal coverage. https://truejoybirthing.com/birth-support/newport-beach-ca/",
+        'tags': [
+            'Newport Beach doula', 'Newport Beach birth doula', 'California Medi-Cal doula',
+            'Newport Beach pregnancy guide', 'birth plan template', 'first time mom Newport Beach',
+            'Newport Beach hospital maternity', 'Newport Beach doula cost', 'California birth support',
+            'doula near me', 'Newport Beach midwife', 'pregnancy California',
+            'free birth plan', 'doula services Newport Beach', 'birth preparation',
+            'Hoag Newport Beach', 'Providence St Joseph Orange', 'UCI Medical Center',
+        ],
+        'category_id': '27',  # Education
+        'privacy_status': 'public',
+        'made_for_kids': False,
+    },
     'vancouver-wa': {
         'title': 'Vancouver WA Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)',
         'description': """You just found out you're pregnant in Vancouver, Washington — now what? This guide walks you through everything: doulas and midwives serving Vancouver, hospital policies, real costs, and whether Washington Apple Health covers a doula.
@@ -5762,11 +5777,230 @@ Created by Shelbi Kohler, certified birth doula.
         'privacy_status': 'public',
         'made_for_kids': False,
         'embeddable': True,
-    }
-}
+    },
+    'concord-nc': {
+        'title': 'Concord NC Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)',
+        'description': """You just found out you're pregnant in Concord, NC â now what? This guide walks you through everything: doulas and midwives serving Concord, hospital policies, real costs, and whether North Carolina Medicaid covers a doula.
+
+Get the free app: https://truejoybirthing.com
+Free birth plan: https://truejoybirthing.com/birth-plan-template/
+Concord doula directory: https://truejoybirthing.com/birth-support/concord-nc/
+
+Find Concord doulas and midwives (3 providers: Heart of Grace Birth Services, Tiffany St. Louis, What The Bump)
+Compare hospital options (Atrium Health Cabarrus, Level IV NICU)
+Know what doula care actually costs ($800-$2,500)
+Understand North Carolina Medicaid doula coverage
+Build your free birth plan step by step
+
+CHAPTERS:
+0:00 â Welcome to Concord
+0:11 â What This Guide Covers
+0:30 â Atrium Health Cabarrus (Level IV NICU)
+0:55 â Doulas & Midwives in Concord
+1:20 â The True Joy Birthing App
+1:45 â Doula Costs ($800-$2,500)
+2:05 â Insurance & NC Medicaid
+2:25 â Your Next Step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared â all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#concordnc #concordnc #northcarolinamedicaid #birthplan #doula #pregnancyconcord""",
+        'tags': [
+            'Concord NC doula', 'Concord birth doula', 'North Carolina Medicaid doula',
+            'Concord pregnancy guide', 'birth plan template', 'first time mom Concord',
+            'Concord hospital maternity', 'Concord NC doula cost', 'North Carolina birth support',
+            'doula near me', 'Concord midwife', 'pregnancy North Carolina',
+            'free birth plan', 'doula services Concord', 'birth preparation',
+            'Atrium Health Cabarrus',
+        ],
+        'category_id': '27',
+        'privacy_status': 'public',
+        'made_for_kids': False,
+        'embeddable': True,
+    },
+
+    'la-habra-ca': {
+        'title': "La Habra, California Doula and Birth Plan Guide: Costs, Hospitals and Medicaid (First-Time Mom)",
+        'description': """You just found out you're pregnant in La Habra, California, now what? This guide walks you through everything: doulas and midwives serving La Habra and north Orange County, hospital policies, real costs, and how California's Medi-Cal covers doula services.
+
+Get the free app, https://truejoybirthing.com
+Free birth plan, https://truejoybirthing.com/birth-plan-template/
+La Habra doula directory, https://truejoybirthing.com/birth-support/la-habra-ca/
+
+Find La Habra doulas and midwives (3 providers: Aloha Lamaze and Breastfeeding Services, Temple and Terrain Doula Services, Newborn Nurtury Doula Services)
+Compare hospital options (Providence St. Jude Medical Center, PIH Health Whittier Hospital, Anaheim Regional Medical Center)
+Know what doula care actually costs ($800 to $2,500)
+Understand California Medi-Cal doula coverage (covered since January 2023)
+Build your free birth plan step by step
+
+CHAPTERS:
+0:00, Welcome to La Habra
+0:15, What This Guide Covers
+0:35, Providence St. Jude Medical Center (Level III NICU)
+0:46, PIH Health Whittier Hospital (Level III NICU)
+0:58, Anaheim Regional Medical Center (Level III NICU)
+1:10, Doulas and Midwives in La Habra
+1:29, The True Joy Birthing App
+1:53, Cost Reality ($800-$2,500)
+2:16, Insurance and California Medi-Cal
+2:34, Your Next Step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared, all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#lahabradoula #lahabrabirth #californiamedicaid #birthplan #doula #pregnancylahabra""",
+        'tags': [
+            'La Habra doula', 'California birth doula', 'California Medi-Cal doula',
+            'La Habra pregnancy guide', 'birth plan template', 'first time mom La Habra',
+            'La Habra hospital maternity', 'La Habra doula cost', 'California birth support',
+            'doula near me', 'La Habra midwife', 'pregnancy California',
+            'free birth plan', 'doula services La Habra', 'birth preparation',
+            'Providence St Jude Medical Center', 'PIH Health Whittier', 'Anaheim Regional Medical Center',
+        ],
+        'category_id': '27',
+        'privacy_status': 'public',
+        'made_for_kids': False,
+        'embeddable': True,
+    },
 
 
 # ═══════════════════════════════════════════════════════════════
+    'redwood-city-ca': {
+        'title': "Redwood City, California Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+        'description': """You just found out you're pregnant in Redwood City - now what? This guide walks you through everything: doulas and midwives serving Redwood City, hospital policies, real costs, and how California Medicaid covers doula services.
+
+Get the free app - https://truejoybirthing.com
+Free birth plan - https://truejoybirthing.com/birth-plan-template/
+Redwood City doula directory - https://truejoybirthing.com/birth-support/redwood-city-ca/
+
+Find Redwood City doulas and midwives (3 providers: Together Birth & Body, Mairi Doula, Redwood Doulas)
+Compare hospital options (Sequoia Hospital, Kaiser Permanente Redwood City Medical Center)
+Know what doula care actually costs ($800 to $2500)
+Understand California Medicaid doula coverage
+Build your free birth plan step by step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared - all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#redwoodcitycadoula #cadoula #camedicaid #birthplan #doula #pregnancyredwoodcity""",
+        'tags': [
+            'Redwood City doula',
+            'California birth doula',
+            'California Medicaid doula',
+            'Redwood City pregnancy guide',
+            'birth plan template',
+            'first time mom Redwood City',
+            'Redwood City hospital maternity',
+            'doula cost California',
+            'California birth support',
+            'doula near me',
+            'Redwood City midwife',
+            'pregnancy California',
+            'free birth plan',
+            'doula services Redwood City',
+            'birth preparation',
+            'Sequoia Hospital',
+            'Kaiser Permanente Redwood City Medical Center',
+        ],
+        'category_id': '27',
+        'privacy_status': 'public',
+        'made_for_kids': False,
+        'embeddable': True,
+    },
+
+    'palo-alto-ca': {
+        'title': "Palo Alto, California Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+        'description': """You just found out you're pregnant in Palo Alto - now what? This guide walks you through everything: doulas and midwives serving Palo Alto, hospital policies, real costs, and how California Medicaid covers doula services.
+
+Get the free app - https://truejoybirthing.com
+Free birth plan - https://truejoybirthing.com/birth-plan-template/
+Palo Alto doula directory - https://truejoybirthing.com/birth-support/palo-alto-ca/
+
+Find Palo Alto doulas and midwives (3 providers: Blossom Birth and Family, Doula by Mari, Nubia Jones)
+Compare hospital options (Lucile Packard Children's Hospital Stanford, El Camino Hospital)
+Know what doula care actually costs ($800 to $2500)
+Understand California Medicaid doula coverage
+Build your free birth plan step by step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared - all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#paloaltocadoula #cadoula #camedicaid #birthplan #doula #pregnancypaloalto""",
+        'tags': [
+            'Palo Alto doula',
+            'California birth doula',
+            'California Medicaid doula',
+            'Palo Alto pregnancy guide',
+            'birth plan template',
+            'first time mom Palo Alto',
+            'Palo Alto hospital maternity',
+            'doula cost California',
+            'California birth support',
+            'doula near me',
+            'Palo Alto midwife',
+            'pregnancy California',
+            'free birth plan',
+            'doula services Palo Alto',
+            'birth preparation',
+            "Lucile Packard Children's Hospital Stanford",
+            'El Camino Hospital',
+        ],
+        'category_id': '27',
+        'privacy_status': 'public',
+        'made_for_kids': False,
+        'embeddable': True,
+    },
+
+    'san-mateo-ca': {
+        'title': "San Mateo, California Doula & Birth Plan Guide: Costs, Hospitals & Medicaid (First-Time Mom)",
+        'description': """You just found out you're pregnant in San Mateo - now what? This guide walks you through everything: doulas and midwives serving San Mateo, hospital policies, real costs, and how California Medicaid covers doula services.
+
+Get the free app - https://truejoybirthing.com
+Free birth plan - https://truejoybirthing.com/birth-plan-template/
+San Mateo doula directory - https://truejoybirthing.com/birth-support/san-mateo-ca/
+
+Find San Mateo doulas and midwives (3 providers: San Mateo Doula, Thais Mendonca Schweitzer, Sweetbay Doula)
+Compare hospital options (San Mateo Medical Center, Sequoia Hospital)
+Know what doula care actually costs ($800 to $2500)
+Understand California Medicaid doula coverage
+Build your free birth plan step by step
+
+True Joy Birthing helps first-time moms build their birth plans, find local support, and walk into the hospital prepared - all for free.
+
+Created by Shelbi Kohler, certified birth doula.
+
+#sanmateocadoula #cadoula #camedicaid #birthplan #doula #pregnancysanmateo""",
+        'tags': [
+            'San Mateo doula',
+            'California birth doula',
+            'California Medicaid doula',
+            'San Mateo pregnancy guide',
+            'birth plan template',
+            'first time mom San Mateo',
+            'San Mateo hospital maternity',
+            'doula cost California',
+            'California birth support',
+            'doula near me',
+            'San Mateo midwife',
+            'pregnancy California',
+            'free birth plan',
+            'doula services San Mateo',
+            'birth preparation',
+            'San Mateo Medical Center',
+            'Sequoia Hospital',
+        ],
+        'category_id': '27',
+        'privacy_status': 'public',
+        'made_for_kids': False,
+        'embeddable': True,
+    },
+
+}
 # Auto-generate CITY_META from cities.ts when slug not in dict above
 # ═══════════════════════════════════════════════════════════════
 
