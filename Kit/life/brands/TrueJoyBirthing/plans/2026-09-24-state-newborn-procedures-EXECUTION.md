@@ -57,7 +57,7 @@
 - [x] App: `src/components/NewbornProceduresForm.tsx` — per-procedure decision card (opt-in / opt-out / undecided); vitamin K 3-way (oral | shot); state form deep-link when `opt_out_form` non-null, informed-choice doc creation otherwise; state auto-fills from `profile.location_state`, never re-asked. Wired into `app/(mom)/birth-plan.tsx` renderSectionContent. — Kit ✅ 71a351c7
 - [x] Title/icon maps updated: mom birth-plan (icon → approved `newborn_care` glyph), provider client-birth-plans, admin content titles. — Kit ✅ 71a351c7
 - [x] Unknown state → friendly "generic informed-choice cards" fallback (never a dead end) — implemented (banner + generic cards when profile state missing or state JSON fetch fails).
-- [ ] Midwife-visibility gate: section renders only when mom has a midwife relationship (hospital-only moms don't see it). — PENDING (next task)
+- [x] Midwife-visibility gate: section renders only when mom has a midwife relationship (hospital-only moms don't see it). — Kit ✅ 666e83f3: UI gate on `/mom/team` (`provider.role === 'MIDWIFE'` + `connection_status Active`), fail-closed; list + both progress counters respect it. Verified: teamless mom → `[]` (hidden); mom with linked midwife → gate matches; tsc 0. Live probe PASS.
 - [ ] App E2E (EXPO RN) acceptance run — PENDING (part of the testing pass Jeff requested 2026-09-25).
 **Acceptance (updated):** app E2E (EXPO RN): mom in CA sees CA links; mom with no state data sees generic cards; hospital-only mom sees no section.
 **Design note:** cards follow approved design system (design_guidelines.md); PDF packet for Jeff/Chante visual review before ship, per visual-review preference — packet due with the testing plan.
