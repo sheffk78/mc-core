@@ -108,13 +108,14 @@
 ## Grand Rapids, MI (grand-rapids-mi) - 2026-07-28
 
 **Page:** https://truejoybirthing.com/birth-support/grand-rapids-mi/
-**Status:** Outreach sent (3 emails, 3 providers covered)
+**Status:** Outreach sent (4 emails, 4 providers covered)
 
 | Provider | Email | Status | Notes |
 |---|---|---|---|
 | Blessed Birth Doulas (Ashley Korff) | ashley.k.korff@gmail.com | Sent | First-touch, Birth Doula, Spinning Babies-trained, WIC family pricing |
 | Bump to Birth (Kiara Baskin) | bumptobirthdoulagrr@gmail.com | Sent | First-touch, CD, CLC, birth justice focus, Day One Doula Collective PM |
 | Great Lakes Doulas | info@greatlakesdoulas.com | Sent | First-touch, Birth Doula, multi-service agency (birth/postpartum/lactation/body work), ZeroBounce flagged role-based but sent with caution |
+| West Michigan Midwifery Birth Center | info@westmichiganmidwifery.com | Sent (2026-09-23) | First-touch, only freestanding birth center in Grand Rapids area, Medical Mile hospital details validation question (vps-20260923180417390160) |
 
 **No-email providers:** 0 (all providers had discoverable emails)
 **Bounces/failures:** 0
@@ -483,3 +484,16 @@
 **No-email providers:** 0
 **Bounces/failures:** 0
 **Video:** https://youtu.be/Hzw9_-_Z0V8 (custom thumbnail uploaded via API)
+
+## San Antonio, TX (san-antonio-tx) - 2026-09-26
+
+**Page:** https://truejoybirthing.com/birth-support/san-antonio-tx/
+**Status:** Video refreshed (new ID pLKUlnVq7OE replaces 1ccyFIUhNl0, now unlisted; 4K/120fps render; public + embeddable). Page redeployed, CDN purged, schema verified (duration PT4M22S). Outreach first-touch PENDING Jeff approval (mailercloud gate) â provider contact list incomplete (only 2 verified addresses: info@ccaosa.org, nurturingdawn@gmail.com); email-generator tool not present in workspace.
+
+| Provider | Email | Status | Notes |
+|---|---|---|---|
+| CCAOSA (Childbirth Center Assn of SA) | info@ccaosa.org | Pending approval | Org touch, first-touch |
+| Nurturing Dawn | nurturingdawn@gmail.com | Pending approval | First-touch |
+
+**No-email providers:** remaining SA doulas/birth centers from cities.ts lack verified public emails in this workspace
+**Outreach:** NOT SENT â awaiting Jeff approval per TOOLS/mailercloud.md (sending requires approval at every stage)
