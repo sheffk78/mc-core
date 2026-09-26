@@ -1,0 +1,39 @@
+{
+  "slug": "san-antonio-tx",
+  "captured_at": "2026-09-26T16:49:16.509917+00:00",
+  "live_url": "https://truejoybirthing.com/birth-support/san-antonio-tx/",
+  "screenshot": "san-antonio-tx-fullpage-scroll.png",
+  "crop": {
+    "start": 4092,
+    "end": 6618
+  },
+  "section_label": "Doulas & Midwives Serving San Antonio",
+  "provider_photos": [
+    {
+      "src": "provider-san-antonio-tx-rooted-birth.webp",
+      "loaded": true,
+      "name": "Rooted"
+    },
+    {
+      "src": "provider-san-antonio-tx-sabd.webp",
+      "loaded": true,
+      "name": "San Antonio"
+    },
+    {
+      "src": "provider-san-antonio-tx-nurturing-dawn.webp",
+      "loaded": true,
+      "name": "Nurturing Dawn"
+    },
+    {
+      "src": "provider-san-antonio-tx-abundant-joy.webp",
+      "loaded": true,
+      "name": "Abundant Joy"
+    },
+    {
+      "src": "provider-san-antonio-tx-circle-birth.webp",
+      "loaded": true,
+      "name": "Circle"
+    }
+  ],
+  "provider_count": 6
+}
